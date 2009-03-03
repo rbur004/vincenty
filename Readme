@@ -1,0 +1,26 @@
+=Vincenty Algorithms
+Vincenty wrote an algorithm for calculating the bearing and distance between two coordinates on the earth
+and an algorithm for finding a second coordinate, given a starting coordinate, bearing and destination.
+The algorithms model the earth as an ellipsoid, using the WGS-84 model. This is the common GPS model for
+mapping to latitudes and longitudes.
+
+This is a Ruby implementation of Vincenty's algorithms, and the Vincenty class includes two methods for 
+modeling the earth as a sphere. These were added as a reference for testing the Vincenty algorithm, but
+could be used on their own. 
+
+The package also makes use of several other classes that may be useful in their own Right. These include
+class Angle, class Latitude (subclass of Angle), class Longitude (subclass of Angle), 
+class TrackAndBearing and class coordinate (which class Vincenty is a subclass)
+
+Angle requires extensions to Numeric and String to provide to_radians (to_r) and to_degrees (to_d). String also includes a to_decimal_degrees(), which converts most string forms of Latitude and Longitude to decimal form. These extensions are included in the package in core_extensions.rb. Float has also been extended to change round to have an optional argument specifying the number of decimal places to round to. This is fully compatible with the Float.round, as the default is to round to 0 decimal places.
+
+==Copyright.
+I can't lay claim to Vincenty's algorithm, but  my code is available under the Ruby License with no warranty expressed or implied.  
+
+The code is based on the wikipedia presentation of the Vincenty algorithm http://en.wikipedia.org/wiki/Vincenty%27s_formulae .
+It was modified to include changes I found at http://www.movable-type.co.uk/scripts/latlong-vincenty-direct.html.
+I also altered the formulae to correctly return the bearing for angles greater than 180. 
+
+==Vincenty's original publication
+
+T Vincenty, "Direct and Inverse Solutions of Geodesics on the Ellipsoid with application of nested equations", Survey Review, vol XXII no 176, 1975 http://www.ngs.noaa.gov/PUBS_LIB/inverse.pdf
