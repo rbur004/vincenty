@@ -12,6 +12,7 @@ class Coordinate
     @altitude = altitude.to_f
   end
   
+  #Should add a format string to this.
   #Returns: Latitude longitude and altitude as a single string.
   def to_s
     "#{@latitude.to_s }  #{@longitude.to_s} #{@altitude}m"

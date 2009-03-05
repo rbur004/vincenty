@@ -11,9 +11,16 @@ class TrackAndDistance
       @distance = distance
     end
     
+    #format string fmt is currently just for the bearing angle.
+    #Need to change this to include the distance is single format string.
     #Returns: Bearing angle and distance in a string.
-    def to_s
-      "#{@bearing.to_d.round(4)} #{distance.round(4)}m"
+    def to_s(fmt = nil)
+      if(fmt)
+        #needs work to include distance as well as angle fmt.
+        "#{@bearing.strf(fmt)} #{distance.round(4)}m"
+      else
+        "#{@bearing.strf} #{distance.round(4)}m"
+      end
     end
 
     def to_ary

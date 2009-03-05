@@ -1,5 +1,5 @@
 require 'test/unit'
-require 'vincenty.rb'
+require 'vincenty'
 
 class TestVincenty< Test::Unit::TestCase
 

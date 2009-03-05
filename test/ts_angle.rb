@@ -24,6 +24,7 @@ class TestAngle< Test::Unit::TestCase
   
   def test_strf
     a = Angle.new("S37°01′7.5″")
+    assert_equal("-37°01′07.5000″", a.strf) #default format of strf
     assert_equal("37°01′07.50000″S", a.strf( "%d°%2m′%2.5s″%N" ))
     assert_equal("37°01′07.50000″W", a.strf("%d°%2m′%2.5s″%E" ))
     assert_equal("-37°01′07.5000″", a.strf("%d°%2m′%2.4s″" ))
