@@ -1,6 +1,6 @@
 = Vincenty
 
-* "http://rubyforge.org/projects/vincenty/"
+* http://rubyforge.org/projects/vincenty/
 
 == DESCRIPTION:
 
