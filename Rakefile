@@ -1,9 +1,9 @@
 #!/usr/bin/ruby
 # -*- ruby -*-
 
-require 'rubygems'
+#require 'rubygems'
 require 'hoe'
-require 'lib/vincenty.rb'
+#require 'lib/vincenty.rb'
 
 
 Hoe.spec 'vincenty' do 
