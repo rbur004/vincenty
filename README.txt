@@ -57,7 +57,7 @@
 
 Code unique to this implementation of Vincentys algrithm is distributed under the Ruby License.
 
-Copyright (c) 2009 FIX
+Copyright (c) 2009
 
 1. You may make and give away verbatim copies of the source form of the
    software without restriction, provided that you duplicate all of the

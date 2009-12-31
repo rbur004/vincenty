@@ -9,10 +9,10 @@ class Latitude < Angle
     #longitude's are -180 to 180 for west to east
     degrees = super
     case
-    when degrees > 270 : -(360 - degrees)
-    when degrees > 180 : 180 - degrees
-    when degrees > 90 : 180 - degrees
-    when degrees < -90 : 180 - degrees
+    when degrees > 270 ; -(360 - degrees)
+    when degrees > 180 ; 180 - degrees
+    when degrees > 90 ; 180 - degrees
+    when degrees < -90 ; 180 - degrees
     else degrees
     end
   end
@@ -22,10 +22,10 @@ class Latitude < Angle
   def to_radians
     #longitude's are -180 to 180 for west to east
     case
-    when @value > 3*Math::PI/2 :  @value - Math::PI * 2
-    when @value > Math::PI : Math::PI - @value
-    when @value > Math::PI/2 : Math::PI - @value
-    when @value < -Math::PI/2 : -Math::PI - @value
+    when @value > 3*Math::PI/2 ;  @value - Math::PI * 2
+    when @value > Math::PI ; Math::PI - @value
+    when @value > Math::PI/2 ; Math::PI - @value
+    when @value < -Math::PI/2 ; -Math::PI - @value
     else @value
     end
   end

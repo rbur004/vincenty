@@ -12,7 +12,12 @@ require 'track_and_distance.rb'
 require 'coordinate.rb'
 
 class Vincenty < Coordinate
-  VERSION = '1.0.2'
+  VERSION = '1.0.3'
+  
+  def version
+    VERSION
+  end
+  
   #Great Circle formulae  http://en.wikipedia.org/wiki/Great-circle_distance
   #Reference calculation for testing, assumes the earth is a sphere, which it isn't. 
   #This gives us an approximation to verify Vincenty algorithm.

@@ -8,7 +8,7 @@ class Longitude < Angle
   def to_degrees
     degrees = super
     case
-      when degrees > 180 : degrees - 360
+      when degrees > 180 ; degrees - 360
       else degrees
     end
   end
@@ -17,7 +17,7 @@ class Longitude < Angle
   #Returns: angle as degrees in range -2PI and 2PI
   def to_radians
     case
-      when @value > Math::PI : @value - 2 * Math::PI
+      when @value > Math::PI ; @value - 2 * Math::PI
       else @value
     end
   end
