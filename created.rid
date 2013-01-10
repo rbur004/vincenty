@@ -1,4 +1,4 @@
-Thu, 10 Jan 2013 20:08:47 +1300
+Thu, 10 Jan 2013 21:57:41 +1300
 lib/angle.rb	Thu, 10 Jan 2013 20:05:00 +1300
 lib/coordinate.rb	Thu, 10 Jan 2013 20:05:24 +1300
 lib/core_extensions.rb	Thu, 10 Jan 2013 20:05:51 +1300
@@ -8,4 +8,4 @@ lib/track_and_distance.rb	Thu, 10 Jan 2013 20:06:52 +1300
 lib/vincenty.rb	Thu, 10 Jan 2013 20:07:53 +1300
 History.txt	Sat, 29 Sep 2012 15:05:29 +1200
 Manifest.txt	Sat, 29 Sep 2012 14:49:53 +1200
-README.txt	Thu, 10 Jan 2013 20:08:42 +1300
+README.txt	Thu, 10 Jan 2013 21:56:21 +1300
