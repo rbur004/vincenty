@@ -1,0 +1,1298 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=US-ASCII" http-equiv="Content-Type">
+
+<title>class Angle - vincenty-1.0.3 Documentation</title>
+
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>lib/angle.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link">Object
+  
+</nav>
+
+    <!-- Included Modules -->
+<nav id="includes-section" class="section">
+  <h3 class="section-header">Included Modules</h3>
+
+  <ul class="link-list">
+  
+  
+    <li><span class="include">Comparable</span>
+  
+  
+  </ul>
+</nav>
+
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li><a href="#method-c-decimal_deg">::decimal_deg</a>
+    
+    <li><a href="#method-c-degrees">::degrees</a>
+    
+    <li><a href="#method-c-dms">::dms</a>
+    
+    <li><a href="#method-c-new">::new</a>
+    
+    <li><a href="#method-c-radians">::radians</a>
+    
+    <li><a href="#method-i-25">#%</a>
+    
+    <li><a href="#method-i-2A">#*</a>
+    
+    <li><a href="#method-i-2A-2A">#**</a>
+    
+    <li><a href="#method-i-2B">#+</a>
+    
+    <li><a href="#method-i-2B-40">#+@</a>
+    
+    <li><a href="#method-i-2D">#-</a>
+    
+    <li><a href="#method-i-2D-40">#-@</a>
+    
+    <li><a href="#method-i-2F">#/</a>
+    
+    <li><a href="#method-i-3C-3D-3E">#&lt;=&gt;</a>
+    
+    <li><a href="#method-i-abs">#abs</a>
+    
+    <li><a href="#method-i-coerce">#coerce</a>
+    
+    <li><a href="#method-i-reverse">#reverse</a>
+    
+    <li><a href="#method-i-sign">#sign</a>
+    
+    <li><a href="#method-i-strf">#strf</a>
+    
+    <li><a href="#method-i-to_bearing">#to_bearing</a>
+    
+    <li><a href="#method-i-to_d">#to_d</a>
+    
+    <li><a href="#method-i-to_degrees">#to_degrees</a>
+    
+    <li><a href="#method-i-to_dms">#to_dms</a>
+    
+    <li><a href="#method-i-to_f">#to_f</a>
+    
+    <li><a href="#method-i-to_i">#to_i</a>
+    
+    <li><a href="#method-i-to_int">#to_int</a>
+    
+    <li><a href="#method-i-to_r">#to_r</a>
+    
+    <li><a href="#method-i-to_radians">#to_radians</a>
+    
+    <li><a href="#method-i-to_s">#to_s</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="./History_txt.html">History</a>
+  
+    <li class="file"><a href="./Manifest_txt.html">Manifest</a>
+  
+    <li class="file"><a href="./README_txt.html">README</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./Angle.html">Angle</a>
+  
+    <li><a href="./Coordinate.html">Coordinate</a>
+  
+    <li><a href="./Float.html">Float</a>
+  
+    <li><a href="./Latitude.html">Latitude</a>
+  
+    <li><a href="./Longitude.html">Longitude</a>
+  
+    <li><a href="./Numeric.html">Numeric</a>
+  
+    <li><a href="./String.html">String</a>
+  
+    <li><a href="./TrackAndDistance.html">TrackAndDistance</a>
+  
+    <li><a href="./Vincenty.html">Vincenty</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class Angle</h1>
+
+  <div id="description" class="description">
+    
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+    <!-- Attributes -->
+    <section id="attribute-method-details" class="method-section section">
+      <h3 class="section-header">Attributes</h3>
+
+      
+      <div id="attribute-i-value" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">value</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+    </section><!-- attribute-method-details -->
+    
+
+    <!-- Methods -->
+    
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Class Methods</h3>
+
+    
+      <div id="method-c-decimal_deg" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">decimal_deg</span><span
+            class="method-args">(*a)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Class level function that converts an array of up to 4 values into decimal
+degrees. <a href="http://0..3">a</a> is degrees, minutes, seconds,
+direction. Dircection is one of 'N', 'S', 'E', 'W'. nil values in the array
+are set to 0 if the a.length &lt; 4,t then a is extended to be length 4
+with 0 A 0 as the direction has no effect on the sign of the result
+Returns: signed decimal degress.</p>
+          
+
+          
+          <div class="method-source-code" id="decimal_deg-source">
+            <pre><span class="ruby-comment"># File lib/angle.rb, line 44</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">decimal_deg</span>(*<span class="ruby-identifier">a</span>)
+  (<span class="ruby-value">0</span><span class="ruby-operator">..</span><span class="ruby-value">3</span>).<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span>  <span class="ruby-identifier">a</span>[<span class="ruby-identifier">x</span>] = <span class="ruby-value">0</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">a</span>[<span class="ruby-identifier">x</span>] <span class="ruby-operator">==</span> <span class="ruby-keyword">nil</span> } <span class="ruby-comment">#convert nil arguments to 0 and ensure 4 values.</span>
+  <span class="ruby-identifier">s</span> = { <span class="ruby-string">'N'</span>=<span class="ruby-operator">&gt;</span><span class="ruby-value">1</span>, <span class="ruby-string">'S'</span>=<span class="ruby-operator">&gt;</span><span class="ruby-value">-1</span>, <span class="ruby-string">'E'</span>=<span class="ruby-operator">&gt;</span><span class="ruby-value">1</span>, <span class="ruby-string">'W'</span>=<span class="ruby-operator">&gt;</span><span class="ruby-value">-1</span>, <span class="ruby-value">0</span>=<span class="ruby-operator">&gt;</span><span class="ruby-value">1</span> }
+  <span class="ruby-identifier">a</span>[<span class="ruby-value">0</span>].<span class="ruby-identifier">sign</span> * (<span class="ruby-identifier">a</span>[<span class="ruby-value">0</span>].<span class="ruby-identifier">abs</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">a</span>[<span class="ruby-value">1</span>]<span class="ruby-operator">/</span><span class="ruby-value">60.0</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">a</span>[<span class="ruby-value">2</span>]<span class="ruby-operator">/</span><span class="ruby-value">3600.0</span>) * <span class="ruby-identifier">s</span>[<span class="ruby-identifier">a</span>[<span class="ruby-value">3</span>]]
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- decimal_deg-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- decimal_deg-method -->
+
+    
+      <div id="method-c-degrees" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">degrees</span><span
+            class="method-args">(d=0)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Class level function equivalent to <a
+href="Angle.html#method-c-new">::new</a>(d, false) or just <a
+href="Angle.html#method-c-new">::new</a> Returns: new <a
+href="Angle.html">Angle</a></p>
+          
+
+          
+          <div class="method-source-code" id="degrees-source">
+            <pre><span class="ruby-comment"># File lib/angle.rb, line 77</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">degrees</span>(<span class="ruby-identifier">d</span>=<span class="ruby-value">0</span>) <span class="ruby-comment">#passed in degrees.</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">d</span>.<span class="ruby-identifier">to_radians</span>, <span class="ruby-keyword">true</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- degrees-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- degrees-method -->
+
+    
+      <div id="method-c-dms" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">dms</span><span
+            class="method-args">(v, radians = false)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Class level utility function to return the value as deg,min,sec Assumes
+decimal degress unless radians == true returns an array of signed deg, min,
+sec.</p>
+          
+
+          
+          <div class="method-source-code" id="dms-source">
+            <pre><span class="ruby-comment"># File lib/angle.rb, line 53</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">dms</span>(<span class="ruby-identifier">v</span>, <span class="ruby-identifier">radians</span> = <span class="ruby-keyword">false</span>)
+  <span class="ruby-identifier">v</span> = <span class="ruby-identifier">v</span>.<span class="ruby-identifier">to_d</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">radians</span>
+  <span class="ruby-identifier">deg</span> = <span class="ruby-identifier">v</span>.<span class="ruby-identifier">floor</span>
+  <span class="ruby-identifier">min</span> = ((<span class="ruby-identifier">v</span><span class="ruby-operator">-</span><span class="ruby-ivar">@deg</span>)*<span class="ruby-value">60</span>).<span class="ruby-identifier">floor</span>
+  <span class="ruby-identifier">sec</span> = ((<span class="ruby-identifier">v</span><span class="ruby-operator">-</span><span class="ruby-ivar">@deg</span><span class="ruby-operator">-</span><span class="ruby-identifier">min</span><span class="ruby-operator">/</span><span class="ruby-value">60.0</span>)*<span class="ruby-value">3600.0</span>) 
+  
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">v</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">0</span> <span class="ruby-operator">&amp;&amp;</span>  <span class="ruby-identifier">deg</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">min</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+      <span class="ruby-identifier">sec</span> = <span class="ruby-operator">-</span><span class="ruby-identifier">sec</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">min</span> = <span class="ruby-operator">-</span><span class="ruby-identifier">min</span> 
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">deg</span>,<span class="ruby-identifier">min</span>,<span class="ruby-identifier">sec</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- dms-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- dms-method -->
+
+    
+      <div id="method-c-new" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">new</span><span
+            class="method-args">(v=0, radians=false)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>v may be anything that has a <a href="Angle.html#method-i-to_f">#to_f</a>
+and to_radians. The Default for v is degrees. if radians == true then v is
+in radians, not degrees.</p>
+          
+
+          
+          <div class="method-source-code" id="new-source">
+            <pre><span class="ruby-comment"># File lib/angle.rb, line 25</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">v</span>=<span class="ruby-value">0</span>, <span class="ruby-identifier">radians</span>=<span class="ruby-keyword">false</span>)
+  <span class="ruby-comment">#assumes that we are getting a value in degrees.</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">radians</span>
+    <span class="ruby-ivar">@value</span> = <span class="ruby-identifier">v</span>.<span class="ruby-identifier">to_f</span> <span class="ruby-comment">#works for String, Fixed, other Angles and for Float.</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">v</span>.<span class="ruby-identifier">class</span> <span class="ruby-operator">==</span> <span class="ruby-constant">Array</span>
+      <span class="ruby-ivar">@value</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">decimal_deg</span>(*<span class="ruby-identifier">v</span>).<span class="ruby-identifier">to_radians</span> <span class="ruby-comment">#Wild assumption that the array is deg,min,sec.</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-ivar">@value</span> = <span class="ruby-identifier">v</span>.<span class="ruby-identifier">to_radians</span> <span class="ruby-comment">#we have a String and Numeric class version of this. Another Angle will work too.</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- new-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- new-method -->
+
+    
+      <div id="method-c-radians" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">radians</span><span
+            class="method-args">(r=0)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Class level function equivalent to <a
+href="Angle.html#method-c-new">::new</a>(r, true) Returns: new <a
+href="Angle.html">Angle</a></p>
+          
+
+          
+          <div class="method-source-code" id="radians-source">
+            <pre><span class="ruby-comment"># File lib/angle.rb, line 71</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">radians</span>(<span class="ruby-identifier">r</span>=<span class="ruby-value">0</span>) <span class="ruby-comment">#passed in radians.</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">r</span>.<span class="ruby-identifier">to_f</span>, <span class="ruby-keyword">true</span>) <span class="ruby-comment">#Nb. self is Angle, be we don't Angle.new, as we want subclasses to return their class, not Angle.</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- radians-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- radians-method -->
+
+    
+    </section><!-- public-class-method-details -->
+  
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-25" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">%</span><span
+            class="method-args">(v)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Returns: new <a href="Angle.html">Angle</a></p>
+          
+
+          
+          <div class="method-source-code" id="25-source">
+            <pre><span class="ruby-comment"># File lib/angle.rb, line 119</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">%</span>(<span class="ruby-identifier">v</span>)
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">radians</span>(<span class="ruby-ivar">@value</span> <span class="ruby-operator">%</span> <span class="ruby-identifier">v</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- 25-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- 25-method -->
+
+    
+      <div id="method-i-2A" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">*</span><span
+            class="method-args">(v)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Returns :new <a href="Angle.html">Angle</a></p>
+          
+
+          
+          <div class="method-source-code" id="2A-source">
+            <pre><span class="ruby-comment"># File lib/angle.rb, line 104</span>
+<span class="ruby-keyword">def</span> *(<span class="ruby-identifier">v</span>)
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">radians</span>(<span class="ruby-ivar">@value</span> * <span class="ruby-identifier">v</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- 2A-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- 2A-method -->
+
+    
+      <div id="method-i-2A-2A" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">**</span><span
+            class="method-args">(v)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Returns: new <a href="Angle.html">Angle</a></p>
+          
+
+          
+          <div class="method-source-code" id="2A-2A-source">
+            <pre><span class="ruby-comment"># File lib/angle.rb, line 109</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">**</span>(<span class="ruby-identifier">v</span>)
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">radians</span>(<span class="ruby-ivar">@value</span> <span class="ruby-operator">**</span> <span class="ruby-identifier">v</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- 2A-2A-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- 2A-2A-method -->
+
+    
+      <div id="method-i-2B" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">+</span><span
+            class="method-args">(v)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Returns :new <a href="Angle.html">Angle</a></p>
+          
+
+          
+          <div class="method-source-code" id="2B-source">
+            <pre><span class="ruby-comment"># File lib/angle.rb, line 94</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">+</span>(<span class="ruby-identifier">v</span>)
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">radians</span>(<span class="ruby-ivar">@value</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">v</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- 2B-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- 2B-method -->
+
+    
+      <div id="method-i-2B-40" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">+@</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>unary + Returns: new <a href="Angle.html">Angle</a></p>
+          
+
+          
+          <div class="method-source-code" id="2B-40-source">
+            <pre><span class="ruby-comment"># File lib/angle.rb, line 83</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">+@</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">radians</span>(<span class="ruby-ivar">@value</span>) <span class="ruby-comment">#Nb. Not Angle.new, as we want subclasses to return their class, not Angle.</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- 2B-40-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- 2B-40-method -->
+
+    
+      <div id="method-i-2D" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">-</span><span
+            class="method-args">(v)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Returns: new <a href="Angle.html">Angle</a></p>
+          
+
+          
+          <div class="method-source-code" id="2D-source">
+            <pre><span class="ruby-comment"># File lib/angle.rb, line 99</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">-</span>(<span class="ruby-identifier">v</span>)
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">radians</span>(<span class="ruby-ivar">@value</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">v</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- 2D-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- 2D-method -->
+
+    
+      <div id="method-i-2D-40" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">-@</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Unary - Returns: new <a href="Angle.html">Angle</a></p>
+          
+
+          
+          <div class="method-source-code" id="2D-40-source">
+            <pre><span class="ruby-comment"># File lib/angle.rb, line 89</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">-@</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">radians</span>(<span class="ruby-operator">-</span><span class="ruby-ivar">@value</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- 2D-40-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- 2D-40-method -->
+
+    
+      <div id="method-i-2F" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">/</span><span
+            class="method-args">(v)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Returns: new <a href="Angle.html">Angle</a></p>
+          
+
+          
+          <div class="method-source-code" id="2F-source">
+            <pre><span class="ruby-comment"># File lib/angle.rb, line 114</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">/</span>(<span class="ruby-identifier">v</span>)
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">radians</span>(<span class="ruby-ivar">@value</span> <span class="ruby-operator">/</span> <span class="ruby-identifier">v</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- 2F-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- 2F-method -->
+
+    
+      <div id="method-i-3C-3D-3E" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">&lt;=&gt;</span><span
+            class="method-args">(v)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Provides test for Module Comparable</p>
+          
+
+          
+          <div class="method-source-code" id="3C-3D-3E-source">
+            <pre><span class="ruby-comment"># File lib/angle.rb, line 13</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">&lt;=&gt;</span>(<span class="ruby-identifier">v</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">v</span>.<span class="ruby-identifier">class</span> <span class="ruby-operator">==</span> <span class="ruby-constant">Angle</span>
+    <span class="ruby-ivar">@value</span> <span class="ruby-operator">&lt;=&gt;</span> <span class="ruby-identifier">v</span>.<span class="ruby-identifier">value</span>
+  <span class="ruby-keyword">else</span> 
+    <span class="ruby-ivar">@value</span> <span class="ruby-operator">&lt;=&gt;</span> <span class="ruby-identifier">v</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- 3C-3D-3E-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- 3C-3D-3E-method -->
+
+    
+      <div id="method-i-abs" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">abs</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Returns: the absolute value of the angle in radians</p>
+          
+
+          
+          <div class="method-source-code" id="abs-source">
+            <pre><span class="ruby-comment"># File lib/angle.rb, line 181</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">abs</span>
+  <span class="ruby-ivar">@value</span>.<span class="ruby-identifier">abs</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- abs-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- abs-method -->
+
+    
+      <div id="method-i-coerce" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">coerce</span><span
+            class="method-args">(v)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="coerce-source">
+            <pre><span class="ruby-comment"># File lib/angle.rb, line 171</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">coerce</span>(<span class="ruby-identifier">v</span>)
+  [<span class="ruby-constant">Float</span>(<span class="ruby-identifier">v</span>), <span class="ruby-ivar">@value</span>]
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- coerce-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- coerce-method -->
+
+    
+      <div id="method-i-reverse" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">reverse</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Returns: the reverse angle in radians. i.e. angle + PI (or angle + 180
+degrees)</p>
+          
+
+          
+          <div class="method-source-code" id="reverse-source">
+            <pre><span class="ruby-comment"># File lib/angle.rb, line 192</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">reverse</span>
+  <span class="ruby-keyword">if</span> (<span class="ruby-identifier">v</span> = <span class="ruby-ivar">@value</span> <span class="ruby-operator">+</span> <span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-constant">PI</span>) <span class="ruby-operator">&gt;</span> <span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-constant">PI</span> * <span class="ruby-value">2</span>
+    <span class="ruby-identifier">v</span> <span class="ruby-operator">-=</span> <span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-constant">PI</span> * <span class="ruby-value">2</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">v</span>,<span class="ruby-keyword">true</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- reverse-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- reverse-method -->
+
+    
+      <div id="method-i-sign" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">sign</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Returns: the sign of the angle. 1 for positive, -1 for negative.</p>
+          
+
+          
+          <div class="method-source-code" id="sign-source">
+            <pre><span class="ruby-comment"># File lib/angle.rb, line 176</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">sign</span>
+  <span class="ruby-ivar">@value</span>.<span class="ruby-identifier">sign</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- sign-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- sign-method -->
+
+    
+      <div id="method-i-strf" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">strf</span><span
+            class="method-args">(fmt="%d^0%2m'%2.4s''")</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>formated output of the angle. The default format is a signed
+deg^0minutes'seconds" with leading 0's in the minutes and seconds and 4
+decimal places for seconds. formats are:</p>
+
+<pre>* %wd output the degrees as an integer.
+**   where w is 0, 1, 2 or 3 and represents the field width. 
+*** 1 is the default, which indicates that at least 1 digit is displayed
+*** 2 indicates that at least 2 digits are displayed. 1 to 9 will be displayed as 01^0 to 09^0
+*** 3 indicates that at least 4 digits are displayed. 10 to 99 will be displayed as 010^0 to 099^0
+
+* %w.pD outputs degrees as a float.
+** p is the number of decimal places.
+
+* %wm output minutes as an integer.
+** where the width w is 0, 1 , 2 with similar meaning to %d. p is again the number of decimal places.
+
+* %w.pM outputs minutes as a float .e.g. 01.125'.
+** p is the number of decimal places.
+
+* %wW outputs secs/60 as a float without the leading '0.'. 
+      Used with %m like this %2m'%4W , to get minute marker before the decimal places. 
+      e.g. -37^001'.1167 rather than -37^001.1167'
+** p is the number of decimal places.
+
+* %w.ps output seconds as a float.
+** where the width w is 1 , 2 with similar meaning to %d. p is again the number of decimal places.
+
+* %N outputs N if the angle is positive and S if the angle is negative.
+
+* %E outputs E if the angle is positive and W if the angle is negative.
+
+* %r outputs Radians
+
+* %% outputs %
+
+Other strings in the format are printed as is.</pre>
+          
+
+          
+          <div class="method-source-code" id="strf-source">
+            <pre><span class="ruby-comment"># File lib/angle.rb, line 241</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">strf</span>(<span class="ruby-identifier">fmt</span>=<span class="ruby-string">&quot;%d^0%2m'%2.4s''&quot;</span>)
+  <span class="ruby-identifier">tokens</span> = <span class="ruby-identifier">fmt</span>.<span class="ruby-identifier">scan</span>(<span class="ruby-regexp">%r%[0-9\.]*[%dmsDMNErW]|[^%]*/</span>)
+  <span class="ruby-identifier">have_dir</span> = <span class="ruby-identifier">have_dms</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-identifier">tokens</span>.<span class="ruby-identifier">collect!</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">t</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">t</span>[<span class="ruby-value">0</span>,<span class="ruby-value">1</span>] <span class="ruby-operator">==</span> <span class="ruby-string">'%'</span> <span class="ruby-comment">#format</span>
+      <span class="ruby-identifier">had_dot</span> = <span class="ruby-keyword">false</span>
+      <span class="ruby-identifier">decimals</span> = <span class="ruby-value">-1</span>
+      <span class="ruby-identifier">width</span> = <span class="ruby-value">-1</span>
+      <span class="ruby-identifier">format</span> = <span class="ruby-keyword">nil</span>
+      <span class="ruby-identifier">t</span>[<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">-1</span>].<span class="ruby-identifier">scan</span>(<span class="ruby-regexp">%r[0-9]+|\.|[0-9]+|[%dmsDMNErW]/</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">t2</span><span class="ruby-operator">|</span>
+        <span class="ruby-keyword">case</span> <span class="ruby-identifier">t2</span>
+          <span class="ruby-keyword">when</span>  <span class="ruby-regexp">%r[0-9]+/</span>
+            <span class="ruby-keyword">if</span> <span class="ruby-identifier">had_dot</span>
+              <span class="ruby-identifier">decimals</span> = <span class="ruby-identifier">t2</span>.<span class="ruby-identifier">to_i</span>
+            <span class="ruby-keyword">else</span>
+              <span class="ruby-identifier">width</span> = <span class="ruby-identifier">t2</span>.<span class="ruby-identifier">to_i</span>
+            <span class="ruby-keyword">end</span>
+          <span class="ruby-keyword">when</span> <span class="ruby-string">'%'</span>
+            <span class="ruby-identifier">format</span> = <span class="ruby-identifier">t2</span>
+          <span class="ruby-keyword">when</span> <span class="ruby-regexp">%r[dmsMwW]/</span>
+            <span class="ruby-identifier">have_dms</span> = <span class="ruby-keyword">true</span>
+            <span class="ruby-identifier">format</span> = <span class="ruby-identifier">t2</span>
+          <span class="ruby-keyword">when</span> <span class="ruby-regexp">%r[NE]/</span>
+            <span class="ruby-identifier">have_dir</span> = <span class="ruby-keyword">true</span>
+            <span class="ruby-identifier">format</span> = <span class="ruby-identifier">t2</span>
+          <span class="ruby-keyword">when</span> <span class="ruby-string">'.'</span> 
+            <span class="ruby-identifier">had_dot</span> = <span class="ruby-keyword">true</span>
+          <span class="ruby-keyword">when</span> <span class="ruby-regexp">%r[Dr]/</span>
+            <span class="ruby-identifier">format</span> = <span class="ruby-identifier">t2</span>
+          <span class="ruby-keyword">else</span>
+            <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;unknown format character '#{t2}'&quot;</span> <span class="ruby-comment">#shouldn't be able to get here.</span>
+        <span class="ruby-keyword">end</span>
+      <span class="ruby-keyword">end</span>
+      [<span class="ruby-value">:format</span>, <span class="ruby-identifier">width</span>, <span class="ruby-identifier">decimals</span>, <span class="ruby-identifier">format</span>]
+    <span class="ruby-keyword">else</span>
+      [<span class="ruby-value">:filler</span>, <span class="ruby-identifier">t</span>]
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">deg</span>,<span class="ruby-identifier">min</span>,<span class="ruby-identifier">sec</span> = <span class="ruby-identifier">to_dms</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">have_dms</span>
+
+  <span class="ruby-identifier">s</span> = <span class="ruby-string">&quot;&quot;</span>
+  <span class="ruby-identifier">tokens</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">t</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">if</span>(<span class="ruby-identifier">t</span>[<span class="ruby-value">0</span>] <span class="ruby-operator">==</span> <span class="ruby-value">:format</span>)
+      <span class="ruby-keyword">case</span> <span class="ruby-identifier">t</span>[<span class="ruby-value">3</span>]
+      <span class="ruby-keyword">when</span> <span class="ruby-string">'%'</span>
+        <span class="ruby-identifier">s</span> <span class="ruby-operator">+=</span> <span class="ruby-string">'%'</span>
+      <span class="ruby-keyword">when</span> <span class="ruby-string">'d'</span>
+        <span class="ruby-identifier">s</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">s_int</span>(<span class="ruby-identifier">deg</span>, <span class="ruby-identifier">t</span>[<span class="ruby-value">1</span>], <span class="ruby-identifier">have_dir</span>)
+      <span class="ruby-keyword">when</span> <span class="ruby-string">'D'</span>
+        <span class="ruby-identifier">s</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">s_float</span>(<span class="ruby-ivar">@value</span>.<span class="ruby-identifier">to_d</span>, <span class="ruby-identifier">t</span>[<span class="ruby-value">1</span>], <span class="ruby-identifier">t</span>[<span class="ruby-value">2</span>], <span class="ruby-identifier">have_dir</span>)
+      <span class="ruby-keyword">when</span> <span class="ruby-string">'m'</span>
+        <span class="ruby-identifier">s</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">s_int</span>(<span class="ruby-identifier">min</span>, <span class="ruby-identifier">t</span>[<span class="ruby-value">1</span>], <span class="ruby-identifier">have_dir</span>)
+      <span class="ruby-keyword">when</span> <span class="ruby-string">'M'</span>
+        <span class="ruby-identifier">s</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">s_float</span>(<span class="ruby-identifier">min</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">sec</span><span class="ruby-operator">/</span><span class="ruby-value">60</span>, <span class="ruby-identifier">t</span>[<span class="ruby-value">1</span>], <span class="ruby-identifier">t</span>[<span class="ruby-value">2</span>], <span class="ruby-identifier">have_dir</span>)
+      <span class="ruby-keyword">when</span> <span class="ruby-string">'W'</span>
+        <span class="ruby-identifier">s</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">s_only_places</span>(<span class="ruby-identifier">sec</span><span class="ruby-operator">/</span><span class="ruby-value">60</span>,  <span class="ruby-identifier">t</span>[<span class="ruby-value">1</span>])
+      <span class="ruby-keyword">when</span> <span class="ruby-string">'s'</span>
+        <span class="ruby-identifier">s</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">s_float</span>(<span class="ruby-identifier">sec</span>, <span class="ruby-identifier">t</span>[<span class="ruby-value">1</span>], <span class="ruby-identifier">t</span>[<span class="ruby-value">2</span>], <span class="ruby-identifier">have_dir</span>)
+      <span class="ruby-keyword">when</span> <span class="ruby-string">'r'</span>
+        <span class="ruby-identifier">s</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">s_float</span>(<span class="ruby-ivar">@value</span>, <span class="ruby-identifier">t</span>[<span class="ruby-value">1</span>], <span class="ruby-identifier">t</span>[<span class="ruby-value">2</span>], <span class="ruby-identifier">have_dir</span>)
+      <span class="ruby-keyword">when</span> <span class="ruby-string">'N'</span>
+        <span class="ruby-identifier">s</span> <span class="ruby-operator">+=</span>  (<span class="ruby-ivar">@value</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">0</span> <span class="ruby-operator">?</span> <span class="ruby-string">'S'</span> <span class="ruby-operator">:</span> <span class="ruby-string">'N'</span>)
+      <span class="ruby-keyword">when</span> <span class="ruby-string">'E'</span>
+        <span class="ruby-identifier">s</span> <span class="ruby-operator">+=</span> (<span class="ruby-ivar">@value</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">0</span> <span class="ruby-operator">?</span> <span class="ruby-string">'W'</span> <span class="ruby-operator">:</span> <span class="ruby-string">'E'</span>)
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">s</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">t</span>[<span class="ruby-value">1</span>] <span class="ruby-comment">#the fillers.</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">s</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- strf-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- strf-method -->
+
+    
+      <div id="method-i-to_bearing" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">to_bearing</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Returns: angle as compass bearing in radians. Compass bearings are
+clockwise, Math angles are counter clockwise.</p>
+          
+
+          
+          <div class="method-source-code" id="to_bearing-source">
+            <pre><span class="ruby-comment"># File lib/angle.rb, line 187</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">to_bearing</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-constant">PI</span> * <span class="ruby-value">2</span> <span class="ruby-operator">-</span> <span class="ruby-ivar">@value</span>,<span class="ruby-keyword">true</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- to_bearing-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- to_bearing-method -->
+
+    
+      <div id="method-i-to_d" class="method-detail method-alias">
+        
+        <div class="method-heading">
+          <span class="method-name">to_d</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+        </div>
+
+        
+
+        
+        <div class="aliases">
+          Alias for: <a href="Angle.html#method-i-to_degrees">to_degrees</a>
+        </div>
+        
+      </div><!-- to_d-method -->
+
+    
+      <div id="method-i-to_degrees" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">to_degrees</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Returns: angle in degrees</p>
+          
+
+          
+          <div class="method-source-code" id="to_degrees-source">
+            <pre><span class="ruby-comment"># File lib/angle.rb, line 124</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">to_degrees</span>
+  <span class="ruby-ivar">@value</span>.<span class="ruby-identifier">to_degrees</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- to_degrees-source -->
+          
+        </div>
+
+        
+        <div class="aliases">
+          Also aliased as: <a href="Angle.html#method-i-to_d">to_d</a>
+        </div>
+        
+
+        
+      </div><!-- to_degrees-method -->
+
+    
+      <div id="method-i-to_dms" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">to_dms</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Returns: [deg,min,sec] Nb. * That min will be negative if the angle is
+negative and deg == 0</p>
+
+<pre>* That sec will be negative if the angle is negative and deg == 0 &amp;&amp; min == 0</pre>
+          
+
+          
+          <div class="method-source-code" id="to_dms-source">
+            <pre><span class="ruby-comment"># File lib/angle.rb, line 140</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">to_dms</span> 
+  <span class="ruby-identifier">d</span> = <span class="ruby-identifier">to_degrees</span>.<span class="ruby-identifier">abs</span>
+  <span class="ruby-identifier">deg</span> = <span class="ruby-identifier">d</span>.<span class="ruby-identifier">floor</span>
+  <span class="ruby-identifier">min</span> = ((<span class="ruby-identifier">d</span><span class="ruby-operator">-</span><span class="ruby-identifier">deg</span>)*<span class="ruby-value">60</span>).<span class="ruby-identifier">floor</span>
+  <span class="ruby-identifier">sec</span> = ((<span class="ruby-identifier">d</span><span class="ruby-operator">-</span><span class="ruby-identifier">deg</span><span class="ruby-operator">-</span><span class="ruby-identifier">min</span><span class="ruby-operator">/</span><span class="ruby-value">60.0</span>)*<span class="ruby-value">3600.0</span>) 
+  
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@value</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">0</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">deg</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">min</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+        <span class="ruby-identifier">sec</span> = <span class="ruby-operator">-</span><span class="ruby-identifier">sec</span>
+      <span class="ruby-keyword">else</span>
+        <span class="ruby-identifier">min</span> = <span class="ruby-operator">-</span><span class="ruby-identifier">min</span> 
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">deg</span> = <span class="ruby-operator">-</span><span class="ruby-identifier">deg</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">deg</span>, <span class="ruby-identifier">min</span>, <span class="ruby-identifier">sec</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- to_dms-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- to_dms-method -->
+
+    
+      <div id="method-i-to_f" class="method-detail method-alias">
+        
+        <div class="method-heading">
+          <span class="method-name">to_f</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Returns: the angle in radians as a float (equivalent to <a
+href="Angle.html#method-i-to_radians">#to_radians</a>)</p>
+          
+
+          
+        </div>
+
+        
+
+        
+        <div class="aliases">
+          Alias for: <a href="Angle.html#method-i-to_radians">to_radians</a>
+        </div>
+        
+      </div><!-- to_f-method -->
+
+    
+      <div id="method-i-to_i" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">to_i</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Returns the angle truncated to an integer, in radians.</p>
+          
+
+          
+          <div class="method-source-code" id="to_i-source">
+            <pre><span class="ruby-comment"># File lib/angle.rb, line 165</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">to_i</span>
+  <span class="ruby-identifier">to_radians</span>.<span class="ruby-identifier">to_i</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- to_i-source -->
+          
+        </div>
+
+        
+        <div class="aliases">
+          Also aliased as: <a href="Angle.html#method-i-to_int">to_int</a>
+        </div>
+        
+
+        
+      </div><!-- to_i-method -->
+
+    
+      <div id="method-i-to_int" class="method-detail method-alias">
+        
+        <div class="method-heading">
+          <span class="method-name">to_int</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+        </div>
+
+        
+
+        
+        <div class="aliases">
+          Alias for: <a href="Angle.html#method-i-to_i">to_i</a>
+        </div>
+        
+      </div><!-- to_int-method -->
+
+    
+      <div id="method-i-to_r" class="method-detail method-alias">
+        
+        <div class="method-heading">
+          <span class="method-name">to_r</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+        </div>
+
+        
+
+        
+        <div class="aliases">
+          Alias for: <a href="Angle.html#method-i-to_radians">to_radians</a>
+        </div>
+        
+      </div><!-- to_r-method -->
+
+    
+      <div id="method-i-to_radians" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">to_radians</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Returns: angle in radians</p>
+          
+
+          
+          <div class="method-source-code" id="to_radians-source">
+            <pre><span class="ruby-comment"># File lib/angle.rb, line 131</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">to_radians</span>
+  <span class="ruby-ivar">@value</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- to_radians-source -->
+          
+        </div>
+
+        
+        <div class="aliases">
+          Also aliased as: <a href="Angle.html#method-i-to_r">to_r</a>, <a href="Angle.html#method-i-to_f">to_f</a>
+        </div>
+        
+
+        
+      </div><!-- to_radians-method -->
+
+    
+      <div id="method-i-to_s" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">to_s</span><span
+            class="method-args">(fmt = nil)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Returns: angle in radians as a string.</p>
+          
+
+          
+          <div class="method-source-code" id="to_s-source">
+            <pre><span class="ruby-comment"># File lib/angle.rb, line 201</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">to_s</span>(<span class="ruby-identifier">fmt</span> = <span class="ruby-keyword">nil</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">to_radians</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-keyword">if</span>(<span class="ruby-identifier">fmt</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">nil</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">strf</span>(<span class="ruby-identifier">fmt</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- to_s-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- to_s-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.12.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

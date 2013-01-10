@@ -1,11 +1,11 @@
-Thu, 10 Jan 2013 19:19:37 +1300
-lib/angle.rb	Sat, 29 Sep 2012 14:49:53 +1200
-lib/coordinate.rb	Sat, 29 Sep 2012 14:49:53 +1200
-lib/core_extensions.rb	Sat, 29 Sep 2012 14:49:53 +1200
-lib/latitude.rb	Sat, 29 Sep 2012 14:49:53 +1200
-lib/longitude.rb	Sat, 29 Sep 2012 14:49:53 +1200
-lib/track_and_distance.rb	Sat, 29 Sep 2012 14:49:53 +1200
-lib/vincenty.rb	Sat, 29 Sep 2012 14:49:53 +1200
+Thu, 10 Jan 2013 20:08:47 +1300
+lib/angle.rb	Thu, 10 Jan 2013 20:05:00 +1300
+lib/coordinate.rb	Thu, 10 Jan 2013 20:05:24 +1300
+lib/core_extensions.rb	Thu, 10 Jan 2013 20:05:51 +1300
+lib/latitude.rb	Thu, 10 Jan 2013 20:08:16 +1300
+lib/longitude.rb	Thu, 10 Jan 2013 20:06:35 +1300
+lib/track_and_distance.rb	Thu, 10 Jan 2013 20:06:52 +1300
+lib/vincenty.rb	Thu, 10 Jan 2013 20:07:53 +1300
 History.txt	Sat, 29 Sep 2012 15:05:29 +1200
 Manifest.txt	Sat, 29 Sep 2012 14:49:53 +1200
-README.txt	Sat, 29 Sep 2012 14:49:53 +1200
+README.txt	Thu, 10 Jan 2013 20:08:42 +1300
