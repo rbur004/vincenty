@@ -8,7 +8,7 @@ require 'hoe'
 
 Hoe.spec 'vincenty' do 
   self.rubyforge_name = "vincenty" 
-  self.developer( "Rob Burrowes","rob@burrowes.org")
+  self.developer( "Rob Burrowes","r.burrowes@auckland.ac.nz")
   #self.url = "http://www.wikarekare.org"
   #self.summary = "Vincenty Algorithm for Distance, Bearing between Map Coordinates." 
   #self.description = s.paragraphs_of('README.txt', 1..4).join("\n\n")

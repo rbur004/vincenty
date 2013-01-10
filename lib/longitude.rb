@@ -24,7 +24,7 @@ class Longitude < Angle
   
   #Returns: angle as string in degrees minutes seconds direction.
   #A West angle is negative, East is Positive.
-  def to_s(fmt='%3d°%2m′%2.4s″%E')
+  def to_s(fmt='%3d^0%2m'%2.4s''%E')
     super(fmt)
   end
   

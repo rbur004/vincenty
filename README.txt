@@ -1,6 +1,8 @@
 = Vincenty
 
-* http://rubyforge.org/projects/vincenty/
+* http://rbur004.github.com/vincenty/
+* Source https://github.com/rbur004/vincenty
+* Gem https://rubygems.org/gems/vincenty
 
 == DESCRIPTION:
 
@@ -33,7 +35,7 @@
 
 == SYNOPSIS:
 
-  flindersPeak = Vincenty.new("-37&deg;57&prime;3.72030″", "144&deg;25&prime;29.52440″" )
+  flindersPeak = Vincenty.new("-37&deg;57&prime;3.72030''", "144&deg;25&prime;29.52440''" )
   buninyong = Vincenty.new("-37&deg; 39' 10.15610''", "143&deg; 55' 35.38390''")
   track_and_bearing = flindersPeak.distanceAndAngle( buninyong )
   puts track_and_bearing

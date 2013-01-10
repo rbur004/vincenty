@@ -204,13 +204,13 @@ class Angle
   end
   
   #formated output of the angle.
-  #The default format is a signed deg°minutes′seconds″ with leading 0's in the minutes and seconds and 4 decimal places for seconds.
+  #The default format is a signed deg^0minutes'seconds'' with leading 0's in the minutes and seconds and 4 decimal places for seconds.
   #formats are:
   # * %wd output the degrees as an integer.
   # **   where w is 0, 1, 2 or 3 and represents the field width. 
   # *** 1 is the default, which indicates that at least 1 digit is displayed
-  # *** 2 indicates that at least 2 digits are displayed. 1 to 9 will be displayed as 01° to 09°
-  # *** 3 indicates that at least 4 digits are displayed. 10 to 99 will be displayed as 010° to 099°
+  # *** 2 indicates that at least 2 digits are displayed. 1 to 9 will be displayed as 01^0 to 09^0
+  # *** 3 indicates that at least 4 digits are displayed. 10 to 99 will be displayed as 010^0 to 099^0
   #
   # * %w.pD outputs degrees as a float.
   # ** p is the number of decimal places.
@@ -218,12 +218,12 @@ class Angle
   # * %wm output minutes as an integer.
   # ** where the width w is 0, 1 , 2 with similar meaning to %d. p is again the number of decimal places.
   #
-  # * %w.pM outputs minutes as a float .e.g. 01.125′.
+  # * %w.pM outputs minutes as a float .e.g. 01.125'.
   # ** p is the number of decimal places.
   #
   # * %wW outputs secs/60 as a float without the leading '0.'. 
-  #       Used with %m like this %2m′%4W , to get minute marker before the decimal places. 
-  #       e.g. -37°01′.1167 rather than -37°01.1167′
+  #       Used with %m like this %2m'%4W , to get minute marker before the decimal places. 
+  #       e.g. -37^001'.1167 rather than -37^001.1167'
   # ** p is the number of decimal places.
   #
   # * %w.ps output seconds as a float.
@@ -238,7 +238,7 @@ class Angle
   # * %% outputs %
   #
   # Other strings in the format are printed as is.
-  def strf(fmt="%d°%2m′%2.4s″")
+  def strf(fmt="%d^0%2m'%2.4s''")
     tokens = fmt.scan(/%[0-9\.]*[%dmsDMNErW]|[^%]*/)
     have_dir = have_dms = false
     tokens.collect! do |t|

@@ -24,7 +24,7 @@ class Vincenty < Coordinate
   #Takes: argument p2 is target coordinate that we want the bearing to.
   #Returns: TrackAndDistance object with the compass bearing and distance in meters to P2
   def sphericalDistanceAndAngle( p2 ) 
-    a = 6378137 #equatorial radius in meters     (±2 m) 
+    a = 6378137 #equatorial radius in meters     (+/-2 m) 
     b = 6356752.31424518 #polar radius in meters
     r = (a+b)/2 #average diametre as a rough estimate for our tests.
     
@@ -52,7 +52,7 @@ class Vincenty < Coordinate
   #Returns: TrackAndDistance object with the compass bearing and distance in meters to P2
   def distanceAndAngle( p2 )
     # a, b = major & minor semiaxes of the ellipsoid
-    a = 6378137 #equatorial radius in meters     (±2 m) 
+    a = 6378137 #equatorial radius in meters     (+/-2 m) 
     b = 6356752.31424518 #polar radius in meters
     f = (a-b)/a #  flattening 
    
@@ -67,7 +67,7 @@ class Vincenty < Coordinate
     
       l = (lon2 - lon1).abs #difference in longitude
       l = 2*Math::PI - l if l > Math::PI
-      u1 = Math.atan( ( 1 - f) * Math.tan( lat1 ) ) #U is ‘reduced latitude’
+      u1 = Math.atan( ( 1 - f) * Math.tan( lat1 ) ) #U is 'reduced latitude'
       u2 = Math.atan( ( 1 - f) *  Math.tan( lat2 ) )
       sin_u1 = Math.sin(u1)
       cos_u1 = Math.cos(u1)
@@ -121,7 +121,7 @@ class Vincenty < Coordinate
   #Takes: TrackAndDistance object with bearing and distance.
   #Returns new Vincenty object with the destination coordinates.
   def sphereDestination( track_and_distance )
-    a = 6378137 #equatorial radius in meters     (±2 m) 
+    a = 6378137 #equatorial radius in meters     (+/-2 m) 
     b = 6356752.31424518 #polar radius in meters
     r = (a+b)/2 #average diametre as a rough estimate for our tests.
     
@@ -144,7 +144,7 @@ class Vincenty < Coordinate
 
   def destination( track_and_distance ) 
     # a, b = major & minor semiaxes of the ellipsoid
-    a = 6378137 #equatorial radius in meters     (±2 m) 
+    a = 6378137 #equatorial radius in meters     (+/-2 m) 
     b = 6356752.31424518 #polar radius in meters
     f = (a-b)/a #  flattening 
     

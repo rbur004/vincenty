@@ -32,7 +32,7 @@ class Latitude < Angle
 
   #Returns: angle as string in degrees minutes seconds direction.
   #A South angle is negative, North is Positive.
-  def to_s(fmt='%2d°%2m′%2.4s″%N')
+  def to_s(fmt='%2d^0%2m'%2.4s''%N')
       super(fmt)
   end
   
