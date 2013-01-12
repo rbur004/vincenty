@@ -5,7 +5,7 @@ require 'ts_longitude.rb'
 require 'ts_coordinate.rb'
 require 'ts_track_and_distance.rb'
 
-puts "Testing from source"
+puts "Testing from installed Gem"
 puts Vincenty.new.version
 
 
