@@ -4,4 +4,4 @@ lib/core_extensions.rb bd840559235b38e68c94cedf45dc58dc29d9af93
 lib/latitude.rb 981ea9dfe7375d840902435f36b89e885a4ea32a
 lib/longitude.rb e24c15821b518146d5f911579518bb12a3b11214
 lib/track_and_distance.rb ce18aa9229e2c75cf41e99b6928bf0c1b7818159
-lib/vincenty.rb 13972ede65a1d818b28cc7a959d359781dd12bbf
+lib/vincenty.rb 0affd7ffad4bd6cea9dba802ee60f788904d979a
