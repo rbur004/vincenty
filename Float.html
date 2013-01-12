@@ -127,7 +127,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#round-instance_method" title="#round (instance method)">- (Object) <strong>round</strong>(n = 0) </a>
+      <a href="#round-instance_method" title="#round (instance method)">- (Float) <strong>round</strong>(n = 0) </a>
     
 
     
@@ -141,8 +141,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Compatible Replacement for Float.round
-Optional argument n is the number of decimal places to round to.</p>
+    <span class="summary_desc"><div class='inline'><p>Compatible Replacement for Float.round.</p>
 </div></span>
   
 </li>
@@ -151,7 +150,7 @@ Optional argument n is the number of decimal places to round to.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#round0-instance_method" title="#round0 (instance method)">- (Object) <strong>round0</strong> </a>
+      <a href="#round0-instance_method" title="#round0 (instance method)">- (Float) <strong>round0</strong> </a>
     
 
     
@@ -165,7 +164,8 @@ Optional argument n is the number of decimal places to round to.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'><p>Replace default round, so we can reference it later.</p>
+</div></span>
   
 </li>
 
@@ -182,7 +182,7 @@ Optional argument n is the number of decimal places to round to.</p>
       <div class="method_details first">
   <h3 class="signature first" id="round-instance_method">
   
-    - (<tt>Object</tt>) <strong>round</strong>(n = 0) 
+    - (<tt><span class='object_link'><a href="" title="Float (class)">Float</a></span></tt>) <strong>round</strong>(n = 0) 
   
 
   
@@ -190,15 +190,51 @@ Optional argument n is the number of decimal places to round to.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Compatible Replacement for Float.round
-Optional argument n is the number of decimal places to round to.
-Returns: float rounded to n decimal places.</p>
+    <p>Compatible Replacement for Float.round</p>
 
 
   </div>
 </div>
 <div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
   
+    <li>
+      
+        <span class='name'>n</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Numeric.html" title="Numeric (class)">Numeric</a></span></tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>0</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>Optional argument n is the number of decimal places to round to.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="" title="Float (class)">Float</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>float rounded to n decimal places.</p>
+</div>
+      
+    </li>
+  
+</ul>
 
 </div><table class="source_code">
   <tr>
@@ -206,13 +242,13 @@ Returns: float rounded to n decimal places.</p>
       <pre class="lines">
 
 
-44
-45
-46
-47</pre>
+48
+49
+50
+51</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/core_extensions.rb', line 44</span>
+      <pre class="code"><span class="info file"># File 'lib/core_extensions.rb', line 48</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_round'>round</span><span class='lparen'>(</span><span class='id identifier rubyid_n'>n</span> <span class='op'>=</span> <span class='int'>0</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_m'>m</span> <span class='op'>=</span> <span class='float'>10.0</span><span class='op'>**</span><span class='id identifier rubyid_n'>n</span>
@@ -226,22 +262,45 @@ Returns: float rounded to n decimal places.</p>
       <div class="method_details ">
   <h3 class="signature " id="round0-instance_method">
   
-    - (<tt>Object</tt>) <strong>round0</strong> 
+    - (<tt><span class='object_link'><a href="" title="Float (class)">Float</a></span></tt>) <strong>round0</strong> 
   
 
   
 
   
-</h3><table class="source_code">
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Replace default round, so we can reference it later.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="" title="Float (class)">Float</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-40</pre>
+43</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/core_extensions.rb', line 40</span>
+      <pre class="code"><span class="info file"># File 'lib/core_extensions.rb', line 43</span>
 
 <span class='kw'>alias</span> <span class='id identifier rubyid_round0'>round0</span> <span class='id identifier rubyid_round'>round</span></pre>
     </td>
@@ -254,7 +313,7 @@ Returns: float rounded to n decimal places.</p>
 </div>
 
     <div id="footer">
-  Generated on Sat Jan 12 13:03:24 2013 by
+  Generated on Sun Jan 13 10:47:55 2013 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.3 (ruby-1.9.3).
 </div>

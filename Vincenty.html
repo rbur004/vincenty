@@ -151,7 +151,7 @@ Added my Modification of the distanceAndAngle formulae to correct the compass be
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#destination-instance_method" title="#destination (instance method)">- (Object) <strong>destination</strong>(track_and_distance) </a>
+      <a href="#destination-instance_method" title="#destination (instance method)">- (Vincenty) <strong>destination</strong>(track_and_distance) </a>
     
 
     
@@ -174,7 +174,7 @@ Added my Modification of the distanceAndAngle formulae to correct the compass be
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#distanceAndAngle-instance_method" title="#distanceAndAngle (instance method)">- (Object) <strong>distanceAndAngle</strong>(p2) </a>
+      <a href="#distanceAndAngle-instance_method" title="#distanceAndAngle (instance method)">- (TrackAndDistance) <strong>distanceAndAngle</strong>(p2) </a>
     
 
     
@@ -197,7 +197,7 @@ Added my Modification of the distanceAndAngle formulae to correct the compass be
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#sphereDestination-instance_method" title="#sphereDestination (instance method)">- (Object) <strong>sphereDestination</strong>(track_and_distance) </a>
+      <a href="#sphereDestination-instance_method" title="#sphereDestination (instance method)">- (Vincenty) <strong>sphereDestination</strong>(track_and_distance) </a>
     
 
     
@@ -212,8 +212,7 @@ Added my Modification of the distanceAndAngle formulae to correct the compass be
 
   
     <span class="summary_desc"><div class='inline'><p>spherical earth estimate of calculation for finding target coordinate from start coordinate, bearing and distance
-Used to run checks on the Vincenty algorithm
-Takes: TrackAndDistance object with bearing and distance.</p>
+Used to run checks on the Vincenty algorithm.</p>
 </div></span>
   
 </li>
@@ -222,7 +221,7 @@ Takes: TrackAndDistance object with bearing and distance.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#sphericalDistanceAndAngle-instance_method" title="#sphericalDistanceAndAngle (instance method)">- (Object) <strong>sphericalDistanceAndAngle</strong>(p2) </a>
+      <a href="#sphericalDistanceAndAngle-instance_method" title="#sphericalDistanceAndAngle (instance method)">- (TrackAndDistance) <strong>sphericalDistanceAndAngle</strong>(p2) </a>
     
 
     
@@ -246,7 +245,7 @@ Reference calculation for testing, assumes the earth is a sphere, which it isn&#
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#version-instance_method" title="#version (instance method)">- (Object) <strong>version</strong> </a>
+      <a href="#version-instance_method" title="#version (instance method)">- (String) <strong>version</strong> </a>
     
 
     
@@ -260,7 +259,8 @@ Reference calculation for testing, assumes the earth is a sphere, which it isn&#
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'><p>Constant VERSION.</p>
+</div></span>
   
 </li>
 
@@ -294,7 +294,7 @@ Reference calculation for testing, assumes the earth is a sphere, which it isn&#
       <div class="method_details first">
   <h3 class="signature first" id="destination-instance_method">
   
-    - (<tt>Object</tt>) <strong>destination</strong>(track_and_distance) 
+    - (<tt><span class='object_link'><a href="" title="Vincenty (class)">Vincenty</a></span></tt>) <strong>destination</strong>(track_and_distance) 
   
 
   
@@ -303,15 +303,49 @@ Reference calculation for testing, assumes the earth is a sphere, which it isn&#
 </h3><div class="docstring">
   <div class="discussion">
     <p>Calculate destination point given start point lat/long, bearing and distance.
-Assumes earth is a WGS-84 Ellipsod.
-Takes: TrackAndDistance object with bearing and distance.
-Returns: new Vincenty object with the destination coordinates.</p>
+Assumes earth is a WGS-84 Ellipsod.</p>
 
 
   </div>
 </div>
 <div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
   
+    <li>
+      
+        <span class='name'>specifying</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="TrackAndDistance.html" title="TrackAndDistance (class)">TrackAndDistance</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>bearing and distance.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="" title="Vincenty (class)">Vincenty</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>with the destination coordinates.</p>
+</div>
+      
+    </li>
+  
+</ul>
 
 </div><table class="source_code">
   <tr>
@@ -319,7 +353,6 @@ Returns: new Vincenty object with the destination coordinates.</p>
       <pre class="lines">
 
 
-144
 145
 146
 147
@@ -360,10 +393,11 @@ Returns: new Vincenty object with the destination coordinates.</p>
 182
 183
 184
-185</pre>
+185
+186</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/vincenty.rb', line 144</span>
+      <pre class="code"><span class="info file"># File 'lib/vincenty.rb', line 145</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_destination'>destination</span><span class='lparen'>(</span> <span class='id identifier rubyid_track_and_distance'>track_and_distance</span> <span class='rparen'>)</span> 
   <span class='comment'># a, b = major &amp; minor semiaxes of the ellipsoid
@@ -415,7 +449,7 @@ Returns: new Vincenty object with the destination coordinates.</p>
       <div class="method_details ">
   <h3 class="signature " id="distanceAndAngle-instance_method">
   
-    - (<tt>Object</tt>) <strong>distanceAndAngle</strong>(p2) 
+    - (<tt><span class='object_link'><a href="TrackAndDistance.html" title="TrackAndDistance (class)">TrackAndDistance</a></span></tt>) <strong>distanceAndAngle</strong>(p2) 
   
 
   
@@ -424,15 +458,49 @@ Returns: new Vincenty object with the destination coordinates.</p>
 </h3><div class="docstring">
   <div class="discussion">
     <p>Vincenty&#39;s algorithm for finding bearing and distance between to coordinates.
-Assumes earth is a WGS-84 Ellipsod.
-Takes: argument p2 is target coordinate that we want the bearing to.
-Returns: TrackAndDistance object with the compass bearing and distance in meters to P2</p>
+Assumes earth is a WGS-84 Ellipsod.</p>
 
 
   </div>
 </div>
 <div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
   
+    <li>
+      
+        <span class='name'>p2</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Coordinate.html" title="Coordinate (class)">Coordinate</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>is target coordinate that we want the bearing to.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="TrackAndDistance.html" title="TrackAndDistance (class)">TrackAndDistance</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>with the compass bearing and distance in meters to P2</p>
+</div>
+      
+    </li>
+  
+</ul>
 
 </div><table class="source_code">
   <tr>
@@ -440,7 +508,6 @@ Returns: TrackAndDistance object with the compass bearing and distance in meters
       <pre class="lines">
 
 
-53
 54
 55
 56
@@ -504,10 +571,11 @@ Returns: TrackAndDistance object with the compass bearing and distance in meters
 114
 115
 116
-117</pre>
+117
+118</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/vincenty.rb', line 53</span>
+      <pre class="code"><span class="info file"># File 'lib/vincenty.rb', line 54</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_distanceAndAngle'>distanceAndAngle</span><span class='lparen'>(</span> <span class='id identifier rubyid_p2'>p2</span> <span class='rparen'>)</span>
   <span class='comment'># a, b = major &amp; minor semiaxes of the ellipsoid
@@ -582,7 +650,7 @@ Returns: TrackAndDistance object with the compass bearing and distance in meters
       <div class="method_details ">
   <h3 class="signature " id="sphereDestination-instance_method">
   
-    - (<tt>Object</tt>) <strong>sphereDestination</strong>(track_and_distance) 
+    - (<tt><span class='object_link'><a href="" title="Vincenty (class)">Vincenty</a></span></tt>) <strong>sphereDestination</strong>(track_and_distance) 
   
 
   
@@ -591,15 +659,49 @@ Returns: TrackAndDistance object with the compass bearing and distance in meters
 </h3><div class="docstring">
   <div class="discussion">
     <p>spherical earth estimate of calculation for finding target coordinate from start coordinate, bearing and distance
-Used to run checks on the Vincenty algorithm
-Takes: TrackAndDistance object with bearing and distance.
-Returns new Vincenty object with the destination coordinates.</p>
+Used to run checks on the Vincenty algorithm</p>
 
 
   </div>
 </div>
 <div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
   
+    <li>
+      
+        <span class='name'>track_and_distance</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="TrackAndDistance.html" title="TrackAndDistance (class)">TrackAndDistance</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>specifying  bearing and distance.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="" title="Vincenty (class)">Vincenty</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>with the destination coordinates.</p>
+</div>
+      
+    </li>
+  
+</ul>
 
 </div><table class="source_code">
   <tr>
@@ -607,7 +709,6 @@ Returns new Vincenty object with the destination coordinates.</p>
       <pre class="lines">
 
 
-123
 124
 125
 126
@@ -621,10 +722,11 @@ Returns new Vincenty object with the destination coordinates.</p>
 134
 135
 136
-137</pre>
+137
+138</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/vincenty.rb', line 123</span>
+      <pre class="code"><span class="info file"># File 'lib/vincenty.rb', line 124</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_sphereDestination'>sphereDestination</span><span class='lparen'>(</span> <span class='id identifier rubyid_track_and_distance'>track_and_distance</span> <span class='rparen'>)</span>
   <span class='id identifier rubyid_a'>a</span> <span class='op'>=</span> <span class='int'>6378137</span> <span class='comment'>#equatorial radius in meters     (+/-2 m) 
@@ -649,7 +751,7 @@ Returns new Vincenty object with the destination coordinates.</p>
       <div class="method_details ">
   <h3 class="signature " id="sphericalDistanceAndAngle-instance_method">
   
-    - (<tt>Object</tt>) <strong>sphericalDistanceAndAngle</strong>(p2) 
+    - (<tt><span class='object_link'><a href="TrackAndDistance.html" title="TrackAndDistance (class)">TrackAndDistance</a></span></tt>) <strong>sphericalDistanceAndAngle</strong>(p2) 
   
 
   
@@ -659,15 +761,49 @@ Returns new Vincenty object with the destination coordinates.</p>
   <div class="discussion">
     <p>Great Circle formulae  <a href="http://en.wikipedia.org/wiki/Great-circle_distance">http://en.wikipedia.org/wiki/Great-circle_distance</a>
 Reference calculation for testing, assumes the earth is a sphere, which it isn&#39;t. 
-This gives us an approximation to verify Vincenty algorithm.
-Takes: argument p2 is target coordinate that we want the bearing to.
-Returns: TrackAndDistance object with the compass bearing and distance in meters to P2</p>
+This gives us an approximation to verify Vincenty algorithm.</p>
 
 
   </div>
 </div>
 <div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
   
+    <li>
+      
+        <span class='name'>p2</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Coordinate.html" title="Coordinate (class)">Coordinate</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>is target coordinate that we want the bearing to.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="TrackAndDistance.html" title="TrackAndDistance (class)">TrackAndDistance</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>with the compass bearing and distance in meters to P2</p>
+</div>
+      
+    </li>
+  
+</ul>
 
 </div><table class="source_code">
   <tr>
@@ -675,7 +811,6 @@ Returns: TrackAndDistance object with the compass bearing and distance in meters
       <pre class="lines">
 
 
-26
 27
 28
 29
@@ -696,10 +831,11 @@ Returns: TrackAndDistance object with the compass bearing and distance in meters
 44
 45
 46
-47</pre>
+47
+48</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/vincenty.rb', line 26</span>
+      <pre class="code"><span class="info file"># File 'lib/vincenty.rb', line 27</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_sphericalDistanceAndAngle'>sphericalDistanceAndAngle</span><span class='lparen'>(</span> <span class='id identifier rubyid_p2'>p2</span> <span class='rparen'>)</span> 
   <span class='id identifier rubyid_a'>a</span> <span class='op'>=</span> <span class='int'>6378137</span> <span class='comment'>#equatorial radius in meters     (+/-2 m) 
@@ -731,24 +867,51 @@ Returns: TrackAndDistance object with the compass bearing and distance in meters
       <div class="method_details ">
   <h3 class="signature " id="version-instance_method">
   
-    - (<tt>Object</tt>) <strong>version</strong> 
+    - (<tt><span class='object_link'><a href="String.html" title="String (class)">String</a></span></tt>) <strong>version</strong> 
   
 
   
 
   
-</h3><table class="source_code">
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Constant VERSION</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>constant VERSION</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-17
 18
-19</pre>
+19
+20</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/vincenty.rb', line 17</span>
+      <pre class="code"><span class="info file"># File 'lib/vincenty.rb', line 18</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_version'>version</span>
   <span class='const'>VERSION</span>
@@ -763,7 +926,7 @@ Returns: TrackAndDistance object with the compass bearing and distance in meters
 </div>
 
     <div id="footer">
-  Generated on Sat Jan 12 13:03:25 2013 by
+  Generated on Sun Jan 13 10:47:55 2013 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.3 (ruby-1.9.3).
 </div>

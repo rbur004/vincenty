@@ -123,7 +123,7 @@
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#altitude-instance_method" title="#altitude (instance method)">- (Object) <strong>altitude</strong> </a>
+      <a href="#altitude-instance_method" title="#altitude (instance method)">- (Numeric) <strong>altitude</strong> </a>
     
 
     
@@ -140,8 +140,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Returns the value of attribute altitude.</p>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -149,7 +148,7 @@
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#latitude-instance_method" title="#latitude (instance method)">- (Object) <strong>latitude</strong> </a>
+      <a href="#latitude-instance_method" title="#latitude (instance method)">- (Latitude) <strong>latitude</strong> </a>
     
 
     
@@ -166,8 +165,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Returns the value of attribute latitude.</p>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -175,7 +173,7 @@
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#longitude-instance_method" title="#longitude (instance method)">- (Object) <strong>longitude</strong> </a>
+      <a href="#longitude-instance_method" title="#longitude (instance method)">- (Longitude) <strong>longitude</strong> </a>
     
 
     
@@ -192,8 +190,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Returns the value of attribute longitude.</p>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -240,7 +237,7 @@ latitude and longitude are in degrees unless radians == true (or set to :radians
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#to_ary-instance_method" title="#to_ary (instance method)">- (Object) <strong>to_ary</strong> </a>
+      <a href="#to_ary-instance_method" title="#to_ary (instance method)">- (Latitude, ...) <strong>to_ary</strong> </a>
     
 
     
@@ -256,8 +253,7 @@ latitude and longitude are in degrees unless radians == true (or set to :radians
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Return coordinate as a 3 member array, with
-members, latitude, longitude and altitude.</p>
+    <span class="summary_desc"><div class='inline'><p>With members, latitude, longitude and altitude.</p>
 </div></span>
   
 </li>
@@ -266,7 +262,7 @@ members, latitude, longitude and altitude.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#to_hash-instance_method" title="#to_hash (instance method)">- (Object) <strong>to_hash</strong> </a>
+      <a href="#to_hash-instance_method" title="#to_hash (instance method)">- (Hash) <strong>to_hash</strong> </a>
     
 
     
@@ -280,8 +276,7 @@ members, latitude, longitude and altitude.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>return coordinate a 3 member hash with
-keys :latitude, :longitude, and :altitude.</p>
+    <span class="summary_desc"><div class='inline'><p>With keys :latitude, :longitude, and :altitude.</p>
 </div></span>
   
 </li>
@@ -290,7 +285,7 @@ keys :latitude, :longitude, and :altitude.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#to_s-instance_method" title="#to_s (instance method)">- (Object) <strong>to_s</strong> </a>
+      <a href="#to_s-instance_method" title="#to_s (instance method)">- (String) <strong>to_s</strong> </a>
     
 
     
@@ -304,7 +299,7 @@ keys :latitude, :longitude, and :altitude.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Returns: Latitude longitude and altitude as a single string.</p>
+    <span class="summary_desc"><div class='inline'><p>Latitude longitude and altitude as a single space separated string.</p>
 </div></span>
   
 </li>
@@ -342,17 +337,17 @@ latitude and longitude are in degrees unless radians == true (or set to :radians
       <pre class="lines">
 
 
-10
-11
-12
-13
-14</pre>
+15
+16
+17
+18
+19</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/coordinate.rb', line 10</span>
+      <pre class="code"><span class="info file"># File 'lib/coordinate.rb', line 15</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_latitude'>latitude</span><span class='op'>=</span><span class='int'>0</span><span class='comma'>,</span> <span class='id identifier rubyid_longitude'>longitude</span><span class='op'>=</span><span class='int'>0</span><span class='comma'>,</span> <span class='id identifier rubyid_altitude'>altitude</span><span class='op'>=</span><span class='int'>0</span><span class='comma'>,</span> <span class='id identifier rubyid_radians'>radians</span> <span class='op'>=</span> <span class='kw'>false</span><span class='rparen'>)</span>
-  <span class='ivar'>@latitude</span> <span class='op'>=</span> <span class='const'>Latitude</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_latitude'>latitude</span><span class='comma'>,</span><span class='id identifier rubyid_radians'>radians</span><span class='rparen'>)</span>
+  <span class='ivar'>@latitude</span> <span class='op'>=</span> <span class='const'>Latitude</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_latitude'>latitude</span><span class='comma'>,</span><span class='id identifier rubyid_radians'>radians</span><span class='rparen'>)</span> 
   <span class='ivar'>@longitude</span> <span class='op'>=</span> <span class='const'>Longitude</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_longitude'>longitude</span><span class='comma'>,</span><span class='id identifier rubyid_radians'>radians</span><span class='rparen'>)</span>
   <span class='ivar'>@altitude</span> <span class='op'>=</span> <span class='id identifier rubyid_altitude'>altitude</span><span class='period'>.</span><span class='id identifier rubyid_to_f'>to_f</span>
 <span class='kw'>end</span></pre>
@@ -371,7 +366,7 @@ latitude and longitude are in degrees unless radians == true (or set to :radians
       <div class="method_details first">
   <h3 class="signature first" id="altitude-instance_method">
   
-    - (<tt>Object</tt>) <strong>altitude</strong> 
+    - (<tt><span class='object_link'><a href="Numeric.html" title="Numeric (class)">Numeric</a></span></tt>) <strong>altitude</strong> 
   
 
   
@@ -379,13 +374,25 @@ latitude and longitude are in degrees unless radians == true (or set to :radians
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns the value of attribute altitude</p>
-
+    
 
   </div>
 </div>
 <div class="tags">
   
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Numeric.html" title="Numeric (class)">Numeric</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
 
 </div><table class="source_code">
   <tr>
@@ -393,12 +400,12 @@ latitude and longitude are in degrees unless radians == true (or set to :radians
       <pre class="lines">
 
 
-6
-7
-8</pre>
+11
+12
+13</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/coordinate.rb', line 6</span>
+      <pre class="code"><span class="info file"># File 'lib/coordinate.rb', line 11</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_altitude'>altitude</span>
   <span class='ivar'>@altitude</span>
@@ -413,7 +420,7 @@ latitude and longitude are in degrees unless radians == true (or set to :radians
       <div class="method_details ">
   <h3 class="signature " id="latitude-instance_method">
   
-    - (<tt>Object</tt>) <strong>latitude</strong> 
+    - (<tt><span class='object_link'><a href="Latitude.html" title="Latitude (class)">Latitude</a></span></tt>) <strong>latitude</strong> 
   
 
   
@@ -421,13 +428,25 @@ latitude and longitude are in degrees unless radians == true (or set to :radians
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns the value of attribute latitude</p>
-
+    
 
   </div>
 </div>
 <div class="tags">
   
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Latitude.html" title="Latitude (class)">Latitude</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
 
 </div><table class="source_code">
   <tr>
@@ -435,12 +454,12 @@ latitude and longitude are in degrees unless radians == true (or set to :radians
       <pre class="lines">
 
 
-6
 7
-8</pre>
+8
+9</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/coordinate.rb', line 6</span>
+      <pre class="code"><span class="info file"># File 'lib/coordinate.rb', line 7</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_latitude'>latitude</span>
   <span class='ivar'>@latitude</span>
@@ -455,7 +474,7 @@ latitude and longitude are in degrees unless radians == true (or set to :radians
       <div class="method_details ">
   <h3 class="signature " id="longitude-instance_method">
   
-    - (<tt>Object</tt>) <strong>longitude</strong> 
+    - (<tt><span class='object_link'><a href="Longitude.html" title="Longitude (class)">Longitude</a></span></tt>) <strong>longitude</strong> 
   
 
   
@@ -463,13 +482,25 @@ latitude and longitude are in degrees unless radians == true (or set to :radians
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns the value of attribute longitude</p>
-
+    
 
   </div>
 </div>
 <div class="tags">
   
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Longitude.html" title="Longitude (class)">Longitude</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
 
 </div><table class="source_code">
   <tr>
@@ -477,12 +508,12 @@ latitude and longitude are in degrees unless radians == true (or set to :radians
       <pre class="lines">
 
 
-6
-7
-8</pre>
+9
+10
+11</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/coordinate.rb', line 6</span>
+      <pre class="code"><span class="info file"># File 'lib/coordinate.rb', line 9</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_longitude'>longitude</span>
   <span class='ivar'>@longitude</span>
@@ -502,7 +533,7 @@ latitude and longitude are in degrees unless radians == true (or set to :radians
       <div class="method_details first">
   <h3 class="signature first" id="to_ary-instance_method">
   
-    - (<tt>Object</tt>) <strong>to_ary</strong> 
+    - (<tt><span class='object_link'><a href="Latitude.html" title="Latitude (class)">Latitude</a></span></tt>, ...) <strong>to_ary</strong> 
   
 
   
@@ -514,14 +545,30 @@ latitude and longitude are in degrees unless radians == true (or set to :radians
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Return coordinate as a 3 member array, with
-members, latitude, longitude and altitude</p>
+    <p>With members, latitude, longitude and altitude</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Latitude.html" title="Latitude (class)">Latitude</a></span></tt>, <tt><span class='object_link'><a href="Longitude.html" title="Longitude (class)">Longitude</a></span></tt>, <tt><span class='object_link'><a href="Float.html" title="Float (class)">Float</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>with members, latitude, longitude and altitude</p>
+</div>
+      
+    </li>
+  
+</ul>
 
 </div><table class="source_code">
   <tr>
@@ -529,12 +576,12 @@ members, latitude, longitude and altitude</p>
       <pre class="lines">
 
 
-24
-25
-26</pre>
+27
+28
+29</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/coordinate.rb', line 24</span>
+      <pre class="code"><span class="info file"># File 'lib/coordinate.rb', line 27</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_ary'>to_ary</span>
   <span class='lbracket'>[</span> <span class='ivar'>@latitude</span><span class='comma'>,</span> <span class='ivar'>@longitude</span><span class='comma'>,</span> <span class='ivar'>@altitude</span> <span class='rbracket'>]</span>
@@ -547,7 +594,7 @@ members, latitude, longitude and altitude</p>
       <div class="method_details ">
   <h3 class="signature " id="to_hash-instance_method">
   
-    - (<tt>Object</tt>) <strong>to_hash</strong> 
+    - (<tt>Hash</tt>) <strong>to_hash</strong> 
   
 
   
@@ -555,14 +602,30 @@ members, latitude, longitude and altitude</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>return coordinate a 3 member hash with
-keys :latitude, :longitude, and :altitude</p>
+    <p>With keys :latitude, :longitude, and :altitude</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>with keys :latitude, :longitude, and :altitude</p>
+</div>
+      
+    </li>
+  
+</ul>
 
 </div><table class="source_code">
   <tr>
@@ -570,12 +633,12 @@ keys :latitude, :longitude, and :altitude</p>
       <pre class="lines">
 
 
-32
-33
-34</pre>
+34
+35
+36</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/coordinate.rb', line 32</span>
+      <pre class="code"><span class="info file"># File 'lib/coordinate.rb', line 34</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_hash'>to_hash</span>
   <span class='lbrace'>{</span> <span class='symbol'>:latitude</span> <span class='op'>=&gt;</span> <span class='ivar'>@latitude</span><span class='comma'>,</span> <span class='symbol'>:longitude</span> <span class='op'>=&gt;</span> <span class='ivar'>@longitude</span><span class='comma'>,</span> <span class='symbol'>:altitude</span> <span class='op'>=&gt;</span> <span class='ivar'>@altitude</span> <span class='rbrace'>}</span>
@@ -588,7 +651,7 @@ keys :latitude, :longitude, and :altitude</p>
       <div class="method_details ">
   <h3 class="signature " id="to_s-instance_method">
   
-    - (<tt>Object</tt>) <strong>to_s</strong> 
+    - (<tt><span class='object_link'><a href="String.html" title="String (class)">String</a></span></tt>) <strong>to_s</strong> 
   
 
   
@@ -596,14 +659,30 @@ keys :latitude, :longitude, and :altitude</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns: Latitude longitude and altitude as a single string.
-Should add an optional format string to this.</p>
+    <p>Latitude longitude and altitude as a single space separated string.</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>Latitude longitude and altitude as a single space separated string.</p>
+</div>
+      
+    </li>
+  
+</ul>
 
 </div><table class="source_code">
   <tr>
@@ -611,12 +690,12 @@ Should add an optional format string to this.</p>
       <pre class="lines">
 
 
-18
-19
-20</pre>
+22
+23
+24</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/coordinate.rb', line 18</span>
+      <pre class="code"><span class="info file"># File 'lib/coordinate.rb', line 22</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_s'>to_s</span>
   <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='ivar'>@latitude</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span> <span class='rbrace'>}</span><span class='tstring_content'>  </span><span class='embexpr_beg'>#{</span><span class='ivar'>@longitude</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='rbrace'>}</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='ivar'>@altitude</span><span class='rbrace'>}</span><span class='tstring_content'>m</span><span class='tstring_end'>&quot;</span></span>
@@ -631,7 +710,7 @@ Should add an optional format string to this.</p>
 </div>
 
     <div id="footer">
-  Generated on Sat Jan 12 13:03:24 2013 by
+  Generated on Sun Jan 13 10:47:55 2013 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.3 (ruby-1.9.3).
 </div>

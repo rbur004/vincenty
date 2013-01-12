@@ -131,7 +131,7 @@
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#angle-instance_method" title="#angle (instance method)">- (Object) <strong>angle</strong> </a>
+      <a href="#angle-instance_method" title="#angle (instance method)">- (Float) <strong>angle</strong> </a>
     
 
     
@@ -150,7 +150,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>stored in radians.</p>
+    <span class="summary_desc"><div class='inline'><p>Stored in radians.</p>
 </div></span>
   
 </li>
@@ -209,8 +209,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Class level function that takes an array of [degress,minutes, seconds, direction]
-and returns decimal degrees.</p>
+    <span class="summary_desc"><div class='inline'><p>Class level function that takes an array of [degress,minutes, seconds, direction] or [degrees,minutes,seconds].</p>
 </div></span>
   
 </li>
@@ -298,7 +297,7 @@ Assumes decimal degress unless radians == true .</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#%25-instance_method" title="#% (instance method)">- (Angle) <strong>%</strong>(angle) </a>
+      <a href="#%25-instance_method" title="#% (instance method)">- (Angle, self) <strong>%</strong>(angle) </a>
     
 
     
@@ -321,7 +320,7 @@ Assumes decimal degress unless radians == true .</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#%2A-instance_method" title="#* (instance method)">- (Angle) <strong>*</strong>(angle) </a>
+      <a href="#%2A-instance_method" title="#* (instance method)">- (Angle, self) <strong>*</strong>(angle) </a>
     
 
     
@@ -344,7 +343,7 @@ Assumes decimal degress unless radians == true .</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#%2A%2A-instance_method" title="#** (instance method)">- (Angle) <strong>**</strong>(angle) </a>
+      <a href="#%2A%2A-instance_method" title="#** (instance method)">- (Angle, self) <strong>**</strong>(angle) </a>
     
 
     
@@ -367,7 +366,7 @@ Assumes decimal degress unless radians == true .</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#%2B-instance_method" title="#+ (instance method)">- (Angle) <strong>+</strong>(angle) </a>
+      <a href="#%2B-instance_method" title="#+ (instance method)">- (Angle, self) <strong>+</strong>(angle) </a>
     
 
     
@@ -390,7 +389,7 @@ Assumes decimal degress unless radians == true .</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#%2B%40-instance_method" title="#+@ (instance method)">- (Angle) <strong>+@</strong> </a>
+      <a href="#%2B%40-instance_method" title="#+@ (instance method)">- (Angle, self) <strong>+@</strong> </a>
     
 
     
@@ -413,7 +412,7 @@ Assumes decimal degress unless radians == true .</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#--instance_method" title="#- (instance method)">- (Angle) <strong>-</strong>(angle) </a>
+      <a href="#--instance_method" title="#- (instance method)">- (Angle, self) <strong>-</strong>(angle) </a>
     
 
     
@@ -436,7 +435,7 @@ Assumes decimal degress unless radians == true .</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#-%40-instance_method" title="#-@ (instance method)">- (Angle) <strong>-@</strong> </a>
+      <a href="#-%40-instance_method" title="#-@ (instance method)">- (Angle, self) <strong>-@</strong> </a>
     
 
     
@@ -459,7 +458,7 @@ Assumes decimal degress unless radians == true .</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#%2F-instance_method" title="#/ (instance method)">- (Angle) <strong>/</strong>(angle) </a>
+      <a href="#%2F-instance_method" title="#/ (instance method)">- (Angle, self) <strong>/</strong>(angle) </a>
     
 
     
@@ -567,7 +566,7 @@ Assumes decimal degress unless radians == true .</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>angle may be anything that has a to_f and to_radians.</p>
+    <span class="summary_desc"><div class='inline'><p>A new instance of Angle.</p>
 </div></span>
   
 </li>
@@ -742,7 +741,7 @@ Nb.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#to_radians-instance_method" title="#to_radians (instance method)">- (Object) <strong>to_radians</strong> </a>
+      <a href="#to_radians-instance_method" title="#to_radians (instance method)">- (Float) <strong>to_radians</strong> </a>
     
 
     
@@ -758,7 +757,7 @@ Nb.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Returns: angle in radians.</p>
+    <span class="summary_desc"><div class='inline'><p>Angle in radians.</p>
 </div></span>
   
 </li>
@@ -805,15 +804,51 @@ Nb.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>angle may be anything that has a to_f and to_radians. 
-The Default for angle is degrees, but internally @angle is stored in radians.
-if radians is passed true or :radians, then angle is in radians, not degrees.</p>
+    <p>A new instance of Angle</p>
 
 
   </div>
 </div>
 <div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
   
+    <li>
+      
+        <span class='name'>angle</span>
+      
+      
+        <span class='type'>(<tt>#to_f</tt>, <tt>#to_radians</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>0</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>may be anything that has a to_f and to_radians.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>radians</span>
+      
+      
+        <span class='type'>(<tt>true</tt>, <tt>false</tt>, <tt>:radians</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>false</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>Angle is in degrees unless radians == true (or set to :radians).</p>
+</div>
+      
+    </li>
+  
+</ul>
+
 
 </div><table class="source_code">
   <tr>
@@ -821,6 +856,7 @@ if radians is passed true or :radians, then angle is in radians, not degrees.</p
       <pre class="lines">
 
 
+19
 20
 21
 22
@@ -831,11 +867,10 @@ if radians is passed true or :radians, then angle is in radians, not degrees.</p
 27
 28
 29
-30
-31</pre>
+30</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/angle.rb', line 20</span>
+      <pre class="code"><span class="info file"># File 'lib/angle.rb', line 19</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_angle'>angle</span><span class='op'>=</span><span class='int'>0</span><span class='comma'>,</span> <span class='id identifier rubyid_radians'>radians</span><span class='op'>=</span><span class='kw'>false</span><span class='rparen'>)</span>
   <span class='comment'>#assumes that we are getting an angle in degrees.
@@ -864,7 +899,7 @@ if radians is passed true or :radians, then angle is in radians, not degrees.</p
       <div class="method_details first">
   <h3 class="signature first" id="angle-instance_method">
   
-    - (<tt>Object</tt>) <strong>angle</strong> 
+    - (<tt><span class='object_link'><a href="Float.html" title="Float (class)">Float</a></span></tt>) <strong>angle</strong> 
   
 
   
@@ -876,13 +911,30 @@ if radians is passed true or :radians, then angle is in radians, not degrees.</p
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>stored in radians</p>
+    <p>Stored in radians</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Float.html" title="Float (class)">Float</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>stored in radians</p>
+</div>
+      
+    </li>
+  
+</ul>
 
 </div><table class="source_code">
   <tr>
@@ -923,15 +975,73 @@ if radians is passed true or :radians, then angle is in radians, not degrees.</p
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Class level function that converts 4 arguments into decimal degrees.
-Dircection is one of &#39;N&#39;, &#39;S&#39;, &#39;E&#39;, &#39;W&#39;.
-direction is optional, as you might want to specify a negative value for degrees</p>
+    <p>Class level function that converts 4 arguments into decimal degrees.</p>
 
 
   </div>
 </div>
 <div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
   
+    <li>
+      
+        <span class='name'>degrees</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Numeric.html" title="Numeric (class)">Numeric</a></span></tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>0</tt>)</em>
+      
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>minutes</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Numeric.html" title="Numeric (class)">Numeric</a></span></tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>0</tt>)</em>
+      
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>seconds</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Numeric.html" title="Numeric (class)">Numeric</a></span></tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>0</tt>)</em>
+      
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>direction</span>
+      
+      
+        <span class='type'>(<tt>'N'</tt>, <tt>'S'</tt>, <tt>'E'</tt>, <tt>'W'</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>'N'</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>Optional, as the direction might be specified by a negative value for degrees</p>
+</div>
+      
+    </li>
+  
+</ul>
+
 <p class="tag_title">Returns:</p>
 <ul class="return">
   
@@ -956,7 +1066,6 @@ direction is optional, as you might want to specify a negative value for degrees
       <pre class="lines">
 
 
-38
 39
 40
 41
@@ -964,10 +1073,11 @@ direction is optional, as you might want to specify a negative value for degrees
 43
 44
 45
-46</pre>
+46
+47</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/angle.rb', line 38</span>
+      <pre class="code"><span class="info file"># File 'lib/angle.rb', line 39</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_decimal_deg'>decimal_deg</span><span class='lparen'>(</span><span class='id identifier rubyid_degrees'>degrees</span><span class='op'>=</span><span class='int'>0</span><span class='comma'>,</span> <span class='id identifier rubyid_minutes'>minutes</span><span class='op'>=</span><span class='int'>0</span><span class='comma'>,</span> <span class='id identifier rubyid_seconds'>seconds</span><span class='op'>=</span><span class='int'>0</span><span class='comma'>,</span> <span class='id identifier rubyid_direction'>direction</span><span class='op'>=</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>N</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span>
   <span class='id identifier rubyid_s'>s</span> <span class='op'>=</span> <span class='lbrace'>{</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>N</span><span class='tstring_end'>'</span></span><span class='op'>=&gt;</span><span class='int'>1</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>S</span><span class='tstring_end'>'</span></span><span class='op'>=&gt;</span><span class='op'>-</span><span class='int'>1</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>E</span><span class='tstring_end'>'</span></span><span class='op'>=&gt;</span><span class='int'>1</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>W</span><span class='tstring_end'>'</span></span><span class='op'>=&gt;</span><span class='op'>-</span><span class='int'>1</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>n</span><span class='tstring_end'>'</span></span><span class='op'>=&gt;</span><span class='int'>1</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>s</span><span class='tstring_end'>'</span></span><span class='op'>=&gt;</span><span class='op'>-</span><span class='int'>1</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>e</span><span class='tstring_end'>'</span></span><span class='op'>=&gt;</span><span class='int'>1</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>w</span><span class='tstring_end'>'</span></span><span class='op'>=&gt;</span><span class='op'>-</span><span class='int'>1</span> <span class='rbrace'>}</span>
@@ -994,14 +1104,32 @@ direction is optional, as you might want to specify a negative value for degrees
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Class level function that takes an array of [degress,minutes, seconds, direction]
-and returns decimal degrees</p>
+    <p>Class level function that takes an array of [degress,minutes, seconds, direction] or [degrees,minutes,seconds]</p>
 
 
   </div>
 </div>
 <div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
   
+    <li>
+      
+        <span class='name'>a</span>
+      
+      
+        <span class='type'>(<tt>Array</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>Array is expanded and passed as degrees,minutes,seconds,direction to Angle#decimal_deg</p>
+</div>
+      
+    </li>
+  
+</ul>
+
 <p class="tag_title">Returns:</p>
 <ul class="return">
   
@@ -1026,12 +1154,12 @@ and returns decimal degrees</p>
       <pre class="lines">
 
 
-51
 52
-53</pre>
+53
+54</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/angle.rb', line 51</span>
+      <pre class="code"><span class="info file"># File 'lib/angle.rb', line 52</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_decimal_deg_from_ary'>decimal_deg_from_ary</span><span class='lparen'>(</span><span class='id identifier rubyid_a'>a</span><span class='rparen'>)</span>
   <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_decimal_deg'>decimal_deg</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_a'>a</span><span class='rparen'>)</span>
@@ -1058,7 +1186,28 @@ and returns decimal degrees</p>
   </div>
 </div>
 <div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
   
+    <li>
+      
+        <span class='name'>d</span>
+      
+      
+        <span class='type'>(<tt>#to_radians</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>0</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>Angle to convert to radians, to create new Angle object from.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
 <p class="tag_title">Returns:</p>
 <ul class="return">
   
@@ -1079,12 +1228,12 @@ and returns decimal degrees</p>
       <pre class="lines">
 
 
-90
-91
-92</pre>
+96
+97
+98</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/angle.rb', line 90</span>
+      <pre class="code"><span class="info file"># File 'lib/angle.rb', line 96</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_degrees'>degrees</span><span class='lparen'>(</span><span class='id identifier rubyid_d'>d</span><span class='op'>=</span><span class='int'>0</span><span class='rparen'>)</span> <span class='comment'>#passed in degrees.
 </span>  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_d'>d</span><span class='period'>.</span><span class='id identifier rubyid_to_radians'>to_radians</span><span class='comma'>,</span> <span class='kw'>true</span><span class='rparen'>)</span>
@@ -1114,7 +1263,43 @@ Nb. * That min will be negative if the angle is negative and deg == 0
   </div>
 </div>
 <div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
   
+    <li>
+      
+        <span class='name'>angle</span>
+      
+      
+        <span class='type'>(<tt>#to_f</tt>, <tt>#to_degrees</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>may be anything that has a to_f and to_radians.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>radians</span>
+      
+      
+        <span class='type'>(<tt>true</tt>, <tt>false</tt>, <tt>:radians</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>false</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>Angle is in degrees unless radians == true (or set to :radians).</p>
+</div>
+      
+    </li>
+  
+</ul>
+
 <p class="tag_title">Returns:</p>
 <ul class="return">
   
@@ -1139,9 +1324,6 @@ Nb. * That min will be negative if the angle is negative and deg == 0
       <pre class="lines">
 
 
-60
-61
-62
 63
 64
 65
@@ -1159,13 +1341,18 @@ Nb. * That min will be negative if the angle is negative and deg == 0
 77
 78
 79
-80</pre>
+80
+81
+82
+83
+84</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/angle.rb', line 60</span>
+      <pre class="code"><span class="info file"># File 'lib/angle.rb', line 63</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_dms'>dms</span><span class='lparen'>(</span><span class='id identifier rubyid_angle'>angle</span><span class='comma'>,</span> <span class='id identifier rubyid_radians'>radians</span> <span class='op'>=</span> <span class='kw'>false</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_angle'>angle</span> <span class='op'>=</span> <span class='id identifier rubyid_angle'>angle</span><span class='period'>.</span><span class='id identifier rubyid_to_d'>to_d</span> <span class='kw'>if</span> <span class='id identifier rubyid_radians'>radians</span> <span class='op'>==</span> <span class='kw'>true</span> <span class='op'>||</span> <span class='id identifier rubyid_radians'>radians</span> <span class='op'>==</span> <span class='symbol'>:radians</span>
+  <span class='id identifier rubyid_ongle'>ongle</span> <span class='op'>=</span> <span class='id identifier rubyid_angle'>angle</span><span class='period'>.</span><span class='id identifier rubyid_to_f'>to_f</span> <span class='comment'>#means Strings, Numeric, and anything accepting a #to_f will work.
+</span>  <span class='id identifier rubyid_angle'>angle</span> <span class='op'>=</span> <span class='id identifier rubyid_angle'>angle</span><span class='period'>.</span><span class='id identifier rubyid_to_degrees'>to_degrees</span> <span class='kw'>if</span> <span class='id identifier rubyid_radians'>radians</span> <span class='op'>==</span> <span class='kw'>true</span> <span class='op'>||</span> <span class='id identifier rubyid_radians'>radians</span> <span class='op'>==</span> <span class='symbol'>:radians</span>
   <span class='id identifier rubyid_v'>v</span> <span class='op'>=</span> <span class='id identifier rubyid_angle'>angle</span><span class='period'>.</span><span class='id identifier rubyid_abs'>abs</span>
   <span class='id identifier rubyid_deg'>deg</span> <span class='op'>=</span> <span class='id identifier rubyid_v'>v</span><span class='period'>.</span><span class='id identifier rubyid_floor'>floor</span>
   <span class='id identifier rubyid_min'>min</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='lparen'>(</span><span class='id identifier rubyid_v'>v</span><span class='op'>-</span><span class='id identifier rubyid_deg'>deg</span><span class='rparen'>)</span><span class='op'>*</span><span class='float'>60.0</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_floor'>floor</span>
@@ -1207,7 +1394,28 @@ Nb. * That min will be negative if the angle is negative and deg == 0
   </div>
 </div>
 <div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
   
+    <li>
+      
+        <span class='name'>r</span>
+      
+      
+        <span class='type'>(<tt>#to_f</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>0</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>Value in radians to create the new Angle class with.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
 <p class="tag_title">Returns:</p>
 <ul class="return">
   
@@ -1228,12 +1436,12 @@ Nb. * That min will be negative if the angle is negative and deg == 0
       <pre class="lines">
 
 
-84
-85
-86</pre>
+89
+90
+91</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/angle.rb', line 84</span>
+      <pre class="code"><span class="info file"># File 'lib/angle.rb', line 89</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_radians'>radians</span><span class='lparen'>(</span><span class='id identifier rubyid_r'>r</span><span class='op'>=</span><span class='int'>0</span><span class='rparen'>)</span> <span class='comment'>#passed in radians.
 </span>  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_r'>r</span><span class='period'>.</span><span class='id identifier rubyid_to_f'>to_f</span><span class='comma'>,</span> <span class='kw'>true</span><span class='rparen'>)</span> <span class='comment'>#Nb. self is Angle, be we don't Angle.new, as we want subclasses to return their class, not Angle.
@@ -1252,7 +1460,7 @@ Nb. * That min will be negative if the angle is negative and deg == 0
       <div class="method_details first">
   <h3 class="signature first" id="%-instance_method">
   
-    - (<tt><span class='object_link'><a href="" title="Angle (class)">Angle</a></span></tt>) <strong>%</strong>(angle) 
+    - (<tt><span class='object_link'><a href="" title="Angle (class)">Angle</a></span></tt>, <tt>self</tt>) <strong>%</strong>(angle) 
   
 
   
@@ -1266,14 +1474,29 @@ Nb. * That min will be negative if the angle is negative and deg == 0
   </div>
 </div>
 <div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
   
+    <li>
+      
+        <span class='name'>angle</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="" title="Angle (class)">Angle</a></span></tt>, <tt><span class='object_link'><a href="Numeric.html" title="Numeric (class)">Numeric</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
 <p class="tag_title">Returns:</p>
 <ul class="return">
   
     <li>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="" title="Angle (class)">Angle</a></span></tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="" title="Angle (class)">Angle</a></span></tt>, <tt>self</tt>)</span>
       
       
       
@@ -1287,12 +1510,12 @@ Nb. * That min will be negative if the angle is negative and deg == 0
       <pre class="lines">
 
 
-148
-149
-150</pre>
+161
+162
+163</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/angle.rb', line 148</span>
+      <pre class="code"><span class="info file"># File 'lib/angle.rb', line 161</span>
 
 <span class='kw'>def</span> <span class='op'>%</span><span class='lparen'>(</span><span class='id identifier rubyid_angle'>angle</span><span class='rparen'>)</span>
   <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_radians'>radians</span><span class='lparen'>(</span><span class='ivar'>@angle</span> <span class='op'>%</span> <span class='id identifier rubyid_angle'>angle</span><span class='rparen'>)</span>
@@ -1305,7 +1528,7 @@ Nb. * That min will be negative if the angle is negative and deg == 0
       <div class="method_details ">
   <h3 class="signature " id="*-instance_method">
   
-    - (<tt><span class='object_link'><a href="" title="Angle (class)">Angle</a></span></tt>) <strong>*</strong>(angle) 
+    - (<tt><span class='object_link'><a href="" title="Angle (class)">Angle</a></span></tt>, <tt>self</tt>) <strong>*</strong>(angle) 
   
 
   
@@ -1319,14 +1542,29 @@ Nb. * That min will be negative if the angle is negative and deg == 0
   </div>
 </div>
 <div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
   
+    <li>
+      
+        <span class='name'>angle</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="" title="Angle (class)">Angle</a></span></tt>, <tt><span class='object_link'><a href="Numeric.html" title="Numeric (class)">Numeric</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
 <p class="tag_title">Returns:</p>
 <ul class="return">
   
     <li>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="" title="Angle (class)">Angle</a></span></tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="" title="Angle (class)">Angle</a></span></tt>, <tt>self</tt>)</span>
       
       
       
@@ -1340,12 +1578,12 @@ Nb. * That min will be negative if the angle is negative and deg == 0
       <pre class="lines">
 
 
-130
-131
-132</pre>
+140
+141
+142</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/angle.rb', line 130</span>
+      <pre class="code"><span class="info file"># File 'lib/angle.rb', line 140</span>
 
 <span class='kw'>def</span> <span class='op'>*</span><span class='lparen'>(</span><span class='id identifier rubyid_angle'>angle</span><span class='rparen'>)</span>
   <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_radians'>radians</span><span class='lparen'>(</span><span class='ivar'>@angle</span> <span class='op'>*</span> <span class='id identifier rubyid_angle'>angle</span><span class='rparen'>)</span>
@@ -1358,7 +1596,7 @@ Nb. * That min will be negative if the angle is negative and deg == 0
       <div class="method_details ">
   <h3 class="signature " id="**-instance_method">
   
-    - (<tt><span class='object_link'><a href="" title="Angle (class)">Angle</a></span></tt>) <strong>**</strong>(angle) 
+    - (<tt><span class='object_link'><a href="" title="Angle (class)">Angle</a></span></tt>, <tt>self</tt>) <strong>**</strong>(angle) 
   
 
   
@@ -1372,14 +1610,29 @@ Nb. * That min will be negative if the angle is negative and deg == 0
   </div>
 </div>
 <div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
   
+    <li>
+      
+        <span class='name'>angle</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="" title="Angle (class)">Angle</a></span></tt>, <tt><span class='object_link'><a href="Numeric.html" title="Numeric (class)">Numeric</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
 <p class="tag_title">Returns:</p>
 <ul class="return">
   
     <li>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="" title="Angle (class)">Angle</a></span></tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="" title="Angle (class)">Angle</a></span></tt>, <tt>self</tt>)</span>
       
       
       
@@ -1393,12 +1646,12 @@ Nb. * That min will be negative if the angle is negative and deg == 0
       <pre class="lines">
 
 
-136
-137
-138</pre>
+147
+148
+149</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/angle.rb', line 136</span>
+      <pre class="code"><span class="info file"># File 'lib/angle.rb', line 147</span>
 
 <span class='kw'>def</span> <span class='op'>**</span><span class='lparen'>(</span><span class='id identifier rubyid_angle'>angle</span><span class='rparen'>)</span>
   <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_radians'>radians</span><span class='lparen'>(</span><span class='ivar'>@angle</span> <span class='op'>**</span> <span class='id identifier rubyid_angle'>angle</span><span class='rparen'>)</span>
@@ -1411,7 +1664,7 @@ Nb. * That min will be negative if the angle is negative and deg == 0
       <div class="method_details ">
   <h3 class="signature " id="+-instance_method">
   
-    - (<tt><span class='object_link'><a href="" title="Angle (class)">Angle</a></span></tt>) <strong>+</strong>(angle) 
+    - (<tt><span class='object_link'><a href="" title="Angle (class)">Angle</a></span></tt>, <tt>self</tt>) <strong>+</strong>(angle) 
   
 
   
@@ -1425,14 +1678,29 @@ Nb. * That min will be negative if the angle is negative and deg == 0
   </div>
 </div>
 <div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
   
+    <li>
+      
+        <span class='name'>angle</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="" title="Angle (class)">Angle</a></span></tt>, <tt><span class='object_link'><a href="Numeric.html" title="Numeric (class)">Numeric</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
 <p class="tag_title">Returns:</p>
 <ul class="return">
   
     <li>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="" title="Angle (class)">Angle</a></span></tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="" title="Angle (class)">Angle</a></span></tt>, <tt>self</tt>)</span>
       
       
       
@@ -1446,12 +1714,12 @@ Nb. * That min will be negative if the angle is negative and deg == 0
       <pre class="lines">
 
 
-118
-119
-120</pre>
+126
+127
+128</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/angle.rb', line 118</span>
+      <pre class="code"><span class="info file"># File 'lib/angle.rb', line 126</span>
 
 <span class='kw'>def</span> <span class='op'>+</span><span class='lparen'>(</span><span class='id identifier rubyid_angle'>angle</span><span class='rparen'>)</span>
   <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_radians'>radians</span><span class='lparen'>(</span><span class='ivar'>@angle</span> <span class='op'>+</span> <span class='id identifier rubyid_angle'>angle</span><span class='rparen'>)</span>
@@ -1464,7 +1732,7 @@ Nb. * That min will be negative if the angle is negative and deg == 0
       <div class="method_details ">
   <h3 class="signature " id="+@-instance_method">
   
-    - (<tt><span class='object_link'><a href="" title="Angle (class)">Angle</a></span></tt>) <strong>+@</strong> 
+    - (<tt><span class='object_link'><a href="" title="Angle (class)">Angle</a></span></tt>, <tt>self</tt>) <strong>+@</strong> 
   
 
   
@@ -1485,7 +1753,7 @@ Nb. * That min will be negative if the angle is negative and deg == 0
     <li>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="" title="Angle (class)">Angle</a></span></tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="" title="Angle (class)">Angle</a></span></tt>, <tt>self</tt>)</span>
       
       
       
@@ -1503,12 +1771,12 @@ Nb. * That min will be negative if the angle is negative and deg == 0
       <pre class="lines">
 
 
-106
-107
-108</pre>
+113
+114
+115</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/angle.rb', line 106</span>
+      <pre class="code"><span class="info file"># File 'lib/angle.rb', line 113</span>
 
 <span class='kw'>def</span> <span class='op'>+@</span>
   <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_radians'>radians</span><span class='lparen'>(</span><span class='ivar'>@angle</span><span class='rparen'>)</span> <span class='comment'>#Nb. Not Angle.new, as we want subclasses to return their class, not Angle.
@@ -1521,7 +1789,7 @@ Nb. * That min will be negative if the angle is negative and deg == 0
       <div class="method_details ">
   <h3 class="signature " id="--instance_method">
   
-    - (<tt><span class='object_link'><a href="" title="Angle (class)">Angle</a></span></tt>) <strong>-</strong>(angle) 
+    - (<tt><span class='object_link'><a href="" title="Angle (class)">Angle</a></span></tt>, <tt>self</tt>) <strong>-</strong>(angle) 
   
 
   
@@ -1535,14 +1803,29 @@ Nb. * That min will be negative if the angle is negative and deg == 0
   </div>
 </div>
 <div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
   
+    <li>
+      
+        <span class='name'>angle</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="" title="Angle (class)">Angle</a></span></tt>, <tt><span class='object_link'><a href="Numeric.html" title="Numeric (class)">Numeric</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
 <p class="tag_title">Returns:</p>
 <ul class="return">
   
     <li>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="" title="Angle (class)">Angle</a></span></tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="" title="Angle (class)">Angle</a></span></tt>, <tt>self</tt>)</span>
       
       
       
@@ -1556,12 +1839,12 @@ Nb. * That min will be negative if the angle is negative and deg == 0
       <pre class="lines">
 
 
-124
-125
-126</pre>
+133
+134
+135</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/angle.rb', line 124</span>
+      <pre class="code"><span class="info file"># File 'lib/angle.rb', line 133</span>
 
 <span class='kw'>def</span> <span class='op'>-</span><span class='lparen'>(</span><span class='id identifier rubyid_angle'>angle</span><span class='rparen'>)</span>
   <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_radians'>radians</span><span class='lparen'>(</span><span class='ivar'>@angle</span> <span class='op'>-</span> <span class='id identifier rubyid_angle'>angle</span><span class='rparen'>)</span>
@@ -1574,7 +1857,7 @@ Nb. * That min will be negative if the angle is negative and deg == 0
       <div class="method_details ">
   <h3 class="signature " id="-@-instance_method">
   
-    - (<tt><span class='object_link'><a href="" title="Angle (class)">Angle</a></span></tt>) <strong>-@</strong> 
+    - (<tt><span class='object_link'><a href="" title="Angle (class)">Angle</a></span></tt>, <tt>self</tt>) <strong>-@</strong> 
   
 
   
@@ -1595,7 +1878,7 @@ Nb. * That min will be negative if the angle is negative and deg == 0
     <li>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="" title="Angle (class)">Angle</a></span></tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="" title="Angle (class)">Angle</a></span></tt>, <tt>self</tt>)</span>
       
       
       
@@ -1613,12 +1896,12 @@ Nb. * That min will be negative if the angle is negative and deg == 0
       <pre class="lines">
 
 
-112
-113
-114</pre>
+119
+120
+121</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/angle.rb', line 112</span>
+      <pre class="code"><span class="info file"># File 'lib/angle.rb', line 119</span>
 
 <span class='kw'>def</span> <span class='op'>-@</span>
   <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_radians'>radians</span><span class='lparen'>(</span><span class='op'>-</span><span class='ivar'>@angle</span><span class='rparen'>)</span>
@@ -1631,7 +1914,7 @@ Nb. * That min will be negative if the angle is negative and deg == 0
       <div class="method_details ">
   <h3 class="signature " id="/-instance_method">
   
-    - (<tt><span class='object_link'><a href="" title="Angle (class)">Angle</a></span></tt>) <strong>/</strong>(angle) 
+    - (<tt><span class='object_link'><a href="" title="Angle (class)">Angle</a></span></tt>, <tt>self</tt>) <strong>/</strong>(angle) 
   
 
   
@@ -1645,14 +1928,29 @@ Nb. * That min will be negative if the angle is negative and deg == 0
   </div>
 </div>
 <div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
   
+    <li>
+      
+        <span class='name'>angle</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="" title="Angle (class)">Angle</a></span></tt>, <tt><span class='object_link'><a href="Numeric.html" title="Numeric (class)">Numeric</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
 <p class="tag_title">Returns:</p>
 <ul class="return">
   
     <li>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="" title="Angle (class)">Angle</a></span></tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="" title="Angle (class)">Angle</a></span></tt>, <tt>self</tt>)</span>
       
       
       
@@ -1666,12 +1964,12 @@ Nb. * That min will be negative if the angle is negative and deg == 0
       <pre class="lines">
 
 
-142
-143
-144</pre>
+154
+155
+156</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/angle.rb', line 142</span>
+      <pre class="code"><span class="info file"># File 'lib/angle.rb', line 154</span>
 
 <span class='kw'>def</span> <span class='op'>/</span><span class='lparen'>(</span><span class='id identifier rubyid_angle'>angle</span><span class='rparen'>)</span>
   <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_radians'>radians</span><span class='lparen'>(</span><span class='ivar'>@angle</span> <span class='op'>/</span> <span class='id identifier rubyid_angle'>angle</span><span class='rparen'>)</span>
@@ -1698,7 +1996,26 @@ Nb. * That min will be negative if the angle is negative and deg == 0
   </div>
 </div>
 <div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
   
+    <li>
+      
+        <span class='name'>angle</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="" title="Angle (class)">Angle</a></span></tt>, <tt><span class='object_link'><a href="Float.html" title="Float (class)">Float</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>Can be another Angle, or a Numeric value to compare @angle with.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
 <p class="tag_title">Returns:</p>
 <ul class="return">
   
@@ -1719,16 +2036,16 @@ Nb. * That min will be negative if the angle is negative and deg == 0
       <pre class="lines">
 
 
-96
-97
-98
-99
-100
-101
-102</pre>
+103
+104
+105
+106
+107
+108
+109</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/angle.rb', line 96</span>
+      <pre class="code"><span class="info file"># File 'lib/angle.rb', line 103</span>
 
 <span class='kw'>def</span> <span class='op'>&lt;=&gt;</span><span class='lparen'>(</span><span class='id identifier rubyid_angle'>angle</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_angle'>angle</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span> <span class='op'>==</span> <span class='const'>Angle</span>
@@ -1784,12 +2101,12 @@ Nb. * That min will be negative if the angle is negative and deg == 0
       <pre class="lines">
 
 
-214
-215
-216</pre>
+228
+229
+230</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/angle.rb', line 214</span>
+      <pre class="code"><span class="info file"># File 'lib/angle.rb', line 228</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_abs'>abs</span>
   <span class='ivar'>@angle</span><span class='period'>.</span><span class='id identifier rubyid_abs'>abs</span>
@@ -1816,7 +2133,22 @@ Nb. * That min will be negative if the angle is negative and deg == 0
   </div>
 </div>
 <div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
   
+    <li>
+      
+        <span class='name'>angle</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Numeric.html" title="Numeric (class)">Numeric</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
 <p class="tag_title">Returns:</p>
 <ul class="return">
   
@@ -1841,12 +2173,12 @@ Nb. * That min will be negative if the angle is negative and deg == 0
       <pre class="lines">
 
 
-204
-205
-206</pre>
+218
+219
+220</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/angle.rb', line 204</span>
+      <pre class="code"><span class="info file"># File 'lib/angle.rb', line 218</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_coerce'>coerce</span><span class='lparen'>(</span><span class='id identifier rubyid_angle'>angle</span><span class='rparen'>)</span>
   <span class='lbracket'>[</span><span class='const'>Float</span><span class='lparen'>(</span><span class='id identifier rubyid_angle'>angle</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='ivar'>@angle</span><span class='rbracket'>]</span>
@@ -1898,15 +2230,15 @@ Nb. * That min will be negative if the angle is negative and deg == 0
       <pre class="lines">
 
 
-225
-226
-227
-228
-229
-230</pre>
+239
+240
+241
+242
+243
+244</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/angle.rb', line 225</span>
+      <pre class="code"><span class="info file"># File 'lib/angle.rb', line 239</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_reverse'>reverse</span>
   <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_angle'>angle</span> <span class='op'>=</span> <span class='ivar'>@angle</span> <span class='op'>+</span> <span class='const'>Math</span><span class='op'>::</span><span class='const'>PI</span><span class='rparen'>)</span> <span class='op'>&gt;</span> <span class='const'>Math</span><span class='op'>::</span><span class='const'>PI</span> <span class='op'>*</span> <span class='int'>2</span>
@@ -1961,12 +2293,12 @@ Nb. * That min will be negative if the angle is negative and deg == 0
       <pre class="lines">
 
 
-209
-210
-211</pre>
+223
+224
+225</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/angle.rb', line 209</span>
+      <pre class="code"><span class="info file"># File 'lib/angle.rb', line 223</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_sign'>sign</span>
   <span class='ivar'>@angle</span><span class='period'>.</span><span class='id identifier rubyid_sign'>sign</span>
@@ -1988,7 +2320,6 @@ Nb. * That min will be negative if the angle is negative and deg == 0
 </h3><div class="docstring">
   <div class="discussion">
     <p>formated output of the angle.
-The default format is a signed deg 0minutes&#39;seconds&quot; with leading 0&#39;s in the minutes and seconds and 4 decimal places for seconds.
 formats are:
 * %wd output the degrees as an integer.
 **   where w is 0, 1, 2 or 3 and represents the field width. 
@@ -2036,7 +2367,28 @@ formats are:
   </div>
 </div>
 <div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
   
+    <li>
+      
+        <span class='name'>fmt</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>&quot;%d %2m'%2.4s\&quot;&quot;</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>The default format is a signed deg minutes&#39;seconds&quot; with leading 0&#39;s in the minutes and seconds and 4 decimal places for seconds.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
 <p class="tag_title">Returns:</p>
 <ul class="return">
   
@@ -2057,21 +2409,6 @@ formats are:
       <pre class="lines">
 
 
-275
-276
-277
-278
-279
-280
-281
-282
-283
-284
-285
-286
-287
-288
-289
 290
 291
 292
@@ -2129,10 +2466,25 @@ formats are:
 344
 345
 346
-347</pre>
+347
+348
+349
+350
+351
+352
+353
+354
+355
+356
+357
+358
+359
+360
+361
+362</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/angle.rb', line 275</span>
+      <pre class="code"><span class="info file"># File 'lib/angle.rb', line 290</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_strf'>strf</span><span class='lparen'>(</span><span class='id identifier rubyid_fmt'>fmt</span><span class='op'>=</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>%d %2m'%2.4s\&quot;</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
   <span class='id identifier rubyid_tokens'>tokens</span> <span class='op'>=</span> <span class='id identifier rubyid_fmt'>fmt</span><span class='period'>.</span><span class='id identifier rubyid_scan'>scan</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>%[0-9\.]*[%dmsDMNErW]|[^%]*</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span>
@@ -2254,12 +2606,12 @@ formats are:
       <pre class="lines">
 
 
-220
-221
-222</pre>
+234
+235
+236</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/angle.rb', line 220</span>
+      <pre class="code"><span class="info file"># File 'lib/angle.rb', line 234</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_bearing'>to_bearing</span>
   <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='const'>Math</span><span class='op'>::</span><span class='const'>PI</span> <span class='op'>*</span> <span class='int'>2</span> <span class='op'>-</span> <span class='ivar'>@angle</span><span class='comma'>,</span><span class='kw'>true</span><span class='rparen'>)</span>
@@ -2315,12 +2667,12 @@ formats are:
       <pre class="lines">
 
 
-153
-154
-155</pre>
+166
+167
+168</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/angle.rb', line 153</span>
+      <pre class="code"><span class="info file"># File 'lib/angle.rb', line 166</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_degrees'>to_degrees</span>
   <span class='ivar'>@angle</span><span class='period'>.</span><span class='id identifier rubyid_to_degrees'>to_degrees</span>
@@ -2374,29 +2726,29 @@ Nb. * That min will be negative if the angle is negative and deg == 0
       <pre class="lines">
 
 
-171
-172
-173
-174
-175
-176
-177
-178
-179
-180
-181
-182
-183
 184
 185
 186
 187
 188
 189
-190</pre>
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/angle.rb', line 171</span>
+      <pre class="code"><span class="info file"># File 'lib/angle.rb', line 184</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_dms'>to_dms</span> 
   <span class='id identifier rubyid_d'>d</span> <span class='op'>=</span> <span class='id identifier rubyid_to_degrees'>to_degrees</span><span class='period'>.</span><span class='id identifier rubyid_abs'>abs</span>
@@ -2469,12 +2821,12 @@ Nb. * That min will be negative if the angle is negative and deg == 0
       <pre class="lines">
 
 
-196
-197
-198</pre>
+209
+210
+211</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/angle.rb', line 196</span>
+      <pre class="code"><span class="info file"># File 'lib/angle.rb', line 209</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_i'>to_i</span>
   <span class='id identifier rubyid_to_radians'>to_radians</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
@@ -2487,7 +2839,7 @@ Nb. * That min will be negative if the angle is negative and deg == 0
       <div class="method_details ">
   <h3 class="signature " id="to_radians-instance_method">
   
-    - (<tt>Object</tt>) <strong>to_radians</strong> 
+    - (<tt><span class='object_link'><a href="Float.html" title="Float (class)">Float</a></span></tt>) <strong>to_radians</strong> 
   
 
   
@@ -2499,13 +2851,30 @@ Nb. * That min will be negative if the angle is negative and deg == 0
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns: angle in radians</p>
+    <p>Angle in radians</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Float.html" title="Float (class)">Float</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>angle in radians</p>
+</div>
+      
+    </li>
+  
+</ul>
 
 </div><table class="source_code">
   <tr>
@@ -2513,12 +2882,12 @@ Nb. * That min will be negative if the angle is negative and deg == 0
       <pre class="lines">
 
 
-161
-162
-163</pre>
+174
+175
+176</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/angle.rb', line 161</span>
+      <pre class="code"><span class="info file"># File 'lib/angle.rb', line 174</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_radians'>to_radians</span>
   <span class='ivar'>@angle</span>
@@ -2545,7 +2914,28 @@ Nb. * That min will be negative if the angle is negative and deg == 0
   </div>
 </div>
 <div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
   
+    <li>
+      
+        <span class='name'>fmt</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>Optional format string passed to Angle#strf</p>
+</div>
+      
+    </li>
+  
+</ul>
+
 <p class="tag_title">Returns:</p>
 <ul class="return">
   
@@ -2570,13 +2960,13 @@ Nb. * That min will be negative if the angle is negative and deg == 0
       <pre class="lines">
 
 
-234
-235
-236
-237</pre>
+249
+250
+251
+252</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/angle.rb', line 234</span>
+      <pre class="code"><span class="info file"># File 'lib/angle.rb', line 249</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_s'>to_s</span><span class='lparen'>(</span><span class='id identifier rubyid_fmt'>fmt</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='id identifier rubyid_to_radians'>to_radians</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span> <span class='kw'>if</span><span class='lparen'>(</span><span class='id identifier rubyid_fmt'>fmt</span> <span class='op'>==</span> <span class='kw'>nil</span><span class='rparen'>)</span>
@@ -2592,7 +2982,7 @@ Nb. * That min will be negative if the angle is negative and deg == 0
 </div>
 
     <div id="footer">
-  Generated on Sat Jan 12 13:03:24 2013 by
+  Generated on Sun Jan 13 10:47:55 2013 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.3 (ruby-1.9.3).
 </div>

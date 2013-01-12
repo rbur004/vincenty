@@ -128,7 +128,7 @@ Also adds in sign.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#sign-instance_method" title="#sign (instance method)">- (Object) <strong>sign</strong> </a>
+      <a href="#sign-instance_method" title="#sign (instance method)">- (Fixnum) <strong>sign</strong> </a>
     
 
     
@@ -142,7 +142,7 @@ Also adds in sign.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Returns: 1 if number is positive, -1 if negative.</p>
+    <span class="summary_desc"><div class='inline'><p>1 if number is positive, -1 if negative.</p>
 </div></span>
   
 </li>
@@ -151,7 +151,7 @@ Also adds in sign.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#to_degrees-instance_method" title="#to_degrees (instance method)">- (Object) <strong>to_degrees</strong>(mod = false) </a>
+      <a href="#to_degrees-instance_method" title="#to_degrees (instance method)">- (Numeric) <strong>to_degrees</strong>(mod = false) </a>
     
 
     
@@ -167,9 +167,7 @@ Also adds in sign.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Convert Radians to Degrees
-if optional argument mod == true, then applies % 360
-Returns: degrees.</p>
+    <span class="summary_desc"><div class='inline'><p>Convert Radians to Degrees.</p>
 </div></span>
   
 </li>
@@ -178,7 +176,7 @@ Returns: degrees.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#to_radians-instance_method" title="#to_radians (instance method)">- (Object) <strong>to_radians</strong>(mod = false) </a>
+      <a href="#to_radians-instance_method" title="#to_radians (instance method)">- (Numeric) <strong>to_radians</strong>(mod = false) </a>
     
 
     
@@ -194,9 +192,7 @@ Returns: degrees.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Converts degrees to Radians
-if optional argument mod == true, then applies % Math::PI
-Returns: radians.</p>
+    <span class="summary_desc"><div class='inline'><p>Converts degrees to Radians.</p>
 </div></span>
   
 </li>
@@ -214,7 +210,7 @@ Returns: radians.</p>
       <div class="method_details first">
   <h3 class="signature first" id="sign-instance_method">
   
-    - (<tt>Object</tt>) <strong>sign</strong> 
+    - (<tt>Fixnum</tt>) <strong>sign</strong> 
   
 
   
@@ -222,13 +218,30 @@ Returns: radians.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns: 1 if number is positive, -1 if negative.</p>
+    <p>1 if number is positive, -1 if negative.</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Fixnum</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>1 if number is positive, -1 if negative.</p>
+</div>
+      
+    </li>
+  
+</ul>
 
 </div><table class="source_code">
   <tr>
@@ -254,7 +267,7 @@ Returns: radians.</p>
       <div class="method_details ">
   <h3 class="signature " id="to_degrees-instance_method">
   
-    - (<tt>Object</tt>) <strong>to_degrees</strong>(mod = false) 
+    - (<tt><span class='object_link'><a href="" title="Numeric (class)">Numeric</a></span></tt>) <strong>to_degrees</strong>(mod = false) 
   
 
   
@@ -266,15 +279,51 @@ Returns: radians.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Convert Radians to Degrees
-if optional argument mod == true, then applies % 360
-Returns: degrees</p>
+    <p>Convert Radians to Degrees</p>
 
 
   </div>
 </div>
 <div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
   
+    <li>
+      
+        <span class='name'>mod</span>
+      
+      
+        <span class='type'>(<tt>true</tt>, <tt>false</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>false</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>Optional argument mod == true, then applies % 360</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="" title="Numeric (class)">Numeric</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>degrees</p>
+</div>
+      
+    </li>
+  
+</ul>
 
 </div><table class="source_code">
   <tr>
@@ -308,7 +357,7 @@ Returns: degrees</p>
       <div class="method_details ">
   <h3 class="signature " id="to_radians-instance_method">
   
-    - (<tt>Object</tt>) <strong>to_radians</strong>(mod = false) 
+    - (<tt><span class='object_link'><a href="" title="Numeric (class)">Numeric</a></span></tt>) <strong>to_radians</strong>(mod = false) 
   
 
   
@@ -320,15 +369,51 @@ Returns: degrees</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Converts degrees to Radians
-if optional argument mod == true, then applies % Math::PI
-Returns: radians</p>
+    <p>Converts degrees to Radians</p>
 
 
   </div>
 </div>
 <div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
   
+    <li>
+      
+        <span class='name'>mod</span>
+      
+      
+        <span class='type'>(<tt>true</tt>, <tt>false</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>false</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>Optional argument mod == true, then applies % Math::PI</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="" title="Numeric (class)">Numeric</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>radians</p>
+</div>
+      
+    </li>
+  
+</ul>
 
 </div><table class="source_code">
   <tr>
@@ -364,7 +449,7 @@ Returns: radians</p>
 </div>
 
     <div id="footer">
-  Generated on Sat Jan 12 13:03:24 2013 by
+  Generated on Sun Jan 13 10:47:55 2013 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.3 (ruby-1.9.3).
 </div>

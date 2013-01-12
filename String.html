@@ -127,7 +127,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#to_dec_degrees-instance_method" title="#to_dec_degrees (instance method)">- (Object) <strong>to_dec_degrees</strong> </a>
+      <a href="#to_dec_degrees-instance_method" title="#to_dec_degrees (instance method)">- (Float) <strong>to_dec_degrees</strong> </a>
     
 
     
@@ -150,7 +150,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#to_degrees-instance_method" title="#to_degrees (instance method)">- (Object) <strong>to_degrees</strong>(mod = false) </a>
+      <a href="#to_degrees-instance_method" title="#to_degrees (instance method)">- (Float) <strong>to_degrees</strong>(mod = false) </a>
     
 
     
@@ -166,9 +166,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Convert Radians to Degrees
-if optional argument mod == true, then applies % 360
-Returns: degrees.</p>
+    <span class="summary_desc"><div class='inline'><p>Convert String number in Radians to Degrees.</p>
 </div></span>
   
 </li>
@@ -177,7 +175,7 @@ Returns: degrees.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#to_radians-instance_method" title="#to_radians (instance method)">- (Object) <strong>to_radians</strong>(mod = false) </a>
+      <a href="#to_radians-instance_method" title="#to_radians (instance method)">- (Float) <strong>to_radians</strong>(mod = false) </a>
     
 
     
@@ -193,9 +191,7 @@ Returns: degrees.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Converts string degrees to to_decimal_degrees, then to Radians
-if optional argument mod == true, then applies % Math::PI
-Returns: radians.</p>
+    <span class="summary_desc"><div class='inline'><p>Converts string degrees to to_decimal_degrees, then to Radians.</p>
 </div></span>
   
 </li>
@@ -213,7 +209,7 @@ Returns: radians.</p>
       <div class="method_details first">
   <h3 class="signature first" id="to_dec_degrees-instance_method">
   
-    - (<tt>Object</tt>) <strong>to_dec_degrees</strong> 
+    - (<tt><span class='object_link'><a href="Float.html" title="Float (class)">Float</a></span></tt>) <strong>to_dec_degrees</strong> 
   
 
   
@@ -222,14 +218,30 @@ Returns: radians.</p>
 </h3><div class="docstring">
   <div class="discussion">
     <p>string expected to be degrees, returns decimal degrees.
-common forms are S37 001&#39;7.5&#39;&#39;, 37 001&#39;7.5&#39;&#39;S , -37 001&#39;7.5&#39;&#39;, -37 0 1.512&#39;. -37.01875 0, 37 001&#39;.512S, S37 001&#39;.512, ...
-Returns: angle in decimal degrees</p>
+common forms are S37 001&#39;7.5&#39;&#39;, 37 001&#39;7.5&#39;&#39;S , -37 001&#39;7.5&#39;&#39;, -37 0 1.512&#39;. -37.01875 0, 37 001&#39;.512S, S37 001&#39;.512, ...</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Float.html" title="Float (class)">Float</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>angle in decimal degrees</p>
+</div>
+      
+    </li>
+  
+</ul>
 
 </div><table class="source_code">
   <tr>
@@ -237,10 +249,6 @@ Returns: angle in decimal degrees</p>
       <pre class="lines">
 
 
-55
-56
-57
-58
 59
 60
 61
@@ -254,10 +262,14 @@ Returns: angle in decimal degrees</p>
 69
 70
 71
-72</pre>
+72
+73
+74
+75
+76</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/core_extensions.rb', line 55</span>
+      <pre class="code"><span class="info file"># File 'lib/core_extensions.rb', line 59</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_dec_degrees'>to_dec_degrees</span> 
   <span class='comment'>#reorder 37 001'.512S, S37 001'.512 into 37 001.512'S, S37 001.512' respectively
@@ -285,7 +297,7 @@ Returns: angle in decimal degrees</p>
       <div class="method_details ">
   <h3 class="signature " id="to_degrees-instance_method">
   
-    - (<tt>Object</tt>) <strong>to_degrees</strong>(mod = false) 
+    - (<tt><span class='object_link'><a href="Float.html" title="Float (class)">Float</a></span></tt>) <strong>to_degrees</strong>(mod = false) 
   
 
   
@@ -297,15 +309,51 @@ Returns: angle in decimal degrees</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Convert Radians to Degrees
-if optional argument mod == true, then applies % 360
-Returns: degrees</p>
+    <p>Convert String number in Radians to Degrees</p>
 
 
   </div>
 </div>
 <div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
   
+    <li>
+      
+        <span class='name'>mod</span>
+      
+      
+        <span class='type'>(<tt>true</tt>, <tt>false</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>false</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>Optional argument mod == true, then applies % 360</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Float.html" title="Float (class)">Float</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>degrees</p>
+</div>
+      
+    </li>
+  
+</ul>
 
 </div><table class="source_code">
   <tr>
@@ -313,12 +361,12 @@ Returns: degrees</p>
       <pre class="lines">
 
 
-77
-78
-79</pre>
+81
+82
+83</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/core_extensions.rb', line 77</span>
+      <pre class="code"><span class="info file"># File 'lib/core_extensions.rb', line 81</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_degrees'>to_degrees</span><span class='lparen'>(</span><span class='id identifier rubyid_mod'>mod</span><span class='op'>=</span><span class='kw'>false</span><span class='rparen'>)</span> <span class='comment'>#string expected to be radians, returns degrees
 </span>  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_to_f'>to_f</span><span class='period'>.</span><span class='id identifier rubyid_to_degrees'>to_degrees</span><span class='lparen'>(</span><span class='id identifier rubyid_mod'>mod</span><span class='rparen'>)</span>
@@ -331,7 +379,7 @@ Returns: degrees</p>
       <div class="method_details ">
   <h3 class="signature " id="to_radians-instance_method">
   
-    - (<tt>Object</tt>) <strong>to_radians</strong>(mod = false) 
+    - (<tt><span class='object_link'><a href="Float.html" title="Float (class)">Float</a></span></tt>) <strong>to_radians</strong>(mod = false) 
   
 
   
@@ -343,15 +391,51 @@ Returns: degrees</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Converts string degrees to to_decimal_degrees, then to Radians
-if optional argument mod == true, then applies % Math::PI
-Returns: radians</p>
+    <p>Converts string degrees to to_decimal_degrees, then to Radians</p>
 
 
   </div>
 </div>
 <div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
   
+    <li>
+      
+        <span class='name'>mod</span>
+      
+      
+        <span class='type'>(<tt>true</tt>, <tt>false</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>false</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>Optional argument mod == true, then applies % Math::PI</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Float.html" title="Float (class)">Float</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>radians</p>
+</div>
+      
+    </li>
+  
+</ul>
 
 </div><table class="source_code">
   <tr>
@@ -359,12 +443,12 @@ Returns: radians</p>
       <pre class="lines">
 
 
-84
-85
-86</pre>
+88
+89
+90</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/core_extensions.rb', line 84</span>
+      <pre class="code"><span class="info file"># File 'lib/core_extensions.rb', line 88</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_radians'>to_radians</span><span class='lparen'>(</span><span class='id identifier rubyid_mod'>mod</span><span class='op'>=</span><span class='kw'>false</span><span class='rparen'>)</span> <span class='comment'>#string expected to be degrees, returns radians
 </span>  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_to_dec_degrees'>to_dec_degrees</span><span class='period'>.</span><span class='id identifier rubyid_to_radians'>to_radians</span><span class='lparen'>(</span><span class='id identifier rubyid_mod'>mod</span><span class='rparen'>)</span>
@@ -379,7 +463,7 @@ Returns: radians</p>
 </div>
 
     <div id="footer">
-  Generated on Sat Jan 12 13:03:24 2013 by
+  Generated on Sun Jan 13 10:47:55 2013 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.3 (ruby-1.9.3).
 </div>
