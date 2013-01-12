@@ -1,336 +1,566 @@
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Class: TrackAndDistance
+  
+    &mdash; Vincenty
+  
+</title>
 
-<html>
-<head>
-<meta content="text/html; charset=US-ASCII" http-equiv="Content-Type">
+  <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
 
-<title>class TrackAndDistance - vincenty-1.0.3 Documentation</title>
+  <link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
 
-<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
-
-<script type="text/javascript">
-  var rdoc_rel_prefix = "./";
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '';
+  framesUrl = "frames.html#!" + escape(window.location.href);
 </script>
 
-<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
-<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
-<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
-<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
-<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
-<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
 
 
-<body id="top" class="class">
-<nav id="metadata">
-  <nav id="home-section" class="section">
-  <h3 class="section-header">
-    <a href="./index.html">Home</a>
-    <a href="./table_of_contents.html#classes">Classes</a>
-    <a href="./table_of_contents.html#methods">Methods</a>
-  </h3>
-</nav>
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="_index.html">Index (T)</a> &raquo;
+    
+    
+    <span class="title">TrackAndDistance</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><h1>Class: TrackAndDistance
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">TrackAndDistance</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+  
+  
+  
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">lib/track_and_distance.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p>Holds a bearing and distance</p>
 
 
-  <nav id="search-section" class="section project-section" class="initially-hidden">
-  <form action="#" method="get" accept-charset="utf-8">
-    <h3 class="section-header">
-      <input type="text" name="search" placeholder="Search" id="search-field"
-             title="Type to search, Up and Down to navigate, Enter to load">
-    </h3>
-  </form>
+  </div>
+</div>
+<div class="tags">
+  
 
-  <ul id="search-results" class="initially-hidden"></ul>
-</nav>
+</div>
 
 
-  <div id="file-metadata">
-    <nav id="file-list-section" class="section">
-  <h3 class="section-header">Defined In</h3>
-  <ul>
-    <li>lib/track_and_distance.rb
+
+  <h2>Instance Attribute Summary <small>(<a href="#" class="summary_toggle">collapse</a>)</small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#bearing-instance_method" title="#bearing (instance method)">- (Object) <strong>bearing</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Returns the value of attribute bearing.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#distance-instance_method" title="#distance (instance method)">- (Object) <strong>distance</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Returns the value of attribute distance.</p>
+</div></span>
+  
+</li>
+
+    
   </ul>
-</nav>
 
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">- (TrackAndDistance) <strong>initialize</strong>(bearing, distance, radians = false) </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Bearing is in degrees unless radians == true (or set to :radians).</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#to_ary-instance_method" title="#to_ary (instance method)">- (Object) <strong>to_ary</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Returns an array with members bearing and distance.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#to_hash-instance_method" title="#to_hash (instance method)">- (Object) <strong>to_hash</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Returns a hash with keys :bearing and :distance.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#to_s-instance_method" title="#to_s (instance method)">- (Object) <strong>to_s</strong>(fmt = nil) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>format string fmt is currently just for the bearing angle.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    - (<tt><span class='object_link'><a href="" title="TrackAndDistance (class)">TrackAndDistance</a></span></tt>) <strong>initialize</strong>(bearing, distance, radians = false) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Bearing is in degrees unless radians == true (or set to :radians).
+Bearing can be a String or Numeric or any object with to_radians and to_f</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+10
+11
+12
+13</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/track_and_distance.rb', line 10</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_bearing'>bearing</span><span class='comma'>,</span> <span class='id identifier rubyid_distance'>distance</span><span class='comma'>,</span> <span class='id identifier rubyid_radians'>radians</span><span class='op'>=</span><span class='kw'>false</span><span class='rparen'>)</span>
+  <span class='ivar'>@bearing</span> <span class='op'>=</span> <span class='const'>Angle</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_bearing'>bearing</span><span class='comma'>,</span> <span class='id identifier rubyid_radians'>radians</span><span class='rparen'>)</span>
+  <span class='ivar'>@distance</span> <span class='op'>=</span> <span class='id identifier rubyid_distance'>distance</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id="bearing=-instance_method"></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="bearing-instance_method">
+  
+    - (<tt>Object</tt>) <strong>bearing</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns the value of attribute bearing</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+6
+7
+8</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/track_and_distance.rb', line 6</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_bearing'>bearing</span>
+  <span class='ivar'>@bearing</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="distance=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="distance-instance_method">
+  
+    - (<tt>Object</tt>) <strong>distance</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns the value of attribute distance</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+6
+7
+8</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/track_and_distance.rb', line 6</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_distance'>distance</span>
+  <span class='ivar'>@distance</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
     
   </div>
 
-  <div id="class-metadata">
-    
-    <nav id="parent-class-section" class="section">
-  <h3 class="section-header">Parent</h3>
-  
-  <p class="link">Object
-  
-</nav>
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
 
     
-    <!-- Method Quickref -->
-<nav id="method-list-section" class="section">
-  <h3 class="section-header">Methods</h3>
+      <div class="method_details first">
+  <h3 class="signature first" id="to_ary-instance_method">
+  
+    - (<tt>Object</tt>) <strong>to_ary</strong> 
+  
 
-  <ul class="link-list">
-    
-    <li><a href="#method-c-new">::new</a>
-    
-    <li><a href="#method-i-to_ary">#to_ary</a>
-    
-    <li><a href="#method-i-to_hash">#to_hash</a>
-    
-    <li><a href="#method-i-to_s">#to_s</a>
-    
-  </ul>
-</nav>
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns an array with members bearing and distance.</p>
+
 
   </div>
+</div>
+<div class="tags">
+  
 
-  <div id="project-metadata">
-    <nav id="fileindex-section" class="section project-section">
-  <h3 class="section-header">Pages</h3>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
 
-  <ul>
-  
-    <li class="file"><a href="./History_txt.html">History</a>
-  
-    <li class="file"><a href="./Manifest_txt.html">Manifest</a>
-  
-    <li class="file"><a href="./README_txt.html">README</a>
-  
-  </ul>
-</nav>
 
-    <nav id="classindex-section" class="section project-section">
-  <h3 class="section-header">Class and Module Index</h3>
+28
+29
+30</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/track_and_distance.rb', line 28</span>
 
-  <ul class="link-list">
+<span class='kw'>def</span> <span class='id identifier rubyid_to_ary'>to_ary</span>
+  <span class='lbracket'>[</span> <span class='ivar'>@bearing</span><span class='comma'>,</span> <span class='ivar'>@distance</span> <span class='rbracket'>]</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="to_hash-instance_method">
   
-    <li><a href="./Angle.html">Angle</a>
+    - (<tt>Object</tt>) <strong>to_hash</strong> 
   
-    <li><a href="./Coordinate.html">Coordinate</a>
+
   
-    <li><a href="./Float.html">Float</a>
+
   
-    <li><a href="./Latitude.html">Latitude</a>
-  
-    <li><a href="./Longitude.html">Longitude</a>
-  
-    <li><a href="./Numeric.html">Numeric</a>
-  
-    <li><a href="./String.html">String</a>
-  
-    <li><a href="./TrackAndDistance.html">TrackAndDistance</a>
-  
-    <li><a href="./Vincenty.html">Vincenty</a>
-  
-  </ul>
-</nav>
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns a hash with keys :bearing and :distance</p>
+
 
   </div>
-</nav>
+</div>
+<div class="tags">
+  
 
-<div id="documentation">
-  <h1 class="class">class TrackAndDistance</h1>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
 
-  <div id="description" class="description">
+
+33
+34
+35</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/track_and_distance.rb', line 33</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_to_hash'>to_hash</span>
+  <span class='lbrace'>{</span> <span class='symbol'>:bearing</span> <span class='op'>=&gt;</span> <span class='ivar'>@bearing</span><span class='comma'>,</span> <span class='symbol'>:distance</span> <span class='op'>=&gt;</span> <span class='ivar'>@distance</span> <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
     
-  </div><!-- description -->
+      <div class="method_details ">
+  <h3 class="signature " id="to_s-instance_method">
+  
+    - (<tt>Object</tt>) <strong>to_s</strong>(fmt = nil) 
+  
 
   
+
   
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>format string fmt is currently just for the bearing angle.
+Need to change this to include the distance is single format string.
+Returns: Bearing angle and distance in a string.</p>
+
+
+  </div>
+</div>
+<div class="tags">
   
-  <section id="5Buntitled-5D" class="documentation-section">
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+18
+19
+20
+21
+22
+23
+24
+25</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/track_and_distance.rb', line 18</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_to_s'>to_s</span><span class='lparen'>(</span><span class='id identifier rubyid_fmt'>fmt</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+  <span class='kw'>if</span><span class='lparen'>(</span><span class='id identifier rubyid_fmt'>fmt</span><span class='rparen'>)</span>
+    <span class='comment'>#needs work to include distance as well as angle fmt.
+</span>    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='ivar'>@bearing</span><span class='period'>.</span><span class='id identifier rubyid_strf'>strf</span><span class='lparen'>(</span><span class='id identifier rubyid_fmt'>fmt</span><span class='rparen'>)</span><span class='rbrace'>}</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_distance'>distance</span><span class='period'>.</span><span class='id identifier rubyid_round'>round</span><span class='lparen'>(</span><span class='int'>4</span><span class='rparen'>)</span><span class='rbrace'>}</span><span class='tstring_content'>m</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>else</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='ivar'>@bearing</span><span class='period'>.</span><span class='id identifier rubyid_strf'>strf</span><span class='rbrace'>}</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_distance'>distance</span><span class='period'>.</span><span class='id identifier rubyid_round'>round</span><span class='lparen'>(</span><span class='int'>4</span><span class='rparen'>)</span><span class='rbrace'>}</span><span class='tstring_content'>m</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
     
+  </div>
 
-    
+</div>
 
-    
+    <div id="footer">
+  Generated on Sat Jan 12 13:03:25 2013 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.3 (ruby-1.9.3).
+</div>
 
-    
-    <!-- Attributes -->
-    <section id="attribute-method-details" class="method-section section">
-      <h3 class="section-header">Attributes</h3>
-
-      
-      <div id="attribute-i-bearing" class="method-detail">
-        <div class="method-heading attribute-method-heading">
-          <span class="method-name">bearing</span><span
-            class="attribute-access-type">[RW]</span>
-        </div>
-
-        <div class="method-description">
-        
-        
-        
-        </div>
-      </div>
-      
-      <div id="attribute-i-distance" class="method-detail">
-        <div class="method-heading attribute-method-heading">
-          <span class="method-name">distance</span><span
-            class="attribute-access-type">[RW]</span>
-        </div>
-
-        <div class="method-description">
-        
-        
-        
-        </div>
-      </div>
-      
-    </section><!-- attribute-method-details -->
-    
-
-    <!-- Methods -->
-    
-     <section id="public-class-5Buntitled-5D-method-details" class="method-section section">
-      <h3 class="section-header">Public Class Methods</h3>
-
-    
-      <div id="method-c-new" class="method-detail ">
-        
-        <div class="method-heading">
-          <span class="method-name">new</span><span
-            class="method-args">(bearing, distance, radians=false)</span>
-          <span class="method-click-advice">click to toggle source</span>
-        </div>
-        
-
-        <div class="method-description">
-          
-          <p>Bearing is in degrees unless radians == true. Bearing can be a <a
-href="String.html">String</a> or <a href="Numeric.html">Numeric</a> or any
-object with to_radians and to_f</p>
-          
-
-          
-          <div class="method-source-code" id="new-source">
-            <pre><span class="ruby-comment"># File lib/track_and_distance.rb, line 9</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">bearing</span>, <span class="ruby-identifier">distance</span>, <span class="ruby-identifier">radians</span>=<span class="ruby-keyword">false</span>)
-  <span class="ruby-ivar">@bearing</span> = <span class="ruby-constant">Angle</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">bearing</span>, <span class="ruby-identifier">radians</span>)
-  <span class="ruby-ivar">@distance</span> = <span class="ruby-identifier">distance</span>
-<span class="ruby-keyword">end</span></pre>
-          </div><!-- new-source -->
-          
-        </div>
-
-        
-
-        
-      </div><!-- new-method -->
-
-    
-    </section><!-- public-class-method-details -->
-  
-     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
-      <h3 class="section-header">Public Instance Methods</h3>
-
-    
-      <div id="method-i-to_ary" class="method-detail ">
-        
-        <div class="method-heading">
-          <span class="method-name">to_ary</span><span
-            class="method-args">()</span>
-          <span class="method-click-advice">click to toggle source</span>
-        </div>
-        
-
-        <div class="method-description">
-          
-          
-          
-
-          
-          <div class="method-source-code" id="to_ary-source">
-            <pre><span class="ruby-comment"># File lib/track_and_distance.rb, line 26</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">to_ary</span>
-  [ <span class="ruby-ivar">@bearing</span>, <span class="ruby-ivar">@distance</span> ]
-<span class="ruby-keyword">end</span></pre>
-          </div><!-- to_ary-source -->
-          
-        </div>
-
-        
-
-        
-      </div><!-- to_ary-method -->
-
-    
-      <div id="method-i-to_hash" class="method-detail ">
-        
-        <div class="method-heading">
-          <span class="method-name">to_hash</span><span
-            class="method-args">()</span>
-          <span class="method-click-advice">click to toggle source</span>
-        </div>
-        
-
-        <div class="method-description">
-          
-          
-          
-
-          
-          <div class="method-source-code" id="to_hash-source">
-            <pre><span class="ruby-comment"># File lib/track_and_distance.rb, line 30</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">to_hash</span>
-  { <span class="ruby-value">:bearing</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@bearing</span>, <span class="ruby-value">:distance</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@distance</span> }
-<span class="ruby-keyword">end</span></pre>
-          </div><!-- to_hash-source -->
-          
-        </div>
-
-        
-
-        
-      </div><!-- to_hash-method -->
-
-    
-      <div id="method-i-to_s" class="method-detail ">
-        
-        <div class="method-heading">
-          <span class="method-name">to_s</span><span
-            class="method-args">(fmt = nil)</span>
-          <span class="method-click-advice">click to toggle source</span>
-        </div>
-        
-
-        <div class="method-description">
-          
-          <p>format string fmt is currently just for the bearing angle. Need to change
-this to include the distance is single format string. Returns: Bearing
-angle and distance in a string.</p>
-          
-
-          
-          <div class="method-source-code" id="to_s-source">
-            <pre><span class="ruby-comment"># File lib/track_and_distance.rb, line 17</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">to_s</span>(<span class="ruby-identifier">fmt</span> = <span class="ruby-keyword">nil</span>)
-  <span class="ruby-keyword">if</span>(<span class="ruby-identifier">fmt</span>)
-    <span class="ruby-comment">#needs work to include distance as well as angle fmt.</span>
-    <span class="ruby-node">&quot;#{@bearing.strf(fmt)} #{distance.round(4)}m&quot;</span>
-  <span class="ruby-keyword">else</span>
-    <span class="ruby-node">&quot;#{@bearing.strf} #{distance.round(4)}m&quot;</span>
-  <span class="ruby-keyword">end</span>
-<span class="ruby-keyword">end</span></pre>
-          </div><!-- to_s-source -->
-          
-        </div>
-
-        
-
-        
-      </div><!-- to_s-method -->
-
-    
-    </section><!-- public-instance-method-details -->
-  
-  </section><!-- 5Buntitled-5D -->
-
-</div><!-- documentation -->
-
-
-<footer id="validator-badges">
-  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
-  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.12.
-  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
-</footer>
-
+  </body>
+</html>

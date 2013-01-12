@@ -1,378 +1,640 @@
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Class: Coordinate
+  
+    &mdash; Vincenty
+  
+</title>
 
-<html>
-<head>
-<meta content="text/html; charset=US-ASCII" http-equiv="Content-Type">
+  <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
 
-<title>class Coordinate - vincenty-1.0.3 Documentation</title>
+  <link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
 
-<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
-
-<script type="text/javascript">
-  var rdoc_rel_prefix = "./";
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '';
+  framesUrl = "frames.html#!" + escape(window.location.href);
 </script>
 
-<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
-<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
-<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
-<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
-<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
-<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
 
 
-<body id="top" class="class">
-<nav id="metadata">
-  <nav id="home-section" class="section">
-  <h3 class="section-header">
-    <a href="./index.html">Home</a>
-    <a href="./table_of_contents.html#classes">Classes</a>
-    <a href="./table_of_contents.html#methods">Methods</a>
-  </h3>
-</nav>
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="_index.html">Index (C)</a> &raquo;
+    
+    
+    <span class="title">Coordinate</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><h1>Class: Coordinate
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">Coordinate</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+  
+  
+  
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">lib/coordinate.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p>Holds the latitude, longitude, and the altitude for the coordinate</p>
 
 
-  <nav id="search-section" class="section project-section" class="initially-hidden">
-  <form action="#" method="get" accept-charset="utf-8">
-    <h3 class="section-header">
-      <input type="text" name="search" placeholder="Search" id="search-field"
-             title="Type to search, Up and Down to navigate, Enter to load">
-    </h3>
-  </form>
+  </div>
+</div>
+<div class="tags">
+  
 
-  <ul id="search-results" class="initially-hidden"></ul>
-</nav>
+</div><div id="subclasses">
+  <h2>Direct Known Subclasses</h2>
+  <p class="children"><span class='object_link'><a href="Vincenty.html" title="Vincenty (class)">Vincenty</a></span></p>
+</div>
 
 
-  <div id="file-metadata">
-    <nav id="file-list-section" class="section">
-  <h3 class="section-header">Defined In</h3>
-  <ul>
-    <li>lib/coordinate.rb
+
+
+  <h2>Instance Attribute Summary <small>(<a href="#" class="summary_toggle">collapse</a>)</small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#altitude-instance_method" title="#altitude (instance method)">- (Object) <strong>altitude</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Returns the value of attribute altitude.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#latitude-instance_method" title="#latitude (instance method)">- (Object) <strong>latitude</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Returns the value of attribute latitude.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#longitude-instance_method" title="#longitude (instance method)">- (Object) <strong>longitude</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Returns the value of attribute longitude.</p>
+</div></span>
+  
+</li>
+
+    
   </ul>
-</nav>
 
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">- (Coordinate) <strong>initialize</strong>(latitude = 0, longitude = 0, altitude = 0, radians = false) </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>latitude and longitude can be Strings or Numeric, or anything else with to_radians and to_f
+latitude and longitude are in degrees unless radians == true (or set to :radians).</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#to_ary-instance_method" title="#to_ary (instance method)">- (Object) <strong>to_ary</strong> </a>
+    
+
+    
+      (also: #to_a)
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Return coordinate as a 3 member array, with
+members, latitude, longitude and altitude.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#to_hash-instance_method" title="#to_hash (instance method)">- (Object) <strong>to_hash</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>return coordinate a 3 member hash with
+keys :latitude, :longitude, and :altitude.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#to_s-instance_method" title="#to_s (instance method)">- (Object) <strong>to_s</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Returns: Latitude longitude and altitude as a single string.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    - (<tt><span class='object_link'><a href="" title="Coordinate (class)">Coordinate</a></span></tt>) <strong>initialize</strong>(latitude = 0, longitude = 0, altitude = 0, radians = false) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>latitude and longitude can be Strings or Numeric, or anything else with to_radians and to_f
+latitude and longitude are in degrees unless radians == true (or set to :radians)</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+10
+11
+12
+13
+14</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/coordinate.rb', line 10</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_latitude'>latitude</span><span class='op'>=</span><span class='int'>0</span><span class='comma'>,</span> <span class='id identifier rubyid_longitude'>longitude</span><span class='op'>=</span><span class='int'>0</span><span class='comma'>,</span> <span class='id identifier rubyid_altitude'>altitude</span><span class='op'>=</span><span class='int'>0</span><span class='comma'>,</span> <span class='id identifier rubyid_radians'>radians</span> <span class='op'>=</span> <span class='kw'>false</span><span class='rparen'>)</span>
+  <span class='ivar'>@latitude</span> <span class='op'>=</span> <span class='const'>Latitude</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_latitude'>latitude</span><span class='comma'>,</span><span class='id identifier rubyid_radians'>radians</span><span class='rparen'>)</span>
+  <span class='ivar'>@longitude</span> <span class='op'>=</span> <span class='const'>Longitude</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_longitude'>longitude</span><span class='comma'>,</span><span class='id identifier rubyid_radians'>radians</span><span class='rparen'>)</span>
+  <span class='ivar'>@altitude</span> <span class='op'>=</span> <span class='id identifier rubyid_altitude'>altitude</span><span class='period'>.</span><span class='id identifier rubyid_to_f'>to_f</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id="altitude=-instance_method"></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="altitude-instance_method">
+  
+    - (<tt>Object</tt>) <strong>altitude</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns the value of attribute altitude</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+6
+7
+8</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/coordinate.rb', line 6</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_altitude'>altitude</span>
+  <span class='ivar'>@altitude</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="latitude=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="latitude-instance_method">
+  
+    - (<tt>Object</tt>) <strong>latitude</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns the value of attribute latitude</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+6
+7
+8</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/coordinate.rb', line 6</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_latitude'>latitude</span>
+  <span class='ivar'>@latitude</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="longitude=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="longitude-instance_method">
+  
+    - (<tt>Object</tt>) <strong>longitude</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns the value of attribute longitude</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+6
+7
+8</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/coordinate.rb', line 6</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_longitude'>longitude</span>
+  <span class='ivar'>@longitude</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
     
   </div>
 
-  <div id="class-metadata">
-    
-    <nav id="parent-class-section" class="section">
-  <h3 class="section-header">Parent</h3>
-  
-  <p class="link">Object
-  
-</nav>
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
 
     
-    <!-- Method Quickref -->
-<nav id="method-list-section" class="section">
-  <h3 class="section-header">Methods</h3>
+      <div class="method_details first">
+  <h3 class="signature first" id="to_ary-instance_method">
+  
+    - (<tt>Object</tt>) <strong>to_ary</strong> 
+  
 
-  <ul class="link-list">
-    
-    <li><a href="#method-c-new">::new</a>
-    
-    <li><a href="#method-i-to_a">#to_a</a>
-    
-    <li><a href="#method-i-to_ary">#to_ary</a>
-    
-    <li><a href="#method-i-to_hash">#to_hash</a>
-    
-    <li><a href="#method-i-to_s">#to_s</a>
-    
-  </ul>
-</nav>
+  
+    <span class="aliases">Also known as:
+    <span class="names"><span id='to_a-instance_method'>to_a</span></span>
+    </span>
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Return coordinate as a 3 member array, with
+members, latitude, longitude and altitude</p>
+
 
   </div>
+</div>
+<div class="tags">
+  
 
-  <div id="project-metadata">
-    <nav id="fileindex-section" class="section project-section">
-  <h3 class="section-header">Pages</h3>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
 
-  <ul>
-  
-    <li class="file"><a href="./History_txt.html">History</a>
-  
-    <li class="file"><a href="./Manifest_txt.html">Manifest</a>
-  
-    <li class="file"><a href="./README_txt.html">README</a>
-  
-  </ul>
-</nav>
 
-    <nav id="classindex-section" class="section project-section">
-  <h3 class="section-header">Class and Module Index</h3>
+24
+25
+26</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/coordinate.rb', line 24</span>
 
-  <ul class="link-list">
+<span class='kw'>def</span> <span class='id identifier rubyid_to_ary'>to_ary</span>
+  <span class='lbracket'>[</span> <span class='ivar'>@latitude</span><span class='comma'>,</span> <span class='ivar'>@longitude</span><span class='comma'>,</span> <span class='ivar'>@altitude</span> <span class='rbracket'>]</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="to_hash-instance_method">
   
-    <li><a href="./Angle.html">Angle</a>
+    - (<tt>Object</tt>) <strong>to_hash</strong> 
   
-    <li><a href="./Coordinate.html">Coordinate</a>
+
   
-    <li><a href="./Float.html">Float</a>
+
   
-    <li><a href="./Latitude.html">Latitude</a>
-  
-    <li><a href="./Longitude.html">Longitude</a>
-  
-    <li><a href="./Numeric.html">Numeric</a>
-  
-    <li><a href="./String.html">String</a>
-  
-    <li><a href="./TrackAndDistance.html">TrackAndDistance</a>
-  
-    <li><a href="./Vincenty.html">Vincenty</a>
-  
-  </ul>
-</nav>
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>return coordinate a 3 member hash with
+keys :latitude, :longitude, and :altitude</p>
+
 
   </div>
-</nav>
+</div>
+<div class="tags">
+  
 
-<div id="documentation">
-  <h1 class="class">class Coordinate</h1>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
 
-  <div id="description" class="description">
+
+32
+33
+34</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/coordinate.rb', line 32</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_to_hash'>to_hash</span>
+  <span class='lbrace'>{</span> <span class='symbol'>:latitude</span> <span class='op'>=&gt;</span> <span class='ivar'>@latitude</span><span class='comma'>,</span> <span class='symbol'>:longitude</span> <span class='op'>=&gt;</span> <span class='ivar'>@longitude</span><span class='comma'>,</span> <span class='symbol'>:altitude</span> <span class='op'>=&gt;</span> <span class='ivar'>@altitude</span> <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
     
-  </div><!-- description -->
+      <div class="method_details ">
+  <h3 class="signature " id="to_s-instance_method">
+  
+    - (<tt>Object</tt>) <strong>to_s</strong> 
+  
 
   
+
   
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns: Latitude longitude and altitude as a single string.
+Should add an optional format string to this.</p>
+
+
+  </div>
+</div>
+<div class="tags">
   
-  <section id="5Buntitled-5D" class="documentation-section">
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+18
+19
+20</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/coordinate.rb', line 18</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_to_s'>to_s</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='ivar'>@latitude</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span> <span class='rbrace'>}</span><span class='tstring_content'>  </span><span class='embexpr_beg'>#{</span><span class='ivar'>@longitude</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='rbrace'>}</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='ivar'>@altitude</span><span class='rbrace'>}</span><span class='tstring_content'>m</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
     
+  </div>
 
-    
+</div>
 
-    
+    <div id="footer">
+  Generated on Sat Jan 12 13:03:24 2013 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.3 (ruby-1.9.3).
+</div>
 
-    
-    <!-- Attributes -->
-    <section id="attribute-method-details" class="method-section section">
-      <h3 class="section-header">Attributes</h3>
-
-      
-      <div id="attribute-i-altitude" class="method-detail">
-        <div class="method-heading attribute-method-heading">
-          <span class="method-name">altitude</span><span
-            class="attribute-access-type">[RW]</span>
-        </div>
-
-        <div class="method-description">
-        
-        
-        
-        </div>
-      </div>
-      
-      <div id="attribute-i-latitude" class="method-detail">
-        <div class="method-heading attribute-method-heading">
-          <span class="method-name">latitude</span><span
-            class="attribute-access-type">[RW]</span>
-        </div>
-
-        <div class="method-description">
-        
-        
-        
-        </div>
-      </div>
-      
-      <div id="attribute-i-longitude" class="method-detail">
-        <div class="method-heading attribute-method-heading">
-          <span class="method-name">longitude</span><span
-            class="attribute-access-type">[RW]</span>
-        </div>
-
-        <div class="method-description">
-        
-        
-        
-        </div>
-      </div>
-      
-    </section><!-- attribute-method-details -->
-    
-
-    <!-- Methods -->
-    
-     <section id="public-class-5Buntitled-5D-method-details" class="method-section section">
-      <h3 class="section-header">Public Class Methods</h3>
-
-    
-      <div id="method-c-new" class="method-detail ">
-        
-        <div class="method-heading">
-          <span class="method-name">new</span><span
-            class="method-args">(latitude=0, longitude=0, altitude=0, radians = false)</span>
-          <span class="method-click-advice">click to toggle source</span>
-        </div>
-        
-
-        <div class="method-description">
-          
-          <p>latitude and longitude can be Strings or <a
-href="Numeric.html">Numeric</a>, or anything else with to_radians and to_f
-latitude and longitude are in degrees unless radians == true</p>
-          
-
-          
-          <div class="method-source-code" id="new-source">
-            <pre><span class="ruby-comment"># File lib/coordinate.rb, line 9</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">latitude</span>=<span class="ruby-value">0</span>, <span class="ruby-identifier">longitude</span>=<span class="ruby-value">0</span>, <span class="ruby-identifier">altitude</span>=<span class="ruby-value">0</span>, <span class="ruby-identifier">radians</span> = <span class="ruby-keyword">false</span>)
-  <span class="ruby-ivar">@latitude</span> = <span class="ruby-constant">Latitude</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">latitude</span>,<span class="ruby-identifier">radians</span>)
-  <span class="ruby-ivar">@longitude</span> = <span class="ruby-constant">Longitude</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">longitude</span>,<span class="ruby-identifier">radians</span>)
-  <span class="ruby-ivar">@altitude</span> = <span class="ruby-identifier">altitude</span>.<span class="ruby-identifier">to_f</span>
-<span class="ruby-keyword">end</span></pre>
-          </div><!-- new-source -->
-          
-        </div>
-
-        
-
-        
-      </div><!-- new-method -->
-
-    
-    </section><!-- public-class-method-details -->
-  
-     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
-      <h3 class="section-header">Public Instance Methods</h3>
-
-    
-      <div id="method-i-to_a" class="method-detail method-alias">
-        
-        <div class="method-heading">
-          <span class="method-name">to_a</span><span
-            class="method-args">()</span>
-          <span class="method-click-advice">click to toggle source</span>
-        </div>
-        
-
-        <div class="method-description">
-          
-          
-          
-
-          
-        </div>
-
-        
-
-        
-        <div class="aliases">
-          Alias for: <a href="Coordinate.html#method-i-to_ary">to_ary</a>
-        </div>
-        
-      </div><!-- to_a-method -->
-
-    
-      <div id="method-i-to_ary" class="method-detail ">
-        
-        <div class="method-heading">
-          <span class="method-name">to_ary</span><span
-            class="method-args">()</span>
-          <span class="method-click-advice">click to toggle source</span>
-        </div>
-        
-
-        <div class="method-description">
-          
-          
-          
-
-          
-          <div class="method-source-code" id="to_ary-source">
-            <pre><span class="ruby-comment"># File lib/coordinate.rb, line 21</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">to_ary</span>
-  [ <span class="ruby-ivar">@latitude</span>, <span class="ruby-ivar">@longitude</span>, <span class="ruby-ivar">@altitude</span> ]
-<span class="ruby-keyword">end</span></pre>
-          </div><!-- to_ary-source -->
-          
-        </div>
-
-        
-        <div class="aliases">
-          Also aliased as: <a href="Coordinate.html#method-i-to_a">to_a</a>
-        </div>
-        
-
-        
-      </div><!-- to_ary-method -->
-
-    
-      <div id="method-i-to_hash" class="method-detail ">
-        
-        <div class="method-heading">
-          <span class="method-name">to_hash</span><span
-            class="method-args">()</span>
-          <span class="method-click-advice">click to toggle source</span>
-        </div>
-        
-
-        <div class="method-description">
-          
-          
-          
-
-          
-          <div class="method-source-code" id="to_hash-source">
-            <pre><span class="ruby-comment"># File lib/coordinate.rb, line 27</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">to_hash</span>
-  { <span class="ruby-value">:latitude</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@latitude</span>, <span class="ruby-value">:longitude</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@longitude</span>, <span class="ruby-value">:altitude</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@altitude</span> }
-<span class="ruby-keyword">end</span></pre>
-          </div><!-- to_hash-source -->
-          
-        </div>
-
-        
-
-        
-      </div><!-- to_hash-method -->
-
-    
-      <div id="method-i-to_s" class="method-detail ">
-        
-        <div class="method-heading">
-          <span class="method-name">to_s</span><span
-            class="method-args">()</span>
-          <span class="method-click-advice">click to toggle source</span>
-        </div>
-        
-
-        <div class="method-description">
-          
-          <p>Should add a format string to this. Returns: <a
-href="Latitude.html">Latitude</a> longitude and altitude as a single
-string.</p>
-          
-
-          
-          <div class="method-source-code" id="to_s-source">
-            <pre><span class="ruby-comment"># File lib/coordinate.rb, line 17</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">to_s</span>
-  <span class="ruby-node">&quot;#{@latitude.to_s }  #{@longitude.to_s} #{@altitude}m&quot;</span>
-<span class="ruby-keyword">end</span></pre>
-          </div><!-- to_s-source -->
-          
-        </div>
-
-        
-
-        
-      </div><!-- to_s-method -->
-
-    
-    </section><!-- public-instance-method-details -->
-  
-  </section><!-- 5Buntitled-5D -->
-
-</div><!-- documentation -->
-
-
-<footer id="validator-badges">
-  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
-  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.12.
-  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
-</footer>
-
+  </body>
+</html>
