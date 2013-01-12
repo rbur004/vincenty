@@ -6,7 +6,7 @@ require 'angle.rb'
 
 class Longitude < Angle
   
-  #Returns angle as degrees in range -180 and 180
+  # @return [Float] angle as degrees in range -180 and 180
   def to_degrees
     degrees = super
     case
@@ -15,7 +15,7 @@ class Longitude < Angle
     end
   end
   
-  #Returns: angle as degrees in range -2PI and 2PI
+  # @return [Float] angle as degrees in range -2PI and 2PI
   def to_radians
     case
       when @angle > Math::PI ; @angle - 2 * Math::PI
@@ -23,8 +23,9 @@ class Longitude < Angle
     end
   end
   
-  #Returns: angle as string in degrees minutes seconds direction.
+  # @return [String] angle as string in degrees minutes seconds direction.
   #A West angle is negative, East is Positive.
+  # @param [String] fmt Optional format string passed to Angle#to_s
   def to_s(fmt="%3d %2m'%2.4s\"%E")
     super(fmt)
   end

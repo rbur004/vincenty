@@ -12,8 +12,9 @@ require 'coordinate.rb'
 # Modified to incorporate corrections to formulae as found in script on http://www.movable-type.co.uk/scripts/LatLongVincenty.html
 # Added my Modification of the distanceAndAngle formulae to correct the compass bearing.
 class Vincenty < Coordinate
-  VERSION = '1.0.4'
+  VERSION = '1.0.5'
   
+  # @return [String] constant VERSION
   def version
     VERSION
   end
@@ -21,8 +22,8 @@ class Vincenty < Coordinate
   #Great Circle formulae  http://en.wikipedia.org/wiki/Great-circle_distance
   #Reference calculation for testing, assumes the earth is a sphere, which it isn't. 
   #This gives us an approximation to verify Vincenty algorithm.
-  #Takes: argument p2 is target coordinate that we want the bearing to.
-  #Returns: TrackAndDistance object with the compass bearing and distance in meters to P2
+  # @param [Coordinate] p2 is target coordinate that we want the bearing to.
+  # @return [TrackAndDistance]  with the compass bearing and distance in meters to P2
   def sphericalDistanceAndAngle( p2 ) 
     a = 6378137 #equatorial radius in meters     (+/-2 m) 
     b = 6356752.31424518 #polar radius in meters
@@ -48,8 +49,8 @@ class Vincenty < Coordinate
 
   #Vincenty's algorithm for finding bearing and distance between to coordinates.
   #Assumes earth is a WGS-84 Ellipsod.
-  #Takes: argument p2 is target coordinate that we want the bearing to.
-  #Returns: TrackAndDistance object with the compass bearing and distance in meters to P2
+  # @param [Coordinate] p2 is target coordinate that we want the bearing to.
+  # @return [TrackAndDistance] with the compass bearing and distance in meters to P2
   def distanceAndAngle( p2 )
     # a, b = major & minor semiaxes of the ellipsoid
     a = 6378137 #equatorial radius in meters     (+/-2 m) 
@@ -118,8 +119,8 @@ class Vincenty < Coordinate
 
   #spherical earth estimate of calculation for finding target coordinate from start coordinate, bearing and distance
   #Used to run checks on the Vincenty algorithm
-  #Takes: TrackAndDistance object with bearing and distance.
-  #Returns new Vincenty object with the destination coordinates.
+  # @param [TrackAndDistance] track_and_distance specifying  bearing and distance.
+  # @return [Vincenty]  with the destination coordinates.
   def sphereDestination( track_and_distance )
     a = 6378137 #equatorial radius in meters     (+/-2 m) 
     b = 6356752.31424518 #polar radius in meters
@@ -139,8 +140,8 @@ class Vincenty < Coordinate
   #
   # Calculate destination point given start point lat/long, bearing and distance.
   #Assumes earth is a WGS-84 Ellipsod.
-  #Takes: TrackAndDistance object with bearing and distance.
-  #Returns: new Vincenty object with the destination coordinates.
+  # @param [TrackAndDistance]  specifying bearing and distance.
+  # @return [Vincenty] with the destination coordinates.
   def destination( track_and_distance ) 
     # a, b = major & minor semiaxes of the ellipsoid
     a = 6378137 #equatorial radius in meters     (+/-2 m) 

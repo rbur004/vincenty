@@ -6,7 +6,7 @@ require 'angle.rb'
 
 class Latitude < Angle
   
-  #Returns angle as degrees in range -90 and 90
+  # @return [Float] angle as degrees in range -90 and 90
   def to_degrees
     degrees = super
     case
@@ -18,7 +18,7 @@ class Latitude < Angle
     end
   end
   
-  #Returns: angle as degrees in range -PI and PI
+  # @return [Float] angle as degrees in range -PI and PI
   def to_radians
     case
     when @angle > 3*Math::PI/2 ;  @angle - Math::PI * 2
@@ -29,8 +29,9 @@ class Latitude < Angle
     end
   end
 
-  #Returns: angle as string in degrees minutes seconds direction.
+  # @return [String] angle as string in degrees minutes seconds direction.
   #A South angle is negative, North is Positive.
+  # @param [String] fmt Optional format string passed to Angle#to_s
   def to_s(fmt="%2d %2m'%2.4s\"%N")
       super(fmt)
   end

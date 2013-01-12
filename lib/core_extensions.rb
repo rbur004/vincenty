@@ -4,8 +4,8 @@ require 'scanf'
 #Also adds in sign.
 class Numeric
   #Convert Radians to Degrees
-  #if optional argument mod == true, then applies % 360
-  #Returns: degrees
+  # @return [Numeric] degrees
+  # @param [true,false]  mod Optional argument mod == true, then applies % 360
   def to_degrees(mod=false) 
     if mod 
       (self * 180  / Math::PI) % 360
@@ -15,8 +15,8 @@ class Numeric
   end
   
   #Converts degrees to Radians
-  #if optional argument mod == true, then applies % Math::PI
-  #Returns: radians
+  # @return [Numeric] radians
+  # @param [true,false] mod Optional argument mod == true, then applies % Math::PI
   def to_radians(mod=false)
     if mod 
       (self * Math::PI / 180) % Math::PI
@@ -28,7 +28,7 @@ class Numeric
   alias to_r to_radians
   alias to_d to_degrees
   
-  #Returns: 1 if number is positive, -1 if negative.
+  # @return [Fixnum] 1 if number is positive, -1 if negative.
   def sign
     self < 0 ? -1 : 1
   end
@@ -37,10 +37,14 @@ end
 
 #Alters round method to have an optional number of decimal places.
 class Float
+  
+  #Replace default round, so we can reference it later.
+  # @return [Float]
   alias round0 round
+  
   #Compatible Replacement for Float.round
-  #Optional argument n is the number of decimal places to round to.
-  #Returns: float rounded to n decimal places.
+  # @return [Float] float rounded to n decimal places.
+  # @param [Numeric] n Optional argument n is the number of decimal places to round to.
   def round(n = 0)
     m = 10.0**n
    (self *  m).round0 / m
@@ -51,7 +55,7 @@ end
 class String
   #string expected to be degrees, returns decimal degrees.
   #common forms are S37 001'7.5'', 37 001'7.5''S , -37 001'7.5'', -37 0 1.512'. -37.01875 0, 37 001'.512S, S37 001'.512, ...
-  #Returns: angle in decimal degrees
+  # @return [Float] angle in decimal degrees
   def to_dec_degrees 
     #reorder 37 001'.512S, S37 001'.512 into 37 001.512'S, S37 001.512' respectively
     s = self.gsub(/([0-9])([''])\.([0-9]+)/, '\1.\3\2')
@@ -71,16 +75,16 @@ class String
     end
   end
   
-  #Convert Radians to Degrees
-  #if optional argument mod == true, then applies % 360
-  #Returns: degrees
+  #Convert String number in Radians to Degrees
+  # @return [Float]  degrees
+  # @param [true,false] mod Optional argument mod == true, then applies % 360
   def to_degrees(mod=false) #string expected to be radians, returns degrees
     self.to_f.to_degrees(mod)
   end
   
   #Converts string degrees to to_decimal_degrees, then to Radians
-  #if optional argument mod == true, then applies % Math::PI
-  #Returns: radians
+  # @return [Float] radians
+  # @param [true,false] mod Optional argument mod == true, then applies % Math::PI
   def to_radians(mod=false) #string expected to be degrees, returns radians
     self.to_dec_degrees.to_radians(mod)
   end
