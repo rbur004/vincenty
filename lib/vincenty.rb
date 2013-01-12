@@ -1,9 +1,3 @@
-#Vincenty's algorithms for finding the bearing and distance between two coordinates and
-#for finding the latitude and longitude, given a start coordinate, distance and bearing.
-#
-# Coded from formulae from Wikipedia http://en.wikipedia.org/wiki/Vincenty%27s_formulae
-# Modified to incorporate corrections to formulae as found in script on http://www.movable-type.co.uk/scripts/LatLongVincenty.html
-# Added my Modification of the distanceAndAngle formulae to correct the compass bearing.
 require 'core_extensions.rb'
 require 'angle.rb'
 require 'latitude.rb'
@@ -11,8 +5,14 @@ require 'longitude.rb'
 require 'track_and_distance.rb'
 require 'coordinate.rb'
 
+#Vincenty's algorithms for finding the bearing and distance between two coordinates and
+#for finding the latitude and longitude, given a start coordinate, distance and bearing.
+#
+# Coded from formulae from Wikipedia http://en.wikipedia.org/wiki/Vincenty%27s_formulae
+# Modified to incorporate corrections to formulae as found in script on http://www.movable-type.co.uk/scripts/LatLongVincenty.html
+# Added my Modification of the distanceAndAngle formulae to correct the compass bearing.
 class Vincenty < Coordinate
-  VERSION = '1.0.3'
+  VERSION = '1.0.4'
   
   def version
     VERSION
@@ -141,7 +141,6 @@ class Vincenty < Coordinate
   #Assumes earth is a WGS-84 Ellipsod.
   #Takes: TrackAndDistance object with bearing and distance.
   #Returns: new Vincenty object with the destination coordinates.
-
   def destination( track_and_distance ) 
     # a, b = major & minor semiaxes of the ellipsoid
     a = 6378137 #equatorial radius in meters     (+/-2 m) 

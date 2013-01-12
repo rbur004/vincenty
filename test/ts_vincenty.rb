@@ -82,13 +82,13 @@ class TestVincenty< Test::Unit::TestCase
   
   #Run the Australian Geoscience site example.
   def test_geoscience_au
-    flindersPeak = Vincenty.new("-37°57'3.72030″", "144°25'29.52440″" )
-    buninyong = Vincenty.new("-37 ° 39 ' 10.15610 ''", "143 ° 55 ' 35.38390 ''") #Buninyong
+    flindersPeak = Vincenty.new("-37 57'3.72030″", "144 25'29.52440″" )
+    buninyong = Vincenty.new("-37   39 ' 10.15610 ''", "143   55 ' 35.38390 ''") #Buninyong
     track_and_bearing = flindersPeak.distanceAndAngle( buninyong ) 
-    assert_equal(Angle.new("306 ° 52 ' 5.37 ''").to_d.round(4), track_and_bearing.bearing.to_d.round(4))
+    assert_equal(Angle.new("306   52 ' 5.37 ''").to_d.round(4), track_and_bearing.bearing.to_d.round(4))
     assert_equal(54972.271, track_and_bearing.distance.round(3))
     
-    destination = flindersPeak.destination(TrackAndDistance.new("306 ° 52 ' 5.37 ''", 54972.271))
+    destination = flindersPeak.destination(TrackAndDistance.new("306   52 ' 5.37 ''", 54972.271))
     assert_equal(buninyong.latitude.to_d.round(4), destination.latitude.to_d.round(4))
     assert_equal(buninyong.longitude.to_d.round(4), destination.longitude.to_d.round(4))
   end

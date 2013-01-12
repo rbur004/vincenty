@@ -1,140 +1,171 @@
+require 'core_extensions.rb'
+
 #Class Angle is a utility class that allows 
-# * Angle arithmetic
-# * Angle comparison
+# * Angle arithmetic ( +,-,*,/,**,% and unary +,-)
+# * Angle comparison ( <=>, hence, <, >, >=, <=, == )
 # * Conversion to and from degrees and radians
 # * Conversion to string as radians or DMS format
-
-require 'core_extensions.rb'
 
 class Angle
   include Comparable
   
-  #Provides test for Module Comparable
-  def <=>(v)
-    if v.class == Angle
-      @value <=> v.value
-    else 
-      @value <=> v
-    end
-  end
 
-  attr_accessor :value #stored in radians
+  attr_accessor :angle #stored in radians
+  alias :value :angle    #Older version of angle used volue rather than angle
+  alias :value= :angle=  #Older version of angle used volue rather than angle
   
-  #v may be anything that has a to_f and to_radians. The Default for v is degrees.
-  #if radians == true then v is in radians, not degrees.
-  def initialize(v=0, radians=false)
-    #assumes that we are getting a value in degrees.
-    if radians
-      @value = v.to_f #works for String, Fixed, other Angles and for Float.
+  #angle may be anything that has a to_f and to_radians. 
+  #The Default for angle is degrees, but internally @angle is stored in radians.
+  #if radians is passed true or :radians, then angle is in radians, not degrees.
+  def initialize(angle=0, radians=false)
+    #assumes that we are getting an angle in degrees.
+    if radians == true || radians == :radians
+      @angle = angle.to_f #works for String, Fixed, other Angles and for Float.
     else
-      if v.class == Array
-        @value = self.class.decimal_deg(*v).to_radians #Wild assumption that the array is deg,min,sec.
+      if angle.class == Array
+        @angle = self.class.decimal_deg(*angle).to_radians #Wild assumption that the array is deg,min,sec.
       else
-        @value = v.to_radians #we have a String and Numeric class version of this. Another Angle will work too.
+        @angle = angle.to_radians #we have a String and Numeric class version of this. Another Angle will work too.
       end
     end
   end
   
-  #Class level function that converts an array of up to 4 values into decimal degrees.
-  #a[0..3] is degrees, minutes, seconds, direction. Dircection is one of 'N', 'S', 'E', 'W'.
-  #nil values in the array are set to 0
-  #if the a.length < 4,t then a is extended to be length 4 with 0
-  #A 0 as the direction has no effect on the sign of the result
-  #Returns: signed decimal degress.
-  def self.decimal_deg(*a)
-    (0..3).each { |x|  a[x] = 0 if a[x] == nil } #convert nil arguments to 0 and ensure 4 values.
-    s = { 'N'=>1, 'S'=>-1, 'E'=>1, 'W'=>-1, 0=>1 }
-    a[0].sign * (a[0].abs + a[1]/60.0 + a[2]/3600.0) * s[a[3]]
+  
+  #Class level function that converts 4 arguments into decimal degrees.
+  #Dircection is one of 'N', 'S', 'E', 'W'.
+  # direction is optional, as you might want to specify a negative value for degrees
+  # @return [Float] signed decimal degrees.
+  def self.decimal_deg(degrees=0, minutes=0, seconds=0, direction='N')
+    s = { 'N'=>1, 'S'=>-1, 'E'=>1, 'W'=>-1, 'n'=>1, 's'=>-1, 'e'=>1, 'w'=>-1 }
+    sign = s[direction]
+    sign = sign == nil ? 1 : sign #Assume 'N' or 'E' if the direction is not set.
+    #Shouldn't have a negative value for degrees if the direction is specified.
+    #I am defaulting to the degrees sign if it is set, otherwise the direction given
+    sign = degrees.sign == -1 || (degrees == 0 && (minutes < 0 || (minutes == 0 && seconds < 0))) ? -1 : sign
+    sign * (degrees.abs + minutes/60.0 + seconds/3600.0) 
   end
   
-  #Class level utility function to return the value as deg,min,sec
-  #Assumes decimal degress unless radians == true
-  #returns an array of signed deg, min, sec.
-  def self.dms(v, radians = false)
-    v = v.to_d if radians
+  #Class level function that takes an array of [degress,minutes, seconds, direction]
+  # and returns decimal degrees
+  # @return [Float] signed decimal degrees.
+  def self.decimal_deg_from_ary(a)
+    self.decimal_deg(*a)
+  end
+  
+  #Class level utility function to return the angle as deg,min,sec
+  #Assumes decimal degress unless radians == true .
+  # @return [Array] of signed deg, min, sec.
+  #Nb. * That min will be negative if the angle is negative and deg == 0
+  #    * That sec will be negative if the angle is negative and deg == 0 && min == 0
+  def self.dms(angle, radians = false)
+    angle = angle.to_d if radians == true || radians == :radians
+    v = angle.abs
     deg = v.floor
-    min = ((v-@deg)*60).floor
-    sec = ((v-@deg-min/60.0)*3600.0) 
+    min = ((v-deg)*60.0).floor
+    sec = ((v-deg-min/60.0)*3600.0) 
     
-    if v < 0 &&  deg == 0
-      if min == 0
-        sec = -sec
+    if angle < 0
+      if deg == 0
+        if min == 0
+          sec = -sec
+        else
+          min = -min 
+        end
       else
-        min = -min 
+        deg = -deg
       end
     end
+
     return deg,min,sec
   end
      
   #Class level function equivalent to Angle.new(r, true)
-  #Returns: new Angle
+  # @return [Angle]
   def self.radians(r=0) #passed in radians.
     self.new(r.to_f, true) #Nb. self is Angle, be we don't Angle.new, as we want subclasses to return their class, not Angle.
   end
   
   #Class level function equivalent to Angle.new(d, false) or just Angle.new(d)
-  #Returns: new Angle
+  # @return [Angle]
   def self.degrees(d=0) #passed in degrees.
     self.new(d.to_radians, true)
   end
     
+  #Provides test for Module Comparable, giving us <,>,<=,>=,== between angles
+  # @return [true,false]
+  def <=>(angle)
+    if angle.class == Angle
+      @angle <=> angle.angle
+    else 
+      @angle <=> angle
+    end
+  end
+
   #unary +
-  #Returns: new Angle
+  # @return [Angle] equivalent to @angle
   def +@
-    self.class.radians(@value) #Nb. Not Angle.new, as we want subclasses to return their class, not Angle.
+    self.class.radians(@angle) #Nb. Not Angle.new, as we want subclasses to return their class, not Angle.
   end
   
   #Unary -
-  #Returns: new Angle
+  # @return [Angle] -@angle
   def -@
-    self.class.radians(-@value)
+    self.class.radians(-@angle)
   end
   
-  #Returns :new Angle
-  def +(v)
-    self.class.radians(@value + v)
+  # Binary addition operator. Can add angles and numbers, or two angles.
+  # @return [Angle]
+  def +(angle)
+    self.class.radians(@angle + angle)
   end
   
-  #Returns: new Angle
-  def -(v)
-    self.class.radians(@value - v)
+  # Binary subtraction operator. Can add angles and numbers, or two angles.
+  # @return [Angle]
+  def -(angle)
+    self.class.radians(@angle - angle)
   end
     
-  #Returns :new Angle
-  def *(v)
-    self.class.radians(@value * v)
+  # Binary multiply operator. Can add angles and numbers, or two angles.
+  # @return [Angle]
+  def *(angle)
+    self.class.radians(@angle * angle)
   end
   
-  #Returns: new Angle
-  def **(v)
-    self.class.radians(@value ** v)
+  # Binary power of operator. Can add angles and numbers, or two angles.
+  # @return [Angle]
+  def **(angle)
+    self.class.radians(@angle ** angle)
   end
   
-  #Returns: new Angle
-  def /(v)
-    self.class.radians(@value / v)
+  # Binary division operator. Can add angles and numbers, or two angles.
+  # @return [Angle]
+  def /(angle)
+    self.class.radians(@angle / angle)
   end
   
-  #Returns: new Angle
-  def %(v)
-    self.class.radians(@value % v)
+  # Binary mod operator. Can add angles and numbers, or two angles.
+  # @return [Angle]
+  def %(angle)
+    self.class.radians(@angle % angle)
   end
     
-  #Returns: angle in degrees
+  # @return [Float] angle in degrees
   def to_degrees
-    @value.to_degrees
+    @angle.to_degrees
   end
  
+  # @return [Float] angle in degrees
   alias to_d to_degrees
   
   #Returns: angle in radians
   def to_radians
-    @value
+    @angle
   end
 
   alias to_r to_radians
   
-  #Returns: [deg,min,sec]
+  # Returns @angle as decimal_degrees
+  # @return [Array]  of signed Floats: degrees,minutes,seconds
   #Nb. * That min will be negative if the angle is negative and deg == 0
   #    * That sec will be negative if the angle is negative and deg == 0 && min == 0
   def to_dms 
@@ -143,7 +174,7 @@ class Angle
     min = ((d-deg)*60).floor
     sec = ((d-deg-min/60.0)*3600.0) 
     
-    if @value < 0
+    if @angle < 0
       if deg == 0
         if min == 0
           sec = -sec
@@ -158,76 +189,78 @@ class Angle
     return deg, min, sec
   end
   
-  #Returns: the angle in radians as a float (equivalent to to_radians)
+  # @return [Float] the angle in radians as a float (equivalent to to_radians)
   alias to_f to_radians
   
-  #Returns the angle truncated to an integer, in radians.
+  # @return [Fixnum] the angle truncated to an integer, in radians.
   def to_i
     to_radians.to_i
   end
   
+  # @return [Fixnum] the angle truncated to an integer, in radians.
   alias to_int to_i
   
-  def coerce(v)
-    [Float(v), @value]
+  # @return [Array] the angle parameter as a Float and the @angle parameter from this class.
+  def coerce(angle)
+    [Float(angle), @angle]
   end
   
-  #Returns: the sign of the angle. 1 for positive, -1 for negative.
+  # @return [Fixnum] the sign of the angle. 1 for positive, -1 for negative.
   def sign
-    @value.sign
+    @angle.sign
   end
   
-  #Returns: the absolute value of the angle in radians
+  # @return [Float] the absolute angle of the angle in radians
   def abs
-    @value.abs
+    @angle.abs
   end
   
-  #Returns: angle as compass bearing in radians.
+  # @return [Float] angle as compass bearing in radians.
   #Compass bearings are clockwise, Math angles are counter clockwise.
   def to_bearing
-    self.class.new(Math::PI * 2 - @value,true)
+    self.class.new(Math::PI * 2 - @angle,true)
   end
   
-  #Returns: the reverse angle in radians. i.e. angle + PI (or angle + 180 degrees)
+  # @return [Float] the reverse angle in radians. i.e. angle + PI (or angle + 180 degrees)
   def reverse
-    if (v = @value + Math::PI) > Math::PI * 2
-      v -= Math::PI * 2
+    if (angle = @angle + Math::PI) > Math::PI * 2
+      angle -= Math::PI * 2
     end
-    return self.class.new(v,true)
+    return self.class.new(angle,true)
   end
   
   
-  #Returns: angle in radians as a string.
+  # @return [String] angle in radians as a string.
   def to_s(fmt = nil)
     return to_radians.to_s if(fmt == nil)
     return strf(fmt)
   end
   
   #formated output of the angle.
-  #The default format is a signed deg^0minutes'seconds'' with leading 0's in the minutes and seconds and 4 decimal places for seconds.
+  #The default format is a signed deg 0minutes'seconds" with leading 0's in the minutes and seconds and 4 decimal places for seconds.
   #formats are:
   # * %wd output the degrees as an integer.
   # **   where w is 0, 1, 2 or 3 and represents the field width. 
   # *** 1 is the default, which indicates that at least 1 digit is displayed
-  # *** 2 indicates that at least 2 digits are displayed. 1 to 9 will be displayed as 01^0 to 09^0
-  # *** 3 indicates that at least 4 digits are displayed. 10 to 99 will be displayed as 010^0 to 099^0
+  # *** 2 indicates that at least 2 digits are displayed. 1 to 9 will be displayed as 01 0 to 09 0
+  # *** 3 indicates that at least 4 digits are displayed. 10 to 99 will be displayed as 010 0 to 099 0
   #
   # * %w.pD outputs degrees as a float.
-  # ** p is the number of decimal places.
+  #     * p is the number of decimal places.
   #
   # * %wm output minutes as an integer.
-  # ** where the width w is 0, 1 , 2 with similar meaning to %d. p is again the number of decimal places.
+  #     * where the width w is 0, 1 , 2 with similar meaning to %d. p is again the number of decimal places.
   #
   # * %w.pM outputs minutes as a float .e.g. 01.125'.
-  # ** p is the number of decimal places.
+  #     * p is the number of decimal places.
   #
   # * %wW outputs secs/60 as a float without the leading '0.'. 
   #       Used with %m like this %2m'%4W , to get minute marker before the decimal places. 
-  #       e.g. -37^001'.1167 rather than -37^001.1167'
-  # ** p is the number of decimal places.
+  #       e.g. -37 001'.1167 rather than -37 001.1167'
+  #     * p is the number of decimal places.
   #
   # * %w.ps output seconds as a float.
-  # ** where the width w is 1 , 2 with similar meaning to %d. p is again the number of decimal places.
+  #     * where the width w is 1 , 2 with similar meaning to %d. p is again the number of decimal places.
   #
   # * %N outputs N if the angle is positive and S if the angle is negative.
   #
@@ -238,7 +271,8 @@ class Angle
   # * %% outputs %
   #
   # Other strings in the format are printed as is.
-  def strf(fmt="%d^0%2m'%2.4s''")
+  # @return [String]
+  def strf(fmt="%d %2m'%2.4s\"")
     tokens = fmt.scan(/%[0-9\.]*[%dmsDMNErW]|[^%]*/)
     have_dir = have_dms = false
     tokens.collect! do |t|
@@ -288,7 +322,7 @@ class Angle
         when 'd'
           s += s_int(deg, t[1], have_dir)
         when 'D'
-          s += s_float(@value.to_d, t[1], t[2], have_dir)
+          s += s_float(@angle.to_d, t[1], t[2], have_dir)
         when 'm'
           s += s_int(min, t[1], have_dir)
         when 'M'
@@ -298,11 +332,11 @@ class Angle
         when 's'
           s += s_float(sec, t[1], t[2], have_dir)
         when 'r'
-          s += s_float(@value, t[1], t[2], have_dir)
+          s += s_float(@angle, t[1], t[2], have_dir)
         when 'N'
-          s +=  (@value < 0 ? 'S' : 'N')
+          s +=  (@angle < 0 ? 'S' : 'N')
         when 'E'
-          s += (@value < 0 ? 'W' : 'E')
+          s += (@angle < 0 ? 'W' : 'E')
         end
       else
         s += t[1] #the fillers.
@@ -313,37 +347,50 @@ class Angle
   end
   
   private 
-  def s_places(v, places)
+  #Output angle_dec as a string to the number of decimal places specified by places.
+  #Assumes the angle is 0 <= angle_dec < 1
+  #No leading '0' is output. The string starts with a '.'
+  #If ploces is -1, then all decimal places are returned.
+  # @return [String]
+  def s_places(angle_dec, places)
     if places != -1
-      dec_p = (v * 10 ** places).round
-      f = ".%0#{places > 0 ? places : ''}d"
-      f % dec_p
+      places > 0 ? ".%0#{places}d" % (angle_dec * 10 ** places).round : ''
     else
-      '.' + v_dec.to_s[2..-1] 
+      angle_dec.to_s[1..-1] #Output all decimal places stripping the leading 0
     end
   end
 
-  def s_only_places(v, places)
-    v_int, v_dec = v.abs.divmod(1)
-    s_places(v_dec, places)
-  end
-
-  #Prints fixed width decimal portion with leading 0s to get at least the width specified
+  #return the angle as a string with fixed width decimal portion with leading 0s 
+  #to get at least the width specified
   #Prints the number of places after the decimal point rounded to places places.
   #-1 width means no width format
   #-1 places means print all decimal places.
   #abs means print the absolute value.
-  def s_float(v, width, places, abs)
-    v_int, v_dec = v.abs.divmod(1)
+  # @return [String]
+  def s_float(angle, width, places, abs)
+    angle_int, angle_dec = angle.abs.divmod(1)
     f = "%0#{width > 0 ? width : ''}d"
-    s = (abs == false && v.sign == -1) ? '-' : ''  #catch the case of -0
-    s += f % v.abs + s_places(v_dec, places)
+    s = (abs == false && angle.sign == -1) ? '-' : ''  #catch the case of -0
+    s += f % angle.abs + s_places(angle_dec, places)
   end
 
-  def s_int(v, width, abs)
+  #Return the integer part of angle as a string of fixed width
+  #If abs == true, then return the absolute value.
+  # @return [Fixnum]
+  def s_int(angle, width, abs)
     f = "%0#{width > 0 ? width : ''}d"
-    s = (abs == false && v.sign == -1) ? '-' : ''  #catch the case of -0
-    s += f % v.abs
+    s = (abs == false && angle.sign == -1) ? '-' : ''  #catch the case of -0
+    s += f % angle.abs
+  end
+  
+  #Return the fractional part of angle as a string,
+  #to the number of decimal places specified by 'places'.
+  #No leading '0' is output. The string starts with a '.'
+  #If ploces is -1, then all decimal places are returned.
+  # @return [String]
+  def s_only_places(angle, places)
+    angle_int, angle_dec = angle.abs.divmod(1)
+    s_places(angle_dec, places)
   end
 end
 

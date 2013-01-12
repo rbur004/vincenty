@@ -13,6 +13,7 @@ class Numeric
       self * 180  / Math::PI 
     end
   end
+  
   #Converts degrees to Radians
   #if optional argument mod == true, then applies % Math::PI
   #Returns: radians
@@ -49,22 +50,22 @@ end
 #Extends String to to_dec_degrees, add to_r and to_d
 class String
   #string expected to be degrees, returns decimal degrees.
-  #common forms are S37^001'7.5'', 37^001'7.5''S , -37^001'7.5'', -37^0 1.512'. -37.01875^0, 37^001'.512S, S37^001'.512, ...
+  #common forms are S37 001'7.5'', 37 001'7.5''S , -37 001'7.5'', -37 0 1.512'. -37.01875 0, 37 001'.512S, S37 001'.512, ...
   #Returns: angle in decimal degrees
   def to_dec_degrees 
-    #reorder 37^001'.512S, S37^001'.512 into 37^001.512'S, S37^001.512' respectively
+    #reorder 37 001'.512S, S37 001'.512 into 37 001.512'S, S37 001.512' respectively
     s = self.gsub(/([0-9])([''])\.([0-9]+)/, '\1.\3\2')
-    #add in minutes and seconds to get 3 values 'deg 0 0'from  S37^0, 37^0S
+    #add in minutes and seconds to get 3 values 'deg 0 0'from  S37 0, 37 0S
     s.gsub!(/^([^0-9\.\-]*)([0-9\-\.]+)([^0-9\-\.]*)$/, '\1\2\3 0 0\5')
-    #add in seconds get 3 values 'deg min 0' from  S37^01.512',  37^01.512'S
+    #add in seconds get 3 values 'deg min 0' from  S37 01.512',  37 01.512'S
     s.gsub!(/^([^0-9\.\-]*)([0-9\-\.]+)([^0-9\-\.]+)([0-9\-\.]+)([^0-9\-\.]*)$/, '\1\2\3\4 0\5')
     
-    #look for anything of the form S37^001'7.5'', S37^01.512', S37.01875^0, ...
+    #look for anything of the form S37 001'7.5'', S37 01.512', S37.01875 0, ...
     s.scanf("%[NSEW]%f%[^0-9-]%f%[^0-9-]%f") do |direction, deg, sep1, min, sep2, sec|
       return Angle.decimal_deg( deg,  min,  sec,  direction)
     end
     
-    #look for anything of the form 37^001'7.5''S , -37^001'7.5'', -37^0 1.512'. -37.01875^0, ...
+    #look for anything of the form 37 001'7.5''S , -37 001'7.5'', -37 0 1.512'. -37.01875 0, ...
     s.scanf("%f%[^0-9-]%f%[^0-9-]%f%[^NSEW]%[NSEW]") do |deg, sep1, min, sep2, sec, sep3, direction|
       return Angle.decimal_deg( deg,  min,  sec,  direction)
     end

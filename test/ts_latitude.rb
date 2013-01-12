@@ -3,12 +3,12 @@ require 'vincenty.rb'
 
 class TestAngle< Test::Unit::TestCase
   def test_strf
-    assert_equal("37°01′07.5000″S", Latitude.new("S37°01′7.5″").to_s)
-    assert_equal("37°01′07.5000″S", Latitude.new("-37°01′7.5″").to_s)
-    assert_equal("37°01′07.5000″S", Latitude.new("37°01′7.5″S").to_s)
-    assert_equal("37°01′07.5000″N", Latitude.new("N37°01′7.5″").to_s)
-    assert_equal("37°01′07.5000″N", Latitude.new("37°01′7.5″").to_s)
-    assert_equal("37°01′07.5000″N", Latitude.new("37°01′7.5″N").to_s)
+    assert_equal("37 01'07.5000\"S", Latitude.new("S37 01'7.5\"").to_s)
+    assert_equal("37 01'07.5000\"S", Latitude.new("-37 01'7.5\"").to_s)
+    assert_equal("37 01'07.5000\"S", Latitude.new("37 01'7.5\"S").to_s)
+    assert_equal("37 01'07.5000\"N", Latitude.new("N37 01'7.5\"").to_s)
+    assert_equal("37 01'07.5000\"N", Latitude.new("37 01'7.5\"").to_s)
+    assert_equal("37 01'07.5000\"N", Latitude.new("37 01'7.5\"N").to_s)
   end
   def test_to_radians
     assert_equal(Math::PI/4, Latitude.degrees(45).to_r)

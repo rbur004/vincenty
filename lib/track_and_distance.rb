@@ -1,10 +1,11 @@
-#Holds a bearing and distance
 
 require 'angle.rb'
 
+#Holds a bearing and distance
 class TrackAndDistance
     attr_accessor :bearing, :distance
-    #Bearing is in degrees unless radians == true.
+    
+    #Bearing is in degrees unless radians == true (or set to :radians).
     #Bearing can be a String or Numeric or any object with to_radians and to_f
     def initialize(bearing, distance, radians=false)
       @bearing = Angle.new(bearing, radians)
@@ -23,10 +24,12 @@ class TrackAndDistance
       end
     end
 
+    #Returns an array with members bearing and distance.
     def to_ary
       [ @bearing, @distance ]
     end
     
+    #Returns a hash with keys :bearing and :distance
     def to_hash
       { :bearing => @bearing, :distance => @distance }
     end
