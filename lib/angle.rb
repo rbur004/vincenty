@@ -168,13 +168,15 @@ class Angle
   end
  
   # @return [Float] angle in degrees
-  alias to_d to_degrees
+  #alias to_d to_degrees
+  alias to_deg to_degrees
   
   # @return [Float]  angle in radians
   def to_radians
     @angle
   end
 
+  alias to_rad to_radians
   alias to_r to_radians
   
   # Returns @angle as decimal_degrees

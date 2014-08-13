@@ -26,7 +26,8 @@ class Numeric
   end
   
   alias to_r to_radians
-  alias to_d to_degrees
+  alias to_rad to_radians
+  alias to_deg to_degrees
   
   # @return [Fixnum] 1 if number is positive, -1 if negative.
   def sign
@@ -89,6 +90,7 @@ class String
     self.to_dec_degrees.to_radians(mod)
   end
   
+  alias to_rad to_radians
   alias to_r to_radians
-  alias to_d to_degrees
+  alias to_deg to_degrees
 end

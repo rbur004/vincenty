@@ -12,7 +12,7 @@ require 'coordinate.rb'
 # Modified to incorporate corrections to formulae as found in script on http://www.movable-type.co.uk/scripts/LatLongVincenty.html
 # Added my Modification of the distanceAndAngle formulae to correct the compass bearing.
 class Vincenty < Coordinate
-  VERSION = '1.0.5'
+  VERSION = '1.0.6'
   
   # @return [String] constant VERSION
   def version
@@ -29,15 +29,15 @@ class Vincenty < Coordinate
     b = 6356752.31424518 #polar radius in meters
     r = (a+b)/2 #average diametre as a rough estimate for our tests.
     
-    sin_lat1 = Math.sin(@latitude.to_r)
-    sin_lat2 = Math.sin(p2.latitude.to_r)
-    cos_lat1 = Math.cos(@latitude.to_r)
+    sin_lat1 = Math.sin(@latitude.to_rad)
+    sin_lat2 = Math.sin(p2.latitude.to_rad)
+    cos_lat1 = Math.cos(@latitude.to_rad)
     atan1_2 = Math.atan(1) * 2
-    t1 = cos_lat1 * Math.cos(p2.latitude.to_r) * ( Math.cos(@longitude.to_r - p2.longitude.to_r) ) + sin_lat1 * sin_lat2 
+    t1 = cos_lat1 * Math.cos(p2.latitude.to_rad) * ( Math.cos(@longitude.to_rad - p2.longitude.to_rad) ) + sin_lat1 * sin_lat2 
     angular_distance = Math.atan(-t1/Math.sqrt(-t1 * t1 +1)) + atan1_2 #central angle in radians so we can calculate the arc length.
 
     t2 = (sin_lat2 - sin_lat1 * Math.cos(angular_distance)) / (cos_lat1 * Math.sin(angular_distance))
-    if(Math.sin(p2.longitude.to_r - @longitude.to_r) < 0)
+    if(Math.sin(p2.longitude.to_rad - @longitude.to_rad) < 0)
       bearing =  2 * Math::PI - (Math.atan(-t2 / Math.sqrt(-t2 * t2 + 1)) + atan1_2) #Compass Bearing in radians (clockwise)
     else
       bearing = Math.atan(-t2 / Math.sqrt(-t2 * t2 + 1)) + atan1_2 #Compass Bearing in radians (clockwise)
@@ -57,10 +57,10 @@ class Vincenty < Coordinate
     b = 6356752.31424518 #polar radius in meters
     f = (a-b)/a #  flattening 
    
-     lat1 = @latitude.to_r
-     lon1 = @longitude.to_r
-     lat2 = p2.latitude.to_r
-     lon2 = p2.longitude.to_r
+     lat1 = @latitude.to_rad
+     lon1 = @longitude.to_rad
+     lat2 = p2.latitude.to_rad
+     lon2 = p2.longitude.to_rad
      lat1 = lat1.sign * (Math::PI/2-(1e-10)) if (Math::PI/2-lat1.abs).abs < 1.0e-10
      lat2 = lat2.sign * (Math::PI/2-(1e-10)) if (Math::PI/2-lat2.abs).abs < 1.0e-10
 
@@ -105,7 +105,7 @@ class Vincenty < Coordinate
       
       #This test isn't in original formulae, and fixes the problem of all angles returned being between 0 - PI (0-180)
       #Also converts the result to compass bearing, rather than the mathmatical anticlockwise angles.
-      if(Math.sin(p2.longitude.to_r - @longitude.to_r) < 0)
+      if(Math.sin(p2.longitude.to_rad - @longitude.to_rad) < 0)
         alpha_1 = Math::PI*2-Math.atan2( cos_u2 * sin_lambda_v, cos_u1 * sin_u2 - sin_u1 * cos_u2 * cos_lambda_v)
         #alpha_2 = Math::PI*2-Math.atan2(cos_u1 * sin_lambda_v, -sin_u1 * cos_u2 + cos_u1 * sin_u2 * cos_lambda_v)
       else
@@ -129,10 +129,10 @@ class Vincenty < Coordinate
     d = track_and_distance.distance.abs
     sin_dor = Math.sin(d/r)
     cos_dor = Math.cos(d/r)
-    sin_lat1 = Math.sin(@latitude.to_r)
-    cos_lat1 = Math.cos(@latitude.to_r)
-    lat2 = Math.asin( sin_lat1 * cos_dor + cos_lat1 * sin_dor * Math.cos(track_and_distance.bearing.to_r) )
-    lon2 = @longitude.to_r + Math.atan2(Math.sin(track_and_distance.bearing.to_r) * sin_dor * cos_lat1, cos_dor-sin_lat1 * Math.sin(lat2))
+    sin_lat1 = Math.sin(@latitude.to_rad)
+    cos_lat1 = Math.cos(@latitude.to_rad)
+    lat2 = Math.asin( sin_lat1 * cos_dor + cos_lat1 * sin_dor * Math.cos(track_and_distance.bearing.to_rad) )
+    lon2 = @longitude.to_rad + Math.atan2(Math.sin(track_and_distance.bearing.to_rad) * sin_dor * cos_lat1, cos_dor-sin_lat1 * Math.sin(lat2))
     
     Vincenty.new(lat2, lon2, 0, true);
   end
@@ -149,11 +149,11 @@ class Vincenty < Coordinate
     f = (a-b)/a #  flattening 
     
     s = track_and_distance.distance.abs;
-    alpha1 = track_and_distance.bearing.to_r
+    alpha1 = track_and_distance.bearing.to_rad
     sin_alpha1 = Math.sin(alpha1)
     cos_alpha1 = Math.cos(alpha1)
   
-    tanU1 = (1-f)  *  Math.tan(@latitude.to_r);
+    tanU1 = (1-f)  *  Math.tan(@latitude.to_rad);
     cosU1 = 1 / Math.sqrt((1  +  tanU1 * tanU1))
     sinU1 = tanU1 * cosU1
     sigma1 = Math.atan2(tanU1, cos_alpha1)

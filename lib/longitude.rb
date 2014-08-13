@@ -31,6 +31,8 @@ class Longitude < Angle
   end
   
   alias to_r to_radians
-  alias to_d to_degrees
+  alias to_rad to_radians
+  #alias to_d to_degrees
+  alias to_deg to_degrees
   
 end

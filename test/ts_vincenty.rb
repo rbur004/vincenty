@@ -42,15 +42,15 @@ class TestVincenty< Test::Unit::TestCase
     start = Vincenty.new(-36.9921838030711, 174.485468469841) 
 
     next_p = start
-#    print "Start at coordinate #{next_p.longitude.to_d}, #{next_p.latitude.to_d}\n"
+#    print "Start at coordinate #{next_p.longitude.to_deg}, #{next_p.latitude.to_deg}\n"
     @path.each_with_index do |leg,i|
       next_p, spherical_ans = next_p.destination( leg ) , next_p.sphereDestination(leg)
  
-      assert_equal(@waypoints[i].longitude.to_d.round(12), next_p.longitude.to_d.round(12))
-      assert_equal(@waypoints[i].latitude.to_d.round(12), next_p.latitude.to_d.round(12))
-  #    print "Expect  #{waypoints[i].longitude.to_d.round(4)}, #{waypoints[i].latitude.to_d.round(4)}\n"
-  #    print "Moved #{leg.bearing.to_d.round(4)} #{leg.distance.round(4)}m to #{next_p.longitude.to_d.round(4)}, #{next_p.latitude.to_d.round(4)}\n"
-  #    print "Spherical #{leg.bearing.to_d.round(4)} #{leg.distance.round(4)}m to #{spherical_ans.longitude.to_d.round(4)}, #{spherical_ans.latitude.to_d.round(4)}\n"
+      assert_equal(@waypoints[i].longitude.to_deg.round(12), next_p.longitude.to_deg.round(12))
+      assert_equal(@waypoints[i].latitude.to_deg.round(12), next_p.latitude.to_deg.round(12))
+  #    print "Expect  #{waypoints[i].longitude.to_deg.round(4)}, #{waypoints[i].latitude.to_deg.round(4)}\n"
+  #    print "Moved #{leg.bearing.to_deg.round(4)} #{leg.distance.round(4)}m to #{next_p.longitude.to_deg.round(4)}, #{next_p.latitude.to_deg.round(4)}\n"
+  #    print "Spherical #{leg.bearing.to_deg.round(4)} #{leg.distance.round(4)}m to #{spherical_ans.longitude.to_deg.round(4)}, #{spherical_ans.latitude.to_deg.round(4)}\n"
   #    puts
     end
   #  assert_equal(0, next_p.distanceAndAngle(start).distance)
@@ -63,16 +63,16 @@ class TestVincenty< Test::Unit::TestCase
     start = Vincenty.new(-36.9921838030711, 174.485468469841) 
     next_p = start
 #   print "\nReverse test, c\n"
-#    print "Start at coordinate #{next_p.longitude.to_d}, #{next_p.latitude.to_d}\n"
+#    print "Start at coordinate #{next_p.longitude.to_deg}, #{next_p.latitude.to_deg}\n"
     @waypoints.each_with_index do |point,i|
       vtrack_and_bearing = next_p.distanceAndAngle( point ) 
   #    strack_and_bearing = next_p.sphericalDistanceAndAngle( point )
       
-      assert_equal(@path[i].bearing.to_d.round(4), vtrack_and_bearing.bearing.to_d.round(4))
+      assert_equal(@path[i].bearing.to_deg.round(4), vtrack_and_bearing.bearing.to_deg.round(4))
       assert_equal(@path[i].distance.round(4), vtrack_and_bearing.distance.round(4))
-  #    print "Expected #{path[i].bearing.to_d.round(4)}(#{((path[i].bearing.to_d+180)%360).round(4)}), #{path[i].distance.round(4)}m\n"
-  #    print "WGS-84 track #{vtrack_and_bearing.bearing.to_d.round(4)} #{vtrack_and_bearing.distance.round(4)}m from #{next_p.longitude.to_d.round(4)}, #{next_p.latitude.to_d.round(4)} to #{point.longitude.to_d.round(4)},  #{point.latitude.to_d.round(4)}\n"
-  #    print "Spherical track #{strack_and_bearing.bearing.to_d.round(4)} #{strack_and_bearing.distance.round(4)}m from #{next_p.longitude.to_d.round(4)}, #{next_p.latitude.to_d.round(4)} to #{point.longitude.to_d.round(4)},  #{point.latitude.to_d.round(4)}\n"
+  #    print "Expected #{path[i].bearing.to_deg.round(4)}(#{((path[i].bearing.to_deg+180)%360).round(4)}), #{path[i].distance.round(4)}m\n"
+  #    print "WGS-84 track #{vtrack_and_bearing.bearing.to_deg.round(4)} #{vtrack_and_bearing.distance.round(4)}m from #{next_p.longitude.to_deg.round(4)}, #{next_p.latitude.to_deg.round(4)} to #{point.longitude.to_deg.round(4)},  #{point.latitude.to_deg.round(4)}\n"
+  #    print "Spherical track #{strack_and_bearing.bearing.to_deg.round(4)} #{strack_and_bearing.distance.round(4)}m from #{next_p.longitude.to_deg.round(4)}, #{next_p.latitude.to_deg.round(4)} to #{point.longitude.to_deg.round(4)},  #{point.latitude.to_deg.round(4)}\n"
   #    puts
       next_p = point
     end
@@ -85,12 +85,12 @@ class TestVincenty< Test::Unit::TestCase
     flindersPeak = Vincenty.new("-37 57'3.72030″", "144 25'29.52440″" )
     buninyong = Vincenty.new("-37   39 ' 10.15610 ''", "143   55 ' 35.38390 ''") #Buninyong
     track_and_bearing = flindersPeak.distanceAndAngle( buninyong ) 
-    assert_equal(Angle.new("306   52 ' 5.37 ''").to_d.round(4), track_and_bearing.bearing.to_d.round(4))
+    assert_equal(Angle.new("306   52 ' 5.37 ''").to_deg.round(4), track_and_bearing.bearing.to_deg.round(4))
     assert_equal(54972.271, track_and_bearing.distance.round(3))
     
     destination = flindersPeak.destination(TrackAndDistance.new("306   52 ' 5.37 ''", 54972.271))
-    assert_equal(buninyong.latitude.to_d.round(4), destination.latitude.to_d.round(4))
-    assert_equal(buninyong.longitude.to_d.round(4), destination.longitude.to_d.round(4))
+    assert_equal(buninyong.latitude.to_deg.round(4), destination.latitude.to_deg.round(4))
+    assert_equal(buninyong.longitude.to_deg.round(4), destination.longitude.to_deg.round(4))
   end
     
 end
