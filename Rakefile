@@ -1,4 +1,4 @@
-#!/usr/bin/ruby
+#!/usr/local/bin/ruby
 # -*- ruby -*-
 
 require 'rubygems'
@@ -7,7 +7,7 @@ require 'hoe'
 Hoe.plugin :yard
 
 Hoe.spec 'vincenty' do 
-  self.rubyforge_name = "vincenty" 
+  #self.rubyforge_name = "vincenty" 
   self.developer( "Rob Burrowes","r.burrowes@auckland.ac.nz")
   
   self.yard_title = 'Vincenty'
