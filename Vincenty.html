@@ -10,14 +10,14 @@
   
 </title>
 
-  <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
+  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
 
-  <link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
+  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
   hasFrames = window.top.frames.main ? true : false;
   relpath = '';
-  framesUrl = "frames.html#!" + escape(window.location.href);
+  framesUrl = "frames.html#!Vincenty.html";
 </script>
 
 
@@ -103,12 +103,17 @@
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>Vincenty&#39;s algorithms for finding the bearing and distance between two coordinates and
-for finding the latitude and longitude, given a start coordinate, distance and bearing.</p>
+    
+<p>Vincenty&#39;s algorithms for finding the bearing and distance between two
+coordinates and for finding the latitude and longitude, given a start
+coordinate, distance and bearing.</p>
 
-<p>Coded from formulae from Wikipedia <a href="http://en.wikipedia.org/wiki/Vincenty%27s_formulae">http://en.wikipedia.org/wiki/Vincenty%27s_formulae</a>
-Modified to incorporate corrections to formulae as found in script on <a href="http://www.movable-type.co.uk/scripts/LatLongVincenty.html">http://www.movable-type.co.uk/scripts/LatLongVincenty.html</a>
-Added my Modification of the distanceAndAngle formulae to correct the compass bearing.</p>
+<p>Coded from formulae from Wikipedia <a
+href="http://en.wikipedia.org/wiki/Vincenty%27s_formulae">en.wikipedia.org/wiki/Vincenty%27s_formulae</a>
+Modified to incorporate corrections to formulae as found in script on <a
+href="http://www.movable-type.co.uk/scripts/LatLongVincenty.html">www.movable-type.co.uk/scripts/LatLongVincenty.html</a>
+Added my Modification of the distanceAndAngle formulae to correct the
+compass bearing.</p>
 
 
   </div>
@@ -124,7 +129,7 @@ Added my Modification of the distanceAndAngle formulae to correct the compass be
         <dt id="VERSION-constant" class="">VERSION =
           
         </dt>
-        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>1.0.5</span><span class='tstring_end'>'</span></span></pre></dd>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>1.0.6</span><span class='tstring_end'>&#39;</span></span></pre></dd>
       
     </dl>
   
@@ -165,7 +170,9 @@ Added my Modification of the distanceAndAngle formulae to correct the compass be
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Calculate destination point given start point lat/long, bearing and distance.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Calculate destination point given start point lat/long, bearing and
+distance.</p>
 </div></span>
   
 </li>
@@ -188,7 +195,9 @@ Added my Modification of the distanceAndAngle formulae to correct the compass be
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Vincenty&#39;s algorithm for finding bearing and distance between to coordinates.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Vincenty&#39;s algorithm for finding bearing and distance between to
+coordinates.</p>
 </div></span>
   
 </li>
@@ -211,8 +220,10 @@ Added my Modification of the distanceAndAngle formulae to correct the compass be
   
 
   
-    <span class="summary_desc"><div class='inline'><p>spherical earth estimate of calculation for finding target coordinate from start coordinate, bearing and distance
-Used to run checks on the Vincenty algorithm.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>spherical earth estimate of calculation for finding target coordinate from
+start coordinate, bearing and distance Used to run checks on the Vincenty
+algorithm.</p>
 </div></span>
   
 </li>
@@ -235,8 +246,11 @@ Used to run checks on the Vincenty algorithm.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Great Circle formulae  <a href="http://en.wikipedia.org/wiki/Great-circle_distance">http://en.wikipedia.org/wiki/Great-circle_distance</a>
-Reference calculation for testing, assumes the earth is a sphere, which it isn&#39;t.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Great Circle formulae <a
+href="http://en.wikipedia.org/wiki/Great-circle_distance">en.wikipedia.org/wiki/Great-circle_distance</a>
+Reference calculation for testing, assumes the earth is a sphere, which it
+isn&#39;t.</p>
 </div></span>
   
 </li>
@@ -259,7 +273,8 @@ Reference calculation for testing, assumes the earth is a sphere, which it isn&#
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Constant VERSION.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Constant VERSION.</p>
 </div></span>
   
 </li>
@@ -302,8 +317,9 @@ Reference calculation for testing, assumes the earth is a sphere, which it isn&#
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Calculate destination point given start point lat/long, bearing and distance.
-Assumes earth is a WGS-84 Ellipsod.</p>
+    
+<p>Calculate destination point given start point lat/long, bearing and
+distance. Assumes earth is a WGS-84 Ellipsod.</p>
 
 
   </div>
@@ -322,7 +338,8 @@ Assumes earth is a WGS-84 Ellipsod.</p>
       
       
         &mdash;
-        <div class='inline'><p>bearing and distance.</p>
+        <div class='inline'>
+<p>bearing and distance.</p>
 </div>
       
     </li>
@@ -340,7 +357,8 @@ Assumes earth is a WGS-84 Ellipsod.</p>
       
       
         &mdash;
-        <div class='inline'><p>with the destination coordinates.</p>
+        <div class='inline'>
+<p>with the destination coordinates.</p>
 </div>
       
     </li>
@@ -406,11 +424,11 @@ Assumes earth is a WGS-84 Ellipsod.</p>
 </span>  <span class='id identifier rubyid_f'>f</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='id identifier rubyid_a'>a</span><span class='op'>-</span><span class='id identifier rubyid_b'>b</span><span class='rparen'>)</span><span class='op'>/</span><span class='id identifier rubyid_a'>a</span> <span class='comment'>#  flattening 
 </span>  
   <span class='id identifier rubyid_s'>s</span> <span class='op'>=</span> <span class='id identifier rubyid_track_and_distance'>track_and_distance</span><span class='period'>.</span><span class='id identifier rubyid_distance'>distance</span><span class='period'>.</span><span class='id identifier rubyid_abs'>abs</span><span class='semicolon'>;</span>
-  <span class='id identifier rubyid_alpha1'>alpha1</span> <span class='op'>=</span> <span class='id identifier rubyid_track_and_distance'>track_and_distance</span><span class='period'>.</span><span class='id identifier rubyid_bearing'>bearing</span><span class='period'>.</span><span class='id identifier rubyid_to_r'>to_r</span>
+  <span class='id identifier rubyid_alpha1'>alpha1</span> <span class='op'>=</span> <span class='id identifier rubyid_track_and_distance'>track_and_distance</span><span class='period'>.</span><span class='id identifier rubyid_bearing'>bearing</span><span class='period'>.</span><span class='id identifier rubyid_to_rad'>to_rad</span>
   <span class='id identifier rubyid_sin_alpha1'>sin_alpha1</span> <span class='op'>=</span> <span class='const'>Math</span><span class='period'>.</span><span class='id identifier rubyid_sin'>sin</span><span class='lparen'>(</span><span class='id identifier rubyid_alpha1'>alpha1</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_cos_alpha1'>cos_alpha1</span> <span class='op'>=</span> <span class='const'>Math</span><span class='period'>.</span><span class='id identifier rubyid_cos'>cos</span><span class='lparen'>(</span><span class='id identifier rubyid_alpha1'>alpha1</span><span class='rparen'>)</span>
 
-  <span class='id identifier rubyid_tanU1'>tanU1</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='int'>1</span><span class='op'>-</span><span class='id identifier rubyid_f'>f</span><span class='rparen'>)</span>  <span class='op'>*</span>  <span class='const'>Math</span><span class='period'>.</span><span class='id identifier rubyid_tan'>tan</span><span class='lparen'>(</span><span class='ivar'>@latitude</span><span class='period'>.</span><span class='id identifier rubyid_to_r'>to_r</span><span class='rparen'>)</span><span class='semicolon'>;</span>
+  <span class='id identifier rubyid_tanU1'>tanU1</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='int'>1</span><span class='op'>-</span><span class='id identifier rubyid_f'>f</span><span class='rparen'>)</span>  <span class='op'>*</span>  <span class='const'>Math</span><span class='period'>.</span><span class='id identifier rubyid_tan'>tan</span><span class='lparen'>(</span><span class='ivar'>@latitude</span><span class='period'>.</span><span class='id identifier rubyid_to_rad'>to_rad</span><span class='rparen'>)</span><span class='semicolon'>;</span>
   <span class='id identifier rubyid_cosU1'>cosU1</span> <span class='op'>=</span> <span class='int'>1</span> <span class='op'>/</span> <span class='const'>Math</span><span class='period'>.</span><span class='id identifier rubyid_sqrt'>sqrt</span><span class='lparen'>(</span><span class='lparen'>(</span><span class='int'>1</span>  <span class='op'>+</span>  <span class='id identifier rubyid_tanU1'>tanU1</span> <span class='op'>*</span> <span class='id identifier rubyid_tanU1'>tanU1</span><span class='rparen'>)</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_sinU1'>sinU1</span> <span class='op'>=</span> <span class='id identifier rubyid_tanU1'>tanU1</span> <span class='op'>*</span> <span class='id identifier rubyid_cosU1'>cosU1</span>
   <span class='id identifier rubyid_sigma1'>sigma1</span> <span class='op'>=</span> <span class='const'>Math</span><span class='period'>.</span><span class='id identifier rubyid_atan2'>atan2</span><span class='lparen'>(</span><span class='id identifier rubyid_tanU1'>tanU1</span><span class='comma'>,</span> <span class='id identifier rubyid_cos_alpha1'>cos_alpha1</span><span class='rparen'>)</span>
@@ -457,8 +475,9 @@ Assumes earth is a WGS-84 Ellipsod.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Vincenty&#39;s algorithm for finding bearing and distance between to coordinates.
-Assumes earth is a WGS-84 Ellipsod.</p>
+    
+<p>Vincenty&#39;s algorithm for finding bearing and distance between to
+coordinates. Assumes earth is a WGS-84 Ellipsod.</p>
 
 
   </div>
@@ -477,7 +496,8 @@ Assumes earth is a WGS-84 Ellipsod.</p>
       
       
         &mdash;
-        <div class='inline'><p>is target coordinate that we want the bearing to.</p>
+        <div class='inline'>
+<p>is target coordinate that we want the bearing to.</p>
 </div>
       
     </li>
@@ -495,7 +515,8 @@ Assumes earth is a WGS-84 Ellipsod.</p>
       
       
         &mdash;
-        <div class='inline'><p>with the compass bearing and distance in meters to P2</p>
+        <div class='inline'>
+<p>with the compass bearing and distance in meters to P2</p>
 </div>
       
     </li>
@@ -583,10 +604,10 @@ Assumes earth is a WGS-84 Ellipsod.</p>
 </span>  <span class='id identifier rubyid_b'>b</span> <span class='op'>=</span> <span class='float'>6356752.31424518</span> <span class='comment'>#polar radius in meters
 </span>  <span class='id identifier rubyid_f'>f</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='id identifier rubyid_a'>a</span><span class='op'>-</span><span class='id identifier rubyid_b'>b</span><span class='rparen'>)</span><span class='op'>/</span><span class='id identifier rubyid_a'>a</span> <span class='comment'>#  flattening 
 </span> 
-   <span class='id identifier rubyid_lat1'>lat1</span> <span class='op'>=</span> <span class='ivar'>@latitude</span><span class='period'>.</span><span class='id identifier rubyid_to_r'>to_r</span>
-   <span class='id identifier rubyid_lon1'>lon1</span> <span class='op'>=</span> <span class='ivar'>@longitude</span><span class='period'>.</span><span class='id identifier rubyid_to_r'>to_r</span>
-   <span class='id identifier rubyid_lat2'>lat2</span> <span class='op'>=</span> <span class='id identifier rubyid_p2'>p2</span><span class='period'>.</span><span class='id identifier rubyid_latitude'>latitude</span><span class='period'>.</span><span class='id identifier rubyid_to_r'>to_r</span>
-   <span class='id identifier rubyid_lon2'>lon2</span> <span class='op'>=</span> <span class='id identifier rubyid_p2'>p2</span><span class='period'>.</span><span class='id identifier rubyid_longitude'>longitude</span><span class='period'>.</span><span class='id identifier rubyid_to_r'>to_r</span>
+   <span class='id identifier rubyid_lat1'>lat1</span> <span class='op'>=</span> <span class='ivar'>@latitude</span><span class='period'>.</span><span class='id identifier rubyid_to_rad'>to_rad</span>
+   <span class='id identifier rubyid_lon1'>lon1</span> <span class='op'>=</span> <span class='ivar'>@longitude</span><span class='period'>.</span><span class='id identifier rubyid_to_rad'>to_rad</span>
+   <span class='id identifier rubyid_lat2'>lat2</span> <span class='op'>=</span> <span class='id identifier rubyid_p2'>p2</span><span class='period'>.</span><span class='id identifier rubyid_latitude'>latitude</span><span class='period'>.</span><span class='id identifier rubyid_to_rad'>to_rad</span>
+   <span class='id identifier rubyid_lon2'>lon2</span> <span class='op'>=</span> <span class='id identifier rubyid_p2'>p2</span><span class='period'>.</span><span class='id identifier rubyid_longitude'>longitude</span><span class='period'>.</span><span class='id identifier rubyid_to_rad'>to_rad</span>
    <span class='id identifier rubyid_lat1'>lat1</span> <span class='op'>=</span> <span class='id identifier rubyid_lat1'>lat1</span><span class='period'>.</span><span class='id identifier rubyid_sign'>sign</span> <span class='op'>*</span> <span class='lparen'>(</span><span class='const'>Math</span><span class='op'>::</span><span class='const'>PI</span><span class='op'>/</span><span class='int'>2</span><span class='op'>-</span><span class='lparen'>(</span><span class='float'>1e-10</span><span class='rparen'>)</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='lparen'>(</span><span class='const'>Math</span><span class='op'>::</span><span class='const'>PI</span><span class='op'>/</span><span class='int'>2</span><span class='op'>-</span><span class='id identifier rubyid_lat1'>lat1</span><span class='period'>.</span><span class='id identifier rubyid_abs'>abs</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_abs'>abs</span> <span class='op'>&lt;</span> <span class='float'>1.0e-10</span>
    <span class='id identifier rubyid_lat2'>lat2</span> <span class='op'>=</span> <span class='id identifier rubyid_lat2'>lat2</span><span class='period'>.</span><span class='id identifier rubyid_sign'>sign</span> <span class='op'>*</span> <span class='lparen'>(</span><span class='const'>Math</span><span class='op'>::</span><span class='const'>PI</span><span class='op'>/</span><span class='int'>2</span><span class='op'>-</span><span class='lparen'>(</span><span class='float'>1e-10</span><span class='rparen'>)</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='lparen'>(</span><span class='const'>Math</span><span class='op'>::</span><span class='const'>PI</span><span class='op'>/</span><span class='int'>2</span><span class='op'>-</span><span class='id identifier rubyid_lat2'>lat2</span><span class='period'>.</span><span class='id identifier rubyid_abs'>abs</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_abs'>abs</span> <span class='op'>&lt;</span> <span class='float'>1.0e-10</span>
 
@@ -594,7 +615,7 @@ Assumes earth is a WGS-84 Ellipsod.</p>
 </span>  
     <span class='id identifier rubyid_l'>l</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='id identifier rubyid_lon2'>lon2</span> <span class='op'>-</span> <span class='id identifier rubyid_lon1'>lon1</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_abs'>abs</span> <span class='comment'>#difference in longitude
 </span>    <span class='id identifier rubyid_l'>l</span> <span class='op'>=</span> <span class='int'>2</span><span class='op'>*</span><span class='const'>Math</span><span class='op'>::</span><span class='const'>PI</span> <span class='op'>-</span> <span class='id identifier rubyid_l'>l</span> <span class='kw'>if</span> <span class='id identifier rubyid_l'>l</span> <span class='op'>&gt;</span> <span class='const'>Math</span><span class='op'>::</span><span class='const'>PI</span>
-    <span class='id identifier rubyid_u1'>u1</span> <span class='op'>=</span> <span class='const'>Math</span><span class='period'>.</span><span class='id identifier rubyid_atan'>atan</span><span class='lparen'>(</span> <span class='lparen'>(</span> <span class='int'>1</span> <span class='op'>-</span> <span class='id identifier rubyid_f'>f</span><span class='rparen'>)</span> <span class='op'>*</span> <span class='const'>Math</span><span class='period'>.</span><span class='id identifier rubyid_tan'>tan</span><span class='lparen'>(</span> <span class='id identifier rubyid_lat1'>lat1</span> <span class='rparen'>)</span> <span class='rparen'>)</span> <span class='comment'>#U is 'reduced latitude'
+    <span class='id identifier rubyid_u1'>u1</span> <span class='op'>=</span> <span class='const'>Math</span><span class='period'>.</span><span class='id identifier rubyid_atan'>atan</span><span class='lparen'>(</span> <span class='lparen'>(</span> <span class='int'>1</span> <span class='op'>-</span> <span class='id identifier rubyid_f'>f</span><span class='rparen'>)</span> <span class='op'>*</span> <span class='const'>Math</span><span class='period'>.</span><span class='id identifier rubyid_tan'>tan</span><span class='lparen'>(</span> <span class='id identifier rubyid_lat1'>lat1</span> <span class='rparen'>)</span> <span class='rparen'>)</span> <span class='comment'>#U is &#39;reduced latitude&#39;
 </span>    <span class='id identifier rubyid_u2'>u2</span> <span class='op'>=</span> <span class='const'>Math</span><span class='period'>.</span><span class='id identifier rubyid_atan'>atan</span><span class='lparen'>(</span> <span class='lparen'>(</span> <span class='int'>1</span> <span class='op'>-</span> <span class='id identifier rubyid_f'>f</span><span class='rparen'>)</span> <span class='op'>*</span>  <span class='const'>Math</span><span class='period'>.</span><span class='id identifier rubyid_tan'>tan</span><span class='lparen'>(</span> <span class='id identifier rubyid_lat2'>lat2</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
     <span class='id identifier rubyid_sin_u1'>sin_u1</span> <span class='op'>=</span> <span class='const'>Math</span><span class='period'>.</span><span class='id identifier rubyid_sin'>sin</span><span class='lparen'>(</span><span class='id identifier rubyid_u1'>u1</span><span class='rparen'>)</span>
     <span class='id identifier rubyid_cos_u1'>cos_u1</span> <span class='op'>=</span> <span class='const'>Math</span><span class='period'>.</span><span class='id identifier rubyid_cos'>cos</span><span class='lparen'>(</span><span class='id identifier rubyid_u1'>u1</span><span class='rparen'>)</span>
@@ -629,9 +650,9 @@ Assumes earth is a WGS-84 Ellipsod.</p>
     <span class='id identifier rubyid_sin_lambda_v'>sin_lambda_v</span> <span class='op'>=</span> <span class='const'>Math</span><span class='period'>.</span><span class='id identifier rubyid_sin'>sin</span><span class='lparen'>(</span><span class='id identifier rubyid_lambda_v'>lambda_v</span><span class='rparen'>)</span>
     <span class='id identifier rubyid_cos_lambda_v'>cos_lambda_v</span> <span class='op'>=</span> <span class='const'>Math</span><span class='period'>.</span><span class='id identifier rubyid_cos'>cos</span><span class='lparen'>(</span><span class='id identifier rubyid_lambda_v'>lambda_v</span><span class='rparen'>)</span>
     
-    <span class='comment'>#This test isn't in original formulae, and fixes the problem of all angles returned being between 0 - PI (0-180)
+    <span class='comment'>#This test isn&#39;t in original formulae, and fixes the problem of all angles returned being between 0 - PI (0-180)
 </span>    <span class='comment'>#Also converts the result to compass bearing, rather than the mathmatical anticlockwise angles.
-</span>    <span class='kw'>if</span><span class='lparen'>(</span><span class='const'>Math</span><span class='period'>.</span><span class='id identifier rubyid_sin'>sin</span><span class='lparen'>(</span><span class='id identifier rubyid_p2'>p2</span><span class='period'>.</span><span class='id identifier rubyid_longitude'>longitude</span><span class='period'>.</span><span class='id identifier rubyid_to_r'>to_r</span> <span class='op'>-</span> <span class='ivar'>@longitude</span><span class='period'>.</span><span class='id identifier rubyid_to_r'>to_r</span><span class='rparen'>)</span> <span class='op'>&lt;</span> <span class='int'>0</span><span class='rparen'>)</span>
+</span>    <span class='kw'>if</span><span class='lparen'>(</span><span class='const'>Math</span><span class='period'>.</span><span class='id identifier rubyid_sin'>sin</span><span class='lparen'>(</span><span class='id identifier rubyid_p2'>p2</span><span class='period'>.</span><span class='id identifier rubyid_longitude'>longitude</span><span class='period'>.</span><span class='id identifier rubyid_to_rad'>to_rad</span> <span class='op'>-</span> <span class='ivar'>@longitude</span><span class='period'>.</span><span class='id identifier rubyid_to_rad'>to_rad</span><span class='rparen'>)</span> <span class='op'>&lt;</span> <span class='int'>0</span><span class='rparen'>)</span>
       <span class='id identifier rubyid_alpha_1'>alpha_1</span> <span class='op'>=</span> <span class='const'>Math</span><span class='op'>::</span><span class='const'>PI</span><span class='op'>*</span><span class='int'>2</span><span class='op'>-</span><span class='const'>Math</span><span class='period'>.</span><span class='id identifier rubyid_atan2'>atan2</span><span class='lparen'>(</span> <span class='id identifier rubyid_cos_u2'>cos_u2</span> <span class='op'>*</span> <span class='id identifier rubyid_sin_lambda_v'>sin_lambda_v</span><span class='comma'>,</span> <span class='id identifier rubyid_cos_u1'>cos_u1</span> <span class='op'>*</span> <span class='id identifier rubyid_sin_u2'>sin_u2</span> <span class='op'>-</span> <span class='id identifier rubyid_sin_u1'>sin_u1</span> <span class='op'>*</span> <span class='id identifier rubyid_cos_u2'>cos_u2</span> <span class='op'>*</span> <span class='id identifier rubyid_cos_lambda_v'>cos_lambda_v</span><span class='rparen'>)</span>
       <span class='comment'>#alpha_2 = Math::PI*2-Math.atan2(cos_u1 * sin_lambda_v, -sin_u1 * cos_u2 + cos_u1 * sin_u2 * cos_lambda_v)
 </span>    <span class='kw'>else</span>
@@ -658,8 +679,10 @@ Assumes earth is a WGS-84 Ellipsod.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>spherical earth estimate of calculation for finding target coordinate from start coordinate, bearing and distance
-Used to run checks on the Vincenty algorithm</p>
+    
+<p>spherical earth estimate of calculation for finding target coordinate from
+start coordinate, bearing and distance Used to run checks on the Vincenty
+algorithm</p>
 
 
   </div>
@@ -678,7 +701,8 @@ Used to run checks on the Vincenty algorithm</p>
       
       
         &mdash;
-        <div class='inline'><p>specifying  bearing and distance.</p>
+        <div class='inline'>
+<p>specifying bearing and distance.</p>
 </div>
       
     </li>
@@ -696,7 +720,8 @@ Used to run checks on the Vincenty algorithm</p>
       
       
         &mdash;
-        <div class='inline'><p>with the destination coordinates.</p>
+        <div class='inline'>
+<p>with the destination coordinates.</p>
 </div>
       
     </li>
@@ -736,10 +761,10 @@ Used to run checks on the Vincenty algorithm</p>
   <span class='id identifier rubyid_d'>d</span> <span class='op'>=</span> <span class='id identifier rubyid_track_and_distance'>track_and_distance</span><span class='period'>.</span><span class='id identifier rubyid_distance'>distance</span><span class='period'>.</span><span class='id identifier rubyid_abs'>abs</span>
   <span class='id identifier rubyid_sin_dor'>sin_dor</span> <span class='op'>=</span> <span class='const'>Math</span><span class='period'>.</span><span class='id identifier rubyid_sin'>sin</span><span class='lparen'>(</span><span class='id identifier rubyid_d'>d</span><span class='op'>/</span><span class='id identifier rubyid_r'>r</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_cos_dor'>cos_dor</span> <span class='op'>=</span> <span class='const'>Math</span><span class='period'>.</span><span class='id identifier rubyid_cos'>cos</span><span class='lparen'>(</span><span class='id identifier rubyid_d'>d</span><span class='op'>/</span><span class='id identifier rubyid_r'>r</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_sin_lat1'>sin_lat1</span> <span class='op'>=</span> <span class='const'>Math</span><span class='period'>.</span><span class='id identifier rubyid_sin'>sin</span><span class='lparen'>(</span><span class='ivar'>@latitude</span><span class='period'>.</span><span class='id identifier rubyid_to_r'>to_r</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_cos_lat1'>cos_lat1</span> <span class='op'>=</span> <span class='const'>Math</span><span class='period'>.</span><span class='id identifier rubyid_cos'>cos</span><span class='lparen'>(</span><span class='ivar'>@latitude</span><span class='period'>.</span><span class='id identifier rubyid_to_r'>to_r</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_lat2'>lat2</span> <span class='op'>=</span> <span class='const'>Math</span><span class='period'>.</span><span class='id identifier rubyid_asin'>asin</span><span class='lparen'>(</span> <span class='id identifier rubyid_sin_lat1'>sin_lat1</span> <span class='op'>*</span> <span class='id identifier rubyid_cos_dor'>cos_dor</span> <span class='op'>+</span> <span class='id identifier rubyid_cos_lat1'>cos_lat1</span> <span class='op'>*</span> <span class='id identifier rubyid_sin_dor'>sin_dor</span> <span class='op'>*</span> <span class='const'>Math</span><span class='period'>.</span><span class='id identifier rubyid_cos'>cos</span><span class='lparen'>(</span><span class='id identifier rubyid_track_and_distance'>track_and_distance</span><span class='period'>.</span><span class='id identifier rubyid_bearing'>bearing</span><span class='period'>.</span><span class='id identifier rubyid_to_r'>to_r</span><span class='rparen'>)</span> <span class='rparen'>)</span>
-  <span class='id identifier rubyid_lon2'>lon2</span> <span class='op'>=</span> <span class='ivar'>@longitude</span><span class='period'>.</span><span class='id identifier rubyid_to_r'>to_r</span> <span class='op'>+</span> <span class='const'>Math</span><span class='period'>.</span><span class='id identifier rubyid_atan2'>atan2</span><span class='lparen'>(</span><span class='const'>Math</span><span class='period'>.</span><span class='id identifier rubyid_sin'>sin</span><span class='lparen'>(</span><span class='id identifier rubyid_track_and_distance'>track_and_distance</span><span class='period'>.</span><span class='id identifier rubyid_bearing'>bearing</span><span class='period'>.</span><span class='id identifier rubyid_to_r'>to_r</span><span class='rparen'>)</span> <span class='op'>*</span> <span class='id identifier rubyid_sin_dor'>sin_dor</span> <span class='op'>*</span> <span class='id identifier rubyid_cos_lat1'>cos_lat1</span><span class='comma'>,</span> <span class='id identifier rubyid_cos_dor'>cos_dor</span><span class='op'>-</span><span class='id identifier rubyid_sin_lat1'>sin_lat1</span> <span class='op'>*</span> <span class='const'>Math</span><span class='period'>.</span><span class='id identifier rubyid_sin'>sin</span><span class='lparen'>(</span><span class='id identifier rubyid_lat2'>lat2</span><span class='rparen'>)</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_sin_lat1'>sin_lat1</span> <span class='op'>=</span> <span class='const'>Math</span><span class='period'>.</span><span class='id identifier rubyid_sin'>sin</span><span class='lparen'>(</span><span class='ivar'>@latitude</span><span class='period'>.</span><span class='id identifier rubyid_to_rad'>to_rad</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_cos_lat1'>cos_lat1</span> <span class='op'>=</span> <span class='const'>Math</span><span class='period'>.</span><span class='id identifier rubyid_cos'>cos</span><span class='lparen'>(</span><span class='ivar'>@latitude</span><span class='period'>.</span><span class='id identifier rubyid_to_rad'>to_rad</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_lat2'>lat2</span> <span class='op'>=</span> <span class='const'>Math</span><span class='period'>.</span><span class='id identifier rubyid_asin'>asin</span><span class='lparen'>(</span> <span class='id identifier rubyid_sin_lat1'>sin_lat1</span> <span class='op'>*</span> <span class='id identifier rubyid_cos_dor'>cos_dor</span> <span class='op'>+</span> <span class='id identifier rubyid_cos_lat1'>cos_lat1</span> <span class='op'>*</span> <span class='id identifier rubyid_sin_dor'>sin_dor</span> <span class='op'>*</span> <span class='const'>Math</span><span class='period'>.</span><span class='id identifier rubyid_cos'>cos</span><span class='lparen'>(</span><span class='id identifier rubyid_track_and_distance'>track_and_distance</span><span class='period'>.</span><span class='id identifier rubyid_bearing'>bearing</span><span class='period'>.</span><span class='id identifier rubyid_to_rad'>to_rad</span><span class='rparen'>)</span> <span class='rparen'>)</span>
+  <span class='id identifier rubyid_lon2'>lon2</span> <span class='op'>=</span> <span class='ivar'>@longitude</span><span class='period'>.</span><span class='id identifier rubyid_to_rad'>to_rad</span> <span class='op'>+</span> <span class='const'>Math</span><span class='period'>.</span><span class='id identifier rubyid_atan2'>atan2</span><span class='lparen'>(</span><span class='const'>Math</span><span class='period'>.</span><span class='id identifier rubyid_sin'>sin</span><span class='lparen'>(</span><span class='id identifier rubyid_track_and_distance'>track_and_distance</span><span class='period'>.</span><span class='id identifier rubyid_bearing'>bearing</span><span class='period'>.</span><span class='id identifier rubyid_to_rad'>to_rad</span><span class='rparen'>)</span> <span class='op'>*</span> <span class='id identifier rubyid_sin_dor'>sin_dor</span> <span class='op'>*</span> <span class='id identifier rubyid_cos_lat1'>cos_lat1</span><span class='comma'>,</span> <span class='id identifier rubyid_cos_dor'>cos_dor</span><span class='op'>-</span><span class='id identifier rubyid_sin_lat1'>sin_lat1</span> <span class='op'>*</span> <span class='const'>Math</span><span class='period'>.</span><span class='id identifier rubyid_sin'>sin</span><span class='lparen'>(</span><span class='id identifier rubyid_lat2'>lat2</span><span class='rparen'>)</span><span class='rparen'>)</span>
   
   <span class='const'>Vincenty</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_lat2'>lat2</span><span class='comma'>,</span> <span class='id identifier rubyid_lon2'>lon2</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='kw'>true</span><span class='rparen'>)</span><span class='semicolon'>;</span>
 <span class='kw'>end</span></pre>
@@ -759,9 +784,11 @@ Used to run checks on the Vincenty algorithm</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Great Circle formulae  <a href="http://en.wikipedia.org/wiki/Great-circle_distance">http://en.wikipedia.org/wiki/Great-circle_distance</a>
-Reference calculation for testing, assumes the earth is a sphere, which it isn&#39;t. 
-This gives us an approximation to verify Vincenty algorithm.</p>
+    
+<p>Great Circle formulae <a
+href="http://en.wikipedia.org/wiki/Great-circle_distance">en.wikipedia.org/wiki/Great-circle_distance</a>
+Reference calculation for testing, assumes the earth is a sphere, which it
+isn&#39;t. This gives us an approximation to verify Vincenty algorithm.</p>
 
 
   </div>
@@ -780,7 +807,8 @@ This gives us an approximation to verify Vincenty algorithm.</p>
       
       
         &mdash;
-        <div class='inline'><p>is target coordinate that we want the bearing to.</p>
+        <div class='inline'>
+<p>is target coordinate that we want the bearing to.</p>
 </div>
       
     </li>
@@ -798,7 +826,8 @@ This gives us an approximation to verify Vincenty algorithm.</p>
       
       
         &mdash;
-        <div class='inline'><p>with the compass bearing and distance in meters to P2</p>
+        <div class='inline'>
+<p>with the compass bearing and distance in meters to P2</p>
 </div>
       
     </li>
@@ -842,15 +871,15 @@ This gives us an approximation to verify Vincenty algorithm.</p>
 </span>  <span class='id identifier rubyid_b'>b</span> <span class='op'>=</span> <span class='float'>6356752.31424518</span> <span class='comment'>#polar radius in meters
 </span>  <span class='id identifier rubyid_r'>r</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='id identifier rubyid_a'>a</span><span class='op'>+</span><span class='id identifier rubyid_b'>b</span><span class='rparen'>)</span><span class='op'>/</span><span class='int'>2</span> <span class='comment'>#average diametre as a rough estimate for our tests.
 </span>  
-  <span class='id identifier rubyid_sin_lat1'>sin_lat1</span> <span class='op'>=</span> <span class='const'>Math</span><span class='period'>.</span><span class='id identifier rubyid_sin'>sin</span><span class='lparen'>(</span><span class='ivar'>@latitude</span><span class='period'>.</span><span class='id identifier rubyid_to_r'>to_r</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_sin_lat2'>sin_lat2</span> <span class='op'>=</span> <span class='const'>Math</span><span class='period'>.</span><span class='id identifier rubyid_sin'>sin</span><span class='lparen'>(</span><span class='id identifier rubyid_p2'>p2</span><span class='period'>.</span><span class='id identifier rubyid_latitude'>latitude</span><span class='period'>.</span><span class='id identifier rubyid_to_r'>to_r</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_cos_lat1'>cos_lat1</span> <span class='op'>=</span> <span class='const'>Math</span><span class='period'>.</span><span class='id identifier rubyid_cos'>cos</span><span class='lparen'>(</span><span class='ivar'>@latitude</span><span class='period'>.</span><span class='id identifier rubyid_to_r'>to_r</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_sin_lat1'>sin_lat1</span> <span class='op'>=</span> <span class='const'>Math</span><span class='period'>.</span><span class='id identifier rubyid_sin'>sin</span><span class='lparen'>(</span><span class='ivar'>@latitude</span><span class='period'>.</span><span class='id identifier rubyid_to_rad'>to_rad</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_sin_lat2'>sin_lat2</span> <span class='op'>=</span> <span class='const'>Math</span><span class='period'>.</span><span class='id identifier rubyid_sin'>sin</span><span class='lparen'>(</span><span class='id identifier rubyid_p2'>p2</span><span class='period'>.</span><span class='id identifier rubyid_latitude'>latitude</span><span class='period'>.</span><span class='id identifier rubyid_to_rad'>to_rad</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_cos_lat1'>cos_lat1</span> <span class='op'>=</span> <span class='const'>Math</span><span class='period'>.</span><span class='id identifier rubyid_cos'>cos</span><span class='lparen'>(</span><span class='ivar'>@latitude</span><span class='period'>.</span><span class='id identifier rubyid_to_rad'>to_rad</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_atan1_2'>atan1_2</span> <span class='op'>=</span> <span class='const'>Math</span><span class='period'>.</span><span class='id identifier rubyid_atan'>atan</span><span class='lparen'>(</span><span class='int'>1</span><span class='rparen'>)</span> <span class='op'>*</span> <span class='int'>2</span>
-  <span class='id identifier rubyid_t1'>t1</span> <span class='op'>=</span> <span class='id identifier rubyid_cos_lat1'>cos_lat1</span> <span class='op'>*</span> <span class='const'>Math</span><span class='period'>.</span><span class='id identifier rubyid_cos'>cos</span><span class='lparen'>(</span><span class='id identifier rubyid_p2'>p2</span><span class='period'>.</span><span class='id identifier rubyid_latitude'>latitude</span><span class='period'>.</span><span class='id identifier rubyid_to_r'>to_r</span><span class='rparen'>)</span> <span class='op'>*</span> <span class='lparen'>(</span> <span class='const'>Math</span><span class='period'>.</span><span class='id identifier rubyid_cos'>cos</span><span class='lparen'>(</span><span class='ivar'>@longitude</span><span class='period'>.</span><span class='id identifier rubyid_to_r'>to_r</span> <span class='op'>-</span> <span class='id identifier rubyid_p2'>p2</span><span class='period'>.</span><span class='id identifier rubyid_longitude'>longitude</span><span class='period'>.</span><span class='id identifier rubyid_to_r'>to_r</span><span class='rparen'>)</span> <span class='rparen'>)</span> <span class='op'>+</span> <span class='id identifier rubyid_sin_lat1'>sin_lat1</span> <span class='op'>*</span> <span class='id identifier rubyid_sin_lat2'>sin_lat2</span> 
+  <span class='id identifier rubyid_t1'>t1</span> <span class='op'>=</span> <span class='id identifier rubyid_cos_lat1'>cos_lat1</span> <span class='op'>*</span> <span class='const'>Math</span><span class='period'>.</span><span class='id identifier rubyid_cos'>cos</span><span class='lparen'>(</span><span class='id identifier rubyid_p2'>p2</span><span class='period'>.</span><span class='id identifier rubyid_latitude'>latitude</span><span class='period'>.</span><span class='id identifier rubyid_to_rad'>to_rad</span><span class='rparen'>)</span> <span class='op'>*</span> <span class='lparen'>(</span> <span class='const'>Math</span><span class='period'>.</span><span class='id identifier rubyid_cos'>cos</span><span class='lparen'>(</span><span class='ivar'>@longitude</span><span class='period'>.</span><span class='id identifier rubyid_to_rad'>to_rad</span> <span class='op'>-</span> <span class='id identifier rubyid_p2'>p2</span><span class='period'>.</span><span class='id identifier rubyid_longitude'>longitude</span><span class='period'>.</span><span class='id identifier rubyid_to_rad'>to_rad</span><span class='rparen'>)</span> <span class='rparen'>)</span> <span class='op'>+</span> <span class='id identifier rubyid_sin_lat1'>sin_lat1</span> <span class='op'>*</span> <span class='id identifier rubyid_sin_lat2'>sin_lat2</span> 
   <span class='id identifier rubyid_angular_distance'>angular_distance</span> <span class='op'>=</span> <span class='const'>Math</span><span class='period'>.</span><span class='id identifier rubyid_atan'>atan</span><span class='lparen'>(</span><span class='op'>-</span><span class='id identifier rubyid_t1'>t1</span><span class='op'>/</span><span class='const'>Math</span><span class='period'>.</span><span class='id identifier rubyid_sqrt'>sqrt</span><span class='lparen'>(</span><span class='op'>-</span><span class='id identifier rubyid_t1'>t1</span> <span class='op'>*</span> <span class='id identifier rubyid_t1'>t1</span> <span class='op'>+</span><span class='int'>1</span><span class='rparen'>)</span><span class='rparen'>)</span> <span class='op'>+</span> <span class='id identifier rubyid_atan1_2'>atan1_2</span> <span class='comment'>#central angle in radians so we can calculate the arc length.
 </span>
   <span class='id identifier rubyid_t2'>t2</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='id identifier rubyid_sin_lat2'>sin_lat2</span> <span class='op'>-</span> <span class='id identifier rubyid_sin_lat1'>sin_lat1</span> <span class='op'>*</span> <span class='const'>Math</span><span class='period'>.</span><span class='id identifier rubyid_cos'>cos</span><span class='lparen'>(</span><span class='id identifier rubyid_angular_distance'>angular_distance</span><span class='rparen'>)</span><span class='rparen'>)</span> <span class='op'>/</span> <span class='lparen'>(</span><span class='id identifier rubyid_cos_lat1'>cos_lat1</span> <span class='op'>*</span> <span class='const'>Math</span><span class='period'>.</span><span class='id identifier rubyid_sin'>sin</span><span class='lparen'>(</span><span class='id identifier rubyid_angular_distance'>angular_distance</span><span class='rparen'>)</span><span class='rparen'>)</span>
-  <span class='kw'>if</span><span class='lparen'>(</span><span class='const'>Math</span><span class='period'>.</span><span class='id identifier rubyid_sin'>sin</span><span class='lparen'>(</span><span class='id identifier rubyid_p2'>p2</span><span class='period'>.</span><span class='id identifier rubyid_longitude'>longitude</span><span class='period'>.</span><span class='id identifier rubyid_to_r'>to_r</span> <span class='op'>-</span> <span class='ivar'>@longitude</span><span class='period'>.</span><span class='id identifier rubyid_to_r'>to_r</span><span class='rparen'>)</span> <span class='op'>&lt;</span> <span class='int'>0</span><span class='rparen'>)</span>
+  <span class='kw'>if</span><span class='lparen'>(</span><span class='const'>Math</span><span class='period'>.</span><span class='id identifier rubyid_sin'>sin</span><span class='lparen'>(</span><span class='id identifier rubyid_p2'>p2</span><span class='period'>.</span><span class='id identifier rubyid_longitude'>longitude</span><span class='period'>.</span><span class='id identifier rubyid_to_rad'>to_rad</span> <span class='op'>-</span> <span class='ivar'>@longitude</span><span class='period'>.</span><span class='id identifier rubyid_to_rad'>to_rad</span><span class='rparen'>)</span> <span class='op'>&lt;</span> <span class='int'>0</span><span class='rparen'>)</span>
     <span class='id identifier rubyid_bearing'>bearing</span> <span class='op'>=</span>  <span class='int'>2</span> <span class='op'>*</span> <span class='const'>Math</span><span class='op'>::</span><span class='const'>PI</span> <span class='op'>-</span> <span class='lparen'>(</span><span class='const'>Math</span><span class='period'>.</span><span class='id identifier rubyid_atan'>atan</span><span class='lparen'>(</span><span class='op'>-</span><span class='id identifier rubyid_t2'>t2</span> <span class='op'>/</span> <span class='const'>Math</span><span class='period'>.</span><span class='id identifier rubyid_sqrt'>sqrt</span><span class='lparen'>(</span><span class='op'>-</span><span class='id identifier rubyid_t2'>t2</span> <span class='op'>*</span> <span class='id identifier rubyid_t2'>t2</span> <span class='op'>+</span> <span class='int'>1</span><span class='rparen'>)</span><span class='rparen'>)</span> <span class='op'>+</span> <span class='id identifier rubyid_atan1_2'>atan1_2</span><span class='rparen'>)</span> <span class='comment'>#Compass Bearing in radians (clockwise)
 </span>  <span class='kw'>else</span>
     <span class='id identifier rubyid_bearing'>bearing</span> <span class='op'>=</span> <span class='const'>Math</span><span class='period'>.</span><span class='id identifier rubyid_atan'>atan</span><span class='lparen'>(</span><span class='op'>-</span><span class='id identifier rubyid_t2'>t2</span> <span class='op'>/</span> <span class='const'>Math</span><span class='period'>.</span><span class='id identifier rubyid_sqrt'>sqrt</span><span class='lparen'>(</span><span class='op'>-</span><span class='id identifier rubyid_t2'>t2</span> <span class='op'>*</span> <span class='id identifier rubyid_t2'>t2</span> <span class='op'>+</span> <span class='int'>1</span><span class='rparen'>)</span><span class='rparen'>)</span> <span class='op'>+</span> <span class='id identifier rubyid_atan1_2'>atan1_2</span> <span class='comment'>#Compass Bearing in radians (clockwise)
@@ -875,7 +904,8 @@ This gives us an approximation to verify Vincenty algorithm.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Constant VERSION</p>
+    
+<p>Returns constant VERSION</p>
 
 
   </div>
@@ -893,7 +923,8 @@ This gives us an approximation to verify Vincenty algorithm.</p>
       
       
         &mdash;
-        <div class='inline'><p>constant VERSION</p>
+        <div class='inline'>
+<p>constant VERSION</p>
 </div>
       
     </li>
@@ -926,9 +957,9 @@ This gives us an approximation to verify Vincenty algorithm.</p>
 </div>
 
     <div id="footer">
-  Generated on Sun Jan 13 11:15:53 2013 by
+  Generated on Sat Aug 23 16:06:34 2014 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.3 (ruby-1.9.3).
+  0.8.7.4 (ruby-2.1.2).
 </div>
 
   </body>

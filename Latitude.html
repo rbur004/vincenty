@@ -10,14 +10,14 @@
   
 </title>
 
-  <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
+  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
 
-  <link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
+  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
   hasFrames = window.top.frames.main ? true : false;
   relpath = '';
-  framesUrl = "frames.html#!" + escape(window.location.href);
+  framesUrl = "frames.html#!Latitude.html";
 </script>
 
 
@@ -103,8 +103,9 @@
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>Subclass of Angle to add in special treatment of to_d, to_r , to_s
-Latitude degrees are between -PI and PI, South to North (+/- 90 degrees)</p>
+    
+<p>Subclass of Angle to add in special treatment of to_d, to_r , to_s Latitude
+degrees are between -PI and PI, South to North (+/- 90 degrees)</p>
 
 
   </div>
@@ -139,7 +140,7 @@ Latitude degrees are between -PI and PI, South to North (+/- 90 degrees)</p>
     
 
     
-      (also: #to_d)
+      (also: #to_deg)
     
   </span>
   
@@ -151,7 +152,8 @@ Latitude degrees are between -PI and PI, South to North (+/- 90 degrees)</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Angle as degrees in range -90 and 90.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Angle as degrees in range -90 and 90.</p>
 </div></span>
   
 </li>
@@ -164,7 +166,7 @@ Latitude degrees are between -PI and PI, South to North (+/- 90 degrees)</p>
     
 
     
-      (also: #to_r)
+      (also: #to_r, #to_rad)
     
   </span>
   
@@ -176,7 +178,8 @@ Latitude degrees are between -PI and PI, South to North (+/- 90 degrees)</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Angle as degrees in range -PI and PI.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Angle as degrees in range -PI and PI.</p>
 </div></span>
   
 </li>
@@ -185,7 +188,7 @@ Latitude degrees are between -PI and PI, South to North (+/- 90 degrees)</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#to_s-instance_method" title="#to_s (instance method)">- (String) <strong>to_s</strong>(fmt = &quot;%2d %2m'%2.4s\&quot;%N&quot;) </a>
+      <a href="#to_s-instance_method" title="#to_s (instance method)">- (String) <strong>to_s</strong>(fmt = &quot;%2d %2m&#39;%2.4s\&quot;%N&quot;) </a>
     
 
     
@@ -199,7 +202,8 @@ Latitude degrees are between -PI and PI, South to North (+/- 90 degrees)</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>A South angle is negative, North is Positive.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>A South angle is negative, North is Positive.</p>
 </div></span>
   
 </li>
@@ -240,14 +244,15 @@ Latitude degrees are between -PI and PI, South to North (+/- 90 degrees)</p>
 
   
     <span class="aliases">Also known as:
-    <span class="names"><span id='to_d-instance_method'>to_d</span></span>
+    <span class="names"><span id='to_deg-instance_method'>to_deg</span></span>
     </span>
   
 
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Angle as degrees in range -90 and 90</p>
+    
+<p>Returns angle as degrees in range -90 and 90</p>
 
 
   </div>
@@ -265,7 +270,8 @@ Latitude degrees are between -PI and PI, South to North (+/- 90 degrees)</p>
       
       
         &mdash;
-        <div class='inline'><p>angle as degrees in range -90 and 90</p>
+        <div class='inline'>
+<p>angle as degrees in range -90 and 90</p>
 </div>
       
     </li>
@@ -315,14 +321,15 @@ Latitude degrees are between -PI and PI, South to North (+/- 90 degrees)</p>
 
   
     <span class="aliases">Also known as:
-    <span class="names"><span id='to_r-instance_method'>to_r</span></span>
+    <span class="names"><span id='to_r-instance_method'>to_r</span>, <span id='to_rad-instance_method'>to_rad</span></span>
     </span>
   
 
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Angle as degrees in range -PI and PI</p>
+    
+<p>Returns angle as degrees in range -PI and PI</p>
 
 
   </div>
@@ -340,7 +347,8 @@ Latitude degrees are between -PI and PI, South to North (+/- 90 degrees)</p>
       
       
         &mdash;
-        <div class='inline'><p>angle as degrees in range -PI and PI</p>
+        <div class='inline'>
+<p>angle as degrees in range -PI and PI</p>
 </div>
       
     </li>
@@ -383,7 +391,7 @@ Latitude degrees are between -PI and PI, South to North (+/- 90 degrees)</p>
       <div class="method_details ">
   <h3 class="signature " id="to_s-instance_method">
   
-    - (<tt><span class='object_link'><a href="String.html" title="String (class)">String</a></span></tt>) <strong>to_s</strong>(fmt = &quot;%2d %2m'%2.4s\&quot;%N&quot;) 
+    - (<tt><span class='object_link'><a href="String.html" title="String (class)">String</a></span></tt>) <strong>to_s</strong>(fmt = &quot;%2d %2m&#39;%2.4s\&quot;%N&quot;) 
   
 
   
@@ -391,7 +399,8 @@ Latitude degrees are between -PI and PI, South to North (+/- 90 degrees)</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>A South angle is negative, North is Positive.</p>
+    
+<p>A South angle is negative, North is Positive.</p>
 
 
   </div>
@@ -408,11 +417,12 @@ Latitude degrees are between -PI and PI, South to North (+/- 90 degrees)</p>
         <span class='type'>(<tt><span class='object_link'><a href="String.html" title="String (class)">String</a></span></tt>)</span>
       
       
-        <em class="default">(defaults to: <tt>&quot;%2d %2m'%2.4s\&quot;%N&quot;</tt>)</em>
+        <em class="default">(defaults to: <tt>&quot;%2d %2m&#39;%2.4s\&quot;%N&quot;</tt>)</em>
       
       
         &mdash;
-        <div class='inline'><p>Optional format string passed to Angle#to_s</p>
+        <div class='inline'>
+<p>Optional format string passed to Angle#to_s</p>
 </div>
       
     </li>
@@ -430,7 +440,8 @@ Latitude degrees are between -PI and PI, South to North (+/- 90 degrees)</p>
       
       
         &mdash;
-        <div class='inline'><p>angle as string in degrees minutes seconds direction.</p>
+        <div class='inline'>
+<p>angle as string in degrees minutes seconds direction.</p>
 </div>
       
     </li>
@@ -450,7 +461,7 @@ Latitude degrees are between -PI and PI, South to North (+/- 90 degrees)</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/latitude.rb', line 35</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_to_s'>to_s</span><span class='lparen'>(</span><span class='id identifier rubyid_fmt'>fmt</span><span class='op'>=</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>%2d %2m'%2.4s\&quot;%N</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_to_s'>to_s</span><span class='lparen'>(</span><span class='id identifier rubyid_fmt'>fmt</span><span class='op'>=</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>%2d %2m&#39;%2.4s\&quot;%N</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
     <span class='kw'>super</span><span class='lparen'>(</span><span class='id identifier rubyid_fmt'>fmt</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -463,9 +474,9 @@ Latitude degrees are between -PI and PI, South to North (+/- 90 degrees)</p>
 </div>
 
     <div id="footer">
-  Generated on Sun Jan 13 11:15:53 2013 by
+  Generated on Sat Aug 23 16:06:33 2014 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.3 (ruby-1.9.3).
+  0.8.7.4 (ruby-2.1.2).
 </div>
 
   </body>

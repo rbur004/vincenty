@@ -10,14 +10,14 @@
   
 </title>
 
-  <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
+  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
 
-  <link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
+  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
   hasFrames = window.top.frames.main ? true : false;
   relpath = '';
-  framesUrl = "frames.html#!" + escape(window.location.href);
+  framesUrl = "frames.html#!Numeric.html";
 </script>
 
 
@@ -101,8 +101,8 @@
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>Extends Numeric, hence Fixed &amp; Float to_r &amp; to_d
-Also adds in sign.</p>
+    
+<p>Extends Numeric, hence Fixed &amp; Float to_r &amp; to_d Also adds in sign.</p>
 
 
   </div>
@@ -142,7 +142,8 @@ Also adds in sign.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>1 if number is positive, -1 if negative.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>1 if number is positive, -1 if negative.</p>
 </div></span>
   
 </li>
@@ -155,7 +156,7 @@ Also adds in sign.</p>
     
 
     
-      (also: #to_d)
+      (also: #to_deg)
     
   </span>
   
@@ -167,7 +168,8 @@ Also adds in sign.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Convert Radians to Degrees.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Convert Radians to Degrees.</p>
 </div></span>
   
 </li>
@@ -180,7 +182,7 @@ Also adds in sign.</p>
     
 
     
-      (also: #to_r)
+      (also: #to_r, #to_rad)
     
   </span>
   
@@ -192,7 +194,8 @@ Also adds in sign.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Converts degrees to Radians.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Converts degrees to Radians.</p>
 </div></span>
   
 </li>
@@ -218,7 +221,8 @@ Also adds in sign.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>1 if number is positive, -1 if negative.</p>
+    
+<p>Returns 1 if number is positive, -1 if negative.</p>
 
 
   </div>
@@ -236,7 +240,8 @@ Also adds in sign.</p>
       
       
         &mdash;
-        <div class='inline'><p>1 if number is positive, -1 if negative.</p>
+        <div class='inline'>
+<p>1 if number is positive, -1 if negative.</p>
 </div>
       
     </li>
@@ -249,12 +254,12 @@ Also adds in sign.</p>
       <pre class="lines">
 
 
-32
 33
-34</pre>
+34
+35</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/core_extensions.rb', line 32</span>
+      <pre class="code"><span class="info file"># File 'lib/core_extensions.rb', line 33</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_sign'>sign</span>
   <span class='kw'>self</span> <span class='op'>&lt;</span> <span class='int'>0</span> <span class='op'>?</span> <span class='op'>-</span><span class='int'>1</span> <span class='op'>:</span> <span class='int'>1</span>
@@ -272,14 +277,15 @@ Also adds in sign.</p>
 
   
     <span class="aliases">Also known as:
-    <span class="names"><span id='to_d-instance_method'>to_d</span></span>
+    <span class="names"><span id='to_deg-instance_method'>to_deg</span></span>
     </span>
   
 
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Convert Radians to Degrees</p>
+    
+<p>Convert Radians to Degrees</p>
 
 
   </div>
@@ -300,7 +306,8 @@ Also adds in sign.</p>
       
       
         &mdash;
-        <div class='inline'><p>Optional argument mod == true, then applies % 360</p>
+        <div class='inline'>
+<p>Optional argument mod == true, then applies % 360</p>
 </div>
       
     </li>
@@ -318,7 +325,8 @@ Also adds in sign.</p>
       
       
         &mdash;
-        <div class='inline'><p>degrees</p>
+        <div class='inline'>
+<p>degrees</p>
 </div>
       
     </li>
@@ -362,14 +370,15 @@ Also adds in sign.</p>
 
   
     <span class="aliases">Also known as:
-    <span class="names"><span id='to_r-instance_method'>to_r</span></span>
+    <span class="names"><span id='to_r-instance_method'>to_r</span>, <span id='to_rad-instance_method'>to_rad</span></span>
     </span>
   
 
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Converts degrees to Radians</p>
+    
+<p>Converts degrees to Radians</p>
 
 
   </div>
@@ -390,7 +399,8 @@ Also adds in sign.</p>
       
       
         &mdash;
-        <div class='inline'><p>Optional argument mod == true, then applies % Math::PI</p>
+        <div class='inline'>
+<p>Optional argument mod == true, then applies % Math::PI</p>
 </div>
       
     </li>
@@ -408,7 +418,8 @@ Also adds in sign.</p>
       
       
         &mdash;
-        <div class='inline'><p>radians</p>
+        <div class='inline'>
+<p>radians</p>
 </div>
       
     </li>
@@ -449,9 +460,9 @@ Also adds in sign.</p>
 </div>
 
     <div id="footer">
-  Generated on Sun Jan 13 11:15:53 2013 by
+  Generated on Sat Aug 23 16:06:33 2014 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.3 (ruby-1.9.3).
+  0.8.7.4 (ruby-2.1.2).
 </div>
 
   </body>

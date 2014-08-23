@@ -10,14 +10,14 @@
   
 </title>
 
-  <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
+  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
 
-  <link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
+  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
   hasFrames = window.top.frames.main ? true : false;
   relpath = '';
-  framesUrl = "frames.html#!" + escape(window.location.href);
+  framesUrl = "frames.html#!Float.html";
 </script>
 
 
@@ -101,7 +101,8 @@
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>Alters round method to have an optional number of decimal places.</p>
+    
+<p>Alters round method to have an optional number of decimal places.</p>
 
 
   </div>
@@ -141,7 +142,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Compatible Replacement for Float.round.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Compatible Replacement for Float.round.</p>
 </div></span>
   
 </li>
@@ -164,7 +166,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Replace default round, so we can reference it later.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Replace default round, so we can reference it later.</p>
 </div></span>
   
 </li>
@@ -190,7 +193,8 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Compatible Replacement for Float.round</p>
+    
+<p>Compatible Replacement for Float.round</p>
 
 
   </div>
@@ -211,7 +215,8 @@
       
       
         &mdash;
-        <div class='inline'><p>Optional argument n is the number of decimal places to round to.</p>
+        <div class='inline'>
+<p>Optional argument n is the number of decimal places to round to.</p>
 </div>
       
     </li>
@@ -229,7 +234,8 @@
       
       
         &mdash;
-        <div class='inline'><p>float rounded to n decimal places.</p>
+        <div class='inline'>
+<p>float rounded to n decimal places.</p>
 </div>
       
     </li>
@@ -242,13 +248,13 @@
       <pre class="lines">
 
 
-48
 49
 50
-51</pre>
+51
+52</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/core_extensions.rb', line 48</span>
+      <pre class="code"><span class="info file"># File 'lib/core_extensions.rb', line 49</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_round'>round</span><span class='lparen'>(</span><span class='id identifier rubyid_n'>n</span> <span class='op'>=</span> <span class='int'>0</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_m'>m</span> <span class='op'>=</span> <span class='float'>10.0</span><span class='op'>**</span><span class='id identifier rubyid_n'>n</span>
@@ -270,7 +276,8 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Replace default round, so we can reference it later.</p>
+    
+<p>Replace default round, so we can reference it later.</p>
 
 
   </div>
@@ -297,10 +304,10 @@
       <pre class="lines">
 
 
-43</pre>
+44</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/core_extensions.rb', line 43</span>
+      <pre class="code"><span class="info file"># File 'lib/core_extensions.rb', line 44</span>
 
 <span class='kw'>alias</span> <span class='id identifier rubyid_round0'>round0</span> <span class='id identifier rubyid_round'>round</span></pre>
     </td>
@@ -313,9 +320,9 @@
 </div>
 
     <div id="footer">
-  Generated on Sun Jan 13 11:15:53 2013 by
+  Generated on Sat Aug 23 16:06:33 2014 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.3 (ruby-1.9.3).
+  0.8.7.4 (ruby-2.1.2).
 </div>
 
   </body>
