@@ -47,8 +47,12 @@ class Float
   # @return [Float] float rounded to n decimal places.
   # @param [Numeric] n Optional argument n is the number of decimal places to round to.
   def round(n = 0)
-    m = 10.0**n
-   (self *  m).round0 / m
+    if n == 0
+      self.round0 #This is to preserve the default behaviour, which is to return a Fixnum, not a float.
+    else
+      m = 10.0**n
+     (self *  m).round0 / m
+   end
   end
 end
 
