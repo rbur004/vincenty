@@ -1,0 +1,7 @@
+lib/angle.rb 10e1bc34a6b2a7545a35300f22f4adeb1264a699
+lib/coordinate.rb d6f7c02e21393e64586cee528500817fd0592c8b
+lib/core_extensions.rb 65007ac7d872ffc088df97d7ada23182b633c0c8
+lib/latitude.rb bdfd4ae036db2e5757f95be5c08f536792d8a74c
+lib/longitude.rb eba544f5a09401bc6a9a9b5bc83be3c1f8a1e525
+lib/track_and_distance.rb ce18aa9229e2c75cf41e99b6928bf0c1b7818159
+lib/vincenty.rb 6f72903da8cf467fc94b5d79f8d57449a914eba4
