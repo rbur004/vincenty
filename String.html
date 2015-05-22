@@ -257,10 +257,6 @@ S37 001&#39;7.5&#39;&#39;, 37 001&#39;7.5&#39;&#39;S , -37
       <pre class="lines">
 
 
-60
-61
-62
-63
 64
 65
 66
@@ -274,10 +270,14 @@ S37 001&#39;7.5&#39;&#39;, 37 001&#39;7.5&#39;&#39;S , -37
 74
 75
 76
-77</pre>
+77
+78
+79
+80
+81</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/core_extensions.rb', line 60</span>
+      <pre class="code"><span class="info file"># File 'lib/core_extensions.rb', line 64</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_dec_degrees'>to_dec_degrees</span> 
   <span class='comment'>#reorder 37 001&#39;.512S, S37 001&#39;.512 into 37 001.512&#39;S, S37 001.512&#39; respectively
@@ -372,12 +372,12 @@ S37 001&#39;7.5&#39;&#39;, 37 001&#39;7.5&#39;&#39;S , -37
       <pre class="lines">
 
 
-82
-83
-84</pre>
+86
+87
+88</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/core_extensions.rb', line 82</span>
+      <pre class="code"><span class="info file"># File 'lib/core_extensions.rb', line 86</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_degrees'>to_degrees</span><span class='lparen'>(</span><span class='id identifier rubyid_mod'>mod</span><span class='op'>=</span><span class='kw'>false</span><span class='rparen'>)</span> <span class='comment'>#string expected to be radians, returns degrees
 </span>  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_to_f'>to_f</span><span class='period'>.</span><span class='id identifier rubyid_to_degrees'>to_degrees</span><span class='lparen'>(</span><span class='id identifier rubyid_mod'>mod</span><span class='rparen'>)</span>
@@ -457,12 +457,12 @@ S37 001&#39;7.5&#39;&#39;, 37 001&#39;7.5&#39;&#39;S , -37
       <pre class="lines">
 
 
-89
-90
-91</pre>
+93
+94
+95</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/core_extensions.rb', line 89</span>
+      <pre class="code"><span class="info file"># File 'lib/core_extensions.rb', line 93</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_radians'>to_radians</span><span class='lparen'>(</span><span class='id identifier rubyid_mod'>mod</span><span class='op'>=</span><span class='kw'>false</span><span class='rparen'>)</span> <span class='comment'>#string expected to be degrees, returns radians
 </span>  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_to_dec_degrees'>to_dec_degrees</span><span class='period'>.</span><span class='id identifier rubyid_to_radians'>to_radians</span><span class='lparen'>(</span><span class='id identifier rubyid_mod'>mod</span><span class='rparen'>)</span>
@@ -477,9 +477,9 @@ S37 001&#39;7.5&#39;&#39;, 37 001&#39;7.5&#39;&#39;S , -37
 </div>
 
     <div id="footer">
-  Generated on Sat Aug 23 16:08:12 2014 by
+  Generated on Fri May 22 13:54:24 2015 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.4 (ruby-2.1.2).
+  0.8.7.6 (ruby-2.1.5).
 </div>
 
   </body>

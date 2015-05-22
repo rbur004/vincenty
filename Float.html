@@ -251,14 +251,22 @@
 49
 50
 51
-52</pre>
+52
+53
+54
+55
+56</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/core_extensions.rb', line 49</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_round'>round</span><span class='lparen'>(</span><span class='id identifier rubyid_n'>n</span> <span class='op'>=</span> <span class='int'>0</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_m'>m</span> <span class='op'>=</span> <span class='float'>10.0</span><span class='op'>**</span><span class='id identifier rubyid_n'>n</span>
- <span class='lparen'>(</span><span class='kw'>self</span> <span class='op'>*</span>  <span class='id identifier rubyid_m'>m</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_round0'>round0</span> <span class='op'>/</span> <span class='id identifier rubyid_m'>m</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_n'>n</span> <span class='op'>==</span> <span class='int'>0</span>
+    <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_round0'>round0</span> <span class='comment'>#This is to preserve the default behaviour, which is to return a Fixnum, not a float.
+</span>  <span class='kw'>else</span>
+    <span class='id identifier rubyid_m'>m</span> <span class='op'>=</span> <span class='float'>10.0</span><span class='op'>**</span><span class='id identifier rubyid_n'>n</span>
+   <span class='lparen'>(</span><span class='kw'>self</span> <span class='op'>*</span>  <span class='id identifier rubyid_m'>m</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_round0'>round0</span> <span class='op'>/</span> <span class='id identifier rubyid_m'>m</span>
+ <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -320,9 +328,9 @@
 </div>
 
     <div id="footer">
-  Generated on Sat Aug 23 16:08:12 2014 by
+  Generated on Fri May 22 13:54:24 2015 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.4 (ruby-2.1.2).
+  0.8.7.6 (ruby-2.1.5).
 </div>
 
   </body>
