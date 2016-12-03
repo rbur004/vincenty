@@ -1,7 +1,7 @@
 require 'test/unit'
 require 'vincenty'
 
-class TestAngle< Test::Unit::TestCase
+class TestTrackAndDistance< Test::Unit::TestCase
   #test TrackAndDistance
   def test_track_and_distance
     assert_equal("140 14'10.0000\" 12.0m", TrackAndDistance.new(Angle.new("320,14,10").reverse, 12.0).to_s)

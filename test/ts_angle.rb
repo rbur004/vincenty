@@ -1,5 +1,5 @@
 require 'test/unit'
-require 'vincenty.rb'
+require_relative '../lib/vincenty.rb'
 
 class TestAngle< Test::Unit::TestCase
   #test Angle creation
@@ -28,7 +28,7 @@ class TestAngle< Test::Unit::TestCase
     assert_equal(Angle.decimal_deg_from_ary([1,5,4,'W']), -(1.0 + 5/60.0 + 4/3600.0))
     assert_equal(Angle.decimal_deg_from_ary(Angle.dms( -(1.0 + 5/60.0 + 1.0/3600.0) )),-(1.0 + 5/60.0 + 1.0/3600.0)) #double call, rounding error always produced a failure.
   end
-  
+
   def test_strf
     a = Angle.new("S37 01'7.5\"")
     assert_equal("-37 01'07.5000\"", a.strf) #default format of strf
@@ -50,7 +50,7 @@ class TestAngle< Test::Unit::TestCase
 
   def test_operators
     #Comparable.
-    assert_equal(Angle.radians(-0.646099072472651), Angle.radians(-0.646099072472651)) #<=>   
+    assert_equal(Angle.radians(-0.646099072472651), Angle.radians(-0.646099072472651)) #<=>
     #unary-op Angle
     assert_equal(+Angle.radians(-0.646099072472651), Angle.radians(-0.646099072472651)) #unary +
     assert_equal(-Angle.radians(-0.646099072472651), Angle.radians(0.646099072472651)) #unary -
@@ -67,7 +67,7 @@ class TestAngle< Test::Unit::TestCase
     assert_equal(6, 3 * Angle.radians(2) ) # *
     assert_equal(2, 4 / Angle.radians(2) ) # /
     #Angle op Angle
-    assert_equal(Angle.radians(3.2+2.1), Angle.radians(3.2) + Angle.radians(2.1) ) # +   
+    assert_equal(Angle.radians(3.2+2.1), Angle.radians(3.2) + Angle.radians(2.1) ) # +
     #Sign method.
     assert_equal(1, Angle.radians(3).sign)
     assert_equal(-1, Angle.radians(-3).sign)

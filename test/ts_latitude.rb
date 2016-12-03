@@ -1,7 +1,7 @@
 require 'test/unit'
-require 'vincenty.rb'
+require_relative '../lib/vincenty.rb'
 
-class TestAngle< Test::Unit::TestCase
+class TestLatitude< Test::Unit::TestCase
   def test_strf
     assert_equal("37 01'07.5000\"S", Latitude.new("S37 01'7.5\"").to_s)
     assert_equal("37 01'07.5000\"S", Latitude.new("-37 01'7.5\"").to_s)

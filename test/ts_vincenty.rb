@@ -1,12 +1,12 @@
 require 'test/unit'
-require 'vincenty.rb'
+require_relative '../lib/vincenty.rb'
 
 class TestVincenty< Test::Unit::TestCase
 
   def initialize(x)
     super(x)
-    
-    @path = [ #Path starting at peg by kanaka at end of drive 
+
+    @path = [ #Path starting at peg by kanaka at end of drive
        TrackAndDistance.new("215,3,0", 19.73 ) ,
        TrackAndDistance.new(Angle.new("320,14,10").reverse, 12.0), #Note don't need to add the radians=true argument as Angle has to_radians function
        TrackAndDistance.new(Angle.new("281,44,40").reverse, 35.23 ),
@@ -32,20 +32,20 @@ class TestVincenty< Test::Unit::TestCase
         Vincenty.new(-36.9917932943506, 174.485664544705),
         Vincenty.new(-36.9920268289562, 174.485617028991),
         Vincenty.new(-36.9921837292671, 174.485468381511),
-    ]  
+    ]
   end
 
   #The path in @path was entered from the property survey map, with distance and bearings which should form a closed loop
   #verified on google map of my property by creating a KML file and loading the map over the satellite image and checking the
-  #coordinates in google earth, and visually checking the route created was a closed loop (it was with a tiny error). 
+  #coordinates in google earth, and visually checking the route created was a closed loop (it was with a tiny error).
   def test_vincenty_destination
-    start = Vincenty.new(-36.9921838030711, 174.485468469841) 
+    start = Vincenty.new(-36.9921838030711, 174.485468469841)
 
     next_p = start
 #    print "Start at coordinate #{next_p.longitude.to_deg}, #{next_p.latitude.to_deg}\n"
     @path.each_with_index do |leg,i|
       next_p, spherical_ans = next_p.destination( leg ) , next_p.sphereDestination(leg)
- 
+
       assert_equal(@waypoints[i].longitude.to_deg.round(12), next_p.longitude.to_deg.round(12))
       assert_equal(@waypoints[i].latitude.to_deg.round(12), next_p.latitude.to_deg.round(12))
   #    print "Expect  #{waypoints[i].longitude.to_deg.round(4)}, #{waypoints[i].latitude.to_deg.round(4)}\n"
@@ -56,18 +56,18 @@ class TestVincenty< Test::Unit::TestCase
   #  assert_equal(0, next_p.distanceAndAngle(start).distance)
   #  puts "distance from end to start should be 0. Actual #{next_p.distanceAndAngle(start)}"
   end
-  
+
   #The waypoints are the latitudes and longitudes of the corners of my property.
   #The resulting bearing and distances between them should match those in @path.
   def test_vincenty_distance_and_angle
-    start = Vincenty.new(-36.9921838030711, 174.485468469841) 
+    start = Vincenty.new(-36.9921838030711, 174.485468469841)
     next_p = start
 #   print "\nReverse test, c\n"
 #    print "Start at coordinate #{next_p.longitude.to_deg}, #{next_p.latitude.to_deg}\n"
     @waypoints.each_with_index do |point,i|
-      vtrack_and_bearing = next_p.distanceAndAngle( point ) 
+      vtrack_and_bearing = next_p.distanceAndAngle( point )
   #    strack_and_bearing = next_p.sphericalDistanceAndAngle( point )
-      
+
       assert_equal(@path[i].bearing.to_deg.round(4), vtrack_and_bearing.bearing.to_deg.round(4))
       assert_equal(@path[i].distance.round(4), vtrack_and_bearing.distance.round(4))
   #    print "Expected #{path[i].bearing.to_deg.round(4)}(#{((path[i].bearing.to_deg+180)%360).round(4)}), #{path[i].distance.round(4)}m\n"
@@ -79,18 +79,27 @@ class TestVincenty< Test::Unit::TestCase
   # assert_equal(0, next_p.distanceAndAngle(start).distance)
   #  puts "distance from end to start should be 0. Actual #{next_p.distanceAndAngle(start)}\n"
   end
-  
+
+  #Edge case, when points are at same location
+  def test_vincenty_distance_and_angle_when_0
+    start = Vincenty.new(-36.9921838030711, 174.485468469841)
+    vtrack_and_bearing = start.distanceAndAngle( start )
+
+    assert_equal(0, vtrack_and_bearing.bearing.to_deg.round(4))
+    assert_equal(0, vtrack_and_bearing.distance.round(4))
+  end
+
   #Run the Australian Geoscience site example.
   def test_geoscience_au
     flindersPeak = Vincenty.new("-37 57'3.72030″", "144 25'29.52440″" )
     buninyong = Vincenty.new("-37   39 ' 10.15610 ''", "143   55 ' 35.38390 ''") #Buninyong
-    track_and_bearing = flindersPeak.distanceAndAngle( buninyong ) 
+    track_and_bearing = flindersPeak.distanceAndAngle( buninyong )
     assert_equal(Angle.new("306   52 ' 5.37 ''").to_deg.round(4), track_and_bearing.bearing.to_deg.round(4))
     assert_equal(54972.271, track_and_bearing.distance.round(3))
-    
+
     destination = flindersPeak.destination(TrackAndDistance.new("306   52 ' 5.37 ''", 54972.271))
     assert_equal(buninyong.latitude.to_deg.round(4), destination.latitude.to_deg.round(4))
     assert_equal(buninyong.longitude.to_deg.round(4), destination.longitude.to_deg.round(4))
   end
-    
+
 end

@@ -1,7 +1,7 @@
 require 'test/unit'
-require 'vincenty.rb'
+require_relative '../lib/vincenty.rb'
 
-class TestAngle< Test::Unit::TestCase
+class TestCoordinate< Test::Unit::TestCase
   #test Coordinate
   def test_coordinate
     c = Coordinate.new(-36.9923293459124, 174.485341187381,13.5)

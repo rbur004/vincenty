@@ -1,5 +1,5 @@
 
-require 'angle.rb'
+require_relative 'angle.rb'
 
 #Holds a bearing and distance
 class TrackAndDistance
@@ -7,7 +7,7 @@ class TrackAndDistance
     attr_accessor :bearing
     # @return [Float]
     attr_accessor :distance
-    
+
     # @param [String, Numeric, #to_radian, #to_f] Bearing can be a String or Numeric or any object with to_radians and to_f
     # @param [Numeric] distance
     # @param [true,false, :radians] radians Bearing is in degrees unless radians == true (or set to :radians).
@@ -15,7 +15,7 @@ class TrackAndDistance
       @bearing = Angle.new(bearing, radians)
       @distance = distance
     end
-    
+
     #format string fmt is currently just for the bearing angle.
     #Need to change this to include the distance is single format string.
     # @return [String] Bearing angle and distance in meters.
@@ -33,7 +33,7 @@ class TrackAndDistance
     def to_ary
       [ @bearing, @distance ]
     end
-    
+
     # @return [Hash] with keys :bearing and :distance
     def to_hash
       { :bearing => @bearing, :distance => @distance }

@@ -6,4 +6,3 @@ git log --pretty=format:"%an%x09%ad%x0a%x09%s" > History.txt
 cp -r doc/* ../doc
 rm -rf doc
 ( cd ../doc; git add . ; git commit -a --allow-empty-message -m ""; git push origin gh-pages )
-
