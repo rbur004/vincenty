@@ -1,8 +1,8 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!DOCTYPE html>
+<html>
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>
   Class: Vincenty
   
@@ -15,9 +15,8 @@
   <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
-  hasFrames = window.top.frames.main ? true : false;
+  pathId = "Vincenty";
   relpath = '';
-  framesUrl = "frames.html#!Vincenty.html";
 </script>
 
 
@@ -28,51 +27,50 @@
 
   </head>
   <body>
-    <div id="header">
-      <div id="menu">
+    <div class="nav_wrap">
+      <iframe id="nav" src="class_list.html"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
   
     <a href="_index.html">Index (V)</a> &raquo;
     
     
     <span class="title">Vincenty</span>
   
-
-  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
 </div>
 
-      <div id="search">
+        <div id="search">
   
     <a class="full_list_link" id="class_list_link"
         href="class_list.html">
-      Class List
-    </a>
-  
-    <a class="full_list_link" id="method_list_link"
-        href="method_list.html">
-      Method List
-    </a>
-  
-    <a class="full_list_link" id="file_list_link"
-        href="file_list.html">
-      File List
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
     </a>
   
 </div>
-      <div class="clear"></div>
-    </div>
+        <div class="clear"></div>
+      </div>
 
-    <iframe id="search_frame"></iframe>
+      <iframe id="search_frame" src="class_list.html"></iframe>
 
-    <div id="content"><h1>Class: Vincenty
+      <div id="content"><h1>Class: Vincenty
   
   
   
 </h1>
-
-<dl class="box">
+<div class="box_info">
   
-    <dt class="r1">Inherits:</dt>
-    <dd class="r1">
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
       <span class="inheritName"><span class='object_link'><a href="Coordinate.html" title="Coordinate (class)">Coordinate</a></span></span>
       
         <ul class="fullTree">
@@ -85,21 +83,25 @@
         </ul>
         <a href="#" class="inheritanceTree">show all</a>
       
-      </dd>
-    
+    </dd>
+  </dl>
   
-  
-    
-  
-    
+
   
   
   
-    <dt class="r2 last">Defined in:</dt>
-    <dd class="r2 last">lib/vincenty.rb</dd>
   
-</dl>
-<div class="clear"></div>
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/vincenty.rb</dd>
+  </dl>
+  
+</div>
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
@@ -123,16 +125,83 @@ compass bearing.</p>
 
 </div>
   <h2>Constant Summary</h2>
+  <dl class="constants">
+    
+      <dt id="VERSION-constant" class="">VERSION =
+        
+      </dt>
+      <dd><pre class="code"><span class='string val'>&#39;1.0.8&#39;</span>
+</pre></dd>
+    
+      <dt id="WGS84_ER-constant" class="">WGS84_ER =
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>Equatorial Radius of earth</p>
+
+
+  </div>
+</div>
+<div class="tags">
   
-    <dl class="constants">
-      
-        <dt id="VERSION-constant" class="">VERSION =
-          
-        </dt>
-        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>1.0.7</span><span class='tstring_end'>&#39;</span></span></pre></dd>
-      
-    </dl>
+
+</div>
+      </dt>
+      <dd><pre class="code"><span class='integer val'>6378137</span>
+</pre></dd>
+    
+      <dt id="WGS84_IF-constant" class="">WGS84_IF =
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>Inverse Flattening</p>
+
+
+  </div>
+</div>
+<div class="tags">
   
+
+</div>
+      </dt>
+      <dd><pre class="code"><span class='float val'>298.257223563</span>
+</pre></dd>
+    
+      <dt id="GRS80_ER-constant" class="">GRS80_ER =
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>Equatorial Radius of earth</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+      </dt>
+      <dd><pre class="code"><span class='integer val'>6378137</span>
+</pre></dd>
+    
+      <dt id="GRS80_IF-constant" class="">GRS80_IF =
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>Inverse Flattening</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+      </dt>
+      <dd><pre class="code"><span class='float val'>298.25722210882711</span>
+</pre></dd>
+    
+  </dl>
 
 
 
@@ -148,7 +217,7 @@ compass bearing.</p>
   
     <h2>
       Instance Method Summary
-      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+      <small><a href="#" class="summary_toggle">collapse</a></small>
     </h2>
 
     <ul class="summary">
@@ -156,7 +225,7 @@ compass bearing.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#destination-instance_method" title="#destination (instance method)">- (Vincenty) <strong>destination</strong>(track_and_distance) </a>
+      <a href="#destination-instance_method" title="#destination (instance method)">#<strong>destination</strong>(track_and_distance)  &#x21d2; Vincenty </a>
     
 
     
@@ -181,7 +250,7 @@ distance.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#distanceAndAngle-instance_method" title="#distanceAndAngle (instance method)">- (TrackAndDistance) <strong>distanceAndAngle</strong>(p2) </a>
+      <a href="#distanceAndAngle-instance_method" title="#distanceAndAngle (instance method)">#<strong>distanceAndAngle</strong>(p2)  &#x21d2; TrackAndDistance </a>
     
 
     
@@ -206,7 +275,7 @@ coordinates.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#sphereDestination-instance_method" title="#sphereDestination (instance method)">- (Vincenty) <strong>sphereDestination</strong>(track_and_distance) </a>
+      <a href="#sphereDestination-instance_method" title="#sphereDestination (instance method)">#<strong>sphereDestination</strong>(track_and_distance)  &#x21d2; Vincenty </a>
     
 
     
@@ -232,7 +301,7 @@ algorithm.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#sphericalDistanceAndAngle-instance_method" title="#sphericalDistanceAndAngle (instance method)">- (TrackAndDistance) <strong>sphericalDistanceAndAngle</strong>(p2) </a>
+      <a href="#sphericalDistanceAndAngle-instance_method" title="#sphericalDistanceAndAngle (instance method)">#<strong>sphericalDistanceAndAngle</strong>(p2, equatorial_radius = WGS84_ER, inverse_flattening = WGS84_IF)  &#x21d2; TrackAndDistance </a>
     
 
     
@@ -259,7 +328,7 @@ isn&#39;t.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#version-instance_method" title="#version (instance method)">- (String) <strong>version</strong> </a>
+      <a href="#version-instance_method" title="#version (instance method)">#<strong>version</strong>  &#x21d2; String </a>
     
 
     
@@ -309,7 +378,7 @@ isn&#39;t.</p>
       <div class="method_details first">
   <h3 class="signature first" id="destination-instance_method">
   
-    - (<tt><span class='object_link'><a href="" title="Vincenty (class)">Vincenty</a></span></tt>) <strong>destination</strong>(track_and_distance) 
+    #<strong>destination</strong>(track_and_distance)  &#x21d2; <tt><span class='object_link'><a href="" title="Vincenty (class)">Vincenty</a></span></tt> 
   
 
   
@@ -371,20 +440,6 @@ distance. Assumes earth is a WGS-84 Ellipsod.</p>
       <pre class="lines">
 
 
-145
-146
-147
-148
-149
-150
-151
-152
-153
-154
-155
-156
-157
-158
 159
 160
 161
@@ -412,53 +467,68 @@ distance. Assumes earth is a WGS-84 Ellipsod.</p>
 183
 184
 185
-186</pre>
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/vincenty.rb', line 145</span>
+      <pre class="code"><span class="info file"># File 'lib/vincenty.rb', line 159</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_destination'>destination</span><span class='lparen'>(</span> <span class='id identifier rubyid_track_and_distance'>track_and_distance</span> <span class='rparen'>)</span> 
-  <span class='comment'># a, b = major &amp; minor semiaxes of the ellipsoid
-</span>  <span class='id identifier rubyid_a'>a</span> <span class='op'>=</span> <span class='int'>6378137</span> <span class='comment'>#equatorial radius in meters     (+/-2 m) 
-</span>  <span class='id identifier rubyid_b'>b</span> <span class='op'>=</span> <span class='float'>6356752.31424518</span> <span class='comment'>#polar radius in meters
-</span>  <span class='id identifier rubyid_f'>f</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='id identifier rubyid_a'>a</span><span class='op'>-</span><span class='id identifier rubyid_b'>b</span><span class='rparen'>)</span><span class='op'>/</span><span class='id identifier rubyid_a'>a</span> <span class='comment'>#  flattening 
-</span>  
-  <span class='id identifier rubyid_s'>s</span> <span class='op'>=</span> <span class='id identifier rubyid_track_and_distance'>track_and_distance</span><span class='period'>.</span><span class='id identifier rubyid_distance'>distance</span><span class='period'>.</span><span class='id identifier rubyid_abs'>abs</span><span class='semicolon'>;</span>
-  <span class='id identifier rubyid_alpha1'>alpha1</span> <span class='op'>=</span> <span class='id identifier rubyid_track_and_distance'>track_and_distance</span><span class='period'>.</span><span class='id identifier rubyid_bearing'>bearing</span><span class='period'>.</span><span class='id identifier rubyid_to_rad'>to_rad</span>
-  <span class='id identifier rubyid_sin_alpha1'>sin_alpha1</span> <span class='op'>=</span> <span class='const'>Math</span><span class='period'>.</span><span class='id identifier rubyid_sin'>sin</span><span class='lparen'>(</span><span class='id identifier rubyid_alpha1'>alpha1</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_cos_alpha1'>cos_alpha1</span> <span class='op'>=</span> <span class='const'>Math</span><span class='period'>.</span><span class='id identifier rubyid_cos'>cos</span><span class='lparen'>(</span><span class='id identifier rubyid_alpha1'>alpha1</span><span class='rparen'>)</span>
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_destination identifier id'>destination</span><span class='lparen token'>(</span> <span class='rubyid_track_and_distance identifier id'>track_and_distance</span> <span class='rparen token'>)</span>
+  <span class='comment val'># a, b = major &amp; minor semiaxes of the ellipsoid</span>
+  <span class='rubyid_a identifier id'>a</span> <span class='assign token'>=</span> <span class='integer val'>6378137</span> <span class='comment val'>#equatorial radius in meters     (+/-2 m)</span>
+  <span class='rubyid_b identifier id'>b</span> <span class='assign token'>=</span> <span class='float val'>6356752.31424518</span> <span class='comment val'>#polar radius in meters</span>
+  <span class='rubyid_f identifier id'>f</span> <span class='assign token'>=</span> <span class='lparen token'>(</span><span class='rubyid_a identifier id'>a</span><span class='minus op'>-</span><span class='rubyid_b identifier id'>b</span><span class='rparen token'>)</span><span class='div op'>/</span><span class='rubyid_a identifier id'>a</span> <span class='comment val'>#  flattening</span>
 
-  <span class='id identifier rubyid_tanU1'>tanU1</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='int'>1</span><span class='op'>-</span><span class='id identifier rubyid_f'>f</span><span class='rparen'>)</span>  <span class='op'>*</span>  <span class='const'>Math</span><span class='period'>.</span><span class='id identifier rubyid_tan'>tan</span><span class='lparen'>(</span><span class='ivar'>@latitude</span><span class='period'>.</span><span class='id identifier rubyid_to_rad'>to_rad</span><span class='rparen'>)</span><span class='semicolon'>;</span>
-  <span class='id identifier rubyid_cosU1'>cosU1</span> <span class='op'>=</span> <span class='int'>1</span> <span class='op'>/</span> <span class='const'>Math</span><span class='period'>.</span><span class='id identifier rubyid_sqrt'>sqrt</span><span class='lparen'>(</span><span class='lparen'>(</span><span class='int'>1</span>  <span class='op'>+</span>  <span class='id identifier rubyid_tanU1'>tanU1</span> <span class='op'>*</span> <span class='id identifier rubyid_tanU1'>tanU1</span><span class='rparen'>)</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_sinU1'>sinU1</span> <span class='op'>=</span> <span class='id identifier rubyid_tanU1'>tanU1</span> <span class='op'>*</span> <span class='id identifier rubyid_cosU1'>cosU1</span>
-  <span class='id identifier rubyid_sigma1'>sigma1</span> <span class='op'>=</span> <span class='const'>Math</span><span class='period'>.</span><span class='id identifier rubyid_atan2'>atan2</span><span class='lparen'>(</span><span class='id identifier rubyid_tanU1'>tanU1</span><span class='comma'>,</span> <span class='id identifier rubyid_cos_alpha1'>cos_alpha1</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_sin_alpha'>sin_alpha</span> <span class='op'>=</span> <span class='id identifier rubyid_cosU1'>cosU1</span>  <span class='op'>*</span>  <span class='id identifier rubyid_sin_alpha1'>sin_alpha1</span>
-  <span class='id identifier rubyid_cos_2_alpha'>cos_2_alpha</span> <span class='op'>=</span> <span class='int'>1</span> <span class='op'>-</span> <span class='id identifier rubyid_sin_alpha'>sin_alpha</span> <span class='op'>*</span> <span class='id identifier rubyid_sin_alpha'>sin_alpha</span> <span class='comment'>#Trig identity
-</span>  <span class='id identifier rubyid_u_2'>u_2</span> <span class='op'>=</span> <span class='id identifier rubyid_cos_2_alpha'>cos_2_alpha</span>  <span class='op'>*</span>  <span class='lparen'>(</span><span class='id identifier rubyid_a'>a</span> <span class='op'>*</span> <span class='id identifier rubyid_a'>a</span> <span class='op'>-</span> <span class='id identifier rubyid_b'>b</span> <span class='op'>*</span> <span class='id identifier rubyid_b'>b</span><span class='rparen'>)</span> <span class='op'>/</span> <span class='lparen'>(</span><span class='id identifier rubyid_b'>b</span> <span class='op'>*</span> <span class='id identifier rubyid_b'>b</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_a1'>a1</span> <span class='op'>=</span> <span class='int'>1</span>  <span class='op'>+</span>  <span class='id identifier rubyid_u_2'>u_2</span><span class='op'>/</span><span class='int'>16384</span> <span class='op'>*</span> <span class='lparen'>(</span><span class='int'>4096</span> <span class='op'>+</span> <span class='id identifier rubyid_u_2'>u_2</span> <span class='op'>*</span> <span class='lparen'>(</span><span class='op'>-</span><span class='int'>768</span> <span class='op'>+</span> <span class='id identifier rubyid_u_2'>u_2</span> <span class='op'>*</span> <span class='lparen'>(</span><span class='int'>320</span><span class='op'>-</span><span class='int'>175</span> <span class='op'>*</span> <span class='id identifier rubyid_u_2'>u_2</span><span class='rparen'>)</span><span class='rparen'>)</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_b1'>b1</span> <span class='op'>=</span> <span class='id identifier rubyid_u_2'>u_2</span><span class='op'>/</span><span class='int'>1024</span>  <span class='op'>*</span>  <span class='lparen'>(</span><span class='int'>256</span> <span class='op'>+</span> <span class='id identifier rubyid_u_2'>u_2</span> <span class='op'>*</span> <span class='lparen'>(</span><span class='op'>-</span><span class='int'>128</span> <span class='op'>+</span> <span class='id identifier rubyid_u_2'>u_2</span> <span class='op'>*</span> <span class='lparen'>(</span><span class='int'>74</span><span class='op'>-</span><span class='int'>47</span> <span class='op'>*</span> <span class='id identifier rubyid_u_2'>u_2</span><span class='rparen'>)</span><span class='rparen'>)</span><span class='rparen'>)</span>
+  <span class='rubyid_s identifier id'>s</span> <span class='assign token'>=</span> <span class='rubyid_track_and_distance identifier id'>track_and_distance</span><span class='dot token'>.</span><span class='rubyid_distance identifier id'>distance</span><span class='dot token'>.</span><span class='rubyid_abs identifier id'>abs</span><span class='semicolon token'>;</span>
+  <span class='rubyid_alpha1 identifier id'>alpha1</span> <span class='assign token'>=</span> <span class='rubyid_track_and_distance identifier id'>track_and_distance</span><span class='dot token'>.</span><span class='rubyid_bearing identifier id'>bearing</span><span class='dot token'>.</span><span class='rubyid_to_rad identifier id'>to_rad</span>
+  <span class='rubyid_sin_alpha1 identifier id'>sin_alpha1</span> <span class='assign token'>=</span> <span class='rubyid_Math constant id'>Math</span><span class='dot token'>.</span><span class='rubyid_sin identifier id'>sin</span><span class='lparen token'>(</span><span class='rubyid_alpha1 identifier id'>alpha1</span><span class='rparen token'>)</span>
+  <span class='rubyid_cos_alpha1 identifier id'>cos_alpha1</span> <span class='assign token'>=</span> <span class='rubyid_Math constant id'>Math</span><span class='dot token'>.</span><span class='rubyid_cos identifier id'>cos</span><span class='lparen token'>(</span><span class='rubyid_alpha1 identifier id'>alpha1</span><span class='rparen token'>)</span>
 
-  <span class='id identifier rubyid_sigma'>sigma</span> <span class='op'>=</span> <span class='id identifier rubyid_s'>s</span> <span class='op'>/</span> <span class='lparen'>(</span><span class='id identifier rubyid_b'>b</span> <span class='op'>*</span> <span class='id identifier rubyid_a1'>a1</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_sigma_dash'>sigma_dash</span> <span class='op'>=</span> <span class='int'>2</span> <span class='op'>*</span> <span class='const'>Math</span><span class='op'>::</span><span class='const'>PI</span>
-  <span class='kw'>while</span> <span class='lparen'>(</span><span class='lparen'>(</span><span class='id identifier rubyid_sigma'>sigma</span><span class='op'>-</span><span class='id identifier rubyid_sigma_dash'>sigma_dash</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_abs'>abs</span> <span class='op'>&gt;</span> <span class='float'>1.0e-12</span><span class='rparen'>)</span> <span class='comment'>#i.e 0.06mm
-</span>    <span class='id identifier rubyid_cos_2_sigma_m'>cos_2_sigma_m</span> <span class='op'>=</span> <span class='const'>Math</span><span class='period'>.</span><span class='id identifier rubyid_cos'>cos</span><span class='lparen'>(</span><span class='int'>2</span> <span class='op'>*</span> <span class='id identifier rubyid_sigma1'>sigma1</span>  <span class='op'>+</span>  <span class='id identifier rubyid_sigma'>sigma</span><span class='rparen'>)</span>
-    <span class='id identifier rubyid_sin_sigma'>sin_sigma</span> <span class='op'>=</span> <span class='const'>Math</span><span class='period'>.</span><span class='id identifier rubyid_sin'>sin</span><span class='lparen'>(</span><span class='id identifier rubyid_sigma'>sigma</span><span class='rparen'>)</span>
-    <span class='id identifier rubyid_cos_sigma'>cos_sigma</span> <span class='op'>=</span> <span class='const'>Math</span><span class='period'>.</span><span class='id identifier rubyid_cos'>cos</span><span class='lparen'>(</span><span class='id identifier rubyid_sigma'>sigma</span><span class='rparen'>)</span>
-    <span class='id identifier rubyid_delta_sigma'>delta_sigma</span> <span class='op'>=</span> <span class='id identifier rubyid_b1'>b1</span> <span class='op'>*</span> <span class='id identifier rubyid_sin_sigma'>sin_sigma</span> <span class='op'>*</span> <span class='lparen'>(</span><span class='id identifier rubyid_cos_2_sigma_m'>cos_2_sigma_m</span> <span class='op'>+</span> <span class='id identifier rubyid_b1'>b1</span><span class='op'>/</span><span class='int'>4</span> <span class='op'>*</span> <span class='lparen'>(</span><span class='id identifier rubyid_cos_sigma'>cos_sigma</span> <span class='op'>*</span> <span class='lparen'>(</span><span class='op'>-</span><span class='int'>1</span> <span class='op'>+</span> <span class='int'>2</span> <span class='op'>*</span> <span class='id identifier rubyid_cos_2_sigma_m'>cos_2_sigma_m</span> <span class='op'>*</span> <span class='id identifier rubyid_cos_2_sigma_m'>cos_2_sigma_m</span><span class='rparen'>)</span> <span class='op'>-</span> <span class='id identifier rubyid_b1'>b1</span><span class='op'>/</span><span class='int'>6</span> <span class='op'>*</span> <span class='id identifier rubyid_cos_2_sigma_m'>cos_2_sigma_m</span> <span class='op'>*</span> <span class='lparen'>(</span><span class='op'>-</span><span class='int'>3</span> <span class='op'>+</span> <span class='int'>4</span> <span class='op'>*</span> <span class='id identifier rubyid_sin_sigma'>sin_sigma</span> <span class='op'>*</span> <span class='id identifier rubyid_sin_sigma'>sin_sigma</span><span class='rparen'>)</span> <span class='op'>*</span> <span class='lparen'>(</span><span class='op'>-</span><span class='int'>3</span> <span class='op'>+</span> <span class='int'>4</span> <span class='op'>*</span> <span class='id identifier rubyid_cos_2_sigma_m'>cos_2_sigma_m</span> <span class='op'>*</span> <span class='id identifier rubyid_cos_2_sigma_m'>cos_2_sigma_m</span><span class='rparen'>)</span><span class='rparen'>)</span><span class='rparen'>)</span>
-    <span class='id identifier rubyid_sigma_dash'>sigma_dash</span> <span class='op'>=</span> <span class='id identifier rubyid_sigma'>sigma</span>
-    <span class='id identifier rubyid_sigma'>sigma</span> <span class='op'>=</span> <span class='id identifier rubyid_s'>s</span> <span class='op'>/</span> <span class='lparen'>(</span><span class='id identifier rubyid_b'>b</span> <span class='op'>*</span> <span class='id identifier rubyid_a1'>a1</span><span class='rparen'>)</span>  <span class='op'>+</span>  <span class='id identifier rubyid_delta_sigma'>delta_sigma</span>
-  <span class='kw'>end</span>
+  <span class='rubyid_tanU1 identifier id'>tanU1</span> <span class='assign token'>=</span> <span class='lparen token'>(</span><span class='integer val'>1</span><span class='minus op'>-</span><span class='rubyid_f identifier id'>f</span><span class='rparen token'>)</span>  <span class='mult op'>*</span>  <span class='rubyid_Math constant id'>Math</span><span class='dot token'>.</span><span class='rubyid_tan identifier id'>tan</span><span class='lparen token'>(</span><span class='rubyid_@latitude ivar id'>@latitude</span><span class='dot token'>.</span><span class='rubyid_to_rad identifier id'>to_rad</span><span class='rparen token'>)</span><span class='semicolon token'>;</span>
+  <span class='rubyid_cosU1 identifier id'>cosU1</span> <span class='assign token'>=</span> <span class='integer val'>1</span> <span class='div op'>/</span> <span class='rubyid_Math constant id'>Math</span><span class='dot token'>.</span><span class='rubyid_sqrt identifier id'>sqrt</span><span class='lparen token'>(</span><span class='lparen token'>(</span><span class='integer val'>1</span>  <span class='plus op'>+</span>  <span class='rubyid_tanU1 identifier id'>tanU1</span> <span class='mult op'>*</span> <span class='rubyid_tanU1 identifier id'>tanU1</span><span class='rparen token'>)</span><span class='rparen token'>)</span>
+  <span class='rubyid_sinU1 identifier id'>sinU1</span> <span class='assign token'>=</span> <span class='rubyid_tanU1 identifier id'>tanU1</span> <span class='mult op'>*</span> <span class='rubyid_cosU1 identifier id'>cosU1</span>
+  <span class='rubyid_sigma1 identifier id'>sigma1</span> <span class='assign token'>=</span> <span class='rubyid_Math constant id'>Math</span><span class='dot token'>.</span><span class='rubyid_atan2 identifier id'>atan2</span><span class='lparen token'>(</span><span class='rubyid_tanU1 identifier id'>tanU1</span><span class='comma token'>,</span> <span class='rubyid_cos_alpha1 identifier id'>cos_alpha1</span><span class='rparen token'>)</span>
+  <span class='rubyid_sin_alpha identifier id'>sin_alpha</span> <span class='assign token'>=</span> <span class='rubyid_cosU1 identifier id'>cosU1</span>  <span class='mult op'>*</span>  <span class='rubyid_sin_alpha1 identifier id'>sin_alpha1</span>
+  <span class='rubyid_cos_2_alpha identifier id'>cos_2_alpha</span> <span class='assign token'>=</span> <span class='integer val'>1</span> <span class='minus op'>-</span> <span class='rubyid_sin_alpha identifier id'>sin_alpha</span> <span class='mult op'>*</span> <span class='rubyid_sin_alpha identifier id'>sin_alpha</span> <span class='comment val'>#Trig identity</span>
+  <span class='rubyid_u_2 identifier id'>u_2</span> <span class='assign token'>=</span> <span class='rubyid_cos_2_alpha identifier id'>cos_2_alpha</span>  <span class='mult op'>*</span>  <span class='lparen token'>(</span><span class='rubyid_a identifier id'>a</span> <span class='mult op'>*</span> <span class='rubyid_a identifier id'>a</span> <span class='minus op'>-</span> <span class='rubyid_b identifier id'>b</span> <span class='mult op'>*</span> <span class='rubyid_b identifier id'>b</span><span class='rparen token'>)</span> <span class='div op'>/</span> <span class='lparen token'>(</span><span class='rubyid_b identifier id'>b</span> <span class='mult op'>*</span> <span class='rubyid_b identifier id'>b</span><span class='rparen token'>)</span>
+  <span class='rubyid_a1 identifier id'>a1</span> <span class='assign token'>=</span> <span class='integer val'>1</span>  <span class='plus op'>+</span>  <span class='rubyid_u_2 identifier id'>u_2</span><span class='div op'>/</span><span class='integer val'>16384</span> <span class='mult op'>*</span> <span class='lparen token'>(</span><span class='integer val'>4096</span> <span class='plus op'>+</span> <span class='rubyid_u_2 identifier id'>u_2</span> <span class='mult op'>*</span> <span class='lparen token'>(</span><span class='integer val'>-768</span> <span class='plus op'>+</span> <span class='rubyid_u_2 identifier id'>u_2</span> <span class='mult op'>*</span> <span class='lparen token'>(</span><span class='integer val'>320</span><span class='minus op'>-</span><span class='integer val'>175</span> <span class='mult op'>*</span> <span class='rubyid_u_2 identifier id'>u_2</span><span class='rparen token'>)</span><span class='rparen token'>)</span><span class='rparen token'>)</span>
+  <span class='rubyid_b1 identifier id'>b1</span> <span class='assign token'>=</span> <span class='rubyid_u_2 identifier id'>u_2</span><span class='div op'>/</span><span class='integer val'>1024</span>  <span class='mult op'>*</span>  <span class='lparen token'>(</span><span class='integer val'>256</span> <span class='plus op'>+</span> <span class='rubyid_u_2 identifier id'>u_2</span> <span class='mult op'>*</span> <span class='lparen token'>(</span><span class='integer val'>-128</span> <span class='plus op'>+</span> <span class='rubyid_u_2 identifier id'>u_2</span> <span class='mult op'>*</span> <span class='lparen token'>(</span><span class='integer val'>74</span><span class='minus op'>-</span><span class='integer val'>47</span> <span class='mult op'>*</span> <span class='rubyid_u_2 identifier id'>u_2</span><span class='rparen token'>)</span><span class='rparen token'>)</span><span class='rparen token'>)</span>
 
-  <span class='id identifier rubyid_tmp'>tmp</span> <span class='op'>=</span> <span class='id identifier rubyid_sinU1'>sinU1</span> <span class='op'>*</span> <span class='id identifier rubyid_sin_sigma'>sin_sigma</span> <span class='op'>-</span> <span class='id identifier rubyid_cosU1'>cosU1</span> <span class='op'>*</span> <span class='id identifier rubyid_cos_sigma'>cos_sigma</span> <span class='op'>*</span> <span class='id identifier rubyid_cos_alpha1'>cos_alpha1</span>
-  <span class='id identifier rubyid_lat2'>lat2</span> <span class='op'>=</span> <span class='const'>Math</span><span class='period'>.</span><span class='id identifier rubyid_atan2'>atan2</span><span class='lparen'>(</span><span class='id identifier rubyid_sinU1'>sinU1</span> <span class='op'>*</span> <span class='id identifier rubyid_cos_sigma'>cos_sigma</span>  <span class='op'>+</span>  <span class='id identifier rubyid_cosU1'>cosU1</span> <span class='op'>*</span> <span class='id identifier rubyid_sin_sigma'>sin_sigma</span> <span class='op'>*</span> <span class='id identifier rubyid_cos_alpha1'>cos_alpha1</span><span class='comma'>,</span>  <span class='lparen'>(</span><span class='int'>1</span><span class='op'>-</span><span class='id identifier rubyid_f'>f</span><span class='rparen'>)</span> <span class='op'>*</span> <span class='const'>Math</span><span class='period'>.</span><span class='id identifier rubyid_sqrt'>sqrt</span><span class='lparen'>(</span><span class='id identifier rubyid_sin_alpha'>sin_alpha</span> <span class='op'>*</span> <span class='id identifier rubyid_sin_alpha'>sin_alpha</span>  <span class='op'>+</span>  <span class='id identifier rubyid_tmp'>tmp</span> <span class='op'>*</span> <span class='id identifier rubyid_tmp'>tmp</span><span class='rparen'>)</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_lambda_v'>lambda_v</span> <span class='op'>=</span> <span class='const'>Math</span><span class='period'>.</span><span class='id identifier rubyid_atan2'>atan2</span><span class='lparen'>(</span><span class='id identifier rubyid_sin_sigma'>sin_sigma</span> <span class='op'>*</span> <span class='id identifier rubyid_sin_alpha1'>sin_alpha1</span><span class='comma'>,</span> <span class='id identifier rubyid_cosU1'>cosU1</span> <span class='op'>*</span> <span class='id identifier rubyid_cos_sigma'>cos_sigma</span> <span class='op'>-</span> <span class='id identifier rubyid_sinU1'>sinU1</span> <span class='op'>*</span> <span class='id identifier rubyid_sin_sigma'>sin_sigma</span> <span class='op'>*</span> <span class='id identifier rubyid_cos_alpha1'>cos_alpha1</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_c'>c</span> <span class='op'>=</span> <span class='id identifier rubyid_f'>f</span><span class='op'>/</span><span class='int'>16</span> <span class='op'>*</span> <span class='id identifier rubyid_cos_2_alpha'>cos_2_alpha</span> <span class='op'>*</span> <span class='lparen'>(</span><span class='int'>4</span> <span class='op'>+</span> <span class='id identifier rubyid_f'>f</span> <span class='op'>*</span> <span class='lparen'>(</span><span class='int'>4</span><span class='op'>-</span><span class='int'>3</span> <span class='op'>*</span> <span class='id identifier rubyid_cos_2_alpha'>cos_2_alpha</span><span class='rparen'>)</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_l'>l</span> <span class='op'>=</span> <span class='id identifier rubyid_lambda_v'>lambda_v</span> <span class='op'>-</span> <span class='lparen'>(</span><span class='int'>1</span><span class='op'>-</span><span class='id identifier rubyid_c'>c</span><span class='rparen'>)</span>  <span class='op'>*</span>  <span class='id identifier rubyid_f'>f</span>  <span class='op'>*</span>  <span class='id identifier rubyid_sin_alpha'>sin_alpha</span>  <span class='op'>*</span>  <span class='lparen'>(</span><span class='id identifier rubyid_sigma'>sigma</span>  <span class='op'>+</span>  <span class='id identifier rubyid_c'>c</span> <span class='op'>*</span> <span class='id identifier rubyid_sin_sigma'>sin_sigma</span> <span class='op'>*</span> <span class='lparen'>(</span><span class='id identifier rubyid_cos_2_sigma_m'>cos_2_sigma_m</span> <span class='op'>+</span> <span class='id identifier rubyid_c'>c</span> <span class='op'>*</span> <span class='id identifier rubyid_cos_sigma'>cos_sigma</span> <span class='op'>*</span> <span class='lparen'>(</span><span class='op'>-</span><span class='int'>1</span> <span class='op'>+</span> <span class='int'>2</span> <span class='op'>*</span> <span class='id identifier rubyid_cos_2_sigma_m'>cos_2_sigma_m</span> <span class='op'>*</span> <span class='id identifier rubyid_cos_2_sigma_m'>cos_2_sigma_m</span><span class='rparen'>)</span><span class='rparen'>)</span><span class='rparen'>)</span> <span class='comment'>#difference in longitude
-</span>
-  <span class='comment'>#sigma2 = Math.atan2(sin_alpha, -tmp)  # reverse azimuth
-</span>
-  <span class='kw'>return</span> <span class='const'>Vincenty</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_lat2'>lat2</span><span class='comma'>,</span> <span class='ivar'>@longitude</span> <span class='op'>+</span> <span class='id identifier rubyid_l'>l</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='kw'>true</span><span class='rparen'>)</span><span class='semicolon'>;</span>
-<span class='kw'>end</span></pre>
+  <span class='rubyid_sigma identifier id'>sigma</span> <span class='assign token'>=</span> <span class='rubyid_s identifier id'>s</span> <span class='div op'>/</span> <span class='lparen token'>(</span><span class='rubyid_b identifier id'>b</span> <span class='mult op'>*</span> <span class='rubyid_a1 identifier id'>a1</span><span class='rparen token'>)</span>
+  <span class='rubyid_sigma_dash identifier id'>sigma_dash</span> <span class='assign token'>=</span> <span class='integer val'>2</span> <span class='mult op'>*</span> <span class='rubyid_Math constant id'>Math</span><span class='colon2 op'>::</span><span class='rubyid_PI constant id'>PI</span>
+  <span class='rubyid_while while kw'>while</span> <span class='lparen token'>(</span><span class='lparen token'>(</span><span class='rubyid_sigma identifier id'>sigma</span><span class='minus op'>-</span><span class='rubyid_sigma_dash identifier id'>sigma_dash</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='rubyid_abs identifier id'>abs</span> <span class='gt op'>&gt;</span> <span class='float val'>1.0e-12</span><span class='rparen token'>)</span> <span class='comment val'>#i.e 0.06mm</span>
+    <span class='rubyid_cos_2_sigma_m identifier id'>cos_2_sigma_m</span> <span class='assign token'>=</span> <span class='rubyid_Math constant id'>Math</span><span class='dot token'>.</span><span class='rubyid_cos identifier id'>cos</span><span class='lparen token'>(</span><span class='integer val'>2</span> <span class='mult op'>*</span> <span class='rubyid_sigma1 identifier id'>sigma1</span>  <span class='plus op'>+</span>  <span class='rubyid_sigma identifier id'>sigma</span><span class='rparen token'>)</span>
+    <span class='rubyid_sin_sigma identifier id'>sin_sigma</span> <span class='assign token'>=</span> <span class='rubyid_Math constant id'>Math</span><span class='dot token'>.</span><span class='rubyid_sin identifier id'>sin</span><span class='lparen token'>(</span><span class='rubyid_sigma identifier id'>sigma</span><span class='rparen token'>)</span>
+    <span class='rubyid_cos_sigma identifier id'>cos_sigma</span> <span class='assign token'>=</span> <span class='rubyid_Math constant id'>Math</span><span class='dot token'>.</span><span class='rubyid_cos identifier id'>cos</span><span class='lparen token'>(</span><span class='rubyid_sigma identifier id'>sigma</span><span class='rparen token'>)</span>
+    <span class='rubyid_delta_sigma identifier id'>delta_sigma</span> <span class='assign token'>=</span> <span class='rubyid_b1 identifier id'>b1</span> <span class='mult op'>*</span> <span class='rubyid_sin_sigma identifier id'>sin_sigma</span> <span class='mult op'>*</span> <span class='lparen token'>(</span><span class='rubyid_cos_2_sigma_m identifier id'>cos_2_sigma_m</span> <span class='plus op'>+</span> <span class='rubyid_b1 identifier id'>b1</span><span class='div op'>/</span><span class='integer val'>4</span> <span class='mult op'>*</span> <span class='lparen token'>(</span><span class='rubyid_cos_sigma identifier id'>cos_sigma</span> <span class='mult op'>*</span> <span class='lparen token'>(</span><span class='integer val'>-1</span> <span class='plus op'>+</span> <span class='integer val'>2</span> <span class='mult op'>*</span> <span class='rubyid_cos_2_sigma_m identifier id'>cos_2_sigma_m</span> <span class='mult op'>*</span> <span class='rubyid_cos_2_sigma_m identifier id'>cos_2_sigma_m</span><span class='rparen token'>)</span> <span class='minus op'>-</span> <span class='rubyid_b1 identifier id'>b1</span><span class='div op'>/</span><span class='integer val'>6</span> <span class='mult op'>*</span> <span class='rubyid_cos_2_sigma_m identifier id'>cos_2_sigma_m</span> <span class='mult op'>*</span> <span class='lparen token'>(</span><span class='integer val'>-3</span> <span class='plus op'>+</span> <span class='integer val'>4</span> <span class='mult op'>*</span> <span class='rubyid_sin_sigma identifier id'>sin_sigma</span> <span class='mult op'>*</span> <span class='rubyid_sin_sigma identifier id'>sin_sigma</span><span class='rparen token'>)</span> <span class='mult op'>*</span> <span class='lparen token'>(</span><span class='integer val'>-3</span> <span class='plus op'>+</span> <span class='integer val'>4</span> <span class='mult op'>*</span> <span class='rubyid_cos_2_sigma_m identifier id'>cos_2_sigma_m</span> <span class='mult op'>*</span> <span class='rubyid_cos_2_sigma_m identifier id'>cos_2_sigma_m</span><span class='rparen token'>)</span><span class='rparen token'>)</span><span class='rparen token'>)</span>
+    <span class='rubyid_sigma_dash identifier id'>sigma_dash</span> <span class='assign token'>=</span> <span class='rubyid_sigma identifier id'>sigma</span>
+    <span class='rubyid_sigma identifier id'>sigma</span> <span class='assign token'>=</span> <span class='rubyid_s identifier id'>s</span> <span class='div op'>/</span> <span class='lparen token'>(</span><span class='rubyid_b identifier id'>b</span> <span class='mult op'>*</span> <span class='rubyid_a1 identifier id'>a1</span><span class='rparen token'>)</span>  <span class='plus op'>+</span>  <span class='rubyid_delta_sigma identifier id'>delta_sigma</span>
+  <span class='rubyid_end end kw'>end</span>
+
+  <span class='rubyid_tmp identifier id'>tmp</span> <span class='assign token'>=</span> <span class='rubyid_sinU1 identifier id'>sinU1</span> <span class='mult op'>*</span> <span class='rubyid_sin_sigma identifier id'>sin_sigma</span> <span class='minus op'>-</span> <span class='rubyid_cosU1 identifier id'>cosU1</span> <span class='mult op'>*</span> <span class='rubyid_cos_sigma identifier id'>cos_sigma</span> <span class='mult op'>*</span> <span class='rubyid_cos_alpha1 identifier id'>cos_alpha1</span>
+  <span class='rubyid_lat2 identifier id'>lat2</span> <span class='assign token'>=</span> <span class='rubyid_Math constant id'>Math</span><span class='dot token'>.</span><span class='rubyid_atan2 identifier id'>atan2</span><span class='lparen token'>(</span><span class='rubyid_sinU1 identifier id'>sinU1</span> <span class='mult op'>*</span> <span class='rubyid_cos_sigma identifier id'>cos_sigma</span>  <span class='plus op'>+</span>  <span class='rubyid_cosU1 identifier id'>cosU1</span> <span class='mult op'>*</span> <span class='rubyid_sin_sigma identifier id'>sin_sigma</span> <span class='mult op'>*</span> <span class='rubyid_cos_alpha1 identifier id'>cos_alpha1</span><span class='comma token'>,</span>  <span class='lparen token'>(</span><span class='integer val'>1</span><span class='minus op'>-</span><span class='rubyid_f identifier id'>f</span><span class='rparen token'>)</span> <span class='mult op'>*</span> <span class='rubyid_Math constant id'>Math</span><span class='dot token'>.</span><span class='rubyid_sqrt identifier id'>sqrt</span><span class='lparen token'>(</span><span class='rubyid_sin_alpha identifier id'>sin_alpha</span> <span class='mult op'>*</span> <span class='rubyid_sin_alpha identifier id'>sin_alpha</span>  <span class='plus op'>+</span>  <span class='rubyid_tmp identifier id'>tmp</span> <span class='mult op'>*</span> <span class='rubyid_tmp identifier id'>tmp</span><span class='rparen token'>)</span><span class='rparen token'>)</span>
+  <span class='rubyid_lambda_v identifier id'>lambda_v</span> <span class='assign token'>=</span> <span class='rubyid_Math constant id'>Math</span><span class='dot token'>.</span><span class='rubyid_atan2 identifier id'>atan2</span><span class='lparen token'>(</span><span class='rubyid_sin_sigma identifier id'>sin_sigma</span> <span class='mult op'>*</span> <span class='rubyid_sin_alpha1 identifier id'>sin_alpha1</span><span class='comma token'>,</span> <span class='rubyid_cosU1 identifier id'>cosU1</span> <span class='mult op'>*</span> <span class='rubyid_cos_sigma identifier id'>cos_sigma</span> <span class='minus op'>-</span> <span class='rubyid_sinU1 identifier id'>sinU1</span> <span class='mult op'>*</span> <span class='rubyid_sin_sigma identifier id'>sin_sigma</span> <span class='mult op'>*</span> <span class='rubyid_cos_alpha1 identifier id'>cos_alpha1</span><span class='rparen token'>)</span>
+  <span class='rubyid_c identifier id'>c</span> <span class='assign token'>=</span> <span class='rubyid_f identifier id'>f</span><span class='div op'>/</span><span class='integer val'>16</span> <span class='mult op'>*</span> <span class='rubyid_cos_2_alpha identifier id'>cos_2_alpha</span> <span class='mult op'>*</span> <span class='lparen token'>(</span><span class='integer val'>4</span> <span class='plus op'>+</span> <span class='rubyid_f identifier id'>f</span> <span class='mult op'>*</span> <span class='lparen token'>(</span><span class='integer val'>4</span><span class='minus op'>-</span><span class='integer val'>3</span> <span class='mult op'>*</span> <span class='rubyid_cos_2_alpha identifier id'>cos_2_alpha</span><span class='rparen token'>)</span><span class='rparen token'>)</span>
+  <span class='rubyid_l identifier id'>l</span> <span class='assign token'>=</span> <span class='rubyid_lambda_v identifier id'>lambda_v</span> <span class='minus op'>-</span> <span class='lparen token'>(</span><span class='integer val'>1</span><span class='minus op'>-</span><span class='rubyid_c identifier id'>c</span><span class='rparen token'>)</span>  <span class='mult op'>*</span>  <span class='rubyid_f identifier id'>f</span>  <span class='mult op'>*</span>  <span class='rubyid_sin_alpha identifier id'>sin_alpha</span>  <span class='mult op'>*</span>  <span class='lparen token'>(</span><span class='rubyid_sigma identifier id'>sigma</span>  <span class='plus op'>+</span>  <span class='rubyid_c identifier id'>c</span> <span class='mult op'>*</span> <span class='rubyid_sin_sigma identifier id'>sin_sigma</span> <span class='mult op'>*</span> <span class='lparen token'>(</span><span class='rubyid_cos_2_sigma_m identifier id'>cos_2_sigma_m</span> <span class='plus op'>+</span> <span class='rubyid_c identifier id'>c</span> <span class='mult op'>*</span> <span class='rubyid_cos_sigma identifier id'>cos_sigma</span> <span class='mult op'>*</span> <span class='lparen token'>(</span><span class='integer val'>-1</span> <span class='plus op'>+</span> <span class='integer val'>2</span> <span class='mult op'>*</span> <span class='rubyid_cos_2_sigma_m identifier id'>cos_2_sigma_m</span> <span class='mult op'>*</span> <span class='rubyid_cos_2_sigma_m identifier id'>cos_2_sigma_m</span><span class='rparen token'>)</span><span class='rparen token'>)</span><span class='rparen token'>)</span> <span class='comment val'>#difference in longitude</span>
+
+  <span class='comment val'>#sigma2 = Math.atan2(sin_alpha, -tmp)  # reverse azimuth</span>
+
+  <span class='rubyid_return return kw'>return</span> <span class='rubyid_Vincenty constant id'>Vincenty</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span><span class='lparen token'>(</span><span class='rubyid_lat2 identifier id'>lat2</span><span class='comma token'>,</span> <span class='rubyid_@longitude ivar id'>@longitude</span> <span class='plus op'>+</span> <span class='rubyid_l identifier id'>l</span><span class='comma token'>,</span> <span class='integer val'>0</span><span class='comma token'>,</span> <span class='rubyid_true true kw'>true</span><span class='rparen token'>)</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
     </td>
   </tr>
 </table>
@@ -467,7 +537,7 @@ distance. Assumes earth is a WGS-84 Ellipsod.</p>
       <div class="method_details ">
   <h3 class="signature " id="distanceAndAngle-instance_method">
   
-    - (<tt><span class='object_link'><a href="TrackAndDistance.html" title="TrackAndDistance (class)">TrackAndDistance</a></span></tt>) <strong>distanceAndAngle</strong>(p2) 
+    #<strong>distanceAndAngle</strong>(p2)  &#x21d2; <tt><span class='object_link'><a href="TrackAndDistance.html" title="TrackAndDistance (class)">TrackAndDistance</a></span></tt> 
   
 
   
@@ -529,16 +599,6 @@ coordinates. Assumes earth is a WGS-84 Ellipsod.</p>
       <pre class="lines">
 
 
-54
-55
-56
-57
-58
-59
-60
-61
-62
-63
 64
 65
 66
@@ -593,76 +653,95 @@ coordinates. Assumes earth is a WGS-84 Ellipsod.</p>
 115
 116
 117
-118</pre>
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/vincenty.rb', line 54</span>
+      <pre class="code"><span class="info file"># File 'lib/vincenty.rb', line 64</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_distanceAndAngle'>distanceAndAngle</span><span class='lparen'>(</span> <span class='id identifier rubyid_p2'>p2</span> <span class='rparen'>)</span>
-  <span class='comment'># a, b = major &amp; minor semiaxes of the ellipsoid
-</span>  <span class='id identifier rubyid_a'>a</span> <span class='op'>=</span> <span class='int'>6378137</span> <span class='comment'>#equatorial radius in meters     (+/-2 m) 
-</span>  <span class='id identifier rubyid_b'>b</span> <span class='op'>=</span> <span class='float'>6356752.31424518</span> <span class='comment'>#polar radius in meters
-</span>  <span class='id identifier rubyid_f'>f</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='id identifier rubyid_a'>a</span><span class='op'>-</span><span class='id identifier rubyid_b'>b</span><span class='rparen'>)</span><span class='op'>/</span><span class='id identifier rubyid_a'>a</span> <span class='comment'>#  flattening 
-</span> 
-   <span class='id identifier rubyid_lat1'>lat1</span> <span class='op'>=</span> <span class='ivar'>@latitude</span><span class='period'>.</span><span class='id identifier rubyid_to_rad'>to_rad</span>
-   <span class='id identifier rubyid_lon1'>lon1</span> <span class='op'>=</span> <span class='ivar'>@longitude</span><span class='period'>.</span><span class='id identifier rubyid_to_rad'>to_rad</span>
-   <span class='id identifier rubyid_lat2'>lat2</span> <span class='op'>=</span> <span class='id identifier rubyid_p2'>p2</span><span class='period'>.</span><span class='id identifier rubyid_latitude'>latitude</span><span class='period'>.</span><span class='id identifier rubyid_to_rad'>to_rad</span>
-   <span class='id identifier rubyid_lon2'>lon2</span> <span class='op'>=</span> <span class='id identifier rubyid_p2'>p2</span><span class='period'>.</span><span class='id identifier rubyid_longitude'>longitude</span><span class='period'>.</span><span class='id identifier rubyid_to_rad'>to_rad</span>
-   <span class='id identifier rubyid_lat1'>lat1</span> <span class='op'>=</span> <span class='id identifier rubyid_lat1'>lat1</span><span class='period'>.</span><span class='id identifier rubyid_sign'>sign</span> <span class='op'>*</span> <span class='lparen'>(</span><span class='const'>Math</span><span class='op'>::</span><span class='const'>PI</span><span class='op'>/</span><span class='int'>2</span><span class='op'>-</span><span class='lparen'>(</span><span class='float'>1e-10</span><span class='rparen'>)</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='lparen'>(</span><span class='const'>Math</span><span class='op'>::</span><span class='const'>PI</span><span class='op'>/</span><span class='int'>2</span><span class='op'>-</span><span class='id identifier rubyid_lat1'>lat1</span><span class='period'>.</span><span class='id identifier rubyid_abs'>abs</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_abs'>abs</span> <span class='op'>&lt;</span> <span class='float'>1.0e-10</span>
-   <span class='id identifier rubyid_lat2'>lat2</span> <span class='op'>=</span> <span class='id identifier rubyid_lat2'>lat2</span><span class='period'>.</span><span class='id identifier rubyid_sign'>sign</span> <span class='op'>*</span> <span class='lparen'>(</span><span class='const'>Math</span><span class='op'>::</span><span class='const'>PI</span><span class='op'>/</span><span class='int'>2</span><span class='op'>-</span><span class='lparen'>(</span><span class='float'>1e-10</span><span class='rparen'>)</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='lparen'>(</span><span class='const'>Math</span><span class='op'>::</span><span class='const'>PI</span><span class='op'>/</span><span class='int'>2</span><span class='op'>-</span><span class='id identifier rubyid_lat2'>lat2</span><span class='period'>.</span><span class='id identifier rubyid_abs'>abs</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_abs'>abs</span> <span class='op'>&lt;</span> <span class='float'>1.0e-10</span>
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_distanceAndAngle identifier id'>distanceAndAngle</span><span class='lparen token'>(</span> <span class='rubyid_p2 identifier id'>p2</span> <span class='rparen token'>)</span>
+  <span class='rubyid_if if kw'>if</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_latitude identifier id'>latitude</span> <span class='eq op'>==</span> <span class='rubyid_p2 identifier id'>p2</span><span class='dot token'>.</span><span class='rubyid_latitude identifier id'>latitude</span> <span class='andop op'>&amp;&amp;</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_longitude identifier id'>longitude</span> <span class='eq op'>==</span> <span class='rubyid_p2 identifier id'>p2</span><span class='dot token'>.</span><span class='rubyid_longitude identifier id'>longitude</span>
+    <span class='rubyid_return return kw'>return</span> <span class='rubyid_TrackAndDistance constant id'>TrackAndDistance</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span><span class='lparen token'>(</span><span class='integer val'>0</span><span class='comma token'>,</span> <span class='integer val'>0</span><span class='comma token'>,</span> <span class='rubyid_true true kw'>true</span><span class='rparen token'>)</span> <span class='comment val'>#No calculations necessary. Solv NAN issue</span>
+  <span class='rubyid_end end kw'>end</span>
 
-  <span class='comment'>#  lat1, lat2 = geodetic latitude
-</span>  
-    <span class='id identifier rubyid_l'>l</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='id identifier rubyid_lon2'>lon2</span> <span class='op'>-</span> <span class='id identifier rubyid_lon1'>lon1</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_abs'>abs</span> <span class='comment'>#difference in longitude
-</span>    <span class='id identifier rubyid_l'>l</span> <span class='op'>=</span> <span class='int'>2</span><span class='op'>*</span><span class='const'>Math</span><span class='op'>::</span><span class='const'>PI</span> <span class='op'>-</span> <span class='id identifier rubyid_l'>l</span> <span class='kw'>if</span> <span class='id identifier rubyid_l'>l</span> <span class='op'>&gt;</span> <span class='const'>Math</span><span class='op'>::</span><span class='const'>PI</span>
-    <span class='id identifier rubyid_u1'>u1</span> <span class='op'>=</span> <span class='const'>Math</span><span class='period'>.</span><span class='id identifier rubyid_atan'>atan</span><span class='lparen'>(</span> <span class='lparen'>(</span> <span class='int'>1</span> <span class='op'>-</span> <span class='id identifier rubyid_f'>f</span><span class='rparen'>)</span> <span class='op'>*</span> <span class='const'>Math</span><span class='period'>.</span><span class='id identifier rubyid_tan'>tan</span><span class='lparen'>(</span> <span class='id identifier rubyid_lat1'>lat1</span> <span class='rparen'>)</span> <span class='rparen'>)</span> <span class='comment'>#U is &#39;reduced latitude&#39;
-</span>    <span class='id identifier rubyid_u2'>u2</span> <span class='op'>=</span> <span class='const'>Math</span><span class='period'>.</span><span class='id identifier rubyid_atan'>atan</span><span class='lparen'>(</span> <span class='lparen'>(</span> <span class='int'>1</span> <span class='op'>-</span> <span class='id identifier rubyid_f'>f</span><span class='rparen'>)</span> <span class='op'>*</span>  <span class='const'>Math</span><span class='period'>.</span><span class='id identifier rubyid_tan'>tan</span><span class='lparen'>(</span> <span class='id identifier rubyid_lat2'>lat2</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
-    <span class='id identifier rubyid_sin_u1'>sin_u1</span> <span class='op'>=</span> <span class='const'>Math</span><span class='period'>.</span><span class='id identifier rubyid_sin'>sin</span><span class='lparen'>(</span><span class='id identifier rubyid_u1'>u1</span><span class='rparen'>)</span>
-    <span class='id identifier rubyid_cos_u1'>cos_u1</span> <span class='op'>=</span> <span class='const'>Math</span><span class='period'>.</span><span class='id identifier rubyid_cos'>cos</span><span class='lparen'>(</span><span class='id identifier rubyid_u1'>u1</span><span class='rparen'>)</span>
-    <span class='id identifier rubyid_sin_u2'>sin_u2</span> <span class='op'>=</span> <span class='const'>Math</span><span class='period'>.</span><span class='id identifier rubyid_sin'>sin</span><span class='lparen'>(</span><span class='id identifier rubyid_u2'>u2</span><span class='rparen'>)</span>
-    <span class='id identifier rubyid_cos_u2'>cos_u2</span> <span class='op'>=</span> <span class='const'>Math</span><span class='period'>.</span><span class='id identifier rubyid_cos'>cos</span><span class='lparen'>(</span><span class='id identifier rubyid_u2'>u2</span><span class='rparen'>)</span>
-    
-    <span class='id identifier rubyid_lambda_v'>lambda_v</span> <span class='op'>=</span> <span class='id identifier rubyid_l'>l</span>
-    <span class='id identifier rubyid_lambda_dash'>lambda_dash</span> <span class='op'>=</span>  <span class='const'>Math</span><span class='op'>::</span><span class='const'>PI</span> <span class='op'>*</span> <span class='int'>2</span>
-    <span class='kw'>while</span><span class='lparen'>(</span> <span class='lparen'>(</span><span class='id identifier rubyid_lambda_v'>lambda_v</span> <span class='op'>-</span> <span class='id identifier rubyid_lambda_dash'>lambda_dash</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_abs'>abs</span> <span class='op'>&gt;</span> <span class='float'>1.0e-12</span>   <span class='rparen'>)</span> <span class='comment'>#i.e. 0.06 mm error
-</span>      <span class='id identifier rubyid_sin_lambda_v'>sin_lambda_v</span> <span class='op'>=</span> <span class='const'>Math</span><span class='period'>.</span><span class='id identifier rubyid_sin'>sin</span><span class='lparen'>(</span><span class='id identifier rubyid_lambda_v'>lambda_v</span><span class='rparen'>)</span>
-      <span class='id identifier rubyid_cos_lambda_v'>cos_lambda_v</span> <span class='op'>=</span> <span class='const'>Math</span><span class='period'>.</span><span class='id identifier rubyid_cos'>cos</span><span class='lparen'>(</span><span class='id identifier rubyid_lambda_v'>lambda_v</span><span class='rparen'>)</span>
-     	<span class='id identifier rubyid_sin_sigma'>sin_sigma</span> <span class='op'>=</span> <span class='const'>Math</span><span class='period'>.</span><span class='id identifier rubyid_sqrt'>sqrt</span><span class='lparen'>(</span> <span class='lparen'>(</span> <span class='id identifier rubyid_cos_u2'>cos_u2</span> <span class='op'>*</span> <span class='id identifier rubyid_sin_lambda_v'>sin_lambda_v</span> <span class='rparen'>)</span> <span class='op'>**</span> <span class='int'>2</span> <span class='op'>+</span> <span class='lparen'>(</span> <span class='id identifier rubyid_cos_u1'>cos_u1</span> <span class='op'>*</span> <span class='id identifier rubyid_sin_u2'>sin_u2</span> <span class='op'>-</span> <span class='id identifier rubyid_sin_u1'>sin_u1</span> <span class='op'>*</span> <span class='id identifier rubyid_cos_u2'>cos_u2</span> <span class='op'>*</span> <span class='id identifier rubyid_cos_lambda_v'>cos_lambda_v</span> <span class='rparen'>)</span> <span class='op'>**</span> <span class='int'>2</span> <span class='rparen'>)</span>
-  	  <span class='id identifier rubyid_cos_sigma'>cos_sigma</span> <span class='op'>=</span> <span class='id identifier rubyid_sin_u1'>sin_u1</span> <span class='op'>*</span> <span class='id identifier rubyid_sin_u2'>sin_u2</span> <span class='op'>+</span> <span class='id identifier rubyid_cos_u1'>cos_u1</span> <span class='op'>*</span> <span class='id identifier rubyid_cos_u2'>cos_u2</span> <span class='op'>*</span> <span class='id identifier rubyid_cos_lambda_v'>cos_lambda_v</span>
-  	  <span class='id identifier rubyid_sigma'>sigma</span> <span class='op'>=</span> <span class='const'>Math</span><span class='period'>.</span><span class='id identifier rubyid_atan2'>atan2</span><span class='lparen'>(</span><span class='id identifier rubyid_sin_sigma'>sin_sigma</span><span class='comma'>,</span> <span class='id identifier rubyid_cos_sigma'>cos_sigma</span><span class='rparen'>)</span>
-  	  <span class='id identifier rubyid_sin_alpha'>sin_alpha</span><span class='op'>=</span> <span class='id identifier rubyid_cos_u1'>cos_u1</span>  <span class='op'>*</span> <span class='id identifier rubyid_cos_u2'>cos_u2</span> <span class='op'>*</span> <span class='id identifier rubyid_sin_lambda_v'>sin_lambda_v</span> <span class='op'>/</span> <span class='id identifier rubyid_sin_sigma'>sin_sigma</span> 
-  	  <span class='id identifier rubyid_cos_2_alpha'>cos_2_alpha</span> <span class='op'>=</span> <span class='int'>1</span> <span class='op'>-</span> <span class='id identifier rubyid_sin_alpha'>sin_alpha</span> <span class='op'>*</span> <span class='id identifier rubyid_sin_alpha'>sin_alpha</span> <span class='comment'>#trig identity 	 
-</span>  	  <span class='id identifier rubyid_cos_2_sigma_m'>cos_2_sigma_m</span> <span class='op'>=</span> <span class='id identifier rubyid_cos_sigma'>cos_sigma</span> <span class='op'>-</span> <span class='int'>2</span> <span class='op'>*</span> <span class='id identifier rubyid_sin_u1'>sin_u1</span> <span class='op'>*</span> <span class='id identifier rubyid_sin_u2'>sin_u2</span><span class='op'>/</span><span class='id identifier rubyid_cos_2_alpha'>cos_2_alpha</span>
-  	  <span class='id identifier rubyid_c'>c</span> <span class='op'>=</span> <span class='id identifier rubyid_f'>f</span> <span class='op'>/</span> <span class='int'>16</span> <span class='op'>*</span> <span class='id identifier rubyid_cos_2_alpha'>cos_2_alpha</span> <span class='op'>*</span> <span class='lparen'>(</span><span class='int'>4</span> <span class='op'>+</span> <span class='id identifier rubyid_f'>f</span><span class='op'>*</span><span class='lparen'>(</span><span class='int'>4</span><span class='op'>-</span><span class='int'>3</span><span class='op'>*</span><span class='id identifier rubyid_cos_2_alpha'>cos_2_alpha</span><span class='rparen'>)</span><span class='rparen'>)</span>
-  	  <span class='id identifier rubyid_lambda_dash'>lambda_dash</span> <span class='op'>=</span> <span class='id identifier rubyid_lambda_v'>lambda_v</span>
-  	  <span class='id identifier rubyid_lambda_v'>lambda_v</span> <span class='op'>=</span> <span class='id identifier rubyid_l'>l</span> <span class='op'>+</span> <span class='lparen'>(</span><span class='int'>1</span><span class='op'>-</span><span class='id identifier rubyid_c'>c</span><span class='rparen'>)</span> <span class='op'>*</span> <span class='id identifier rubyid_f'>f</span> <span class='op'>*</span> <span class='id identifier rubyid_sin_alpha'>sin_alpha</span> <span class='op'>*</span> <span class='lparen'>(</span><span class='id identifier rubyid_sigma'>sigma</span> <span class='op'>+</span> <span class='id identifier rubyid_c'>c</span> <span class='op'>*</span> <span class='id identifier rubyid_sin_sigma'>sin_sigma</span> <span class='op'>*</span> <span class='lparen'>(</span><span class='id identifier rubyid_cos_2_sigma_m'>cos_2_sigma_m</span> <span class='op'>+</span> <span class='id identifier rubyid_c'>c</span> <span class='op'>*</span> <span class='id identifier rubyid_cos_sigma'>cos_sigma</span> <span class='op'>*</span> <span class='lparen'>(</span><span class='op'>-</span><span class='int'>1</span> <span class='op'>+</span> <span class='int'>2</span> <span class='op'>*</span> <span class='id identifier rubyid_cos_2_sigma_m'>cos_2_sigma_m</span> <span class='op'>*</span> <span class='id identifier rubyid_cos_2_sigma_m'>cos_2_sigma_m</span><span class='rparen'>)</span> <span class='rparen'>)</span> <span class='rparen'>)</span>  <span class='comment'># use cos_2_sigma_m=0 when over equatorial lines
-</span>  	  <span class='kw'>if</span> <span class='id identifier rubyid_lambda_v'>lambda_v</span> <span class='op'>&gt;</span> <span class='const'>Math</span><span class='op'>::</span><span class='const'>PI</span>
-  	    <span class='id identifier rubyid_lambda_v'>lambda_v</span> <span class='op'>=</span> <span class='const'>Math</span><span class='op'>::</span><span class='const'>PI</span>
-  	    <span class='kw'>break</span>
-      <span class='kw'>end</span>
-    <span class='kw'>end</span>
+  <span class='comment val'># a, b = major &amp; minor semiaxes of the ellipsoid</span>
+  <span class='rubyid_a identifier id'>a</span> <span class='assign token'>=</span> <span class='integer val'>6378137</span> <span class='comment val'>#equatorial radius in meters     (+/-2 m)</span>
+  <span class='rubyid_b identifier id'>b</span> <span class='assign token'>=</span> <span class='float val'>6356752.31424518</span> <span class='comment val'>#polar radius in meters</span>
+  <span class='rubyid_f identifier id'>f</span> <span class='assign token'>=</span> <span class='lparen token'>(</span><span class='rubyid_a identifier id'>a</span><span class='minus op'>-</span><span class='rubyid_b identifier id'>b</span><span class='rparen token'>)</span><span class='div op'>/</span><span class='rubyid_a identifier id'>a</span> <span class='comment val'>#  flattening</span>
 
-    <span class='id identifier rubyid_u_2'>u_2</span> <span class='op'>=</span> <span class='id identifier rubyid_cos_2_alpha'>cos_2_alpha</span> <span class='op'>*</span> <span class='lparen'>(</span><span class='id identifier rubyid_a'>a</span> <span class='op'>*</span> <span class='id identifier rubyid_a'>a</span> <span class='op'>-</span> <span class='id identifier rubyid_b'>b</span> <span class='op'>*</span> <span class='id identifier rubyid_b'>b</span><span class='rparen'>)</span> <span class='op'>/</span> <span class='lparen'>(</span><span class='id identifier rubyid_b'>b</span> <span class='op'>*</span> <span class='id identifier rubyid_b'>b</span><span class='rparen'>)</span>
-    <span class='id identifier rubyid_a1'>a1</span> <span class='op'>=</span> <span class='int'>1</span> <span class='op'>+</span> <span class='id identifier rubyid_u_2'>u_2</span> <span class='op'>/</span> <span class='int'>16384</span> <span class='op'>*</span> <span class='lparen'>(</span><span class='int'>4096</span> <span class='op'>+</span> <span class='id identifier rubyid_u_2'>u_2</span> <span class='op'>*</span> <span class='lparen'>(</span><span class='op'>-</span><span class='int'>768</span> <span class='op'>+</span> <span class='id identifier rubyid_u_2'>u_2</span> <span class='op'>*</span> <span class='lparen'>(</span><span class='int'>320</span> <span class='op'>-</span> <span class='int'>175</span> <span class='op'>*</span> <span class='id identifier rubyid_u_2'>u_2</span><span class='rparen'>)</span><span class='rparen'>)</span><span class='rparen'>)</span>
-    <span class='id identifier rubyid_b1'>b1</span> <span class='op'>=</span> <span class='id identifier rubyid_u_2'>u_2</span> <span class='op'>/</span> <span class='int'>1024</span> <span class='op'>*</span> <span class='lparen'>(</span><span class='int'>256</span> <span class='op'>+</span> <span class='id identifier rubyid_u_2'>u_2</span> <span class='op'>*</span> <span class='lparen'>(</span><span class='op'>-</span><span class='int'>128</span> <span class='op'>+</span> <span class='id identifier rubyid_u_2'>u_2</span> <span class='op'>*</span> <span class='lparen'>(</span><span class='int'>74</span> <span class='op'>-</span> <span class='int'>47</span> <span class='op'>*</span> <span class='id identifier rubyid_u_2'>u_2</span><span class='rparen'>)</span><span class='rparen'>)</span><span class='rparen'>)</span>
-    <span class='id identifier rubyid_delta_sigma'>delta_sigma</span> <span class='op'>=</span> <span class='id identifier rubyid_b1'>b1</span> <span class='op'>*</span> <span class='id identifier rubyid_sin_sigma'>sin_sigma</span> <span class='op'>*</span> <span class='lparen'>(</span><span class='id identifier rubyid_cos_2_sigma_m'>cos_2_sigma_m</span> <span class='op'>+</span> <span class='id identifier rubyid_b1'>b1</span> <span class='op'>/</span> <span class='int'>4</span> <span class='op'>*</span> <span class='lparen'>(</span><span class='id identifier rubyid_cos_sigma'>cos_sigma</span> <span class='op'>*</span> <span class='lparen'>(</span><span class='op'>-</span><span class='int'>1</span> <span class='op'>+</span> <span class='int'>2</span> <span class='op'>*</span> <span class='id identifier rubyid_cos_2_sigma_m'>cos_2_sigma_m</span> <span class='op'>*</span> <span class='id identifier rubyid_cos_2_sigma_m'>cos_2_sigma_m</span><span class='rparen'>)</span> <span class='op'>-</span> <span class='id identifier rubyid_b1'>b1</span> <span class='op'>/</span> <span class='int'>6</span> <span class='op'>*</span> <span class='id identifier rubyid_cos_2_sigma_m'>cos_2_sigma_m</span> <span class='op'>*</span> <span class='lparen'>(</span><span class='op'>-</span><span class='int'>3</span> <span class='op'>+</span> <span class='int'>4</span> <span class='op'>*</span> <span class='id identifier rubyid_sin_sigma'>sin_sigma</span> <span class='op'>*</span> <span class='id identifier rubyid_sin_sigma'>sin_sigma</span><span class='rparen'>)</span> <span class='op'>*</span> <span class='lparen'>(</span><span class='op'>-</span><span class='int'>3</span> <span class='op'>+</span> <span class='int'>4</span> <span class='op'>*</span> <span class='id identifier rubyid_cos_2_sigma_m'>cos_2_sigma_m</span> <span class='op'>*</span> <span class='id identifier rubyid_cos_2_sigma_m'>cos_2_sigma_m</span><span class='rparen'>)</span><span class='rparen'>)</span><span class='rparen'>)</span>
-    <span class='id identifier rubyid_s'>s</span> <span class='op'>=</span> <span class='id identifier rubyid_b'>b</span> <span class='op'>*</span> <span class='id identifier rubyid_a1'>a1</span> <span class='op'>*</span> <span class='lparen'>(</span><span class='id identifier rubyid_sigma'>sigma</span> <span class='op'>-</span> <span class='id identifier rubyid_delta_sigma'>delta_sigma</span><span class='rparen'>)</span>
-    <span class='id identifier rubyid_sin_lambda_v'>sin_lambda_v</span> <span class='op'>=</span> <span class='const'>Math</span><span class='period'>.</span><span class='id identifier rubyid_sin'>sin</span><span class='lparen'>(</span><span class='id identifier rubyid_lambda_v'>lambda_v</span><span class='rparen'>)</span>
-    <span class='id identifier rubyid_cos_lambda_v'>cos_lambda_v</span> <span class='op'>=</span> <span class='const'>Math</span><span class='period'>.</span><span class='id identifier rubyid_cos'>cos</span><span class='lparen'>(</span><span class='id identifier rubyid_lambda_v'>lambda_v</span><span class='rparen'>)</span>
-    
-    <span class='comment'>#This test isn&#39;t in original formulae, and fixes the problem of all angles returned being between 0 - PI (0-180)
-</span>    <span class='comment'>#Also converts the result to compass bearing, rather than the mathmatical anticlockwise angles.
-</span>    <span class='kw'>if</span><span class='lparen'>(</span><span class='const'>Math</span><span class='period'>.</span><span class='id identifier rubyid_sin'>sin</span><span class='lparen'>(</span><span class='id identifier rubyid_p2'>p2</span><span class='period'>.</span><span class='id identifier rubyid_longitude'>longitude</span><span class='period'>.</span><span class='id identifier rubyid_to_rad'>to_rad</span> <span class='op'>-</span> <span class='ivar'>@longitude</span><span class='period'>.</span><span class='id identifier rubyid_to_rad'>to_rad</span><span class='rparen'>)</span> <span class='op'>&lt;</span> <span class='int'>0</span><span class='rparen'>)</span>
-      <span class='id identifier rubyid_alpha_1'>alpha_1</span> <span class='op'>=</span> <span class='const'>Math</span><span class='op'>::</span><span class='const'>PI</span><span class='op'>*</span><span class='int'>2</span><span class='op'>-</span><span class='const'>Math</span><span class='period'>.</span><span class='id identifier rubyid_atan2'>atan2</span><span class='lparen'>(</span> <span class='id identifier rubyid_cos_u2'>cos_u2</span> <span class='op'>*</span> <span class='id identifier rubyid_sin_lambda_v'>sin_lambda_v</span><span class='comma'>,</span> <span class='id identifier rubyid_cos_u1'>cos_u1</span> <span class='op'>*</span> <span class='id identifier rubyid_sin_u2'>sin_u2</span> <span class='op'>-</span> <span class='id identifier rubyid_sin_u1'>sin_u1</span> <span class='op'>*</span> <span class='id identifier rubyid_cos_u2'>cos_u2</span> <span class='op'>*</span> <span class='id identifier rubyid_cos_lambda_v'>cos_lambda_v</span><span class='rparen'>)</span>
-      <span class='comment'>#alpha_2 = Math::PI*2-Math.atan2(cos_u1 * sin_lambda_v, -sin_u1 * cos_u2 + cos_u1 * sin_u2 * cos_lambda_v)
-</span>    <span class='kw'>else</span>
-      <span class='id identifier rubyid_alpha_1'>alpha_1</span> <span class='op'>=</span> <span class='const'>Math</span><span class='period'>.</span><span class='id identifier rubyid_atan2'>atan2</span><span class='lparen'>(</span> <span class='id identifier rubyid_cos_u2'>cos_u2</span> <span class='op'>*</span> <span class='id identifier rubyid_sin_lambda_v'>sin_lambda_v</span><span class='comma'>,</span> <span class='id identifier rubyid_cos_u1'>cos_u1</span> <span class='op'>*</span> <span class='id identifier rubyid_sin_u2'>sin_u2</span> <span class='op'>-</span> <span class='id identifier rubyid_sin_u1'>sin_u1</span> <span class='op'>*</span> <span class='id identifier rubyid_cos_u2'>cos_u2</span> <span class='op'>*</span> <span class='id identifier rubyid_cos_lambda_v'>cos_lambda_v</span><span class='rparen'>)</span>
-      <span class='comment'>#alpha_2 = Math.atan2(cos_u1 * sin_lambda_v, -sin_u1 * cos_u2 + cos_u1 * sin_u2 * cos_lambda_v)
-</span>    <span class='kw'>end</span>
+   <span class='rubyid_lat1 identifier id'>lat1</span> <span class='assign token'>=</span> <span class='rubyid_@latitude ivar id'>@latitude</span><span class='dot token'>.</span><span class='rubyid_to_rad identifier id'>to_rad</span>
+   <span class='rubyid_lon1 identifier id'>lon1</span> <span class='assign token'>=</span> <span class='rubyid_@longitude ivar id'>@longitude</span><span class='dot token'>.</span><span class='rubyid_to_rad identifier id'>to_rad</span>
+   <span class='rubyid_lat2 identifier id'>lat2</span> <span class='assign token'>=</span> <span class='rubyid_p2 identifier id'>p2</span><span class='dot token'>.</span><span class='rubyid_latitude identifier id'>latitude</span><span class='dot token'>.</span><span class='rubyid_to_rad identifier id'>to_rad</span>
+   <span class='rubyid_lon2 identifier id'>lon2</span> <span class='assign token'>=</span> <span class='rubyid_p2 identifier id'>p2</span><span class='dot token'>.</span><span class='rubyid_longitude identifier id'>longitude</span><span class='dot token'>.</span><span class='rubyid_to_rad identifier id'>to_rad</span>
+   <span class='rubyid_lat1 identifier id'>lat1</span> <span class='assign token'>=</span> <span class='rubyid_lat1 identifier id'>lat1</span><span class='dot token'>.</span><span class='rubyid_sign identifier id'>sign</span> <span class='mult op'>*</span> <span class='lparen token'>(</span><span class='rubyid_Math constant id'>Math</span><span class='colon2 op'>::</span><span class='rubyid_PI constant id'>PI</span><span class='div op'>/</span><span class='integer val'>2</span><span class='minus op'>-</span><span class='lparen token'>(</span><span class='float val'>1e-10</span><span class='rparen token'>)</span><span class='rparen token'>)</span> <span class='rubyid_if if_mod kw'>if</span> <span class='lparen token'>(</span><span class='rubyid_Math constant id'>Math</span><span class='colon2 op'>::</span><span class='rubyid_PI constant id'>PI</span><span class='div op'>/</span><span class='integer val'>2</span><span class='minus op'>-</span><span class='rubyid_lat1 identifier id'>lat1</span><span class='dot token'>.</span><span class='rubyid_abs identifier id'>abs</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='rubyid_abs identifier id'>abs</span> <span class='lt op'>&lt;</span> <span class='float val'>1.0e-10</span>
+   <span class='rubyid_lat2 identifier id'>lat2</span> <span class='assign token'>=</span> <span class='rubyid_lat2 identifier id'>lat2</span><span class='dot token'>.</span><span class='rubyid_sign identifier id'>sign</span> <span class='mult op'>*</span> <span class='lparen token'>(</span><span class='rubyid_Math constant id'>Math</span><span class='colon2 op'>::</span><span class='rubyid_PI constant id'>PI</span><span class='div op'>/</span><span class='integer val'>2</span><span class='minus op'>-</span><span class='lparen token'>(</span><span class='float val'>1e-10</span><span class='rparen token'>)</span><span class='rparen token'>)</span> <span class='rubyid_if if_mod kw'>if</span> <span class='lparen token'>(</span><span class='rubyid_Math constant id'>Math</span><span class='colon2 op'>::</span><span class='rubyid_PI constant id'>PI</span><span class='div op'>/</span><span class='integer val'>2</span><span class='minus op'>-</span><span class='rubyid_lat2 identifier id'>lat2</span><span class='dot token'>.</span><span class='rubyid_abs identifier id'>abs</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='rubyid_abs identifier id'>abs</span> <span class='lt op'>&lt;</span> <span class='float val'>1.0e-10</span>
 
-  <span class='comment'>#Note that the bearing is a compass (i.e. clockwise) angle.
-</span>  <span class='kw'>return</span> <span class='const'>TrackAndDistance</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_alpha_1'>alpha_1</span><span class='comma'>,</span> <span class='id identifier rubyid_s'>s</span><span class='comma'>,</span> <span class='kw'>true</span><span class='rparen'>)</span> <span class='comment'>#What to do with alpha_2?
-</span><span class='kw'>end</span></pre>
+  <span class='comment val'>#  lat1, lat2 = geodetic latitude</span>
+
+    <span class='rubyid_l identifier id'>l</span> <span class='assign token'>=</span> <span class='lparen token'>(</span><span class='rubyid_lon2 identifier id'>lon2</span> <span class='minus op'>-</span> <span class='rubyid_lon1 identifier id'>lon1</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='rubyid_abs identifier id'>abs</span> <span class='comment val'>#difference in longitude</span>
+    <span class='rubyid_l identifier id'>l</span> <span class='assign token'>=</span> <span class='integer val'>2</span><span class='mult op'>*</span><span class='rubyid_Math constant id'>Math</span><span class='colon2 op'>::</span><span class='rubyid_PI constant id'>PI</span> <span class='minus op'>-</span> <span class='rubyid_l identifier id'>l</span> <span class='rubyid_if if_mod kw'>if</span> <span class='rubyid_l identifier id'>l</span> <span class='gt op'>&gt;</span> <span class='rubyid_Math constant id'>Math</span><span class='colon2 op'>::</span><span class='rubyid_PI constant id'>PI</span>
+    <span class='rubyid_u1 identifier id'>u1</span> <span class='assign token'>=</span> <span class='rubyid_Math constant id'>Math</span><span class='dot token'>.</span><span class='rubyid_atan identifier id'>atan</span><span class='lparen token'>(</span> <span class='lparen token'>(</span> <span class='integer val'>1</span> <span class='minus op'>-</span> <span class='rubyid_f identifier id'>f</span><span class='rparen token'>)</span> <span class='mult op'>*</span> <span class='rubyid_Math constant id'>Math</span><span class='dot token'>.</span><span class='rubyid_tan identifier id'>tan</span><span class='lparen token'>(</span> <span class='rubyid_lat1 identifier id'>lat1</span> <span class='rparen token'>)</span> <span class='rparen token'>)</span> <span class='comment val'>#U is &#39;reduced latitude&#39;</span>
+    <span class='rubyid_u2 identifier id'>u2</span> <span class='assign token'>=</span> <span class='rubyid_Math constant id'>Math</span><span class='dot token'>.</span><span class='rubyid_atan identifier id'>atan</span><span class='lparen token'>(</span> <span class='lparen token'>(</span> <span class='integer val'>1</span> <span class='minus op'>-</span> <span class='rubyid_f identifier id'>f</span><span class='rparen token'>)</span> <span class='mult op'>*</span>  <span class='rubyid_Math constant id'>Math</span><span class='dot token'>.</span><span class='rubyid_tan identifier id'>tan</span><span class='lparen token'>(</span> <span class='rubyid_lat2 identifier id'>lat2</span> <span class='rparen token'>)</span> <span class='rparen token'>)</span>
+    <span class='rubyid_sin_u1 identifier id'>sin_u1</span> <span class='assign token'>=</span> <span class='rubyid_Math constant id'>Math</span><span class='dot token'>.</span><span class='rubyid_sin identifier id'>sin</span><span class='lparen token'>(</span><span class='rubyid_u1 identifier id'>u1</span><span class='rparen token'>)</span>
+    <span class='rubyid_cos_u1 identifier id'>cos_u1</span> <span class='assign token'>=</span> <span class='rubyid_Math constant id'>Math</span><span class='dot token'>.</span><span class='rubyid_cos identifier id'>cos</span><span class='lparen token'>(</span><span class='rubyid_u1 identifier id'>u1</span><span class='rparen token'>)</span>
+    <span class='rubyid_sin_u2 identifier id'>sin_u2</span> <span class='assign token'>=</span> <span class='rubyid_Math constant id'>Math</span><span class='dot token'>.</span><span class='rubyid_sin identifier id'>sin</span><span class='lparen token'>(</span><span class='rubyid_u2 identifier id'>u2</span><span class='rparen token'>)</span>
+    <span class='rubyid_cos_u2 identifier id'>cos_u2</span> <span class='assign token'>=</span> <span class='rubyid_Math constant id'>Math</span><span class='dot token'>.</span><span class='rubyid_cos identifier id'>cos</span><span class='lparen token'>(</span><span class='rubyid_u2 identifier id'>u2</span><span class='rparen token'>)</span>
+
+    <span class='rubyid_lambda_v identifier id'>lambda_v</span> <span class='assign token'>=</span> <span class='rubyid_l identifier id'>l</span>
+    <span class='rubyid_lambda_dash identifier id'>lambda_dash</span> <span class='assign token'>=</span>  <span class='rubyid_Math constant id'>Math</span><span class='colon2 op'>::</span><span class='rubyid_PI constant id'>PI</span> <span class='mult op'>*</span> <span class='integer val'>2</span>
+    <span class='rubyid_while while kw'>while</span><span class='lparen token'>(</span> <span class='lparen token'>(</span><span class='rubyid_lambda_v identifier id'>lambda_v</span> <span class='minus op'>-</span> <span class='rubyid_lambda_dash identifier id'>lambda_dash</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='rubyid_abs identifier id'>abs</span> <span class='gt op'>&gt;</span> <span class='float val'>1.0e-12</span>   <span class='rparen token'>)</span> <span class='comment val'>#i.e. 0.06 mm error</span>
+      <span class='rubyid_sin_lambda_v identifier id'>sin_lambda_v</span> <span class='assign token'>=</span> <span class='rubyid_Math constant id'>Math</span><span class='dot token'>.</span><span class='rubyid_sin identifier id'>sin</span><span class='lparen token'>(</span><span class='rubyid_lambda_v identifier id'>lambda_v</span><span class='rparen token'>)</span>
+      <span class='rubyid_cos_lambda_v identifier id'>cos_lambda_v</span> <span class='assign token'>=</span> <span class='rubyid_Math constant id'>Math</span><span class='dot token'>.</span><span class='rubyid_cos identifier id'>cos</span><span class='lparen token'>(</span><span class='rubyid_lambda_v identifier id'>lambda_v</span><span class='rparen token'>)</span>
+      <span class='rubyid_sin_sigma identifier id'>sin_sigma</span> <span class='assign token'>=</span> <span class='rubyid_Math constant id'>Math</span><span class='dot token'>.</span><span class='rubyid_sqrt identifier id'>sqrt</span><span class='lparen token'>(</span> <span class='lparen token'>(</span> <span class='rubyid_cos_u2 identifier id'>cos_u2</span> <span class='mult op'>*</span> <span class='rubyid_sin_lambda_v identifier id'>sin_lambda_v</span> <span class='rparen token'>)</span> <span class='pow op'>**</span> <span class='integer val'>2</span> <span class='plus op'>+</span> <span class='lparen token'>(</span> <span class='rubyid_cos_u1 identifier id'>cos_u1</span> <span class='mult op'>*</span> <span class='rubyid_sin_u2 identifier id'>sin_u2</span> <span class='minus op'>-</span> <span class='rubyid_sin_u1 identifier id'>sin_u1</span> <span class='mult op'>*</span> <span class='rubyid_cos_u2 identifier id'>cos_u2</span> <span class='mult op'>*</span> <span class='rubyid_cos_lambda_v identifier id'>cos_lambda_v</span> <span class='rparen token'>)</span> <span class='pow op'>**</span> <span class='integer val'>2</span> <span class='rparen token'>)</span>
+      <span class='rubyid_cos_sigma identifier id'>cos_sigma</span> <span class='assign token'>=</span> <span class='rubyid_sin_u1 identifier id'>sin_u1</span> <span class='mult op'>*</span> <span class='rubyid_sin_u2 identifier id'>sin_u2</span> <span class='plus op'>+</span> <span class='rubyid_cos_u1 identifier id'>cos_u1</span> <span class='mult op'>*</span> <span class='rubyid_cos_u2 identifier id'>cos_u2</span> <span class='mult op'>*</span> <span class='rubyid_cos_lambda_v identifier id'>cos_lambda_v</span>
+      <span class='rubyid_sigma identifier id'>sigma</span> <span class='assign token'>=</span> <span class='rubyid_Math constant id'>Math</span><span class='dot token'>.</span><span class='rubyid_atan2 identifier id'>atan2</span><span class='lparen token'>(</span><span class='rubyid_sin_sigma identifier id'>sin_sigma</span><span class='comma token'>,</span> <span class='rubyid_cos_sigma identifier id'>cos_sigma</span><span class='rparen token'>)</span>
+      <span class='rubyid_sin_alpha identifier id'>sin_alpha</span><span class='assign token'>=</span> <span class='rubyid_cos_u1 identifier id'>cos_u1</span>  <span class='mult op'>*</span> <span class='rubyid_cos_u2 identifier id'>cos_u2</span> <span class='mult op'>*</span> <span class='rubyid_sin_lambda_v identifier id'>sin_lambda_v</span> <span class='div op'>/</span> <span class='rubyid_sin_sigma identifier id'>sin_sigma</span>
+      <span class='rubyid_cos_2_alpha identifier id'>cos_2_alpha</span> <span class='assign token'>=</span> <span class='integer val'>1</span> <span class='minus op'>-</span> <span class='rubyid_sin_alpha identifier id'>sin_alpha</span> <span class='mult op'>*</span> <span class='rubyid_sin_alpha identifier id'>sin_alpha</span> <span class='comment val'>#trig identity</span>
+      <span class='rubyid_cos_2_sigma_m identifier id'>cos_2_sigma_m</span> <span class='assign token'>=</span> <span class='rubyid_cos_sigma identifier id'>cos_sigma</span> <span class='minus op'>-</span> <span class='integer val'>2</span> <span class='mult op'>*</span> <span class='rubyid_sin_u1 identifier id'>sin_u1</span> <span class='mult op'>*</span> <span class='rubyid_sin_u2 identifier id'>sin_u2</span><span class='div op'>/</span><span class='rubyid_cos_2_alpha identifier id'>cos_2_alpha</span>
+      <span class='rubyid_c identifier id'>c</span> <span class='assign token'>=</span> <span class='rubyid_f identifier id'>f</span> <span class='div op'>/</span> <span class='integer val'>16</span> <span class='mult op'>*</span> <span class='rubyid_cos_2_alpha identifier id'>cos_2_alpha</span> <span class='mult op'>*</span> <span class='lparen token'>(</span><span class='integer val'>4</span> <span class='plus op'>+</span> <span class='rubyid_f identifier id'>f</span><span class='mult op'>*</span><span class='lparen token'>(</span><span class='integer val'>4</span><span class='minus op'>-</span><span class='integer val'>3</span><span class='mult op'>*</span><span class='rubyid_cos_2_alpha identifier id'>cos_2_alpha</span><span class='rparen token'>)</span><span class='rparen token'>)</span>
+      <span class='rubyid_lambda_dash identifier id'>lambda_dash</span> <span class='assign token'>=</span> <span class='rubyid_lambda_v identifier id'>lambda_v</span>
+      <span class='rubyid_lambda_v identifier id'>lambda_v</span> <span class='assign token'>=</span> <span class='rubyid_l identifier id'>l</span> <span class='plus op'>+</span> <span class='lparen token'>(</span><span class='integer val'>1</span><span class='minus op'>-</span><span class='rubyid_c identifier id'>c</span><span class='rparen token'>)</span> <span class='mult op'>*</span> <span class='rubyid_f identifier id'>f</span> <span class='mult op'>*</span> <span class='rubyid_sin_alpha identifier id'>sin_alpha</span> <span class='mult op'>*</span> <span class='lparen token'>(</span><span class='rubyid_sigma identifier id'>sigma</span> <span class='plus op'>+</span> <span class='rubyid_c identifier id'>c</span> <span class='mult op'>*</span> <span class='rubyid_sin_sigma identifier id'>sin_sigma</span> <span class='mult op'>*</span> <span class='lparen token'>(</span><span class='rubyid_cos_2_sigma_m identifier id'>cos_2_sigma_m</span> <span class='plus op'>+</span> <span class='rubyid_c identifier id'>c</span> <span class='mult op'>*</span> <span class='rubyid_cos_sigma identifier id'>cos_sigma</span> <span class='mult op'>*</span> <span class='lparen token'>(</span><span class='integer val'>-1</span> <span class='plus op'>+</span> <span class='integer val'>2</span> <span class='mult op'>*</span> <span class='rubyid_cos_2_sigma_m identifier id'>cos_2_sigma_m</span> <span class='mult op'>*</span> <span class='rubyid_cos_2_sigma_m identifier id'>cos_2_sigma_m</span><span class='rparen token'>)</span> <span class='rparen token'>)</span> <span class='rparen token'>)</span>  <span class='comment val'># use cos_2_sigma_m=0 when over equatorial lines</span>
+      <span class='rubyid_if if kw'>if</span> <span class='rubyid_lambda_v identifier id'>lambda_v</span> <span class='gt op'>&gt;</span> <span class='rubyid_Math constant id'>Math</span><span class='colon2 op'>::</span><span class='rubyid_PI constant id'>PI</span>
+        <span class='rubyid_lambda_v identifier id'>lambda_v</span> <span class='assign token'>=</span> <span class='rubyid_Math constant id'>Math</span><span class='colon2 op'>::</span><span class='rubyid_PI constant id'>PI</span>
+        <span class='rubyid_break break kw'>break</span>
+      <span class='rubyid_end end kw'>end</span>
+    <span class='rubyid_end end kw'>end</span>
+
+    <span class='rubyid_u_2 identifier id'>u_2</span> <span class='assign token'>=</span> <span class='rubyid_cos_2_alpha identifier id'>cos_2_alpha</span> <span class='mult op'>*</span> <span class='lparen token'>(</span><span class='rubyid_a identifier id'>a</span> <span class='mult op'>*</span> <span class='rubyid_a identifier id'>a</span> <span class='minus op'>-</span> <span class='rubyid_b identifier id'>b</span> <span class='mult op'>*</span> <span class='rubyid_b identifier id'>b</span><span class='rparen token'>)</span> <span class='div op'>/</span> <span class='lparen token'>(</span><span class='rubyid_b identifier id'>b</span> <span class='mult op'>*</span> <span class='rubyid_b identifier id'>b</span><span class='rparen token'>)</span>
+    <span class='rubyid_a1 identifier id'>a1</span> <span class='assign token'>=</span> <span class='integer val'>1</span> <span class='plus op'>+</span> <span class='rubyid_u_2 identifier id'>u_2</span> <span class='div op'>/</span> <span class='integer val'>16384</span> <span class='mult op'>*</span> <span class='lparen token'>(</span><span class='integer val'>4096</span> <span class='plus op'>+</span> <span class='rubyid_u_2 identifier id'>u_2</span> <span class='mult op'>*</span> <span class='lparen token'>(</span><span class='integer val'>-768</span> <span class='plus op'>+</span> <span class='rubyid_u_2 identifier id'>u_2</span> <span class='mult op'>*</span> <span class='lparen token'>(</span><span class='integer val'>320</span> <span class='minus op'>-</span> <span class='integer val'>175</span> <span class='mult op'>*</span> <span class='rubyid_u_2 identifier id'>u_2</span><span class='rparen token'>)</span><span class='rparen token'>)</span><span class='rparen token'>)</span>
+    <span class='rubyid_b1 identifier id'>b1</span> <span class='assign token'>=</span> <span class='rubyid_u_2 identifier id'>u_2</span> <span class='div op'>/</span> <span class='integer val'>1024</span> <span class='mult op'>*</span> <span class='lparen token'>(</span><span class='integer val'>256</span> <span class='plus op'>+</span> <span class='rubyid_u_2 identifier id'>u_2</span> <span class='mult op'>*</span> <span class='lparen token'>(</span><span class='integer val'>-128</span> <span class='plus op'>+</span> <span class='rubyid_u_2 identifier id'>u_2</span> <span class='mult op'>*</span> <span class='lparen token'>(</span><span class='integer val'>74</span> <span class='minus op'>-</span> <span class='integer val'>47</span> <span class='mult op'>*</span> <span class='rubyid_u_2 identifier id'>u_2</span><span class='rparen token'>)</span><span class='rparen token'>)</span><span class='rparen token'>)</span>
+    <span class='rubyid_delta_sigma identifier id'>delta_sigma</span> <span class='assign token'>=</span> <span class='rubyid_b1 identifier id'>b1</span> <span class='mult op'>*</span> <span class='rubyid_sin_sigma identifier id'>sin_sigma</span> <span class='mult op'>*</span> <span class='lparen token'>(</span><span class='rubyid_cos_2_sigma_m identifier id'>cos_2_sigma_m</span> <span class='plus op'>+</span> <span class='rubyid_b1 identifier id'>b1</span> <span class='div op'>/</span> <span class='integer val'>4</span> <span class='mult op'>*</span> <span class='lparen token'>(</span><span class='rubyid_cos_sigma identifier id'>cos_sigma</span> <span class='mult op'>*</span> <span class='lparen token'>(</span><span class='integer val'>-1</span> <span class='plus op'>+</span> <span class='integer val'>2</span> <span class='mult op'>*</span> <span class='rubyid_cos_2_sigma_m identifier id'>cos_2_sigma_m</span> <span class='mult op'>*</span> <span class='rubyid_cos_2_sigma_m identifier id'>cos_2_sigma_m</span><span class='rparen token'>)</span> <span class='minus op'>-</span> <span class='rubyid_b1 identifier id'>b1</span> <span class='div op'>/</span> <span class='integer val'>6</span> <span class='mult op'>*</span> <span class='rubyid_cos_2_sigma_m identifier id'>cos_2_sigma_m</span> <span class='mult op'>*</span> <span class='lparen token'>(</span><span class='integer val'>-3</span> <span class='plus op'>+</span> <span class='integer val'>4</span> <span class='mult op'>*</span> <span class='rubyid_sin_sigma identifier id'>sin_sigma</span> <span class='mult op'>*</span> <span class='rubyid_sin_sigma identifier id'>sin_sigma</span><span class='rparen token'>)</span> <span class='mult op'>*</span> <span class='lparen token'>(</span><span class='integer val'>-3</span> <span class='plus op'>+</span> <span class='integer val'>4</span> <span class='mult op'>*</span> <span class='rubyid_cos_2_sigma_m identifier id'>cos_2_sigma_m</span> <span class='mult op'>*</span> <span class='rubyid_cos_2_sigma_m identifier id'>cos_2_sigma_m</span><span class='rparen token'>)</span><span class='rparen token'>)</span><span class='rparen token'>)</span>
+    <span class='rubyid_s identifier id'>s</span> <span class='assign token'>=</span> <span class='rubyid_b identifier id'>b</span> <span class='mult op'>*</span> <span class='rubyid_a1 identifier id'>a1</span> <span class='mult op'>*</span> <span class='lparen token'>(</span><span class='rubyid_sigma identifier id'>sigma</span> <span class='minus op'>-</span> <span class='rubyid_delta_sigma identifier id'>delta_sigma</span><span class='rparen token'>)</span>
+    <span class='rubyid_sin_lambda_v identifier id'>sin_lambda_v</span> <span class='assign token'>=</span> <span class='rubyid_Math constant id'>Math</span><span class='dot token'>.</span><span class='rubyid_sin identifier id'>sin</span><span class='lparen token'>(</span><span class='rubyid_lambda_v identifier id'>lambda_v</span><span class='rparen token'>)</span>
+    <span class='rubyid_cos_lambda_v identifier id'>cos_lambda_v</span> <span class='assign token'>=</span> <span class='rubyid_Math constant id'>Math</span><span class='dot token'>.</span><span class='rubyid_cos identifier id'>cos</span><span class='lparen token'>(</span><span class='rubyid_lambda_v identifier id'>lambda_v</span><span class='rparen token'>)</span>
+
+    <span class='comment val'>#This test isn&#39;t in original formulae, and fixes the problem of all angles returned being between 0 - PI (0-180)</span>
+    <span class='comment val'>#Also converts the result to compass bearing, rather than the mathmatical anticlockwise angles.</span>
+    <span class='rubyid_if if kw'>if</span><span class='lparen token'>(</span><span class='rubyid_Math constant id'>Math</span><span class='dot token'>.</span><span class='rubyid_sin identifier id'>sin</span><span class='lparen token'>(</span><span class='rubyid_p2 identifier id'>p2</span><span class='dot token'>.</span><span class='rubyid_longitude identifier id'>longitude</span><span class='dot token'>.</span><span class='rubyid_to_rad identifier id'>to_rad</span> <span class='minus op'>-</span> <span class='rubyid_@longitude ivar id'>@longitude</span><span class='dot token'>.</span><span class='rubyid_to_rad identifier id'>to_rad</span><span class='rparen token'>)</span> <span class='lt op'>&lt;</span> <span class='integer val'>0</span><span class='rparen token'>)</span>
+      <span class='rubyid_alpha_1 identifier id'>alpha_1</span> <span class='assign token'>=</span> <span class='rubyid_Math constant id'>Math</span><span class='colon2 op'>::</span><span class='rubyid_PI constant id'>PI</span><span class='mult op'>*</span><span class='integer val'>2</span><span class='minus op'>-</span><span class='rubyid_Math constant id'>Math</span><span class='dot token'>.</span><span class='rubyid_atan2 identifier id'>atan2</span><span class='lparen token'>(</span> <span class='rubyid_cos_u2 identifier id'>cos_u2</span> <span class='mult op'>*</span> <span class='rubyid_sin_lambda_v identifier id'>sin_lambda_v</span><span class='comma token'>,</span> <span class='rubyid_cos_u1 identifier id'>cos_u1</span> <span class='mult op'>*</span> <span class='rubyid_sin_u2 identifier id'>sin_u2</span> <span class='minus op'>-</span> <span class='rubyid_sin_u1 identifier id'>sin_u1</span> <span class='mult op'>*</span> <span class='rubyid_cos_u2 identifier id'>cos_u2</span> <span class='mult op'>*</span> <span class='rubyid_cos_lambda_v identifier id'>cos_lambda_v</span><span class='rparen token'>)</span>
+      <span class='comment val'>#alpha_2 = Math::PI*2-Math.atan2(cos_u1 * sin_lambda_v, -sin_u1 * cos_u2 + cos_u1 * sin_u2 * cos_lambda_v)</span>
+    <span class='rubyid_else else kw'>else</span>
+      <span class='rubyid_alpha_1 identifier id'>alpha_1</span> <span class='assign token'>=</span> <span class='rubyid_Math constant id'>Math</span><span class='dot token'>.</span><span class='rubyid_atan2 identifier id'>atan2</span><span class='lparen token'>(</span> <span class='rubyid_cos_u2 identifier id'>cos_u2</span> <span class='mult op'>*</span> <span class='rubyid_sin_lambda_v identifier id'>sin_lambda_v</span><span class='comma token'>,</span> <span class='rubyid_cos_u1 identifier id'>cos_u1</span> <span class='mult op'>*</span> <span class='rubyid_sin_u2 identifier id'>sin_u2</span> <span class='minus op'>-</span> <span class='rubyid_sin_u1 identifier id'>sin_u1</span> <span class='mult op'>*</span> <span class='rubyid_cos_u2 identifier id'>cos_u2</span> <span class='mult op'>*</span> <span class='rubyid_cos_lambda_v identifier id'>cos_lambda_v</span><span class='rparen token'>)</span>
+      <span class='comment val'>#alpha_2 = Math.atan2(cos_u1 * sin_lambda_v, -sin_u1 * cos_u2 + cos_u1 * sin_u2 * cos_lambda_v)</span>
+    <span class='rubyid_end end kw'>end</span>
+
+  <span class='comment val'>#Note that the bearing is a compass (i.e. clockwise) angle.</span>
+  <span class='rubyid_return return kw'>return</span> <span class='rubyid_TrackAndDistance constant id'>TrackAndDistance</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span><span class='lparen token'>(</span><span class='rubyid_alpha_1 identifier id'>alpha_1</span><span class='comma token'>,</span> <span class='rubyid_s identifier id'>s</span><span class='comma token'>,</span> <span class='rubyid_true true kw'>true</span><span class='rparen token'>)</span> <span class='comment val'>#What to do with alpha_2?</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
     </td>
   </tr>
 </table>
@@ -671,7 +750,7 @@ coordinates. Assumes earth is a WGS-84 Ellipsod.</p>
       <div class="method_details ">
   <h3 class="signature " id="sphereDestination-instance_method">
   
-    - (<tt><span class='object_link'><a href="" title="Vincenty (class)">Vincenty</a></span></tt>) <strong>sphereDestination</strong>(track_and_distance) 
+    #<strong>sphereDestination</strong>(track_and_distance)  &#x21d2; <tt><span class='object_link'><a href="" title="Vincenty (class)">Vincenty</a></span></tt> 
   
 
   
@@ -734,40 +813,41 @@ algorithm</p>
       <pre class="lines">
 
 
-124
-125
-126
-127
-128
-129
-130
-131
-132
-133
-134
-135
-136
-137
-138</pre>
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/vincenty.rb', line 124</span>
+      <pre class="code"><span class="info file"># File 'lib/vincenty.rb', line 138</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_sphereDestination'>sphereDestination</span><span class='lparen'>(</span> <span class='id identifier rubyid_track_and_distance'>track_and_distance</span> <span class='rparen'>)</span>
-  <span class='id identifier rubyid_a'>a</span> <span class='op'>=</span> <span class='int'>6378137</span> <span class='comment'>#equatorial radius in meters     (+/-2 m) 
-</span>  <span class='id identifier rubyid_b'>b</span> <span class='op'>=</span> <span class='float'>6356752.31424518</span> <span class='comment'>#polar radius in meters
-</span>  <span class='id identifier rubyid_r'>r</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='id identifier rubyid_a'>a</span><span class='op'>+</span><span class='id identifier rubyid_b'>b</span><span class='rparen'>)</span><span class='op'>/</span><span class='int'>2</span> <span class='comment'>#average diametre as a rough estimate for our tests.
-</span>  
-  <span class='id identifier rubyid_d'>d</span> <span class='op'>=</span> <span class='id identifier rubyid_track_and_distance'>track_and_distance</span><span class='period'>.</span><span class='id identifier rubyid_distance'>distance</span><span class='period'>.</span><span class='id identifier rubyid_abs'>abs</span>
-  <span class='id identifier rubyid_sin_dor'>sin_dor</span> <span class='op'>=</span> <span class='const'>Math</span><span class='period'>.</span><span class='id identifier rubyid_sin'>sin</span><span class='lparen'>(</span><span class='id identifier rubyid_d'>d</span><span class='op'>/</span><span class='id identifier rubyid_r'>r</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_cos_dor'>cos_dor</span> <span class='op'>=</span> <span class='const'>Math</span><span class='period'>.</span><span class='id identifier rubyid_cos'>cos</span><span class='lparen'>(</span><span class='id identifier rubyid_d'>d</span><span class='op'>/</span><span class='id identifier rubyid_r'>r</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_sin_lat1'>sin_lat1</span> <span class='op'>=</span> <span class='const'>Math</span><span class='period'>.</span><span class='id identifier rubyid_sin'>sin</span><span class='lparen'>(</span><span class='ivar'>@latitude</span><span class='period'>.</span><span class='id identifier rubyid_to_rad'>to_rad</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_cos_lat1'>cos_lat1</span> <span class='op'>=</span> <span class='const'>Math</span><span class='period'>.</span><span class='id identifier rubyid_cos'>cos</span><span class='lparen'>(</span><span class='ivar'>@latitude</span><span class='period'>.</span><span class='id identifier rubyid_to_rad'>to_rad</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_lat2'>lat2</span> <span class='op'>=</span> <span class='const'>Math</span><span class='period'>.</span><span class='id identifier rubyid_asin'>asin</span><span class='lparen'>(</span> <span class='id identifier rubyid_sin_lat1'>sin_lat1</span> <span class='op'>*</span> <span class='id identifier rubyid_cos_dor'>cos_dor</span> <span class='op'>+</span> <span class='id identifier rubyid_cos_lat1'>cos_lat1</span> <span class='op'>*</span> <span class='id identifier rubyid_sin_dor'>sin_dor</span> <span class='op'>*</span> <span class='const'>Math</span><span class='period'>.</span><span class='id identifier rubyid_cos'>cos</span><span class='lparen'>(</span><span class='id identifier rubyid_track_and_distance'>track_and_distance</span><span class='period'>.</span><span class='id identifier rubyid_bearing'>bearing</span><span class='period'>.</span><span class='id identifier rubyid_to_rad'>to_rad</span><span class='rparen'>)</span> <span class='rparen'>)</span>
-  <span class='id identifier rubyid_lon2'>lon2</span> <span class='op'>=</span> <span class='ivar'>@longitude</span><span class='period'>.</span><span class='id identifier rubyid_to_rad'>to_rad</span> <span class='op'>+</span> <span class='const'>Math</span><span class='period'>.</span><span class='id identifier rubyid_atan2'>atan2</span><span class='lparen'>(</span><span class='const'>Math</span><span class='period'>.</span><span class='id identifier rubyid_sin'>sin</span><span class='lparen'>(</span><span class='id identifier rubyid_track_and_distance'>track_and_distance</span><span class='period'>.</span><span class='id identifier rubyid_bearing'>bearing</span><span class='period'>.</span><span class='id identifier rubyid_to_rad'>to_rad</span><span class='rparen'>)</span> <span class='op'>*</span> <span class='id identifier rubyid_sin_dor'>sin_dor</span> <span class='op'>*</span> <span class='id identifier rubyid_cos_lat1'>cos_lat1</span><span class='comma'>,</span> <span class='id identifier rubyid_cos_dor'>cos_dor</span><span class='op'>-</span><span class='id identifier rubyid_sin_lat1'>sin_lat1</span> <span class='op'>*</span> <span class='const'>Math</span><span class='period'>.</span><span class='id identifier rubyid_sin'>sin</span><span class='lparen'>(</span><span class='id identifier rubyid_lat2'>lat2</span><span class='rparen'>)</span><span class='rparen'>)</span>
-  
-  <span class='const'>Vincenty</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_lat2'>lat2</span><span class='comma'>,</span> <span class='id identifier rubyid_lon2'>lon2</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='kw'>true</span><span class='rparen'>)</span><span class='semicolon'>;</span>
-<span class='kw'>end</span></pre>
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_sphereDestination identifier id'>sphereDestination</span><span class='lparen token'>(</span> <span class='rubyid_track_and_distance identifier id'>track_and_distance</span> <span class='rparen token'>)</span>
+  <span class='rubyid_a identifier id'>a</span> <span class='assign token'>=</span> <span class='integer val'>6378137</span> <span class='comment val'>#equatorial radius in meters     (+/-2 m)</span>
+  <span class='rubyid_b identifier id'>b</span> <span class='assign token'>=</span> <span class='float val'>6356752.31424518</span> <span class='comment val'>#polar radius in meters</span>
+  <span class='rubyid_r identifier id'>r</span> <span class='assign token'>=</span> <span class='lparen token'>(</span><span class='rubyid_a identifier id'>a</span><span class='plus op'>+</span><span class='rubyid_b identifier id'>b</span><span class='rparen token'>)</span><span class='div op'>/</span><span class='integer val'>2</span> <span class='comment val'>#average diametre as a rough estimate for our tests.</span>
+
+  <span class='rubyid_d identifier id'>d</span> <span class='assign token'>=</span> <span class='rubyid_track_and_distance identifier id'>track_and_distance</span><span class='dot token'>.</span><span class='rubyid_distance identifier id'>distance</span><span class='dot token'>.</span><span class='rubyid_abs identifier id'>abs</span>
+  <span class='rubyid_sin_dor identifier id'>sin_dor</span> <span class='assign token'>=</span> <span class='rubyid_Math constant id'>Math</span><span class='dot token'>.</span><span class='rubyid_sin identifier id'>sin</span><span class='lparen token'>(</span><span class='rubyid_d identifier id'>d</span><span class='div op'>/</span><span class='rubyid_r identifier id'>r</span><span class='rparen token'>)</span>
+  <span class='rubyid_cos_dor identifier id'>cos_dor</span> <span class='assign token'>=</span> <span class='rubyid_Math constant id'>Math</span><span class='dot token'>.</span><span class='rubyid_cos identifier id'>cos</span><span class='lparen token'>(</span><span class='rubyid_d identifier id'>d</span><span class='div op'>/</span><span class='rubyid_r identifier id'>r</span><span class='rparen token'>)</span>
+  <span class='rubyid_sin_lat1 identifier id'>sin_lat1</span> <span class='assign token'>=</span> <span class='rubyid_Math constant id'>Math</span><span class='dot token'>.</span><span class='rubyid_sin identifier id'>sin</span><span class='lparen token'>(</span><span class='rubyid_@latitude ivar id'>@latitude</span><span class='dot token'>.</span><span class='rubyid_to_rad identifier id'>to_rad</span><span class='rparen token'>)</span>
+  <span class='rubyid_cos_lat1 identifier id'>cos_lat1</span> <span class='assign token'>=</span> <span class='rubyid_Math constant id'>Math</span><span class='dot token'>.</span><span class='rubyid_cos identifier id'>cos</span><span class='lparen token'>(</span><span class='rubyid_@latitude ivar id'>@latitude</span><span class='dot token'>.</span><span class='rubyid_to_rad identifier id'>to_rad</span><span class='rparen token'>)</span>
+  <span class='rubyid_lat2 identifier id'>lat2</span> <span class='assign token'>=</span> <span class='rubyid_Math constant id'>Math</span><span class='dot token'>.</span><span class='rubyid_asin identifier id'>asin</span><span class='lparen token'>(</span> <span class='rubyid_sin_lat1 identifier id'>sin_lat1</span> <span class='mult op'>*</span> <span class='rubyid_cos_dor identifier id'>cos_dor</span> <span class='plus op'>+</span> <span class='rubyid_cos_lat1 identifier id'>cos_lat1</span> <span class='mult op'>*</span> <span class='rubyid_sin_dor identifier id'>sin_dor</span> <span class='mult op'>*</span> <span class='rubyid_Math constant id'>Math</span><span class='dot token'>.</span><span class='rubyid_cos identifier id'>cos</span><span class='lparen token'>(</span><span class='rubyid_track_and_distance identifier id'>track_and_distance</span><span class='dot token'>.</span><span class='rubyid_bearing identifier id'>bearing</span><span class='dot token'>.</span><span class='rubyid_to_rad identifier id'>to_rad</span><span class='rparen token'>)</span> <span class='rparen token'>)</span>
+  <span class='rubyid_lon2 identifier id'>lon2</span> <span class='assign token'>=</span> <span class='rubyid_@longitude ivar id'>@longitude</span><span class='dot token'>.</span><span class='rubyid_to_rad identifier id'>to_rad</span> <span class='plus op'>+</span> <span class='rubyid_Math constant id'>Math</span><span class='dot token'>.</span><span class='rubyid_atan2 identifier id'>atan2</span><span class='lparen token'>(</span><span class='rubyid_Math constant id'>Math</span><span class='dot token'>.</span><span class='rubyid_sin identifier id'>sin</span><span class='lparen token'>(</span><span class='rubyid_track_and_distance identifier id'>track_and_distance</span><span class='dot token'>.</span><span class='rubyid_bearing identifier id'>bearing</span><span class='dot token'>.</span><span class='rubyid_to_rad identifier id'>to_rad</span><span class='rparen token'>)</span> <span class='mult op'>*</span> <span class='rubyid_sin_dor identifier id'>sin_dor</span> <span class='mult op'>*</span> <span class='rubyid_cos_lat1 identifier id'>cos_lat1</span><span class='comma token'>,</span> <span class='rubyid_cos_dor identifier id'>cos_dor</span><span class='minus op'>-</span><span class='rubyid_sin_lat1 identifier id'>sin_lat1</span> <span class='mult op'>*</span> <span class='rubyid_Math constant id'>Math</span><span class='dot token'>.</span><span class='rubyid_sin identifier id'>sin</span><span class='lparen token'>(</span><span class='rubyid_lat2 identifier id'>lat2</span><span class='rparen token'>)</span><span class='rparen token'>)</span>
+
+  <span class='rubyid_Vincenty constant id'>Vincenty</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span><span class='lparen token'>(</span><span class='rubyid_lat2 identifier id'>lat2</span><span class='comma token'>,</span> <span class='rubyid_lon2 identifier id'>lon2</span><span class='comma token'>,</span> <span class='integer val'>0</span><span class='comma token'>,</span> <span class='rubyid_true true kw'>true</span><span class='rparen token'>)</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
     </td>
   </tr>
 </table>
@@ -776,7 +856,7 @@ algorithm</p>
       <div class="method_details ">
   <h3 class="signature " id="sphericalDistanceAndAngle-instance_method">
   
-    - (<tt><span class='object_link'><a href="TrackAndDistance.html" title="TrackAndDistance (class)">TrackAndDistance</a></span></tt>) <strong>sphericalDistanceAndAngle</strong>(p2) 
+    #<strong>sphericalDistanceAndAngle</strong>(p2, equatorial_radius = WGS84_ER, inverse_flattening = WGS84_IF)  &#x21d2; <tt><span class='object_link'><a href="TrackAndDistance.html" title="TrackAndDistance (class)">TrackAndDistance</a></span></tt> 
   
 
   
@@ -840,11 +920,6 @@ isn&#39;t. This gives us an approximation to verify Vincenty algorithm.</p>
       <pre class="lines">
 
 
-27
-28
-29
-30
-31
 32
 33
 34
@@ -861,33 +936,49 @@ isn&#39;t. This gives us an approximation to verify Vincenty algorithm.</p>
 45
 46
 47
-48</pre>
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/vincenty.rb', line 27</span>
+      <pre class="code"><span class="info file"># File 'lib/vincenty.rb', line 32</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_sphericalDistanceAndAngle'>sphericalDistanceAndAngle</span><span class='lparen'>(</span> <span class='id identifier rubyid_p2'>p2</span> <span class='rparen'>)</span> 
-  <span class='id identifier rubyid_a'>a</span> <span class='op'>=</span> <span class='int'>6378137</span> <span class='comment'>#equatorial radius in meters     (+/-2 m) 
-</span>  <span class='id identifier rubyid_b'>b</span> <span class='op'>=</span> <span class='float'>6356752.31424518</span> <span class='comment'>#polar radius in meters
-</span>  <span class='id identifier rubyid_r'>r</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='id identifier rubyid_a'>a</span><span class='op'>+</span><span class='id identifier rubyid_b'>b</span><span class='rparen'>)</span><span class='op'>/</span><span class='int'>2</span> <span class='comment'>#average diametre as a rough estimate for our tests.
-</span>  
-  <span class='id identifier rubyid_sin_lat1'>sin_lat1</span> <span class='op'>=</span> <span class='const'>Math</span><span class='period'>.</span><span class='id identifier rubyid_sin'>sin</span><span class='lparen'>(</span><span class='ivar'>@latitude</span><span class='period'>.</span><span class='id identifier rubyid_to_rad'>to_rad</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_sin_lat2'>sin_lat2</span> <span class='op'>=</span> <span class='const'>Math</span><span class='period'>.</span><span class='id identifier rubyid_sin'>sin</span><span class='lparen'>(</span><span class='id identifier rubyid_p2'>p2</span><span class='period'>.</span><span class='id identifier rubyid_latitude'>latitude</span><span class='period'>.</span><span class='id identifier rubyid_to_rad'>to_rad</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_cos_lat1'>cos_lat1</span> <span class='op'>=</span> <span class='const'>Math</span><span class='period'>.</span><span class='id identifier rubyid_cos'>cos</span><span class='lparen'>(</span><span class='ivar'>@latitude</span><span class='period'>.</span><span class='id identifier rubyid_to_rad'>to_rad</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_atan1_2'>atan1_2</span> <span class='op'>=</span> <span class='const'>Math</span><span class='period'>.</span><span class='id identifier rubyid_atan'>atan</span><span class='lparen'>(</span><span class='int'>1</span><span class='rparen'>)</span> <span class='op'>*</span> <span class='int'>2</span>
-  <span class='id identifier rubyid_t1'>t1</span> <span class='op'>=</span> <span class='id identifier rubyid_cos_lat1'>cos_lat1</span> <span class='op'>*</span> <span class='const'>Math</span><span class='period'>.</span><span class='id identifier rubyid_cos'>cos</span><span class='lparen'>(</span><span class='id identifier rubyid_p2'>p2</span><span class='period'>.</span><span class='id identifier rubyid_latitude'>latitude</span><span class='period'>.</span><span class='id identifier rubyid_to_rad'>to_rad</span><span class='rparen'>)</span> <span class='op'>*</span> <span class='lparen'>(</span> <span class='const'>Math</span><span class='period'>.</span><span class='id identifier rubyid_cos'>cos</span><span class='lparen'>(</span><span class='ivar'>@longitude</span><span class='period'>.</span><span class='id identifier rubyid_to_rad'>to_rad</span> <span class='op'>-</span> <span class='id identifier rubyid_p2'>p2</span><span class='period'>.</span><span class='id identifier rubyid_longitude'>longitude</span><span class='period'>.</span><span class='id identifier rubyid_to_rad'>to_rad</span><span class='rparen'>)</span> <span class='rparen'>)</span> <span class='op'>+</span> <span class='id identifier rubyid_sin_lat1'>sin_lat1</span> <span class='op'>*</span> <span class='id identifier rubyid_sin_lat2'>sin_lat2</span> 
-  <span class='id identifier rubyid_angular_distance'>angular_distance</span> <span class='op'>=</span> <span class='const'>Math</span><span class='period'>.</span><span class='id identifier rubyid_atan'>atan</span><span class='lparen'>(</span><span class='op'>-</span><span class='id identifier rubyid_t1'>t1</span><span class='op'>/</span><span class='const'>Math</span><span class='period'>.</span><span class='id identifier rubyid_sqrt'>sqrt</span><span class='lparen'>(</span><span class='op'>-</span><span class='id identifier rubyid_t1'>t1</span> <span class='op'>*</span> <span class='id identifier rubyid_t1'>t1</span> <span class='op'>+</span><span class='int'>1</span><span class='rparen'>)</span><span class='rparen'>)</span> <span class='op'>+</span> <span class='id identifier rubyid_atan1_2'>atan1_2</span> <span class='comment'>#central angle in radians so we can calculate the arc length.
-</span>
-  <span class='id identifier rubyid_t2'>t2</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='id identifier rubyid_sin_lat2'>sin_lat2</span> <span class='op'>-</span> <span class='id identifier rubyid_sin_lat1'>sin_lat1</span> <span class='op'>*</span> <span class='const'>Math</span><span class='period'>.</span><span class='id identifier rubyid_cos'>cos</span><span class='lparen'>(</span><span class='id identifier rubyid_angular_distance'>angular_distance</span><span class='rparen'>)</span><span class='rparen'>)</span> <span class='op'>/</span> <span class='lparen'>(</span><span class='id identifier rubyid_cos_lat1'>cos_lat1</span> <span class='op'>*</span> <span class='const'>Math</span><span class='period'>.</span><span class='id identifier rubyid_sin'>sin</span><span class='lparen'>(</span><span class='id identifier rubyid_angular_distance'>angular_distance</span><span class='rparen'>)</span><span class='rparen'>)</span>
-  <span class='kw'>if</span><span class='lparen'>(</span><span class='const'>Math</span><span class='period'>.</span><span class='id identifier rubyid_sin'>sin</span><span class='lparen'>(</span><span class='id identifier rubyid_p2'>p2</span><span class='period'>.</span><span class='id identifier rubyid_longitude'>longitude</span><span class='period'>.</span><span class='id identifier rubyid_to_rad'>to_rad</span> <span class='op'>-</span> <span class='ivar'>@longitude</span><span class='period'>.</span><span class='id identifier rubyid_to_rad'>to_rad</span><span class='rparen'>)</span> <span class='op'>&lt;</span> <span class='int'>0</span><span class='rparen'>)</span>
-    <span class='id identifier rubyid_bearing'>bearing</span> <span class='op'>=</span>  <span class='int'>2</span> <span class='op'>*</span> <span class='const'>Math</span><span class='op'>::</span><span class='const'>PI</span> <span class='op'>-</span> <span class='lparen'>(</span><span class='const'>Math</span><span class='period'>.</span><span class='id identifier rubyid_atan'>atan</span><span class='lparen'>(</span><span class='op'>-</span><span class='id identifier rubyid_t2'>t2</span> <span class='op'>/</span> <span class='const'>Math</span><span class='period'>.</span><span class='id identifier rubyid_sqrt'>sqrt</span><span class='lparen'>(</span><span class='op'>-</span><span class='id identifier rubyid_t2'>t2</span> <span class='op'>*</span> <span class='id identifier rubyid_t2'>t2</span> <span class='op'>+</span> <span class='int'>1</span><span class='rparen'>)</span><span class='rparen'>)</span> <span class='op'>+</span> <span class='id identifier rubyid_atan1_2'>atan1_2</span><span class='rparen'>)</span> <span class='comment'>#Compass Bearing in radians (clockwise)
-</span>  <span class='kw'>else</span>
-    <span class='id identifier rubyid_bearing'>bearing</span> <span class='op'>=</span> <span class='const'>Math</span><span class='period'>.</span><span class='id identifier rubyid_atan'>atan</span><span class='lparen'>(</span><span class='op'>-</span><span class='id identifier rubyid_t2'>t2</span> <span class='op'>/</span> <span class='const'>Math</span><span class='period'>.</span><span class='id identifier rubyid_sqrt'>sqrt</span><span class='lparen'>(</span><span class='op'>-</span><span class='id identifier rubyid_t2'>t2</span> <span class='op'>*</span> <span class='id identifier rubyid_t2'>t2</span> <span class='op'>+</span> <span class='int'>1</span><span class='rparen'>)</span><span class='rparen'>)</span> <span class='op'>+</span> <span class='id identifier rubyid_atan1_2'>atan1_2</span> <span class='comment'>#Compass Bearing in radians (clockwise)
-</span>  <span class='kw'>end</span>
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_sphericalDistanceAndAngle identifier id'>sphericalDistanceAndAngle</span><span class='lparen token'>(</span> <span class='rubyid_p2 identifier id'>p2</span><span class='comma token'>,</span> <span class='rubyid_equatorial_radius identifier id'>equatorial_radius</span> <span class='assign token'>=</span> <span class='rubyid_WGS84_ER constant id'>WGS84_ER</span><span class='comma token'>,</span> <span class='rubyid_inverse_flattening identifier id'>inverse_flattening</span> <span class='assign token'>=</span> <span class='rubyid_WGS84_IF constant id'>WGS84_IF</span> <span class='rparen token'>)</span>
+  <span class='rubyid_if if kw'>if</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_latitude identifier id'>latitude</span> <span class='eq op'>==</span> <span class='rubyid_p2 identifier id'>p2</span><span class='dot token'>.</span><span class='rubyid_latitude identifier id'>latitude</span> <span class='andop op'>&amp;&amp;</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_longitude identifier id'>longitude</span> <span class='eq op'>==</span> <span class='rubyid_p2 identifier id'>p2</span><span class='dot token'>.</span><span class='rubyid_longitude identifier id'>longitude</span>
+    <span class='rubyid_return return kw'>return</span> <span class='rubyid_TrackAndDistance constant id'>TrackAndDistance</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span><span class='lparen token'>(</span><span class='integer val'>0</span><span class='comma token'>,</span> <span class='integer val'>0</span><span class='comma token'>,</span> <span class='rubyid_true true kw'>true</span><span class='rparen token'>)</span> <span class='comment val'>#No calculations necessary</span>
+  <span class='rubyid_end end kw'>end</span>
 
-  <span class='comment'>#Note that the bearing is a compass angle. That is angles are positive clockwise. 
-</span>  <span class='kw'>return</span> <span class='const'>TrackAndDistance</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_bearing'>bearing</span><span class='comma'>,</span> <span class='id identifier rubyid_angular_distance'>angular_distance</span> <span class='op'>*</span> <span class='id identifier rubyid_r'>r</span><span class='comma'>,</span> <span class='kw'>true</span><span class='rparen'>)</span>
-<span class='kw'>end</span></pre>
+  <span class='rubyid_a identifier id'>a</span> <span class='assign token'>=</span> <span class='rubyid_equatorial_radius identifier id'>equatorial_radius</span> <span class='comment val'>#equatorial radius in meters     (+/-2 m)</span>
+  <span class='rubyid_f identifier id'>f</span> <span class='assign token'>=</span> <span class='rubyid_inverse_flattening identifier id'>inverse_flattening</span><span class='dot token'>.</span>
+  <span class='rubyid_b identifier id'>b</span> <span class='assign token'>=</span> <span class='rubyid_a identifier id'>a</span> <span class='minus op'>-</span> <span class='rubyid_a identifier id'>a</span><span class='div op'>/</span><span class='rubyid_f identifier id'>f</span> <span class='comment val'>#WGS84 = 6356752.314245179 polar radius in meters</span>
+  <span class='rubyid_r identifier id'>r</span> <span class='assign token'>=</span> <span class='lparen token'>(</span><span class='rubyid_a identifier id'>a</span><span class='plus op'>+</span><span class='rubyid_b identifier id'>b</span><span class='rparen token'>)</span><span class='div op'>/</span><span class='integer val'>2</span> <span class='comment val'>#average diametre as a rough estimate for our tests.</span>
+
+  <span class='rubyid_sin_lat1 identifier id'>sin_lat1</span> <span class='assign token'>=</span> <span class='rubyid_Math constant id'>Math</span><span class='dot token'>.</span><span class='rubyid_sin identifier id'>sin</span><span class='lparen token'>(</span><span class='rubyid_@latitude ivar id'>@latitude</span><span class='dot token'>.</span><span class='rubyid_to_rad identifier id'>to_rad</span><span class='rparen token'>)</span>
+  <span class='rubyid_sin_lat2 identifier id'>sin_lat2</span> <span class='assign token'>=</span> <span class='rubyid_Math constant id'>Math</span><span class='dot token'>.</span><span class='rubyid_sin identifier id'>sin</span><span class='lparen token'>(</span><span class='rubyid_p2 identifier id'>p2</span><span class='dot token'>.</span><span class='rubyid_latitude identifier id'>latitude</span><span class='dot token'>.</span><span class='rubyid_to_rad identifier id'>to_rad</span><span class='rparen token'>)</span>
+  <span class='rubyid_cos_lat1 identifier id'>cos_lat1</span> <span class='assign token'>=</span> <span class='rubyid_Math constant id'>Math</span><span class='dot token'>.</span><span class='rubyid_cos identifier id'>cos</span><span class='lparen token'>(</span><span class='rubyid_@latitude ivar id'>@latitude</span><span class='dot token'>.</span><span class='rubyid_to_rad identifier id'>to_rad</span><span class='rparen token'>)</span>
+  <span class='rubyid_atan1_2 identifier id'>atan1_2</span> <span class='assign token'>=</span> <span class='rubyid_Math constant id'>Math</span><span class='dot token'>.</span><span class='rubyid_atan identifier id'>atan</span><span class='lparen token'>(</span><span class='integer val'>1</span><span class='rparen token'>)</span> <span class='mult op'>*</span> <span class='integer val'>2</span>
+  <span class='rubyid_t1 identifier id'>t1</span> <span class='assign token'>=</span> <span class='rubyid_cos_lat1 identifier id'>cos_lat1</span> <span class='mult op'>*</span> <span class='rubyid_Math constant id'>Math</span><span class='dot token'>.</span><span class='rubyid_cos identifier id'>cos</span><span class='lparen token'>(</span><span class='rubyid_p2 identifier id'>p2</span><span class='dot token'>.</span><span class='rubyid_latitude identifier id'>latitude</span><span class='dot token'>.</span><span class='rubyid_to_rad identifier id'>to_rad</span><span class='rparen token'>)</span> <span class='mult op'>*</span> <span class='lparen token'>(</span> <span class='rubyid_Math constant id'>Math</span><span class='dot token'>.</span><span class='rubyid_cos identifier id'>cos</span><span class='lparen token'>(</span><span class='rubyid_@longitude ivar id'>@longitude</span><span class='dot token'>.</span><span class='rubyid_to_rad identifier id'>to_rad</span> <span class='minus op'>-</span> <span class='rubyid_p2 identifier id'>p2</span><span class='dot token'>.</span><span class='rubyid_longitude identifier id'>longitude</span><span class='dot token'>.</span><span class='rubyid_to_rad identifier id'>to_rad</span><span class='rparen token'>)</span> <span class='rparen token'>)</span> <span class='plus op'>+</span> <span class='rubyid_sin_lat1 identifier id'>sin_lat1</span> <span class='mult op'>*</span> <span class='rubyid_sin_lat2 identifier id'>sin_lat2</span>
+  <span class='rubyid_angular_distance identifier id'>angular_distance</span> <span class='assign token'>=</span> <span class='rubyid_Math constant id'>Math</span><span class='dot token'>.</span><span class='rubyid_atan identifier id'>atan</span><span class='lparen token'>(</span><span class='minus op'>-</span><span class='rubyid_t1 identifier id'>t1</span><span class='div op'>/</span><span class='rubyid_Math constant id'>Math</span><span class='dot token'>.</span><span class='rubyid_sqrt identifier id'>sqrt</span><span class='lparen token'>(</span><span class='minus op'>-</span><span class='rubyid_t1 identifier id'>t1</span> <span class='mult op'>*</span> <span class='rubyid_t1 identifier id'>t1</span> <span class='integer val'>+1</span><span class='rparen token'>)</span><span class='rparen token'>)</span> <span class='plus op'>+</span> <span class='rubyid_atan1_2 identifier id'>atan1_2</span> <span class='comment val'>#central angle in radians so we can calculate the arc length.</span>
+
+  <span class='rubyid_t2 identifier id'>t2</span> <span class='assign token'>=</span> <span class='lparen token'>(</span><span class='rubyid_sin_lat2 identifier id'>sin_lat2</span> <span class='minus op'>-</span> <span class='rubyid_sin_lat1 identifier id'>sin_lat1</span> <span class='mult op'>*</span> <span class='rubyid_Math constant id'>Math</span><span class='dot token'>.</span><span class='rubyid_cos identifier id'>cos</span><span class='lparen token'>(</span><span class='rubyid_angular_distance identifier id'>angular_distance</span><span class='rparen token'>)</span><span class='rparen token'>)</span> <span class='div op'>/</span> <span class='lparen token'>(</span><span class='rubyid_cos_lat1 identifier id'>cos_lat1</span> <span class='mult op'>*</span> <span class='rubyid_Math constant id'>Math</span><span class='dot token'>.</span><span class='rubyid_sin identifier id'>sin</span><span class='lparen token'>(</span><span class='rubyid_angular_distance identifier id'>angular_distance</span><span class='rparen token'>)</span><span class='rparen token'>)</span>
+  <span class='rubyid_if if kw'>if</span><span class='lparen token'>(</span><span class='rubyid_Math constant id'>Math</span><span class='dot token'>.</span><span class='rubyid_sin identifier id'>sin</span><span class='lparen token'>(</span><span class='rubyid_p2 identifier id'>p2</span><span class='dot token'>.</span><span class='rubyid_longitude identifier id'>longitude</span><span class='dot token'>.</span><span class='rubyid_to_rad identifier id'>to_rad</span> <span class='minus op'>-</span> <span class='rubyid_@longitude ivar id'>@longitude</span><span class='dot token'>.</span><span class='rubyid_to_rad identifier id'>to_rad</span><span class='rparen token'>)</span> <span class='lt op'>&lt;</span> <span class='integer val'>0</span><span class='rparen token'>)</span>
+    <span class='rubyid_bearing identifier id'>bearing</span> <span class='assign token'>=</span>  <span class='integer val'>2</span> <span class='mult op'>*</span> <span class='rubyid_Math constant id'>Math</span><span class='colon2 op'>::</span><span class='rubyid_PI constant id'>PI</span> <span class='minus op'>-</span> <span class='lparen token'>(</span><span class='rubyid_Math constant id'>Math</span><span class='dot token'>.</span><span class='rubyid_atan identifier id'>atan</span><span class='lparen token'>(</span><span class='minus op'>-</span><span class='rubyid_t2 identifier id'>t2</span> <span class='div op'>/</span> <span class='rubyid_Math constant id'>Math</span><span class='dot token'>.</span><span class='rubyid_sqrt identifier id'>sqrt</span><span class='lparen token'>(</span><span class='minus op'>-</span><span class='rubyid_t2 identifier id'>t2</span> <span class='mult op'>*</span> <span class='rubyid_t2 identifier id'>t2</span> <span class='plus op'>+</span> <span class='integer val'>1</span><span class='rparen token'>)</span><span class='rparen token'>)</span> <span class='plus op'>+</span> <span class='rubyid_atan1_2 identifier id'>atan1_2</span><span class='rparen token'>)</span> <span class='comment val'>#Compass Bearing in radians (clockwise)</span>
+  <span class='rubyid_else else kw'>else</span>
+    <span class='rubyid_bearing identifier id'>bearing</span> <span class='assign token'>=</span> <span class='rubyid_Math constant id'>Math</span><span class='dot token'>.</span><span class='rubyid_atan identifier id'>atan</span><span class='lparen token'>(</span><span class='minus op'>-</span><span class='rubyid_t2 identifier id'>t2</span> <span class='div op'>/</span> <span class='rubyid_Math constant id'>Math</span><span class='dot token'>.</span><span class='rubyid_sqrt identifier id'>sqrt</span><span class='lparen token'>(</span><span class='minus op'>-</span><span class='rubyid_t2 identifier id'>t2</span> <span class='mult op'>*</span> <span class='rubyid_t2 identifier id'>t2</span> <span class='plus op'>+</span> <span class='integer val'>1</span><span class='rparen token'>)</span><span class='rparen token'>)</span> <span class='plus op'>+</span> <span class='rubyid_atan1_2 identifier id'>atan1_2</span> <span class='comment val'>#Compass Bearing in radians (clockwise)</span>
+  <span class='rubyid_end end kw'>end</span>
+
+  <span class='comment val'>#Note that the bearing is a compass angle. That is angles are positive clockwise.</span>
+  <span class='rubyid_return return kw'>return</span> <span class='rubyid_TrackAndDistance constant id'>TrackAndDistance</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span><span class='lparen token'>(</span><span class='rubyid_bearing identifier id'>bearing</span><span class='comma token'>,</span> <span class='rubyid_angular_distance identifier id'>angular_distance</span> <span class='mult op'>*</span> <span class='rubyid_r identifier id'>r</span><span class='comma token'>,</span> <span class='rubyid_true true kw'>true</span><span class='rparen token'>)</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
     </td>
   </tr>
 </table>
@@ -896,7 +987,7 @@ isn&#39;t. This gives us an approximation to verify Vincenty algorithm.</p>
       <div class="method_details ">
   <h3 class="signature " id="version-instance_method">
   
-    - (<tt><span class='object_link'><a href="String.html" title="String (class)">String</a></span></tt>) <strong>version</strong> 
+    #<strong>version</strong>  &#x21d2; <tt><span class='object_link'><a href="String.html" title="String (class)">String</a></span></tt> 
   
 
   
@@ -944,9 +1035,10 @@ isn&#39;t. This gives us an approximation to verify Vincenty algorithm.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/vincenty.rb', line 18</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_version'>version</span>
-  <span class='const'>VERSION</span>
-<span class='kw'>end</span></pre>
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_version identifier id'>version</span>
+  <span class='rubyid_VERSION constant id'>VERSION</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
     </td>
   </tr>
 </table>
@@ -956,11 +1048,12 @@ isn&#39;t. This gives us an approximation to verify Vincenty algorithm.</p>
 
 </div>
 
-    <div id="footer">
-  Generated on Fri May 22 13:54:24 2015 by
+      <div id="footer">
+  Generated on Sat Dec  3 17:37:06 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.6 (ruby-2.1.5).
+  0.9.5 (ruby-2.3.1).
 </div>
 
+    </div>
   </body>
 </html>
