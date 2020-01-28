@@ -1,8 +1,9 @@
 # Vincenty
+[![Gem Version](https://badge.fury.io/rb/vincenty.svg)](https://rubygems.org/gems/vincenty)
+[![Build Status](https://travis-ci.org/rbur004/vincenty.svg)](https://travis-ci.org/rbur004/vincenty)
 
-* http://rbur004.github.com/vincenty/
 * Source https://github.com/rbur004/vincenty
-* Gem https://rubygems.org/gems/vincenty
+* https://rubygems.org/gems/vincenty
 
 ## DESCRIPTION:
 
