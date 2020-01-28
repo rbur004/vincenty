@@ -11,20 +11,20 @@
   The algorithms model the earth as an ellipsoid, using the WGS-84 model. This is the common GPS model for
   mapping to latitudes and longitudes.
 
-  This is a Ruby implementation of Vincenty's algorithms, and the Vincenty class includes two methods for 
+  This is a Ruby implementation of Vincenty's algorithms, and the Vincenty class includes two methods for
   modeling the earth as a sphere. These were added as a reference for testing the Vincenty algorithm, but
-  could be used on their own. 
+  could be used on their own.
 
   The package also makes use of several other classes that may be useful in their own Right. These include
-  class Angle, class Latitude (subclass of Angle), class Longitude (subclass of Angle), 
+  class Angle, class Latitude (subclass of Angle), class Longitude (subclass of Angle),
   class TrackAndBearing and class coordinate (which class Vincenty is a subclass)
 
-  Angle requires extensions to Numeric and String to provide to_radians (to_r) and to_degrees (to_d). String also includes a to_decimal_degrees(), which converts most string forms of Latitude and Longitude to decimal form. These extensions are included in the package in core_extensions.rb. Float has also been extended to change round to have an optional argument specifying the number of decimal places to round to. This is fully compatible with the Float.round, as the default is to round to 0 decimal places.
+  Angle requires extensions to Numeric and String to provide to_radians (to_r) and to_degrees (to_d). String also includes a to_decimal_degrees(), which converts most string forms of Latitude and Longitude to decimal form. These extensions are included in the package in core_extensions.rb.
 
 *  The Vincenty code is based on the wikipedia presentation of the Vincenty algorithm http://en.wikipedia.org/wiki/Vincenty%27s_formulae .
 *  The algorithm was modified to include changes I found at http://www.movable-type.co.uk/scripts/latlong-vincenty-direct.html.
-*  I also altered the formulae to correctly return the bearing for angles greater than 180. 
-  
+*  I also altered the formulae to correctly return the bearing for angles greater than 180.
+
 * Vincenty's original publication
 
 ** T Vincenty, "Direct and Inverse Solutions of Geodesics on the Ellipsoid with application of nested equations", Survey Review, vol XXII no 176, 1975 http://www.ngs.noaa.gov/PUBS_LIB/inverse.pdf
@@ -35,25 +35,33 @@
 
 ## SYNOPSIS:
 
-  flindersPeak = Vincenty.new("-37&deg;57&prime;3.72030''", "144&deg;25&prime;29.52440''" )
-  buninyong = Vincenty.new("-37&deg; 39' 10.15610''", "143&deg; 55' 35.38390''")
+```ruby
+  flindersPeak = Vincenty.new("-37°57′3.72030''", "144°25′29.52440''" )
+  buninyong = Vincenty.new("-37° 39' 10.15610''", "143° 55' 35.38390''")
   track_and_bearing = flindersPeak.distanceAndAngle( buninyong )
   puts track_and_bearing
 
   #or the reverse
-  destination = flindersPeak.destination(TrackAndDistance.new("306&deg; 52' 5.37\"", 54972.271))
+  destination = flindersPeak.destination(TrackAndDistance.new("306° 52' 5.37\"", 54972.271))
   puts destination
-  
+
   #Angles is the parent class of Latitude and Longitude
-  Angle.new("-37&deg;01&prime;.125").strf( "The angle is %d&deg;%2m&prime;%2.5s&Prime;%N" ) -> "The angle is 37&deg;01&prime;07.50000&Prime;S"
-  
+  Angle.new("-37°01′.125").strf( "The angle is %d°%2m′%2.5s′%N" ) -> "The angle is 37°01′07.50000′S"
+```
+
 ## REQUIREMENTS:
 
-* require 'rubygems'
+* `require 'rubygems'`
 
 ## INSTALL:
 
-* sudo gem install vincenty
+* `sudo gem install vincenty`
+
+## CONTRIBUTING:
+
+* Generate documentation with `gendoc.sh`
+* Create packaged gem with `genpkg.sh`
+* Push packaged gem with `exportgem.sh`
 
 ## LICENSE:
 
@@ -84,12 +92,12 @@ Copyright (c) 2009
 
 4. You may modify and include the part of the software into any other
    software (possibly commercial).  But some files or libraries used by
-   code in this distribution  may not written by the author, so that they 
+   code in this distribution  may not written by the author, so that they
    are not under these terms.
 
-5. The scripts and library files supplied as input to or produced as 
+5. The scripts and library files supplied as input to or produced as
    output from the software do not automatically fall under the
-   copyright of the software, but belong to whomever generated them, 
+   copyright of the software, but belong to whomever generated them,
    and may be sold commercially, and may be aggregated with this
    software.
 

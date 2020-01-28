@@ -1,7 +1,6 @@
 History.txt
 Manifest.txt
 README.md
-Rakefile
 lib/angle.rb
 lib/coordinate.rb
 lib/core_extensions.rb
