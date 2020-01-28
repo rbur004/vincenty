@@ -1,10 +1,12 @@
-#!/usr/bin/env ruby
-require_relative 'ts_angle.rb'
-require_relative 'ts_vincenty.rb'
-require_relative 'ts_latitude.rb'
-require_relative 'ts_longitude.rb'
-require_relative 'ts_coordinate.rb'
-require_relative 'ts_track_and_distance.rb'
+require 'vincenty'
+include Vincenty
 
-puts "Testing from source"
-puts Vincenty.new.version
+require 'ts_angle.rb'
+require 'ts_vincenty.rb'
+require 'ts_latitude.rb'
+require 'ts_longitude.rb'
+require 'ts_coordinate.rb'
+require 'ts_track_and_distance.rb'
+
+puts "Testing from installed Gem"
+puts Vincenty::VERSION

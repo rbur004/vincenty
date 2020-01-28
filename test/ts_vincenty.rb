@@ -1,8 +1,8 @@
-#!/usr/bin/env ruby
-require 'test/unit'
-require_relative '../lib/vincenty.rb'
+require 'bundler/setup'
+require 'minitest/autorun'
+require 'vincenty'
 
-class TestVincenty< Test::Unit::TestCase
+class TestVincenty < Minitest::Test
 
   def initialize(x)
     super(x)
@@ -22,17 +22,17 @@ class TestVincenty< Test::Unit::TestCase
     ]
 
     @waypoints = [
-        Vincenty.new(-36.9923293459124, 174.485341187381),
-        Vincenty.new(-36.992412464006, 174.485427409127),
-        Vincenty.new(-36.9924770796644, 174.485814875954),
-        Vincenty.new(-36.9923377696042, 174.486232091137),
-        Vincenty.new(-36.9896584018239, 174.488871503953),
-        Vincenty.new(-36.988582616694, 174.488340992344),
-        Vincenty.new(-36.9896367145752, 174.487936042043),
-        Vincenty.new(-36.9912743090293, 174.48541348615),
-        Vincenty.new(-36.9917932943506, 174.485664544705),
-        Vincenty.new(-36.9920268289562, 174.485617028991),
-        Vincenty.new(-36.9921837292671, 174.485468381511),
+        Coordinate.new(-36.9923293459124, 174.485341187381),
+        Coordinate.new(-36.992412464006, 174.485427409127),
+        Coordinate.new(-36.9924770796644, 174.485814875954),
+        Coordinate.new(-36.9923377696042, 174.486232091137),
+        Coordinate.new(-36.9896584018239, 174.488871503953),
+        Coordinate.new(-36.988582616694, 174.488340992344),
+        Coordinate.new(-36.9896367145752, 174.487936042043),
+        Coordinate.new(-36.9912743090293, 174.48541348615),
+        Coordinate.new(-36.9917932943506, 174.485664544705),
+        Coordinate.new(-36.9920268289562, 174.485617028991),
+        Coordinate.new(-36.9921837292671, 174.485468381511),
     ]
   end
 
@@ -40,7 +40,7 @@ class TestVincenty< Test::Unit::TestCase
   #verified on google map of my property by creating a KML file and loading the map over the satellite image and checking the
   #coordinates in google earth, and visually checking the route created was a closed loop (it was with a tiny error).
   def test_vincenty_destination
-    start = Vincenty.new(-36.9921838030711, 174.485468469841)
+    start = Coordinate.new(-36.9921838030711, 174.485468469841)
 
     next_p = start
 #    print "Start at coordinate #{next_p.longitude.to_deg}, #{next_p.latitude.to_deg}\n"
@@ -61,7 +61,7 @@ class TestVincenty< Test::Unit::TestCase
   #The waypoints are the latitudes and longitudes of the corners of my property.
   #The resulting bearing and distances between them should match those in @path.
   def test_vincenty_distance_and_angle
-    start = Vincenty.new(-36.9921838030711, 174.485468469841)
+    start = Coordinate.new(-36.9921838030711, 174.485468469841)
     next_p = start
 #   print "\nReverse test, c\n"
 #    print "Start at coordinate #{next_p.longitude.to_deg}, #{next_p.latitude.to_deg}\n"
@@ -83,7 +83,7 @@ class TestVincenty< Test::Unit::TestCase
 
   #Edge case, when points are at same location
   def test_vincenty_distance_and_angle_when_0
-    start = Vincenty.new(-36.9921838030711, 174.485468469841)
+    start = Coordinate.new(-36.9921838030711, 174.485468469841)
     vtrack_and_bearing = start.distanceAndAngle( start )
 
     assert_equal(0, vtrack_and_bearing.bearing.to_deg.round(4))
@@ -92,8 +92,8 @@ class TestVincenty< Test::Unit::TestCase
 
   #Run the Australian Geoscience site example.
   def test_geoscience_au
-    flindersPeak = Vincenty.new("-37 57'3.72030″", "144 25'29.52440″" )
-    buninyong = Vincenty.new("-37   39 ' 10.15610 ''", "143   55 ' 35.38390 ''") #Buninyong
+    flindersPeak = Coordinate.new("-37 57'3.72030″", "144 25'29.52440″" )
+    buninyong = Coordinate.new("-37   39 ' 10.15610 ''", "143   55 ' 35.38390 ''") #Buninyong
     track_and_bearing = flindersPeak.distanceAndAngle( buninyong )
     assert_equal(Angle.new("306   52 ' 5.37 ''").to_deg.round(4), track_and_bearing.bearing.to_deg.round(4))
     assert_equal(54972.271, track_and_bearing.distance.round(3))
