@@ -1,8 +1,10 @@
 
-require_relative 'angle.rb'
+require_relative 'angle'
 
-#Holds a bearing and distance
-class TrackAndDistance
+module Vincenty
+
+  #Holds a bearing and distance
+  class TrackAndDistance
     # @return [Angle]
     attr_accessor :bearing
     # @return [Float]
@@ -14,6 +16,27 @@ class TrackAndDistance
     def initialize(bearing, distance, radians=false)
       @bearing = Angle.new(bearing, radians)
       @distance = distance
+    end
+
+    # return [Float] distance in meters
+    def northings
+      @distance * Math.cos(@bearing.to_radians)
+    end
+
+    # return [Float] distance in meters
+    def eastings
+      @distance * Math.sin(@bearing.to_radians)
+    end
+
+    alias x eastings
+    alias y northings
+
+    #Class level function equivalent to TrackAndDistance.new that takes X and Y in meters
+    # @return [TrackAndDistance
+    # @param [#to_f] eastings Value in meters representing eastings
+    # @param [#to_f] northings Value in meters representing northings
+    def self.from_xy(eastings, northings)
+      self.new(Angle.radians(Math.atan2(eastings, northings)), Math.hypot(eastings, northings), true)
     end
 
     #format string fmt is currently just for the bearing angle.
@@ -38,4 +61,5 @@ class TrackAndDistance
     def to_hash
       { :bearing => @bearing, :distance => @distance }
     end
+  end
 end

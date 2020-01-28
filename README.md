@@ -59,6 +59,7 @@
 
 ## CONTRIBUTING:
 
+* Run tests with `ruby -Ilib:test test/ts_all.rb`
 * Generate documentation with `gendoc.sh`
 * Create packaged gem with `genpkg.sh`
 * Push packaged gem with `exportgem.sh`
