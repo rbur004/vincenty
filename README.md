@@ -1,8 +1,8 @@
 # Vincenty
 
-* http://rbur004.github.com/vincenty/
-* Source https://github.com/rbur004/vincenty
-* Gem https://rubygems.org/gems/vincenty
+* Docs :: http://rbur004.github.io/vincenty/
+* Source :: https://github.com/rbur004/vincenty
+* Gem :: https://rubygems.org/gems/vincenty
 
 ## DESCRIPTION:
 
