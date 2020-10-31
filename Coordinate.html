@@ -6,15 +6,15 @@
 <title>
   Class: Coordinate
   
-    &mdash; Vincenty
+    &mdash; vincenty
   
 </title>
 
-  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="css/style.css" type="text/css" />
 
-  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="css/common.css" type="text/css" />
 
-<script type="text/javascript" charset="utf-8">
+<script type="text/javascript">
   pathId = "Coordinate";
   relpath = '';
 </script>
@@ -28,7 +28,7 @@
   </head>
   <body>
     <div class="nav_wrap">
-      <iframe id="nav" src="class_list.html"></iframe>
+      <iframe id="nav" src="class_list.html?1"></iframe>
       <div id="resizer"></div>
     </div>
 
@@ -58,8 +58,6 @@
 </div>
         <div class="clear"></div>
       </div>
-
-      <iframe id="search_frame" src="class_list.html"></iframe>
 
       <div id="content"><h1>Class: Coordinate
   
@@ -231,9 +229,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>latitude and longitude can be Strings or Numeric, or anything else with
-to_radians and to_f latitude and longitude are in degrees unless radians ==
-true (or set to :radians).</p>
+<p>latitude and longitude can be Strings or Numeric, or anything else with to_radians and to_f latitude and longitude are in degrees unless radians == true (or set to :radians).</p>
 </div></span>
   
 </li>
@@ -331,9 +327,7 @@ true (or set to :radians).</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>latitude and longitude can be Strings or Numeric, or anything else with
-to_radians and to_f latitude and longitude are in degrees unless radians ==
-true (or set to :radians)</p>
+<p>latitude and longitude can be Strings or Numeric, or anything else with to_radians and to_f latitude and longitude are in degrees unless radians == true (or set to :radians)</p>
 
 
   </div>
@@ -356,12 +350,11 @@ true (or set to :radians)</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/coordinate.rb', line 15</span>
 
-<span class='rubyid_def def kw'>def</span> <span class='rubyid_initialize identifier id'>initialize</span><span class='lparen token'>(</span><span class='rubyid_latitude identifier id'>latitude</span><span class='assign token'>=</span><span class='integer val'>0</span><span class='comma token'>,</span> <span class='rubyid_longitude identifier id'>longitude</span><span class='assign token'>=</span><span class='integer val'>0</span><span class='comma token'>,</span> <span class='rubyid_altitude identifier id'>altitude</span><span class='assign token'>=</span><span class='integer val'>0</span><span class='comma token'>,</span> <span class='rubyid_radians identifier id'>radians</span> <span class='assign token'>=</span> <span class='rubyid_false false kw'>false</span><span class='rparen token'>)</span>
-  <span class='rubyid_@latitude ivar id'>@latitude</span> <span class='assign token'>=</span> <span class='rubyid_Latitude constant id'>Latitude</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span><span class='lparen token'>(</span><span class='rubyid_latitude identifier id'>latitude</span><span class='comma token'>,</span><span class='rubyid_radians identifier id'>radians</span><span class='rparen token'>)</span>
-  <span class='rubyid_@longitude ivar id'>@longitude</span> <span class='assign token'>=</span> <span class='rubyid_Longitude constant id'>Longitude</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span><span class='lparen token'>(</span><span class='rubyid_longitude identifier id'>longitude</span><span class='comma token'>,</span><span class='rubyid_radians identifier id'>radians</span><span class='rparen token'>)</span>
-  <span class='rubyid_@altitude ivar id'>@altitude</span> <span class='assign token'>=</span> <span class='rubyid_altitude identifier id'>altitude</span><span class='dot token'>.</span><span class='rubyid_to_f identifier id'>to_f</span>
-<span class='rubyid_end end kw'>end</span>
-</pre>
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_latitude'>latitude</span><span class='op'>=</span><span class='int'>0</span><span class='comma'>,</span> <span class='id identifier rubyid_longitude'>longitude</span><span class='op'>=</span><span class='int'>0</span><span class='comma'>,</span> <span class='id identifier rubyid_altitude'>altitude</span><span class='op'>=</span><span class='int'>0</span><span class='comma'>,</span> <span class='id identifier rubyid_radians'>radians</span> <span class='op'>=</span> <span class='kw'>false</span><span class='rparen'>)</span>
+  <span class='ivar'>@latitude</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Latitude.html" title="Latitude (class)">Latitude</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Angle.html#initialize-instance_method" title="Angle#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_latitude'>latitude</span><span class='comma'>,</span><span class='id identifier rubyid_radians'>radians</span><span class='rparen'>)</span>
+  <span class='ivar'>@longitude</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Longitude.html" title="Longitude (class)">Longitude</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Angle.html#initialize-instance_method" title="Angle#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_longitude'>longitude</span><span class='comma'>,</span><span class='id identifier rubyid_radians'>radians</span><span class='rparen'>)</span>
+  <span class='ivar'>@altitude</span> <span class='op'>=</span> <span class='id identifier rubyid_altitude'>altitude</span><span class='period'>.</span><span class='id identifier rubyid_to_f'>to_f</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -418,10 +411,9 @@ true (or set to :radians)</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/coordinate.rb', line 11</span>
 
-<span class='rubyid_def def kw'>def</span> <span class='rubyid_altitude identifier id'>altitude</span>
-  <span class='rubyid_@altitude ivar id'>@altitude</span>
-<span class='rubyid_end end kw'>end</span>
-</pre>
+<span class='kw'>def</span> <span class='id identifier rubyid_altitude'>altitude</span>
+  <span class='ivar'>@altitude</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -473,10 +465,9 @@ true (or set to :radians)</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/coordinate.rb', line 7</span>
 
-<span class='rubyid_def def kw'>def</span> <span class='rubyid_latitude identifier id'>latitude</span>
-  <span class='rubyid_@latitude ivar id'>@latitude</span>
-<span class='rubyid_end end kw'>end</span>
-</pre>
+<span class='kw'>def</span> <span class='id identifier rubyid_latitude'>latitude</span>
+  <span class='ivar'>@latitude</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -528,10 +519,9 @@ true (or set to :radians)</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/coordinate.rb', line 9</span>
 
-<span class='rubyid_def def kw'>def</span> <span class='rubyid_longitude identifier id'>longitude</span>
-  <span class='rubyid_@longitude ivar id'>@longitude</span>
-<span class='rubyid_end end kw'>end</span>
-</pre>
+<span class='kw'>def</span> <span class='id identifier rubyid_longitude'>longitude</span>
+  <span class='ivar'>@longitude</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -560,7 +550,7 @@ true (or set to :radians)</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Returns with members, latitude, longitude and altitude</p>
+<p>Returns with members, latitude, longitude and altitude.</p>
 
 
   </div>
@@ -599,10 +589,9 @@ true (or set to :radians)</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/coordinate.rb', line 27</span>
 
-<span class='rubyid_def def kw'>def</span> <span class='rubyid_to_ary identifier id'>to_ary</span>
-  <span class='lbrack token'>[</span> <span class='rubyid_@latitude ivar id'>@latitude</span><span class='comma token'>,</span> <span class='rubyid_@longitude ivar id'>@longitude</span><span class='comma token'>,</span> <span class='rubyid_@altitude ivar id'>@altitude</span> <span class='rbrack token'>]</span>
-<span class='rubyid_end end kw'>end</span>
-</pre>
+<span class='kw'>def</span> <span class='id identifier rubyid_to_ary'>to_ary</span>
+  <span class='lbracket'>[</span> <span class='ivar'>@latitude</span><span class='comma'>,</span> <span class='ivar'>@longitude</span><span class='comma'>,</span> <span class='ivar'>@altitude</span> <span class='rbracket'>]</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -620,7 +609,7 @@ true (or set to :radians)</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Returns with keys :latitude, :longitude, and :altitude</p>
+<p>Returns with keys :latitude, :longitude, and :altitude.</p>
 
 
   </div>
@@ -659,10 +648,9 @@ true (or set to :radians)</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/coordinate.rb', line 34</span>
 
-<span class='rubyid_def def kw'>def</span> <span class='rubyid_to_hash identifier id'>to_hash</span>
-  <span class='lbrace token'>{</span> <span class='symbol val'>:latitude</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='rubyid_@latitude ivar id'>@latitude</span><span class='comma token'>,</span> <span class='symbol val'>:longitude</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='rubyid_@longitude ivar id'>@longitude</span><span class='comma token'>,</span> <span class='symbol val'>:altitude</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='rubyid_@altitude ivar id'>@altitude</span> <span class='rbrace token'>}</span>
-<span class='rubyid_end end kw'>end</span>
-</pre>
+<span class='kw'>def</span> <span class='id identifier rubyid_to_hash'>to_hash</span>
+  <span class='lbrace'>{</span> <span class='symbol'>:latitude</span> <span class='op'>=&gt;</span> <span class='ivar'>@latitude</span><span class='comma'>,</span> <span class='symbol'>:longitude</span> <span class='op'>=&gt;</span> <span class='ivar'>@longitude</span><span class='comma'>,</span> <span class='symbol'>:altitude</span> <span class='op'>=&gt;</span> <span class='ivar'>@altitude</span> <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -719,10 +707,9 @@ true (or set to :radians)</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/coordinate.rb', line 22</span>
 
-<span class='rubyid_def def kw'>def</span> <span class='rubyid_to_s identifier id'>to_s</span>
-  <span class='dstring node'>&quot;#{@latitude.to_s }  #{@longitude.to_s} #{@altitude}m&quot;</span>
-<span class='rubyid_end end kw'>end</span>
-</pre>
+<span class='kw'>def</span> <span class='id identifier rubyid_to_s'>to_s</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='ivar'>@latitude</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span> <span class='embexpr_end'>}</span><span class='tstring_content'>  </span><span class='embexpr_beg'>#{</span><span class='ivar'>@longitude</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='embexpr_end'>}</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='ivar'>@altitude</span><span class='embexpr_end'>}</span><span class='tstring_content'>m</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -733,9 +720,9 @@ true (or set to :radians)</p>
 </div>
 
       <div id="footer">
-  Generated on Sat Dec  3 17:37:04 2016 by
+  Generated on Sat Oct 31 22:00:21 2020 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.5 (ruby-2.3.1).
+  0.9.25 (ruby-2.7.1).
 </div>
 
     </div>

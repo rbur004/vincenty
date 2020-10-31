@@ -6,15 +6,15 @@
 <title>
   Class: Numeric
   
-    &mdash; Vincenty
+    &mdash; vincenty
   
 </title>
 
-  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="css/style.css" type="text/css" />
 
-  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="css/common.css" type="text/css" />
 
-<script type="text/javascript" charset="utf-8">
+<script type="text/javascript">
   pathId = "Numeric";
   relpath = '';
 </script>
@@ -28,7 +28,7 @@
   </head>
   <body>
     <div class="nav_wrap">
-      <iframe id="nav" src="class_list.html"></iframe>
+      <iframe id="nav" src="class_list.html?1"></iframe>
       <div id="resizer"></div>
     </div>
 
@@ -58,8 +58,6 @@
 </div>
         <div class="clear"></div>
       </div>
-
-      <iframe id="search_frame" src="class_list.html"></iframe>
 
       <div id="content"><h1>Class: Numeric
   
@@ -263,10 +261,9 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/core_extensions.rb', line 33</span>
 
-<span class='rubyid_def def kw'>def</span> <span class='rubyid_sign identifier id'>sign</span>
-  <span class='rubyid_self self kw'>self</span> <span class='lt op'>&lt;</span> <span class='integer val'>0</span> <span class='question op'>?</span> <span class='integer val'>-1</span> <span class='colon op'>:</span> <span class='integer val'>1</span>
-<span class='rubyid_end end kw'>end</span>
-</pre>
+<span class='kw'>def</span> <span class='id identifier rubyid_sign'>sign</span>
+  <span class='kw'>self</span> <span class='op'>&lt;</span> <span class='int'>0</span> <span class='op'>?</span> <span class='op'>-</span><span class='int'>1</span> <span class='op'>:</span> <span class='int'>1</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -353,14 +350,13 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/core_extensions.rb', line 9</span>
 
-<span class='rubyid_def def kw'>def</span> <span class='rubyid_to_degrees identifier id'>to_degrees</span><span class='lparen token'>(</span><span class='rubyid_mod identifier id'>mod</span><span class='assign token'>=</span><span class='rubyid_false false kw'>false</span><span class='rparen token'>)</span> 
-  <span class='rubyid_if if kw'>if</span> <span class='rubyid_mod identifier id'>mod</span> 
-    <span class='lparen token'>(</span><span class='rubyid_self self kw'>self</span> <span class='mult op'>*</span> <span class='integer val'>180</span>  <span class='div op'>/</span> <span class='rubyid_Math constant id'>Math</span><span class='colon2 op'>::</span><span class='rubyid_PI constant id'>PI</span><span class='rparen token'>)</span> <span class='mod op'>%</span> <span class='integer val'>360</span>
-  <span class='rubyid_else else kw'>else</span> 
-    <span class='rubyid_self self kw'>self</span> <span class='mult op'>*</span> <span class='integer val'>180</span>  <span class='div op'>/</span> <span class='rubyid_Math constant id'>Math</span><span class='colon2 op'>::</span><span class='rubyid_PI constant id'>PI</span> 
-  <span class='rubyid_end end kw'>end</span>
-<span class='rubyid_end end kw'>end</span>
-</pre>
+<span class='kw'>def</span> <span class='id identifier rubyid_to_degrees'>to_degrees</span><span class='lparen'>(</span><span class='id identifier rubyid_mod'>mod</span><span class='op'>=</span><span class='kw'>false</span><span class='rparen'>)</span> 
+  <span class='kw'>if</span> <span class='id identifier rubyid_mod'>mod</span> 
+    <span class='lparen'>(</span><span class='kw'>self</span> <span class='op'>*</span> <span class='int'>180</span>  <span class='op'>/</span> <span class='const'>Math</span><span class='op'>::</span><span class='const'>PI</span><span class='rparen'>)</span> <span class='op'>%</span> <span class='int'>360</span>
+  <span class='kw'>else</span> 
+    <span class='kw'>self</span> <span class='op'>*</span> <span class='int'>180</span>  <span class='op'>/</span> <span class='const'>Math</span><span class='op'>::</span><span class='const'>PI</span> 
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -447,14 +443,13 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/core_extensions.rb', line 20</span>
 
-<span class='rubyid_def def kw'>def</span> <span class='rubyid_to_radians identifier id'>to_radians</span><span class='lparen token'>(</span><span class='rubyid_mod identifier id'>mod</span><span class='assign token'>=</span><span class='rubyid_false false kw'>false</span><span class='rparen token'>)</span>
-  <span class='rubyid_if if kw'>if</span> <span class='rubyid_mod identifier id'>mod</span> 
-    <span class='lparen token'>(</span><span class='rubyid_self self kw'>self</span> <span class='mult op'>*</span> <span class='rubyid_Math constant id'>Math</span><span class='colon2 op'>::</span><span class='rubyid_PI constant id'>PI</span> <span class='div op'>/</span> <span class='integer val'>180</span><span class='rparen token'>)</span> <span class='mod op'>%</span> <span class='rubyid_Math constant id'>Math</span><span class='colon2 op'>::</span><span class='rubyid_PI constant id'>PI</span>
-  <span class='rubyid_else else kw'>else</span> 
-    <span class='rubyid_self self kw'>self</span> <span class='mult op'>*</span> <span class='rubyid_Math constant id'>Math</span><span class='colon2 op'>::</span><span class='rubyid_PI constant id'>PI</span> <span class='div op'>/</span> <span class='integer val'>180</span>
-  <span class='rubyid_end end kw'>end</span>
-<span class='rubyid_end end kw'>end</span>
-</pre>
+<span class='kw'>def</span> <span class='id identifier rubyid_to_radians'>to_radians</span><span class='lparen'>(</span><span class='id identifier rubyid_mod'>mod</span><span class='op'>=</span><span class='kw'>false</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_mod'>mod</span> 
+    <span class='lparen'>(</span><span class='kw'>self</span> <span class='op'>*</span> <span class='const'>Math</span><span class='op'>::</span><span class='const'>PI</span> <span class='op'>/</span> <span class='int'>180</span><span class='rparen'>)</span> <span class='op'>%</span> <span class='const'>Math</span><span class='op'>::</span><span class='const'>PI</span>
+  <span class='kw'>else</span> 
+    <span class='kw'>self</span> <span class='op'>*</span> <span class='const'>Math</span><span class='op'>::</span><span class='const'>PI</span> <span class='op'>/</span> <span class='int'>180</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -465,9 +460,9 @@
 </div>
 
       <div id="footer">
-  Generated on Sat Dec  3 17:37:04 2016 by
+  Generated on Sat Oct 31 22:00:21 2020 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.5 (ruby-2.3.1).
+  0.9.25 (ruby-2.7.1).
 </div>
 
     </div>
