@@ -1,22 +1,27 @@
-#!/usr/local/bin/ruby
 # -*- ruby -*-
-#need
-#     gem install yard
-#     gem install hoe
-#     gem install hoe-yard
-require 'yard'
+require 'rubygems'
 require 'hoe'
-#require 'lib/vincenty.rb'
 Hoe.plugin :yard
+load "#{__dir__}/version"
 
-Hoe.spec 'vincenty' do
-  #self.rubyforge_name = "vincenty"
+Hoe.spec PROJECT do 
+  self.readme_file = "README.md"
   self.developer( "Rob Burrowes","r.burrowes@auckland.ac.nz")
-
-  self.yard_title = 'Vincenty'
+  remote_rdoc_dir = '' # Release to root
+  
+  self.yard_title = PROJECT
   self.yard_options = ['--markup', 'markdown', '--protected']
-  #self.url = "http://www.wikarekare.org"
-  #self.summary = "Vincenty Algorithm for Distance, Bearing between Map Coordinates."
-  #self.description = s.paragraphs_of('README.txt', 1..4).join("\n\n")
-  #self.remote_rdoc_dir = '' # Release to root
 end
+
+
+#Validate manfest.txt
+#rake check_manifest
+
+#Local checking. Creates pkg/
+#rake gem
+
+#create doc/
+#rake docs  
+
+#Copy up to rubygem.org
+#rake release VERSION=1.0.1
