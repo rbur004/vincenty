@@ -6,5 +6,5 @@ require_relative 'ts_longitude.rb'
 require_relative 'ts_coordinate.rb'
 require_relative 'ts_track_and_distance.rb'
 
-puts "Testing from source"
+puts 'Testing from source'
 puts Vincenty.new.version

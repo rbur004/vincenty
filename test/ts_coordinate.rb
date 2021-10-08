@@ -2,10 +2,10 @@
 require 'test/unit'
 require_relative '../lib/vincenty.rb'
 
-class TestCoordinate< Test::Unit::TestCase
-  #test Coordinate
+class TestCoordinate < Test::Unit::TestCase
+  # test Coordinate
   def test_coordinate
-    c = Coordinate.new(-36.9923293459124, 174.485341187381,13.5)
+    c = Coordinate.new(-36.9923293459124, 174.485341187381, 13.5)
     ca = c.to_ary
     assert_equal(-36.9923293459124, ca[0].to_deg)
     assert_equal(174.485341187381, ca[1].to_deg)
