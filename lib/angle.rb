@@ -141,26 +141,26 @@ class Angle
   # @return [Angle,self]
   # @param [Angle,Numeric] angle
   def **(other)
-    self.class.radians(@angle**other)
+    return self.class.radians(@angle**other)
   end
 
   # Binary division operator. Can add angles and numbers, or two angles.
   # @return [Angle,self]
   # @param [Angle,Numeric] angle
   def /(other)
-    self.class.radians(@angle / other)
+    return self.class.radians(@angle / other)
   end
 
   # Binary mod operator. Can add angles and numbers, or two angles.
   # @return [Angle,self]
   # @param [Angle,Numeric] angle
   def %(other)
-    self.class.radians(@angle % other)
+    return self.class.radians(@angle % other)
   end
 
   # @return [Float] angle in degrees
   def to_degrees
-    @angle.to_degrees
+    return @angle.to_degrees
   end
 
   # @return [Float] angle in degrees
@@ -169,7 +169,7 @@ class Angle
 
   # @return [Float]  angle in radians
   def to_radians
-    @angle
+    return @angle
   end
 
   alias to_rad to_radians
@@ -205,7 +205,7 @@ class Angle
 
   # @return [Fixnum] the angle truncated to an integer, in radians.
   def to_i
-    to_radians.to_i
+    return to_radians.to_i
   end
 
   # @return [Fixnum] the angle truncated to an integer, in radians.
@@ -214,23 +214,23 @@ class Angle
   # @return [Array] the angle parameter as a Float and the @angle parameter from this class.
   # @param [Numeric] angle
   def coerce(angle)
-    [ Float(angle), @angle ]
+    return [ Float(angle), @angle ]
   end
 
   # @return [Fixnum] the sign of the angle. 1 for positive, -1 for negative.
   def sign
-    @angle.sign
+    return @angle.sign
   end
 
   # @return [Float] the absolute angle of the angle in radians
   def abs
-    @angle.abs
+    return @angle.abs
   end
 
   # @return [Float] angle as compass bearing in radians.
   # Compass bearings are clockwise, Math angles are counter clockwise.
   def to_bearing
-    self.class.new((Math::PI * 2) - @angle, true)
+    return self.class.new((Math::PI * 2) - @angle, true)
   end
 
   # @return [Float] the reverse angle in radians. i.e. angle + PI (or angle + 180 degrees)
