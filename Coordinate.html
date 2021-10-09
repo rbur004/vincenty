@@ -341,18 +341,18 @@
       <pre class="lines">
 
 
+14
 15
 16
 17
-18
-19</pre>
+18</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/coordinate.rb', line 15</span>
+      <pre class="code"><span class="info file"># File 'lib/coordinate.rb', line 14</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_latitude'>latitude</span><span class='op'>=</span><span class='int'>0</span><span class='comma'>,</span> <span class='id identifier rubyid_longitude'>longitude</span><span class='op'>=</span><span class='int'>0</span><span class='comma'>,</span> <span class='id identifier rubyid_altitude'>altitude</span><span class='op'>=</span><span class='int'>0</span><span class='comma'>,</span> <span class='id identifier rubyid_radians'>radians</span> <span class='op'>=</span> <span class='kw'>false</span><span class='rparen'>)</span>
-  <span class='ivar'>@latitude</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Latitude.html" title="Latitude (class)">Latitude</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Angle.html#initialize-instance_method" title="Angle#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_latitude'>latitude</span><span class='comma'>,</span><span class='id identifier rubyid_radians'>radians</span><span class='rparen'>)</span>
-  <span class='ivar'>@longitude</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Longitude.html" title="Longitude (class)">Longitude</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Angle.html#initialize-instance_method" title="Angle#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_longitude'>longitude</span><span class='comma'>,</span><span class='id identifier rubyid_radians'>radians</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_latitude'>latitude</span> <span class='op'>=</span> <span class='int'>0</span><span class='comma'>,</span> <span class='id identifier rubyid_longitude'>longitude</span> <span class='op'>=</span> <span class='int'>0</span><span class='comma'>,</span> <span class='id identifier rubyid_altitude'>altitude</span> <span class='op'>=</span> <span class='int'>0</span><span class='comma'>,</span> <span class='id identifier rubyid_radians'>radians</span> <span class='op'>=</span> <span class='kw'>false</span><span class='rparen'>)</span>
+  <span class='ivar'>@latitude</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Latitude.html" title="Latitude (class)">Latitude</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Angle.html#initialize-instance_method" title="Angle#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_latitude'>latitude</span><span class='comma'>,</span> <span class='id identifier rubyid_radians'>radians</span><span class='rparen'>)</span>
+  <span class='ivar'>@longitude</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Longitude.html" title="Longitude (class)">Longitude</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Angle.html#initialize-instance_method" title="Angle#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_longitude'>longitude</span><span class='comma'>,</span> <span class='id identifier rubyid_radians'>radians</span><span class='rparen'>)</span>
   <span class='ivar'>@altitude</span> <span class='op'>=</span> <span class='id identifier rubyid_altitude'>altitude</span><span class='period'>.</span><span class='id identifier rubyid_to_f'>to_f</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -404,12 +404,12 @@
       <pre class="lines">
 
 
+10
 11
-12
-13</pre>
+12</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/coordinate.rb', line 11</span>
+      <pre class="code"><span class="info file"># File 'lib/coordinate.rb', line 10</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_altitude'>altitude</span>
   <span class='ivar'>@altitude</span>
@@ -458,12 +458,12 @@
       <pre class="lines">
 
 
+6
 7
-8
-9</pre>
+8</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/coordinate.rb', line 7</span>
+      <pre class="code"><span class="info file"># File 'lib/coordinate.rb', line 6</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_latitude'>latitude</span>
   <span class='ivar'>@latitude</span>
@@ -512,12 +512,12 @@
       <pre class="lines">
 
 
+8
 9
-10
-11</pre>
+10</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/coordinate.rb', line 9</span>
+      <pre class="code"><span class="info file"># File 'lib/coordinate.rb', line 8</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_longitude'>longitude</span>
   <span class='ivar'>@longitude</span>
@@ -582,12 +582,12 @@
       <pre class="lines">
 
 
+26
 27
-28
-29</pre>
+28</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/coordinate.rb', line 27</span>
+      <pre class="code"><span class="info file"># File 'lib/coordinate.rb', line 26</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_ary'>to_ary</span>
   <span class='lbracket'>[</span> <span class='ivar'>@latitude</span><span class='comma'>,</span> <span class='ivar'>@longitude</span><span class='comma'>,</span> <span class='ivar'>@altitude</span> <span class='rbracket'>]</span>
@@ -641,15 +641,15 @@
       <pre class="lines">
 
 
+33
 34
-35
-36</pre>
+35</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/coordinate.rb', line 34</span>
+      <pre class="code"><span class="info file"># File 'lib/coordinate.rb', line 33</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_hash'>to_hash</span>
-  <span class='lbrace'>{</span> <span class='symbol'>:latitude</span> <span class='op'>=&gt;</span> <span class='ivar'>@latitude</span><span class='comma'>,</span> <span class='symbol'>:longitude</span> <span class='op'>=&gt;</span> <span class='ivar'>@longitude</span><span class='comma'>,</span> <span class='symbol'>:altitude</span> <span class='op'>=&gt;</span> <span class='ivar'>@altitude</span> <span class='rbrace'>}</span>
+  <span class='lbrace'>{</span> <span class='label'>latitude:</span> <span class='ivar'>@latitude</span><span class='comma'>,</span> <span class='label'>longitude:</span> <span class='ivar'>@longitude</span><span class='comma'>,</span> <span class='label'>altitude:</span> <span class='ivar'>@altitude</span> <span class='rbrace'>}</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -700,15 +700,15 @@
       <pre class="lines">
 
 
+21
 22
-23
-24</pre>
+23</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/coordinate.rb', line 22</span>
+      <pre class="code"><span class="info file"># File 'lib/coordinate.rb', line 21</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_s'>to_s</span>
-  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='ivar'>@latitude</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span> <span class='embexpr_end'>}</span><span class='tstring_content'>  </span><span class='embexpr_beg'>#{</span><span class='ivar'>@longitude</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='embexpr_end'>}</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='ivar'>@altitude</span><span class='embexpr_end'>}</span><span class='tstring_content'>m</span><span class='tstring_end'>&quot;</span></span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='ivar'>@latitude</span><span class='embexpr_end'>}</span><span class='tstring_content'>  </span><span class='embexpr_beg'>#{</span><span class='ivar'>@longitude</span><span class='embexpr_end'>}</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='ivar'>@altitude</span><span class='embexpr_end'>}</span><span class='tstring_content'>m</span><span class='tstring_end'>&quot;</span></span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -720,9 +720,9 @@
 </div>
 
       <div id="footer">
-  Generated on Sat Oct 31 22:00:21 2020 by
+  Generated on Sun Oct 10 11:42:47 2021 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.25 (ruby-2.7.1).
+  0.9.26 (ruby-3.0.2).
 </div>
 
     </div>

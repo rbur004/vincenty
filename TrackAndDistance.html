@@ -359,15 +359,15 @@
       <pre class="lines">
 
 
+13
 14
 15
-16
-17</pre>
+16</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/track_and_distance.rb', line 14</span>
+      <pre class="code"><span class="info file"># File 'lib/track_and_distance.rb', line 13</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_bearing'>bearing</span><span class='comma'>,</span> <span class='id identifier rubyid_distance'>distance</span><span class='comma'>,</span> <span class='id identifier rubyid_radians'>radians</span><span class='op'>=</span><span class='kw'>false</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_bearing'>bearing</span><span class='comma'>,</span> <span class='id identifier rubyid_distance'>distance</span><span class='comma'>,</span> <span class='id identifier rubyid_radians'>radians</span> <span class='op'>=</span> <span class='kw'>false</span><span class='rparen'>)</span>
   <span class='ivar'>@bearing</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Angle.html" title="Angle (class)">Angle</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Angle.html#initialize-instance_method" title="Angle#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_bearing'>bearing</span><span class='comma'>,</span> <span class='id identifier rubyid_radians'>radians</span><span class='rparen'>)</span>
   <span class='ivar'>@distance</span> <span class='op'>=</span> <span class='id identifier rubyid_distance'>distance</span>
 <span class='kw'>end</span></pre>
@@ -420,12 +420,12 @@
       <pre class="lines">
 
 
+6
 7
-8
-9</pre>
+8</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/track_and_distance.rb', line 7</span>
+      <pre class="code"><span class="info file"># File 'lib/track_and_distance.rb', line 6</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_bearing'>bearing</span>
   <span class='ivar'>@bearing</span>
@@ -474,12 +474,12 @@
       <pre class="lines">
 
 
+8
 9
-10
-11</pre>
+10</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/track_and_distance.rb', line 9</span>
+      <pre class="code"><span class="info file"># File 'lib/track_and_distance.rb', line 8</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_distance'>distance</span>
   <span class='ivar'>@distance</span>
@@ -540,15 +540,15 @@
       <pre class="lines">
 
 
+32
 33
-34
-35</pre>
+34</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/track_and_distance.rb', line 33</span>
+      <pre class="code"><span class="info file"># File 'lib/track_and_distance.rb', line 32</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_ary'>to_ary</span>
-  <span class='lbracket'>[</span> <span class='ivar'>@bearing</span><span class='comma'>,</span> <span class='ivar'>@distance</span> <span class='rbracket'>]</span>
+  <span class='kw'>return</span> <span class='lbracket'>[</span> <span class='ivar'>@bearing</span><span class='comma'>,</span> <span class='ivar'>@distance</span> <span class='rbracket'>]</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -599,15 +599,15 @@
       <pre class="lines">
 
 
+37
 38
-39
-40</pre>
+39</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/track_and_distance.rb', line 38</span>
+      <pre class="code"><span class="info file"># File 'lib/track_and_distance.rb', line 37</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_hash'>to_hash</span>
-  <span class='lbrace'>{</span> <span class='symbol'>:bearing</span> <span class='op'>=&gt;</span> <span class='ivar'>@bearing</span><span class='comma'>,</span> <span class='symbol'>:distance</span> <span class='op'>=&gt;</span> <span class='ivar'>@distance</span> <span class='rbrace'>}</span>
+  <span class='kw'>return</span> <span class='lbrace'>{</span> <span class='label'>bearing:</span> <span class='ivar'>@bearing</span><span class='comma'>,</span> <span class='label'>distance:</span> <span class='ivar'>@distance</span> <span class='rbrace'>}</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -680,24 +680,24 @@
       <pre class="lines">
 
 
+22
 23
 24
 25
 26
 27
 28
-29
-30</pre>
+29</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/track_and_distance.rb', line 23</span>
+      <pre class="code"><span class="info file"># File 'lib/track_and_distance.rb', line 22</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_s'>to_s</span><span class='lparen'>(</span><span class='id identifier rubyid_fmt'>fmt</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
-  <span class='kw'>if</span><span class='lparen'>(</span><span class='id identifier rubyid_fmt'>fmt</span><span class='rparen'>)</span>
-    <span class='comment'>#needs work to include distance as well as angle fmt.
-</span>    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='ivar'>@bearing</span><span class='period'>.</span><span class='id identifier rubyid_strf'>strf</span><span class='lparen'>(</span><span class='id identifier rubyid_fmt'>fmt</span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_distance'>distance</span><span class='period'>.</span><span class='id identifier rubyid_round'>round</span><span class='lparen'>(</span><span class='int'>4</span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>m</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_fmt'>fmt</span>
+    <span class='comment'># needs work to include distance as well as angle fmt.
+</span>    <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='ivar'>@bearing</span><span class='period'>.</span><span class='id identifier rubyid_strf'>strf</span><span class='lparen'>(</span><span class='id identifier rubyid_fmt'>fmt</span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_distance'>distance</span><span class='period'>.</span><span class='id identifier rubyid_round'>round</span><span class='lparen'>(</span><span class='int'>4</span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>m</span><span class='tstring_end'>&quot;</span></span>
   <span class='kw'>else</span>
-    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='ivar'>@bearing</span><span class='period'>.</span><span class='id identifier rubyid_strf'>strf</span><span class='embexpr_end'>}</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_distance'>distance</span><span class='period'>.</span><span class='id identifier rubyid_round'>round</span><span class='lparen'>(</span><span class='int'>4</span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>m</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='ivar'>@bearing</span><span class='period'>.</span><span class='id identifier rubyid_strf'>strf</span><span class='embexpr_end'>}</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_distance'>distance</span><span class='period'>.</span><span class='id identifier rubyid_round'>round</span><span class='lparen'>(</span><span class='int'>4</span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>m</span><span class='tstring_end'>&quot;</span></span>
   <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -710,9 +710,9 @@
 </div>
 
       <div id="footer">
-  Generated on Sat Oct 31 22:00:21 2020 by
+  Generated on Sun Oct 10 11:42:47 2021 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.25 (ruby-2.7.1).
+  0.9.26 (ruby-3.0.2).
 </div>
 
     </div>

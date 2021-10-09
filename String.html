@@ -254,6 +254,8 @@
       <pre class="lines">
 
 
+62
+63
 64
 65
 66
@@ -269,28 +271,26 @@
 76
 77
 78
-79
-80
-81</pre>
+79</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/core_extensions.rb', line 64</span>
+      <pre class="code"><span class="info file"># File 'lib/core_extensions.rb', line 62</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_to_dec_degrees'>to_dec_degrees</span> 
-  <span class='comment'>#reorder 37 001&#39;.512S, S37 001&#39;.512 into 37 001.512&#39;S, S37 001.512&#39; respectively
-</span>  <span class='id identifier rubyid_s'>s</span> <span class='op'>=</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_gsub'>gsub</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>([0-9])([&#39;&#39;])\.([0-9]+)</span><span class='regexp_end'>/</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>\1.\3\2</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
-  <span class='comment'>#add in minutes and seconds to get 3 values &#39;deg 0 0&#39;from  S37 0, 37 0S
-</span>  <span class='id identifier rubyid_s'>s</span><span class='period'>.</span><span class='id identifier rubyid_gsub!'>gsub!</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^([^0-9\.\-]*)([0-9\-\.]+)([^0-9\-\.]*)$</span><span class='regexp_end'>/</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>\1\2\3 0 0\5</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
-  <span class='comment'>#add in seconds get 3 values &#39;deg min 0&#39; from  S37 01.512&#39;,  37 01.512&#39;S
-</span>  <span class='id identifier rubyid_s'>s</span><span class='period'>.</span><span class='id identifier rubyid_gsub!'>gsub!</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^([^0-9\.\-]*)([0-9\-\.]+)([^0-9\-\.]+)([0-9\-\.]+)([^0-9\-\.]*)$</span><span class='regexp_end'>/</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>\1\2\3\4 0\5</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
-  
-  <span class='comment'>#look for anything of the form S37 001&#39;7.5&#39;&#39;, S37 01.512&#39;, S37.01875 0, ...
-</span>  <span class='id identifier rubyid_s'>s</span><span class='period'>.</span><span class='id identifier rubyid_scanf'>scanf</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>%[NSEW]%f%[^0-9-]%f%[^0-9-]%f</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_direction'>direction</span><span class='comma'>,</span> <span class='id identifier rubyid_deg'>deg</span><span class='comma'>,</span> <span class='id identifier rubyid_sep1'>sep1</span><span class='comma'>,</span> <span class='id identifier rubyid_min'>min</span><span class='comma'>,</span> <span class='id identifier rubyid_sep2'>sep2</span><span class='comma'>,</span> <span class='id identifier rubyid_sec'>sec</span><span class='op'>|</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_to_dec_degrees'>to_dec_degrees</span>
+  <span class='comment'># reorder 37 001&#39;.512S, S37 001&#39;.512 into 37 001.512&#39;S, S37 001.512&#39; respectively
+</span>  <span class='id identifier rubyid_s'>s</span> <span class='op'>=</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_gsub'>gsub</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>([0-9])(&#39;)\.([0-9]+)</span><span class='regexp_end'>/</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>\1.\3\2</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+  <span class='comment'># add in minutes and seconds to get 3 values &#39;deg 0 0&#39;from  S37 0, 37 0S
+</span>  <span class='id identifier rubyid_s'>s</span><span class='period'>.</span><span class='id identifier rubyid_gsub!'>gsub!</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^([^0-9.\-]*)([0-9\-.]+)([^0-9\-.]*)$</span><span class='regexp_end'>/</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>\1\2\3 0 0\5</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+  <span class='comment'># add in seconds get 3 values &#39;deg min 0&#39; from  S37 01.512&#39;,  37 01.512&#39;S
+</span>  <span class='id identifier rubyid_s'>s</span><span class='period'>.</span><span class='id identifier rubyid_gsub!'>gsub!</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^([^0-9.\-]*)([0-9\-.]+)([^0-9\-.]+)([0-9\-.]+)([^0-9\-.]*)$</span><span class='regexp_end'>/</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>\1\2\3\4 0\5</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+
+  <span class='comment'># look for anything of the form S37 001&#39;7.5&#39;&#39;, S37 01.512&#39;, S37.01875 0, ...
+</span>  <span class='id identifier rubyid_s'>s</span><span class='period'>.</span><span class='id identifier rubyid_scanf'>scanf</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>%[NSEW]%f%[^0-9-]%f%[^0-9-]%f</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_direction'>direction</span><span class='comma'>,</span> <span class='id identifier rubyid_deg'>deg</span><span class='comma'>,</span> <span class='id identifier rubyid__sep1'>_sep1</span><span class='comma'>,</span> <span class='id identifier rubyid_min'>min</span><span class='comma'>,</span> <span class='id identifier rubyid__sep2'>_sep2</span><span class='comma'>,</span> <span class='id identifier rubyid_sec'>sec</span><span class='op'>|</span>
     <span class='kw'>return</span> <span class='const'><span class='object_link'><a href="Angle.html" title="Angle (class)">Angle</a></span></span><span class='period'>.</span><span class='id identifier rubyid_decimal_deg'><span class='object_link'><a href="Angle.html#decimal_deg-class_method" title="Angle.decimal_deg (method)">decimal_deg</a></span></span><span class='lparen'>(</span> <span class='id identifier rubyid_deg'>deg</span><span class='comma'>,</span>  <span class='id identifier rubyid_min'>min</span><span class='comma'>,</span>  <span class='id identifier rubyid_sec'>sec</span><span class='comma'>,</span>  <span class='id identifier rubyid_direction'>direction</span><span class='rparen'>)</span>
   <span class='kw'>end</span>
-  
-  <span class='comment'>#look for anything of the form 37 001&#39;7.5&#39;&#39;S , -37 001&#39;7.5&#39;&#39;, -37 0 1.512&#39;. -37.01875 0, ...
-</span>  <span class='id identifier rubyid_s'>s</span><span class='period'>.</span><span class='id identifier rubyid_scanf'>scanf</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>%f%[^0-9-]%f%[^0-9-]%f%[^NSEW]%[NSEW]</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_deg'>deg</span><span class='comma'>,</span> <span class='id identifier rubyid_sep1'>sep1</span><span class='comma'>,</span> <span class='id identifier rubyid_min'>min</span><span class='comma'>,</span> <span class='id identifier rubyid_sep2'>sep2</span><span class='comma'>,</span> <span class='id identifier rubyid_sec'>sec</span><span class='comma'>,</span> <span class='id identifier rubyid_sep3'>sep3</span><span class='comma'>,</span> <span class='id identifier rubyid_direction'>direction</span><span class='op'>|</span>
+
+  <span class='comment'># look for anything of the form 37 001&#39;7.5&#39;&#39;S , -37 001&#39;7.5&#39;&#39;, -37 0 1.512&#39;. -37.01875 0, ...
+</span>  <span class='id identifier rubyid_s'>s</span><span class='period'>.</span><span class='id identifier rubyid_scanf'>scanf</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>%f%[^0-9-]%f%[^0-9-]%f%[^NSEW]%[NSEW]</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_deg'>deg</span><span class='comma'>,</span> <span class='id identifier rubyid__sep1'>_sep1</span><span class='comma'>,</span> <span class='id identifier rubyid_min'>min</span><span class='comma'>,</span> <span class='id identifier rubyid__sep2'>_sep2</span><span class='comma'>,</span> <span class='id identifier rubyid_sec'>sec</span><span class='comma'>,</span> <span class='id identifier rubyid__sep3'>_sep3</span><span class='comma'>,</span> <span class='id identifier rubyid_direction'>direction</span><span class='op'>|</span>
     <span class='kw'>return</span> <span class='const'><span class='object_link'><a href="Angle.html" title="Angle (class)">Angle</a></span></span><span class='period'>.</span><span class='id identifier rubyid_decimal_deg'><span class='object_link'><a href="Angle.html#decimal_deg-class_method" title="Angle.decimal_deg (method)">decimal_deg</a></span></span><span class='lparen'>(</span> <span class='id identifier rubyid_deg'>deg</span><span class='comma'>,</span>  <span class='id identifier rubyid_min'>min</span><span class='comma'>,</span>  <span class='id identifier rubyid_sec'>sec</span><span class='comma'>,</span>  <span class='id identifier rubyid_direction'>direction</span><span class='rparen'>)</span>
   <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
@@ -369,15 +369,15 @@
       <pre class="lines">
 
 
-86
-87
-88</pre>
+84
+85
+86</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/core_extensions.rb', line 86</span>
+      <pre class="code"><span class="info file"># File 'lib/core_extensions.rb', line 84</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_to_degrees'>to_degrees</span><span class='lparen'>(</span><span class='id identifier rubyid_mod'>mod</span><span class='op'>=</span><span class='kw'>false</span><span class='rparen'>)</span> <span class='comment'>#string expected to be radians, returns degrees
-</span>  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_to_f'>to_f</span><span class='period'>.</span><span class='id identifier rubyid_to_degrees'>to_degrees</span><span class='lparen'>(</span><span class='id identifier rubyid_mod'>mod</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_to_degrees'>to_degrees</span><span class='lparen'>(</span><span class='id identifier rubyid_mod'>mod</span> <span class='op'>=</span> <span class='kw'>false</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_to_f'>to_f</span><span class='period'>.</span><span class='id identifier rubyid_to_degrees'>to_degrees</span><span class='lparen'>(</span><span class='id identifier rubyid_mod'>mod</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -454,15 +454,15 @@
       <pre class="lines">
 
 
-93
-94
-95</pre>
+91
+92
+93</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/core_extensions.rb', line 93</span>
+      <pre class="code"><span class="info file"># File 'lib/core_extensions.rb', line 91</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_to_radians'>to_radians</span><span class='lparen'>(</span><span class='id identifier rubyid_mod'>mod</span><span class='op'>=</span><span class='kw'>false</span><span class='rparen'>)</span> <span class='comment'>#string expected to be degrees, returns radians
-</span>  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_to_dec_degrees'>to_dec_degrees</span><span class='period'>.</span><span class='id identifier rubyid_to_radians'>to_radians</span><span class='lparen'>(</span><span class='id identifier rubyid_mod'>mod</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_to_radians'>to_radians</span><span class='lparen'>(</span><span class='id identifier rubyid_mod'>mod</span> <span class='op'>=</span> <span class='kw'>false</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_to_dec_degrees'>to_dec_degrees</span><span class='period'>.</span><span class='id identifier rubyid_to_radians'>to_radians</span><span class='lparen'>(</span><span class='id identifier rubyid_mod'>mod</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -474,9 +474,9 @@
 </div>
 
       <div id="footer">
-  Generated on Sat Oct 31 22:00:21 2020 by
+  Generated on Sun Oct 10 11:42:47 2021 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.25 (ruby-2.7.1).
+  0.9.26 (ruby-3.0.2).
 </div>
 
     </div>

@@ -350,11 +350,11 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/core_extensions.rb', line 9</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_to_degrees'>to_degrees</span><span class='lparen'>(</span><span class='id identifier rubyid_mod'>mod</span><span class='op'>=</span><span class='kw'>false</span><span class='rparen'>)</span> 
-  <span class='kw'>if</span> <span class='id identifier rubyid_mod'>mod</span> 
-    <span class='lparen'>(</span><span class='kw'>self</span> <span class='op'>*</span> <span class='int'>180</span>  <span class='op'>/</span> <span class='const'>Math</span><span class='op'>::</span><span class='const'>PI</span><span class='rparen'>)</span> <span class='op'>%</span> <span class='int'>360</span>
-  <span class='kw'>else</span> 
-    <span class='kw'>self</span> <span class='op'>*</span> <span class='int'>180</span>  <span class='op'>/</span> <span class='const'>Math</span><span class='op'>::</span><span class='const'>PI</span> 
+<span class='kw'>def</span> <span class='id identifier rubyid_to_degrees'>to_degrees</span><span class='lparen'>(</span><span class='id identifier rubyid_mod'>mod</span> <span class='op'>=</span> <span class='kw'>false</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_mod'>mod</span>
+    <span class='lparen'>(</span><span class='kw'>self</span> <span class='op'>*</span> <span class='int'>180</span> <span class='op'>/</span> <span class='const'>Math</span><span class='op'>::</span><span class='const'>PI</span><span class='rparen'>)</span> <span class='op'>%</span> <span class='int'>360</span>
+  <span class='kw'>else</span>
+    <span class='kw'>self</span> <span class='op'>*</span> <span class='int'>180</span> <span class='op'>/</span> <span class='const'>Math</span><span class='op'>::</span><span class='const'>PI</span>
   <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -443,10 +443,10 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/core_extensions.rb', line 20</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_to_radians'>to_radians</span><span class='lparen'>(</span><span class='id identifier rubyid_mod'>mod</span><span class='op'>=</span><span class='kw'>false</span><span class='rparen'>)</span>
-  <span class='kw'>if</span> <span class='id identifier rubyid_mod'>mod</span> 
+<span class='kw'>def</span> <span class='id identifier rubyid_to_radians'>to_radians</span><span class='lparen'>(</span><span class='id identifier rubyid_mod'>mod</span> <span class='op'>=</span> <span class='kw'>false</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_mod'>mod</span>
     <span class='lparen'>(</span><span class='kw'>self</span> <span class='op'>*</span> <span class='const'>Math</span><span class='op'>::</span><span class='const'>PI</span> <span class='op'>/</span> <span class='int'>180</span><span class='rparen'>)</span> <span class='op'>%</span> <span class='const'>Math</span><span class='op'>::</span><span class='const'>PI</span>
-  <span class='kw'>else</span> 
+  <span class='kw'>else</span>
     <span class='kw'>self</span> <span class='op'>*</span> <span class='const'>Math</span><span class='op'>::</span><span class='const'>PI</span> <span class='op'>/</span> <span class='int'>180</span>
   <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
@@ -460,9 +460,9 @@
 </div>
 
       <div id="footer">
-  Generated on Sat Oct 31 22:00:21 2020 by
+  Generated on Sun Oct 10 11:42:47 2021 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.25 (ruby-2.7.1).
+  0.9.26 (ruby-3.0.2).
 </div>
 
     </div>
