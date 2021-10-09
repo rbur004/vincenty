@@ -182,7 +182,7 @@
     
 
     
-      (also: #to_rad, #to_r)
+      (also: #to_rad)
     
   </span>
   
@@ -213,7 +213,7 @@
       <div class="method_details first">
   <h3 class="signature first" id="to_dec_degrees-instance_method">
   
-    #<strong>to_dec_degrees</strong>  &#x21d2; <tt><span class='object_link'><a href="Float.html" title="Float (class)">Float</a></span></tt> 
+    #<strong>to_dec_degrees</strong>  &#x21d2; <tt>Float</tt> 
   
 
   
@@ -235,7 +235,7 @@
     <li>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="Float.html" title="Float (class)">Float</a></span></tt>)</span>
+        <span class='type'>(<tt>Float</tt>)</span>
       
       
       
@@ -254,27 +254,27 @@
       <pre class="lines">
 
 
-62
-63
-64
-65
-66
-67
-68
-69
-70
-71
-72
-73
-74
-75
-76
-77
-78
-79</pre>
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/core_extensions.rb', line 62</span>
+      <pre class="code"><span class="info file"># File 'lib/core_extensions.rb', line 42</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_dec_degrees'>to_dec_degrees</span>
   <span class='comment'># reorder 37 001&#39;.512S, S37 001&#39;.512 into 37 001.512&#39;S, S37 001.512&#39; respectively
@@ -302,7 +302,7 @@
       <div class="method_details ">
   <h3 class="signature " id="to_degrees-instance_method">
   
-    #<strong>to_degrees</strong>(mod = false)  &#x21d2; <tt><span class='object_link'><a href="Float.html" title="Float (class)">Float</a></span></tt> 
+    #<strong>to_degrees</strong>(mod = false)  &#x21d2; <tt>Float</tt> 
   
 
   
@@ -350,7 +350,7 @@
     <li>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="Float.html" title="Float (class)">Float</a></span></tt>)</span>
+        <span class='type'>(<tt>Float</tt>)</span>
       
       
       
@@ -369,12 +369,12 @@
       <pre class="lines">
 
 
-84
-85
-86</pre>
+64
+65
+66</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/core_extensions.rb', line 84</span>
+      <pre class="code"><span class="info file"># File 'lib/core_extensions.rb', line 64</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_degrees'>to_degrees</span><span class='lparen'>(</span><span class='id identifier rubyid_mod'>mod</span> <span class='op'>=</span> <span class='kw'>false</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_to_f'>to_f</span><span class='period'>.</span><span class='id identifier rubyid_to_degrees'>to_degrees</span><span class='lparen'>(</span><span class='id identifier rubyid_mod'>mod</span><span class='rparen'>)</span>
@@ -387,12 +387,12 @@
       <div class="method_details ">
   <h3 class="signature " id="to_radians-instance_method">
   
-    #<strong>to_radians</strong>(mod = false)  &#x21d2; <tt><span class='object_link'><a href="Float.html" title="Float (class)">Float</a></span></tt> 
+    #<strong>to_radians</strong>(mod = false)  &#x21d2; <tt>Float</tt> 
   
 
   
     <span class="aliases">Also known as:
-    <span class="names"><span id='to_rad-instance_method'>to_rad</span>, <span id='to_r-instance_method'>to_r</span></span>
+    <span class="names"><span id='to_rad-instance_method'>to_rad</span></span>
     </span>
   
 
@@ -435,7 +435,7 @@
     <li>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="Float.html" title="Float (class)">Float</a></span></tt>)</span>
+        <span class='type'>(<tt>Float</tt>)</span>
       
       
       
@@ -454,12 +454,12 @@
       <pre class="lines">
 
 
-91
-92
-93</pre>
+71
+72
+73</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/core_extensions.rb', line 91</span>
+      <pre class="code"><span class="info file"># File 'lib/core_extensions.rb', line 71</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_radians'>to_radians</span><span class='lparen'>(</span><span class='id identifier rubyid_mod'>mod</span> <span class='op'>=</span> <span class='kw'>false</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_to_dec_degrees'>to_dec_degrees</span><span class='period'>.</span><span class='id identifier rubyid_to_radians'>to_radians</span><span class='lparen'>(</span><span class='id identifier rubyid_mod'>mod</span><span class='rparen'>)</span>
@@ -474,7 +474,7 @@
 </div>
 
       <div id="footer">
-  Generated on Sun Oct 10 11:42:47 2021 by
+  Generated on Sun Oct 10 12:08:29 2021 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.26 (ruby-3.0.2).
 </div>
