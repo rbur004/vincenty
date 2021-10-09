@@ -25,32 +25,12 @@ class Numeric
     end
   end
 
-  alias to_r to_radians
   alias to_rad to_radians
   alias to_deg to_degrees
 
   # @return [Fixnum] 1 if number is positive, -1 if negative.
   def sign
     self < 0 ? -1 : 1
-  end
-end
-
-# Alters round method to have an optional number of decimal places.
-class Float
-  # Replace default round, so we can reference it later.
-  # @return [Float]
-  alias round0 round
-
-  # Compatible Replacement for Float.round
-  # @return [Float] float rounded to n decimal places.
-  # @param [Numeric] n Optional argument n is the number of decimal places to round to.
-  def round(n = 0)
-    if n == 0
-      self.round0 # This is to preserve the default behaviour, which is to return a Fixnum, not a float.
-    else
-      m = 10.0**n
-      (self * m).round0 / m
-    end
   end
 end
 
@@ -93,6 +73,5 @@ class String
   end
 
   alias to_rad to_radians
-  alias to_r to_radians
   alias to_deg to_degrees
 end
