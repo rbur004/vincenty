@@ -1554,7 +1554,7 @@
       <pre class="code"><span class="info file"># File 'lib/angle.rb', line 157</span>
 
 <span class='kw'>def</span> <span class='op'>%</span><span class='lparen'>(</span><span class='id identifier rubyid_other'>other</span><span class='rparen'>)</span>
-  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_radians'>radians</span><span class='lparen'>(</span><span class='ivar'>@angle</span> <span class='op'>%</span> <span class='id identifier rubyid_other'>other</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_radians'>radians</span><span class='lparen'>(</span><span class='ivar'>@angle</span> <span class='op'>%</span> <span class='id identifier rubyid_other'>other</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1692,7 +1692,7 @@
       <pre class="code"><span class="info file"># File 'lib/angle.rb', line 143</span>
 
 <span class='kw'>def</span> <span class='op'>**</span><span class='lparen'>(</span><span class='id identifier rubyid_other'>other</span><span class='rparen'>)</span>
-  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_radians'>radians</span><span class='lparen'>(</span><span class='ivar'>@angle</span><span class='op'>**</span><span class='id identifier rubyid_other'>other</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_radians'>radians</span><span class='lparen'>(</span><span class='ivar'>@angle</span><span class='op'>**</span><span class='id identifier rubyid_other'>other</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -2017,7 +2017,7 @@
       <pre class="code"><span class="info file"># File 'lib/angle.rb', line 150</span>
 
 <span class='kw'>def</span> <span class='op'>/</span><span class='lparen'>(</span><span class='id identifier rubyid_other'>other</span><span class='rparen'>)</span>
-  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_radians'>radians</span><span class='lparen'>(</span><span class='ivar'>@angle</span> <span class='op'>/</span> <span class='id identifier rubyid_other'>other</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_radians'>radians</span><span class='lparen'>(</span><span class='ivar'>@angle</span> <span class='op'>/</span> <span class='id identifier rubyid_other'>other</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -2158,7 +2158,7 @@
       <pre class="code"><span class="info file"># File 'lib/angle.rb', line 226</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_abs'>abs</span>
-  <span class='ivar'>@angle</span><span class='period'>.</span><span class='id identifier rubyid_abs'>abs</span>
+  <span class='kw'>return</span> <span class='ivar'>@angle</span><span class='period'>.</span><span class='id identifier rubyid_abs'>abs</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -2232,7 +2232,7 @@
       <pre class="code"><span class="info file"># File 'lib/angle.rb', line 216</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_coerce'>coerce</span><span class='lparen'>(</span><span class='id identifier rubyid_angle'>angle</span><span class='rparen'>)</span>
-  <span class='lbracket'>[</span> <span class='const'>Float</span><span class='lparen'>(</span><span class='id identifier rubyid_angle'>angle</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='ivar'>@angle</span> <span class='rbracket'>]</span>
+  <span class='kw'>return</span> <span class='lbracket'>[</span> <span class='const'>Float</span><span class='lparen'>(</span><span class='id identifier rubyid_angle'>angle</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='ivar'>@angle</span> <span class='rbracket'>]</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -2356,7 +2356,7 @@
       <pre class="code"><span class="info file"># File 'lib/angle.rb', line 221</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_sign'>sign</span>
-  <span class='ivar'>@angle</span><span class='period'>.</span><span class='id identifier rubyid_sign'>sign</span>
+  <span class='kw'>return</span> <span class='ivar'>@angle</span><span class='period'>.</span><span class='id identifier rubyid_sign'>sign</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -2665,7 +2665,7 @@
       <pre class="code"><span class="info file"># File 'lib/angle.rb', line 232</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_bearing'>to_bearing</span>
-  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='lparen'>(</span><span class='const'>Math</span><span class='op'>::</span><span class='const'>PI</span> <span class='op'>*</span> <span class='int'>2</span><span class='rparen'>)</span> <span class='op'>-</span> <span class='ivar'>@angle</span><span class='comma'>,</span> <span class='kw'>true</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='lparen'>(</span><span class='const'>Math</span><span class='op'>::</span><span class='const'>PI</span> <span class='op'>*</span> <span class='int'>2</span><span class='rparen'>)</span> <span class='op'>-</span> <span class='ivar'>@angle</span><span class='comma'>,</span> <span class='kw'>true</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -2728,7 +2728,7 @@
       <pre class="code"><span class="info file"># File 'lib/angle.rb', line 162</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_degrees'>to_degrees</span>
-  <span class='ivar'>@angle</span><span class='period'>.</span><span class='id identifier rubyid_to_degrees'>to_degrees</span>
+  <span class='kw'>return</span> <span class='ivar'>@angle</span><span class='period'>.</span><span class='id identifier rubyid_to_degrees'>to_degrees</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -2884,7 +2884,7 @@
       <pre class="code"><span class="info file"># File 'lib/angle.rb', line 207</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_i'>to_i</span>
-  <span class='id identifier rubyid_to_radians'>to_radians</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_to_radians'>to_radians</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -2947,7 +2947,7 @@
       <pre class="code"><span class="info file"># File 'lib/angle.rb', line 171</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_radians'>to_radians</span>
-  <span class='ivar'>@angle</span>
+  <span class='kw'>return</span> <span class='ivar'>@angle</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -3044,7 +3044,7 @@
 </div>
 
       <div id="footer">
-  Generated on Sun Oct 10 12:08:28 2021 by
+  Generated on Sun Oct 10 12:09:06 2021 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.26 (ruby-3.0.2).
 </div>
