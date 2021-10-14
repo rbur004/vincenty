@@ -30,9 +30,8 @@ class Vincenty < Coordinate
   # @param [Coordinate] p2 is target coordinate that we want the bearing to.
   # @return [TrackAndDistance]  with the compass bearing and distance in meters to P2
   def sphericalDistanceAndAngle( p2, equatorial_radius = WGS84_ER, inverse_flattening = WGS84_IF )
-    if @latitude == p2.latitude && @longitude == p2.longitude
-      return TrackAndDistance.new(0, 0, true) # No calculations necessary
-    end
+    # No calculations necessary, if these are the same point.
+    return TrackAndDistance.new(0, 0, true) if @latitude == p2.latitude && @longitude == p2.longitude
 
     a = equatorial_radius # equatorial radius in meters     (+/-2 m)
     b = a - a / inverse_flattening # WGS84 = 6356752.314245179 polar radius in meters
