@@ -90,6 +90,36 @@ class TestVincenty < Test::Unit::TestCase
     assert_equal(0, vtrack_and_bearing.distance.round(4))
   end
 
+  # Edge case, when points are close, and 180 degrees
+  def test_vincenty_angle_when_180
+    start_track = Vincenty.new(-36.98684848301985, 174.4873448681314)
+    end_track = Vincenty.new(-36.989952870042174, 174.4873448681314)
+
+    vtrack_and_bearing = start_track.distanceAndAngle( end_track )
+    assert_equal(180.0, vtrack_and_bearing.bearing.to_deg.round(4))
+
+    vtrack_and_bearing = end_track.distanceAndAngle( start_track )
+    assert_equal(0.0, vtrack_and_bearing.bearing.to_deg.round(4))
+  end
+
+  # Edge case, when points are close, and 180 degrees
+  def test_spherical_angle_when_180
+    start_track = Vincenty.new(-36.98684848301985, 174.4873448681314)
+    end_track = Vincenty.new(-36.989952870042174, 174.4873448681314)
+
+    vtrack_and_bearing = start_track.sphericalDistanceAndAngle( end_track )
+    assert_equal(180.0, vtrack_and_bearing.bearing.to_deg.round(4))
+  end
+
+  #Edgecase when points are close and 0 degress
+  def test_spherical_angle_when_0
+    start_track = Vincenty.new(-36.98684848301985, 174.4873448681314)
+    end_track = Vincenty.new(-36.989952870042174, 174.4873448681314)
+
+    vtrack_and_bearing = end_track.sphericalDistanceAndAngle( start_track )
+    assert_equal(0.0, vtrack_and_bearing.bearing.to_deg.round(4))
+  end
+
   # Run the Australian Geoscience site example.
   def test_geoscience_au
     flindersPeak = Vincenty.new("-37 57'3.72030″", "144 25'29.52440″" )

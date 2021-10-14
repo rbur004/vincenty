@@ -30,13 +30,12 @@ class Vincenty < Coordinate
   # @param [Coordinate] p2 is target coordinate that we want the bearing to.
   # @return [TrackAndDistance]  with the compass bearing and distance in meters to P2
   def sphericalDistanceAndAngle( p2, equatorial_radius = WGS84_ER, inverse_flattening = WGS84_IF )
-    if self.latitude == p2.latitude && self.longitude == p2.longitude
+    if @latitude == p2.latitude && @longitude == p2.longitude
       return TrackAndDistance.new(0, 0, true) # No calculations necessary
     end
 
     a = equatorial_radius # equatorial radius in meters     (+/-2 m)
-    f = inverse_flattening
-    b = a - a / f # WGS84 = 6356752.314245179 polar radius in meters
+    b = a - a / inverse_flattening # WGS84 = 6356752.314245179 polar radius in meters
     r = (a + b) / 2 # average diametre as a rough estimate for our tests.
 
     sin_lat1 = Math.sin(@latitude.to_rad)
@@ -45,9 +44,11 @@ class Vincenty < Coordinate
     atan1_2 = Math.atan(1) * 2
     t1 = cos_lat1 * Math.cos(p2.latitude.to_rad) * Math.cos(@longitude.to_rad - p2.longitude.to_rad) + sin_lat1 * sin_lat2
     angular_distance = Math.atan(-t1 / Math.sqrt(-t1 * t1 + 1)) + atan1_2 # central angle in radians so we can calculate the arc length.
-
     t2 = (sin_lat2 - sin_lat1 * Math.cos(angular_distance)) / (cos_lat1 * Math.sin(angular_distance))
-    bearing = if Math.sin(p2.longitude.to_rad - @longitude.to_rad) < 0
+
+    bearing = if @longitude == p2.longitude
+                @latitude > p2.latitude ? Math::PI : 0
+              elsif Math.sin(p2.longitude.to_rad - @longitude.to_rad) < 0
                 2 * Math::PI - (Math.atan(-t2 / Math.sqrt(-t2 * t2 + 1)) + atan1_2) # Compass Bearing in radians (clockwise)
               else
                 Math.atan(-t2 / Math.sqrt(-t2 * t2 + 1)) + atan1_2 # Compass Bearing in radians (clockwise)
