@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 #Local checking. Creates pkg/
 
 #Package project name and version, which needs to match the VERSION in the class declaration (as a safety check)

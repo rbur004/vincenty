@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 #create history.txt from the git history
 git log --pretty=format:"%an%x09%ad%x0a%x09%s" > History.txt

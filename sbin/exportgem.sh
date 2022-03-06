@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 #Copy up to rubygem.org
 
 #ensure the github code is up to date, and tagged as a release version

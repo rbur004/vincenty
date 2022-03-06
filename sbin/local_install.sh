@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 #Need to run from command line.
 . version
 
