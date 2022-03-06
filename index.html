@@ -72,7 +72,7 @@
 <p>Vincenty wrote an algorithm for calculating the bearing and distance between two coordinates on the earth  and an algorithm for finding a second coordinate, given a starting coordinate, bearing and destination.  The algorithms model the earth as an ellipsoid, using the WGS-84 model. This is the common GPS model for  mapping to latitudes and longitudes.</p>
 </li></ul>
 
-<p>This is a Ruby implementation of Vincenty&#39;s algorithms, and the Vincenty class includes two methods for  modeling the earth as a sphere. These were added as a reference for testing the Vincenty algorithm, but  could be used on their own.</p>
+<p>This is a Ruby implementation of Vincenty’s algorithms, and the Vincenty class includes two methods for  modeling the earth as a sphere. These were added as a reference for testing the Vincenty algorithm, but  could be used on their own.</p>
 
 <p>The package also makes use of several other classes that may be useful in their own Right. These include  class Angle, class Latitude (subclass of Angle), class Longitude (subclass of Angle),  class TrackAndBearing and class coordinate (which class Vincenty is a subclass)</p>
 
@@ -84,7 +84,7 @@
 </li><li>
 <p>I also altered the formulae to correctly return the bearing for angles greater than 180.</p>
 </li><li>
-<p>Vincenty&#39;s original publication</p>
+<p>Vincenty's original publication</p>
 </li></ul>
 
 <p>** T Vincenty, “Direct and Inverse Solutions of Geodesics on the Ellipsoid with application of nested equations”, Survey Review, vol XXII no 176, 1975 <a href="http://www.ngs.noaa.gov/PUBS_LIB/inverse.pdf">www.ngs.noaa.gov/PUBS_LIB/inverse.pdf</a></p>
@@ -96,15 +96,15 @@
 
 <h2 id="label-SYNOPSIS-3A">SYNOPSIS:</h2>
 
-<p>flindersPeak = Vincenty.new(“-37°57′3.72030&#39;&#39;”, “144°25′29.52440&#39;&#39;” )  buninyong = Vincenty.new(“-37° 39&#39; 10.15610&#39;&#39;”, “143° 55&#39; 35.38390&#39;&#39;”)  track_and_bearing = flindersPeak.distanceAndAngle( buninyong )  puts track_and_bearing</p>
+<p>flindersPeak = Vincenty.new(“-37°57′3.72030””, “144°25′29.52440”” )  buninyong = Vincenty.new(“-37° 39’ 10.15610””, “143° 55’ 35.38390””)  track_and_bearing = flindersPeak.distanceAndAngle( buninyong )  puts track_and_bearing</p>
 
-<p>#or the reverse  destination = flindersPeak.destination(TrackAndDistance.new(“306° 52&#39; 5.37&quot;”, 54972.271))  puts destination</p>
+<p>#or the reverse  destination = flindersPeak.destination(TrackAndDistance.new(“306° 52’ 5.37&quot;”, 54972.271))  puts destination</p>
 
 <p>#Angles is the parent class of Latitude and Longitude  Angle.new(“-37°01′.125”).strf( “The angle is %d°%2m′%2.5s″%N” ) -&gt; “The angle is 37°01′07.50000″S”</p>
 
 <h2 id="label-REQUIREMENTS-3A">REQUIREMENTS:</h2>
 <ul><li>
-<p>require &#39;rubygems&#39;</p>
+<p>require ‘rubygems’</p>
 </li></ul>
 
 <h2 id="label-INSTALL-3A">INSTALL:</h2>
@@ -151,9 +151,9 @@
 </div></div>
 
       <div id="footer">
-  Generated on Thu Oct 14 15:09:38 2021 by
+  Generated on Sun Mar  6 18:35:25 2022 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.26 (ruby-3.0.2).
+  0.9.27 (ruby-3.1.1).
 </div>
 
     </div>
