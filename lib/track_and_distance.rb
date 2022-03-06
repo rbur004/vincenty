@@ -37,4 +37,7 @@ class TrackAndDistance
   def to_hash
     return { bearing: @bearing, distance: @distance }
   end
+
+  alias deconstruct_keys to_hash
+  alias deconstruct to_ary
 end

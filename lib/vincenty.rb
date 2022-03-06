@@ -12,7 +12,7 @@ require_relative 'coordinate.rb'
 # Modified to incorporate corrections to formulae as found in script on http://www.movable-type.co.uk/scripts/LatLongVincenty.html
 # Added my Modification of the distanceAndAngle formulae to correct the compass bearing.
 class Vincenty < Coordinate
-  VERSION = '1.0.11'
+  VERSION = '1.0.12'
 
   # @return [String] constant VERSION
   def version

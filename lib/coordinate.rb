@@ -33,4 +33,7 @@ class Coordinate
   def to_hash
     { latitude: @latitude, longitude: @longitude, altitude: @altitude }
   end
+
+  alias deconstruct_keys to_hash
+  alias deconstruct to_ary
 end
